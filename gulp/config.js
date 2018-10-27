@@ -13,6 +13,7 @@ var config = {
   },
   'html': {
     'src': [
+      './src/pug/**/*.pug',
       './src/index.pug'
     ],
     'dest': 'dist'
