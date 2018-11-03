@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-@import 'reset';
-@import 'fonts';
-@import 'global';
+@import 'settings/reset';
+@import 'settings/fonts';
+@import 'settings/global';
 @import 'components/*';
