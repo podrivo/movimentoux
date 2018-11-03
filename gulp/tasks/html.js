@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var pug = require('gulp-pug');
 var browserSync = require('browser-sync').create();
 var plumber = require('gulp-plumber');
+var embedSvg = require('gulp-embed-svg');
 
 var log = require('../log/log.js');
 var notifyError = require('../notify/error.js');
@@ -11,6 +12,9 @@ module.exports = function(config, log, error, success) {
     return gulp.src(config.html.src)
       .pipe(pug({
         pretty: true
+      }))
+      .pipe(embedSvg({
+        root: './src'
       }))
       .pipe(plumber({
         errorHandler: error

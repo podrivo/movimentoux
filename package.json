@@ -18,6 +18,7 @@
     "gulp-cache": "^1.0.2",
     "gulp-clean-css": "^3.9.2",
     "gulp-concat": "^2.6.1",
+    "gulp-embed-svg": "^1.0.2",
     "gulp-eslint": "^4.0.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-merge-media-queries": "^0.2.1",
