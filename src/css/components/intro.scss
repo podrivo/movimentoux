@@ -1,11 +1,33 @@
 .intro {
-  font-size: 8.2vw;
-  font-weight: 700;
   width: 100%;
   max-width: 80%;
+  margin-top: 14vw;
+  position: relative;
+  left: -10px;
 
-  h1 {
-    position: relative;
-    left: -10px;
+  > .title {
+    line-height: 1.1em;
+  }
+}
+
+.intro-episode {
+  // position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 14vw 0;
+
+  > .description {
+    width: 100%;
+    max-width: 25vw;
+  }
+
+  > img {
+    width: 460px;
+    height: auto;
+    position: absolute;
+    align-self: center;
+    // top: 0;
+    z-index: 0;
   }
 }

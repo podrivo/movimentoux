@@ -11,13 +11,16 @@ html {
 
 body {
   font-family: 'Rubik', -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 1.6em;
   font-weight: 400;
   background-color: $black;
   color: $white;
   padding: 3vw 4vw;
 }
 
-a {
+a:not(.logo) {
   color: $white;
+  text-decoration: none;
+  border-bottom: 2px solid $white;
 }
