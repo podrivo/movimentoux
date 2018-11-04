@@ -11,23 +11,20 @@
 }
 
 .intro-episode {
-  // position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 14vw 0;
+  margin: 20vw 0;
 
   > .description {
     width: 100%;
     max-width: 25vw;
+    z-index: 1;
   }
 
   > img {
-    width: 460px;
-    height: auto;
     position: absolute;
     align-self: center;
-    // top: 0;
     z-index: 0;
   }
 }
