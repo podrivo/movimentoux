@@ -4,6 +4,11 @@ html, body {
   text-rendering: optimizeLegibility;
 }
 
+html {
+  background-color: $white;
+  padding: 1.4vw;
+}
+
 body {
   font-family: 'Rubik', -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
   font-size: 16px;
