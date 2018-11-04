@@ -1,0 +1,27 @@
+.intro-episode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20vw 0 10vw;
+
+  > img {
+    max-width: 560px;
+    height: auto;
+    position: absolute;
+    align-self: center;
+    z-index: 0;
+  }
+
+  > .description {
+    width: 100%;
+    max-width: 25vw;
+    z-index: 1;
+  }
+
+  > .number {
+    position: absolute;
+    align-self: flex-end;
+    color: $black;
+    text-shadow: -1px 0 $white, 0 1px $white, 1px 0 $white, 0 -1px $white;
+  }
+}

@@ -9,22 +9,3 @@
     line-height: 1.1em;
   }
 }
-
-.intro-episode {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 20vw 0;
-
-  > .description {
-    width: 100%;
-    max-width: 25vw;
-    z-index: 1;
-  }
-
-  > img {
-    position: absolute;
-    align-self: center;
-    z-index: 0;
-  }
-}
