@@ -1,7 +1,11 @@
 .intro {
-  font-size: 9vw;
+  font-size: 8.2vw;
   font-weight: 700;
   width: 100%;
   max-width: 80%;
-  margin: 0 auto;
+
+  h1 {
+    position: relative;
+    left: -10px;
+  }
 }
