@@ -12,8 +12,11 @@ var config = {
     'dest': './dist/img'
   },
   'html': {
-    'src': [
+    'watch': [
       './src/pug/**/*.pug',
+      './src/index.pug'
+    ],
+    'src': [
       './src/index.pug'
     ],
     'dest': 'dist'
