@@ -1,0 +1,11 @@
+.social {
+  position: fixed;
+  bottom: ($padding + $padding * 2);
+  right: ($padding + $padding * 3);
+  text-align: right;
+  transition: opacity 0.3s;
+
+  &.hide {
+    opacity: 0;
+  }
+}

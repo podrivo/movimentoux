@@ -3,6 +3,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  > .logo {
+    width: 200px;
+    height: 38px;
+    border: 0;
+  }
 }
 
 .menu {
