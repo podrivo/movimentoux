@@ -17,6 +17,6 @@ function sticky(){
   }
 }
 
-['scroll', 'load'].forEach(function(evt) {
+['scroll', 'load', 'resize'].forEach(function(evt) {
   document.addEventListener(evt, sticky, false)
 })
