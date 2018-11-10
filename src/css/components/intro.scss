@@ -1,11 +1,13 @@
 .intro {
   width: 100%;
-  max-width: 80%;
   margin-top: 12vw;
-  position: relative;
-  left: -0.5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 
   > .title {
+    max-width: 80%;
     line-height: 1.1em;
+    margin-left: -0.5vw;
   }
 }

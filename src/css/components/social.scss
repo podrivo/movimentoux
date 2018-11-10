@@ -5,7 +5,9 @@
   text-align: right;
   transition: opacity 0.3s;
 
-  &.hide {
-    opacity: 0;
+  &.sticky {
+    position: relative;
+    bottom: 0;
+    right: 0;
   }
 }
