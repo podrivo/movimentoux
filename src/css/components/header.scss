@@ -8,6 +8,10 @@ header {
     width: 200px;
     height: 38px;
     border: 0;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
