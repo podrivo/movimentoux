@@ -50,8 +50,8 @@ table {
 
 *, *::before, *::after {
   box-sizing: border-box;
+}
 
-  &:focus {
-    outline: 0;
-  }
+*:focus, *:focus::before, *:focus::after {
+  outline: 0;
 }
