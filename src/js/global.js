@@ -4,7 +4,7 @@ var introTitle = document.querySelector('#title')
 var introSocial = document.querySelector('.social')
 var introSocialBottom = introSocial.offsetTop + introSocial.offsetHeight
 
-function sticky(){
+function stickySocial(){
   var scroll = window.scrollY
 
   var introTitleBottom = introTitle.offsetTop + introTitle.offsetHeight
@@ -17,6 +17,6 @@ function sticky(){
   }
 }
 
-['scroll', 'load', 'resize'].forEach(function(evt) {
-  document.addEventListener(evt, sticky, false)
+['scroll', 'touchstart', 'load', 'resize'].forEach(function(event) {
+  document.addEventListener(event, stickySocial, false)
 })
