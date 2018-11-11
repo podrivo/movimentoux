@@ -1,0 +1,22 @@
+.form {
+  display: flex;
+}
+
+input {
+  font-size: 1rem;
+  background: transparent;
+  color: $white;
+
+  &[type='text'] {
+    border: 0;
+    border-bottom: 2px solid $white;
+  }
+}
+
+button {
+  background-color: $white;
+  border: 0;
+  font-size: 1rem;
+  padding: 20px 40px;
+  cursor: pointer;
+}
