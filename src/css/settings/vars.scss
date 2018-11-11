@@ -6,3 +6,7 @@ $white: #fff;
 $padding: 1.4vw;
 $padding-y: $padding * 3;
 $padding-x: $padding * 4;
+
+// motion
+$timing: 600ms;
+$easing: cubic-bezier(0.165, 0.84, 0.44, 1); //easeOutQuart

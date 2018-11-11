@@ -1,13 +1,13 @@
 .social {
   position: fixed;
-  bottom: $padding-y;
+  bottom: $padding-y + 1vw;
   right: $padding-x;
   text-align: right;
   transition: opacity 0.3s;
 
   &.sticky {
     position: relative;
-    bottom: 0;
+    bottom: 1vw;
     right: 0;
   }
 }
