@@ -24,6 +24,8 @@ a {
 
   &::after {
     content: '';
+    backface-visibility: hidden;
+    perspective: 1000;
     position: absolute;
     bottom: -2px;
     left: 0;
@@ -31,13 +33,16 @@ a {
     height: 2px;
     background: $white;
     transform: scaleX(0);
+    opacity: 0;
     transform-origin: right center;
-    transition: transform 600ms $easing;
+    transition: transform $timing $easing, opacity 10ms ($timing * 0.8);
   }
 
   &:hover::after,
   &:focus::after {
     transform: scaleX(1);
     transform-origin: left center;
+    transition: transform $timing $easing, opacity 10ms 0s;
+    opacity: 1;
   }
 }
