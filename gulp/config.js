@@ -14,7 +14,7 @@ var config = {
   'html': {
     'watch': [
       './src/pug/**/*.pug',
-      './src/index.pug'
+      './src/*.pug'
     ],
     'src': [
       './src/*.pug'
