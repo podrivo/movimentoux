@@ -17,7 +17,7 @@ var config = {
       './src/index.pug'
     ],
     'src': [
-      './src/index.pug'
+      './src/*.pug'
     ],
     'dest': 'dist'
   },
