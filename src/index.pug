@@ -1,25 +1,28 @@
 extends pug/global
 block content
   
-  include pug/header.pug
+  body.body-intro
   
-  div#barba-wrapper
-    div.barba-container
-      article.intro
-        h1#title.title Movimento UX<br>é um podcast <br>de entrevistas sobre o universo de Experiência do Usuário.
+    include pug/header.pug
+    
+    div#barba-wrapper
+      div.barba-container
+        article.intro
+          h1#title.title Movimento UX<br>é um podcast <br>de entrevistas sobre o universo de Experiência do Usuário.
+          
+          ul#social.social
+            li.item #[a(href='' title='Spotify').link Spotify]
+            li.item #[a(href='' title='iTunes').link iTunes]
+            li.item #[a(href='' title='Stitcher').link Stitcher]
+            li.item #[a(href='' title='SoundCloud').link SoundCloud]
         
-        ul.social
-          li.item #[a(href='' title='Spotify').link Spotify]
-          li.item #[a(href='' title='iTunes').link iTunes]
-          li.item #[a(href='' title='Stitcher').link Stitcher]
-          li.item #[a(href='' title='SoundCloud').link SoundCloud]
-      
-      
-      section.intro-episode
-        img(src='img/intro-paola-sales.jpg' alt='Fotografia de Paola Sales')
-        h2.title Paola<br>Sales
-        p.keywords Design Research Lead — Empatia — Pesquisa Humanizada
-        a(href='' title='').btn Ir para episódio
-        span.number.title.outline 19
-      
-      //- include pug/footer.pug
+        
+        section.intro-episode
+          img(src='img/intro-paola-sales.jpg' alt='Fotografia de Paola Sales')
+          span.last Último episódio
+          h2.title Paola<br>Sales
+          p.keywords Design Research Lead, Empatia, Pesquisa Humanizada
+          a(href='' title='').btn Ir para episódio
+          span.number.title.outline 19
+        
+        //- include pug/footer.pug
