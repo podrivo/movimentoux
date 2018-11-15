@@ -2,10 +2,14 @@
 $black: #111;
 $white: #fff;
 
-//padding
-$padding: 1.4vw;
-$padding-y: $padding * 3;
-$padding-x: $padding * 4;
+//paddings
+$padding-responsive: 1.4vw;
+$padding-responsive-y: $padding-responsive * 3;
+$padding-responsive-x: $padding-responsive * 4;
+
+$padding-font: 1rem;
+$padding-font-y: $padding-font * 1;
+$padding-font-x: $padding-font * 2;
 
 // motion
 $timing: 600ms;
