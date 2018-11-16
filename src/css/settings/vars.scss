@@ -1,9 +1,20 @@
+$font-size: 18px;
+
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@function rem-to-px($size) {
+	$value: parseInt($size) * $font-size;
+	@return round($value);
+}
+
 // colors
 $black: #111;
 $white: #fff;
 
 //paddings
-$padding-responsive: 1.4vw;
+$padding-responsive: rem-to-px(1.4rem);
 $padding-responsive-y: $padding-responsive * 3;
 $padding-responsive-x: $padding-responsive * 4;
 
