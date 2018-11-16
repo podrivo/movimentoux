@@ -31,9 +31,17 @@ a {
   }
 
   &.btn {
-    background-color: $white;
-    color: $black;
+    background-color: transparent;
+    color: $white;
+    border: 2px solid $white;
     padding: $padding-font-y $padding-font-x;
     align-self: flex-start;
+    transition: all $timing-fast $easing;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $black;
+    }
   }
 }
