@@ -1,13 +1,10 @@
 .title {
+  position: relative;
+  left: -0.5vw;
   font-size: 8.2vw;
   line-height: 0.9em;
   font-weight: 700;
   z-index: 0;
-
-  &.outline {
-    color: $black;
-    text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
-  }
 }
 
 .subtitle {

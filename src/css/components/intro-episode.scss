@@ -20,7 +20,12 @@
   }
 
   > .number {
+    font-size: 8.2vw;
+    line-height: 0.9em;
+    font-weight: 700;
     position: absolute;
     align-self: flex-end;
+    color: $black;
+    text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
   }
 }
