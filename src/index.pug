@@ -1,28 +1,24 @@
 extends pug/global
 block content
   
-  body.body-intro
+  include pug/header.pug
   
-    include pug/header.pug
-    
-    div#barba-wrapper
-      div.barba-container
-        article.intro
-          h1#title.title Movimento UX<br>é um podcast <br>de entrevistas sobre o universo de Experiência do Usuário.
-          
-          ul#social.social
-            li.item #[a(href='https://open.spotify.com/playlist/5Bxhm5LY03DHSqko3YRBKf' title='Spotify' target='_blank' rel='noopener').link Spotify]
-            li.item #[a(href='https://itunes.apple.com/br/podcast/movimento-ux/id1093322366' title='iTunes' target='_blank' rel='noopener').link iTunes]
-            li.item #[a(href='https://www.stitcher.com/podcast/movimentoux' title='Stitcher' target='_blank' rel='noopener').link Stitcher]
-            li.item #[a(href='https://soundcloud.com/movimento-ux' title='SoundCloud' target='_blank' rel='noopener').link SoundCloud]
+  div#barba-wrapper
+    div.barba-container
+      article.intro
+        h1#title.title Movimento UX<br>é um podcast <br>de entrevistas sobre o universo de Experiência do Usuário.
         
-        
-        section.intro-episode
-          img(src='img/intro-paola-sales.jpg' alt='Fotografia de Paola Sales')
-          span.last Último episódio
-          h2.title Paola<br>Sales
-          p.keywords Design Research Lead, Empatia, Pesquisa Humanizada
-          a(href='' title='Saiba mais').btn Saiba mais
-          span.number 19
-        
-        //- include pug/footer.pug
+        ul#social.social
+          li.item #[a(href='https://open.spotify.com/playlist/5Bxhm5LY03DHSqko3YRBKf' title='Spotify' target='_blank' rel='noopener').link Spotify]
+          li.item #[a(href='https://itunes.apple.com/br/podcast/movimento-ux/id1093322366' title='iTunes' target='_blank' rel='noopener').link iTunes]
+          li.item #[a(href='https://www.stitcher.com/podcast/movimentoux' title='Stitcher' target='_blank' rel='noopener').link Stitcher]
+          li.item #[a(href='https://soundcloud.com/movimento-ux' title='SoundCloud' target='_blank' rel='noopener').link SoundCloud]
+      
+      
+      section.intro-episode
+        img(src='img/intro-paola-sales.jpg' alt='Fotografia de Paola Sales')
+        span.last Último episódio
+        h2.title Paola<br>Sales
+        p.keywords Design Research Lead, Empatia, Pesquisa Humanizada
+        a(href='' title='Saiba mais').btn Saiba mais
+        span.number 19
