@@ -1,13 +1,7 @@
 .social {
-  position: fixed;
-  bottom: $padding-responsive-y + 1vw;
+  position: sticky;
+  bottom: $padding-responsive-y;
   right: $padding-responsive-x;
   text-align: right;
   transition: opacity 0.3s;
-
-  &.sticky {
-    position: relative;
-    bottom: 1vw;
-    right: 0;
-  }
 }
