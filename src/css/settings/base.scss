@@ -8,8 +8,6 @@ a {
 
   &.link::after {
     content: '';
-    backface-visibility: hidden;
-    perspective: 1000;
     position: absolute;
     bottom: -2px;
     left: 0;
@@ -20,6 +18,8 @@ a {
     opacity: 0;
     transform-origin: right center;
     transition: transform $timing $easing, opacity 10ms ($timing * 0.8);
+    backface-visibility: hidden;
+    perspective: 1000;
   }
 
   &.link:hover::after,
