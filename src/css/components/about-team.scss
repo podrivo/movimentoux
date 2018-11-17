@@ -1,0 +1,21 @@
+.about-team {
+  margin-top: 8vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 80%;
+}
+
+.member-block {
+  width: 30%;
+
+  > .job {
+    margin-bottom: $padding-font-x;
+  }
+
+  > img {
+    width: 100%;
+    height: auto;
+    margin-bottom: $padding-font-x;
+  }
+}
