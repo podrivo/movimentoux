@@ -1,13 +1,6 @@
 .social-links {
   position: sticky;
-
-  &.-intro {
-    bottom: $padding-responsive-y;
-    right: $padding-responsive-x;
-    text-align: right;
-  }
-
-  &.-about {
-    line-height: $padding-font-x;
-  }
+  bottom: $padding-responsive-y;
+  right: $padding-responsive-x;
+  text-align: right;
 }
