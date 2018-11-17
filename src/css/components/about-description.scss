@@ -7,12 +7,12 @@
 
   > .description {
     width: 60%;
-  }
 
-  p {
-    padding-bottom: $padding-font-x;
+    p {
+      padding-bottom: $padding-font-x;
+    }
 
-    &:last-child {
+    p:last-child {
       padding-bottom: 0;
     }
   }
