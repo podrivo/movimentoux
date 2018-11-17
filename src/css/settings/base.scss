@@ -1,9 +1,7 @@
 a {
   position: relative;
   text-decoration: none;
-  // transform-style: preserve-3d;
   backface-visibility: hidden;
-  // perspective: 1000;
 
   &.link {
     color: $white;
@@ -21,9 +19,7 @@ a {
     opacity: 0;
     transform-origin: right center;
     transition: transform $timing $easing, opacity 10ms ($timing * 0.8);
-    // transform-style: preserve-3d;
     backface-visibility: hidden;
-    // perspective: 1000;
   }
 
   &.link:hover::after,

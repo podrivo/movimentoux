@@ -1,0 +1,26 @@
+.about-block {
+  margin-top: 8vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 80%;
+
+  p {
+    padding-bottom: $padding-font-x;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  > .links {
+    position: sticky;
+    left: 0;
+    top: $padding-responsive-y;
+    width: 30%;
+  }
+
+  > .description {
+    width: 70%;
+  }
+}
