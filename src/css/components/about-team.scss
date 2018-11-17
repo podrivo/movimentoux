@@ -1,13 +1,13 @@
 .about-team {
   margin-top: 8vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 80%;
 }
 
 .member-block {
-  width: 30%;
+  width: 28%;
 
   > .job {
     margin-bottom: $padding-font-x;
