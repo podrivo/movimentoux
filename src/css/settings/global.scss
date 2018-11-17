@@ -15,4 +15,16 @@ body {
   font-weight: 400;
   color: $white;
   padding: $padding-responsive-y $padding-responsive-x;
+
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    border: $padding-responsive solid #fff;
+    pointer-events: none;
+    z-index: 999;
+  }
 }

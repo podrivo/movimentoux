@@ -1,17 +1,9 @@
-.about-block {
+.about-text {
   margin-top: 6vw;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   max-width: 80%;
-
-  p {
-    padding-bottom: $padding-font-x;
-
-    &:last-child {
-      padding-bottom: 0;
-    }
-  }
 
   > .links {
     position: sticky;
@@ -22,5 +14,13 @@
 
   > .description {
     width: 70%;
+  }
+
+  p {
+    padding-bottom: $padding-font-x;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 }
