@@ -13,12 +13,12 @@ header {
       display: none;
     }
   }
-}
 
-.menu {
-  display: flex;
+  > .menu {
+    display: flex;
 
-  > .item {
-    padding-left: $padding-font-x;
+    > .item {
+      padding-left: $padding-font-x;
+    }
   }
 }
