@@ -29,7 +29,7 @@ body {
   }
 }
 
-$selection: yellow;
+$selection: lightslategray;
 @mixin selection {
   background-color: rgba($selection, 0.05);
   color: $selection;
