@@ -28,3 +28,11 @@ body {
     z-index: 999;
   }
 }
+
+$selection: yellow;
+@mixin selection {
+  background-color: rgba($selection, 0.05);
+  color: $selection;
+}
+*::-moz-selection {@include selection}
+*::selection {@include selection}
