@@ -14,7 +14,7 @@ body {
   line-height: 1.8em;
   font-weight: 400;
   color: $white;
-  padding: $padding-responsive-y $padding-responsive-x;
+  padding: $padding-responsive-y $padding-responsive-x $padding-responsive-x;
 
   &::after {
     content: '';

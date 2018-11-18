@@ -1,22 +1,22 @@
 .intro-episode {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 20vw 0 10vw;
+  justify-content: flex-end;
+  padding: 26vw 0 0;
 
-  > img {
-    max-width: 560px;
-    height: auto;
-    position: absolute;
-    align-self: center;
-    z-index: 0;
+  > .title,
+  > .title-upper,
+  > .keywords,
+  > .number {
+    pointer-events: none;
+  }
+
+  > .title {
+    margin: $padding-font 0;
   }
 
   > .keywords {
-    width: 100%;
-    max-width: 50vw;
-    margin-bottom: $padding-font-x;
-    z-index: 1;
+    position: relative;
   }
 
   > .number {
@@ -27,5 +27,24 @@
     align-self: flex-end;
     color: $black;
     text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
+  }
+}
+
+.intro-cover {
+  position: absolute;
+  align-self: center;
+  perspective: 1000;
+
+  > img {
+    max-width: 600px;
+    height: auto;
+    display: block;
+    backface-visibility: hidden;
+    transition: transform $timing $easing;
+  }
+
+  &:hover > img,
+  &:focus > img {
+    transform: rotateY(18deg);
   }
 }
