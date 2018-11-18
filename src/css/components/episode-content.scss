@@ -1,0 +1,8 @@
+.episode-content {
+  background-color: $white;
+  color: $black;
+  width: calc(100% + (#{$padding-responsive-x} * 2));
+  padding: $padding-responsive-y $padding-responsive-x $padding-responsive-x;
+  position: relative;
+  left: -$padding-responsive-x;
+}

@@ -1,0 +1,12 @@
+.episode-player {
+  position: fixed;
+  left: $padding-responsive;
+  bottom: $padding-responsive;
+  width: calc(100% - (#{$padding-responsive} * 2));
+  padding: $padding-responsive $padding-responsive-y;
+  height: auto;
+  background-color: green;
+  color: $white;
+  display: block;
+  z-index: 999;
+}

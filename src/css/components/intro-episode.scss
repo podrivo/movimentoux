@@ -4,13 +4,6 @@
   justify-content: flex-end;
   padding: 26vw 0 0;
 
-  > .title,
-  > .eyebrow,
-  > .keywords,
-  > .number {
-    pointer-events: none;
-  }
-
   > .title {
     margin: $padding-font 0;
   }
@@ -28,16 +21,37 @@
     color: $black;
     text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
   }
+
+  &.-inside {
+    padding: 0;
+    height: 60vh;
+    margin-bottom: $padding-responsive-x;
+  }
+
+  &.-inside img {
+    width: 100%;
+    height: auto;
+    max-width: 560px;
+    position: absolute;
+    align-self: center;
+  }
+
+  &:not(.-inside) > .title,
+  &:not(.-inside) > .eyebrow,
+  &:not(.-inside) > .keywords,
+  &:not(.-inside) > .number {
+    pointer-events: none;
+  }
 }
 
-.intro-cover {
+.episode-cover {
   max-width: 42%;
   position: absolute;
   align-self: center;
   perspective: 1000;
 
   > img {
-    max-width: 600px;
+    max-width: 560px;
     width: 100%;
     height: auto;
     backface-visibility: hidden;
