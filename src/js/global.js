@@ -11,10 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
 
     fadeOut: function() {
-      /**
-       * this.oldContainer is the HTMLElement of the old Container
-       */
-
+      /*** this.oldContainer is the HTMLElement of the old Container*/
       return this.oldContainer.classList.add('teste')
     },
 
@@ -29,3 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
     return Transition
   }
 })
+
+
+// SoundCloud API
+// SC.initialize({
+//   client_id: 'y1nMl2njKSB6eNKPiU4jTxp9lNt2LE8d'
+// })
