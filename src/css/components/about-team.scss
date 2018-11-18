@@ -19,3 +19,26 @@
     margin-bottom: $padding-font-x;
   }
 }
+
+.member-social {
+  display: flex;
+  margin-top: $padding-font-x;
+
+  > .item {
+    margin-right: $padding-font;
+  }
+
+  .icon {
+    display: block;
+    transition: transform $timing $easing;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-4px);
+    }
+  }
+
+  svg {
+    display: block;
+  }
+}
