@@ -134,7 +134,7 @@
 // $(ui.play).addEventListener('click', togglePlay)
 // $(ui.audio).addEventListener('timeupdate', initProgressBar)
 
-var audio = new SoundCloudAudio('y1nMl2njKSB6eNKPiU4jTxp9lNt2LE8d')
+var scPlayer = new SoundCloudAudio('y1nMl2njKSB6eNKPiU4jTxp9lNt2LE8d')
 var time = document.querySelector('.time')
 var duration = document.querySelector('.duration')
 
@@ -148,12 +148,12 @@ function formatTime(time) {
   return format
 }
 
-audio.resolve('https://soundcloud.com/movimento-ux/andredoamaral', function(track) {
+scPlayer.resolve('https://soundcloud.com/movimento-ux/andredoamaral', function(track) {
   // do smth with track object
   // e.g. display data in a view etc.
-  console.log(track, audio)
+  console.log(track, scPlayer)
   // var durationFormatted = formatTime(audio.duration)
-  duration.innerHTML = formatTime(audio.duration)
+  duration.innerHTML = formatTime(scPlayer.duration)
 
   // once track is loaded it can be played
   // audio.play()
@@ -162,10 +162,10 @@ audio.resolve('https://soundcloud.com/movimento-ux/andredoamaral', function(trac
   // audio.pause()
 })
 
-audio.audio.addEventListener('timeupdate', function(e){
-  time.innerHTML = formatTime(audio.audio.currentTime)
-})
-
+scPlayer.on('timeupdate', function() {
+  console.log(scPlayer, scPlayer.audio, scPlayer.audio.currentTime);
+  time.innerHTML = formatTime(scPlayer.audio.currentTime)
+});
 
 
 var playButton = document.querySelector('.episode-player > .play')
