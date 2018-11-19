@@ -135,6 +135,7 @@
 // $(ui.audio).addEventListener('timeupdate', initProgressBar)
 
 var audio = new SoundCloudAudio('y1nMl2njKSB6eNKPiU4jTxp9lNt2LE8d')
+var time = document.querySelector('.time')
 var duration = document.querySelector('.duration')
 
 function formatTime(time) {
@@ -160,6 +161,11 @@ audio.resolve('https://soundcloud.com/movimento-ux/andredoamaral', function(trac
   // stop playing track and keep silence
   // audio.pause()
 })
+
+audio.audio.addEventListener('timeupdate', function(e){
+  time.innerHTML = formatTime(audio.audio.currentTime)
+})
+
 
 
 var playButton = document.querySelector('.episode-player > .play')
