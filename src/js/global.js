@@ -141,7 +141,8 @@ function formatTime(time) {
   var seconds = parseInt(time % 60)
   var minutes = parseInt((time / 60) % 60)
   var hours = parseInt((time / 3600) % 60)
-  var format = hours + ':' + minutes + ':' + seconds
+
+  var format = (hours <= 0 ? '' : hours + ':') + (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds)
 
   return format
 }
