@@ -5,4 +5,12 @@
   padding: $padding-responsive-y $padding-responsive-x $padding-responsive-x;
   position: relative;
   left: -$padding-responsive-x;
+
+  p {
+    padding-bottom: $padding-font-x;
+  }
+
+  p:last-child {
+    padding-bottom: 0;
+  }
 }
