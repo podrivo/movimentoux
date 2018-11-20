@@ -134,7 +134,7 @@
 // $(ui.play).addEventListener('click', togglePlay)
 // $(ui.audio).addEventListener('timeupdate', initProgressBar)
 
-var scPlayer = new SoundCloudAudio('y1nMl2njKSB6eNKPiU4jTxp9lNt2LE8d')
+var soundcloud = new SoundCloudAudio('y1nMl2njKSB6eNKPiU4jTxp9lNt2LE8d')
 var time = document.querySelector('.time')
 var duration = document.querySelector('.duration')
 
@@ -148,12 +148,12 @@ function formatTime(time) {
   return format
 }
 
-scPlayer.resolve('https://soundcloud.com/movimento-ux/andredoamaral', function(track) {
+soundcloud.resolve('https://soundcloud.com/movimento-ux/andredoamaral', function(track) {
   // do smth with track object
   // e.g. display data in a view etc.
-  console.log(track, scPlayer)
+  console.log(track, soundcloud)
   // var durationFormatted = formatTime(audio.duration)
-  duration.innerHTML = formatTime(scPlayer.duration)
+  duration.innerHTML = formatTime(soundcloud.duration)
 
   // once track is loaded it can be played
   // audio.play()
@@ -162,19 +162,19 @@ scPlayer.resolve('https://soundcloud.com/movimento-ux/andredoamaral', function(t
   // audio.pause()
 })
 
-scPlayer.on('timeupdate', function() {
-  console.log(scPlayer, scPlayer.audio, scPlayer.audio.currentTime);
-  time.innerHTML = formatTime(scPlayer.audio.currentTime)
+soundcloud.on('timeupdate', function() {
+  console.log(soundcloud, soundcloud.audio, soundcloud.audio.currentTime);
+  time.innerHTML = formatTime(soundcloud.audio.currentTime)
 });
 
 
 var playButton = document.querySelector('.episode-player > .play')
 playButton.addEventListener('click', function(){
-  if (audio.playing) {
-    audio.pause()
+  if (soundcloud.playing) {
+    soundcloud.pause()
     this.classList.remove('on')
   } else {
-    audio.play()
+    soundcloud.play()
     this.classList.add('on')
   }
 })
