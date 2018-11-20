@@ -1,5 +1,12 @@
 $font-size: 18px;
 
+$spacing: 10px;
+$spacing-1: $spacing * 1;
+$spacing-2: $spacing * 2;
+$spacing-4: $spacing * 4;
+$spacing-8: $spacing * 8;
+$spacing-10: $spacing * 10;
+
 @function parse-int($n) {
   @return $n / ($n * 0 + 1);
 }
@@ -10,7 +17,7 @@ $font-size: 18px;
 }
 
 // colors
-$black: #111;
+$black: #1b1b1b;
 $white: #fff;
 
 //paddings

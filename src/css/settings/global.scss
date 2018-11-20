@@ -4,17 +4,14 @@ html, body {
   text-rendering: optimizeLegibility;
 }
 
-html {
-  background-color: $black;
-}
-
 body {
+  background-color: $black;
   font-family: 'Rubik', -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
   font-size: $font-size;
   line-height: 1.8em;
   font-weight: 400;
   color: $white;
-  padding: $padding-responsive-y $padding-responsive-x $padding-responsive-x;
+  padding: $spacing-8 $spacing-10 $spacing-10;
 
   &::after {
     content: '';
@@ -23,7 +20,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    border: $padding-responsive solid #fff;
+    border: 14px solid #fff;
     pointer-events: none;
     z-index: 999;
   }
