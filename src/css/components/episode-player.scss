@@ -1,10 +1,15 @@
 .episode-player {
-  position: fixed;
-  left: $padding-responsive;
-  bottom: $padding-responsive;
-  width: calc(100% - (#{$padding-responsive} * 2));
-  padding: $padding-responsive $padding-responsive-y;
+  position: sticky;
+  top: $padding-responsive;
+  // position: fixed;
+  // left: $padding-responsive;
+  // bottom: $padding-responsive;
+  // width: calc(100% - (#{$padding-responsive} * 2));
+  width: calc(100% + #{$padding-responsive-y} * 2);
   height: auto;
+  margin-left: -$padding-responsive-y;
+  margin-bottom: $padding-font-x;
+  padding: $padding-responsive $padding-responsive-y;
   background-color: $black;
   color: $white;
   z-index: 999;
