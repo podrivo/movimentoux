@@ -14,17 +14,17 @@
   justify-content: space-between;
   align-items: center;
 
-  > .play {
-
-  }
+  // > .play {
+  //
+  // }
 }
 
 
-#radioIcon {
-  width: 30px;
-  height: 30px;
-  background: url('https://image.flaticon.com/icons/svg/149/149429.svg') no-repeat center;
-}
+// #radioIcon {
+//   width: 30px;
+//   height: 30px;
+//   background: url('https://image.flaticon.com/icons/svg/149/149429.svg') no-repeat center;
+// }
 
 // .play {
 //   // -webkit-appearance: none;
@@ -54,7 +54,7 @@
 }
 
 #seekObj {
-  position:relative;
+  position: relative;
   width: 100%;
   height: 100%;
   background-color: $white;

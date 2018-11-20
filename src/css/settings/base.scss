@@ -5,22 +5,30 @@ a {
 
   &.link {
     color: $white;
+
+    &.-alt {
+      white-space: nowrap;
+      color: $black;
+    }
   }
 
-  &.link::after {
+  &.link::after,
+  &.link.-alt::after {
     content: '';
     position: absolute;
     bottom: -2px;
     left: 0;
     width: 100%;
     height: 2px;
-    background: $white;
     transform: scaleX(0);
     opacity: 0;
     transform-origin: right center;
     transition: transform $timing $easing, opacity 10ms ($timing * 0.8);
     backface-visibility: hidden;
   }
+
+  &.link::after {background: $white;}
+  &.link.-alt::after {background: $black;}
 
   &.link:hover::after,
   &.link:focus::after {
