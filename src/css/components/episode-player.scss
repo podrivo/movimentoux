@@ -7,16 +7,11 @@
   height: auto;
   background-color: $black;
   color: $white;
-  // display: block;
   z-index: 999;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  // > .play {
-  //
-  // }
 }
 
 
@@ -53,7 +48,7 @@
   align-items: center;
 }
 
-#seekObj {
+.seekObj {
   position: relative;
   width: 100%;
   height: 100%;
@@ -62,7 +57,7 @@
   // border: 1px solid black;
 }
 
-#percentage {
+.percentage {
   position: absolute;
   left: 0;
   top: 0;
