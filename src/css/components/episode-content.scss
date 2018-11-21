@@ -1,12 +1,11 @@
 .episode-content {
   position: relative;
-  // bottom: -$padding-responsive-x;
-  left: -$padding-responsive-x;
+  left: -$spacing-body-x;
+  width: calc(100% + (#{$spacing-body-x} * 2));
+  margin-bottom: -$spacing-body-x;
+  padding: $spacing-body-y $spacing-body-x;
   background-color: $white;
   color: $black;
-  width: calc(100% + (#{$padding-responsive-x} * 2));
-  margin-bottom: -$padding-responsive-x;
-  padding: $padding-responsive-y $padding-responsive-x;
   display: flex;
   justify-content: space-between;
 
@@ -15,16 +14,15 @@
 
     img {
       width: 120%;
-      height: auto;
-      margin-bottom: $padding-font-x;
+      margin-bottom: $spacing-4;
     }
 
     p {
-      padding-bottom: $padding-font-x;
+      margin-bottom: $spacing-4;
     }
 
-    p:last-child {
-      padding-bottom: 0;
+    *:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -32,7 +30,7 @@
     width: 20%;
 
     .eyebrow {
-      margin-top: $padding-font-x;
+      margin-top: $spacing-4;
     }
 
     .eyebrow:first-child {
@@ -43,8 +41,8 @@
       font-size: 2rem;
       line-height: 2.4rem;
       font-weight: 500;
-      margin-top: $padding-responsive-y;
-      padding: $padding-responsive-y 0;
+      margin-top: $spacing-8;
+      padding: $spacing-8 0;
       border-top: 1px solid rgba($black, 0.1);
       border-bottom: 1px solid rgba($black, 0.1);
     }

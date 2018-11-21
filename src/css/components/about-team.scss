@@ -7,7 +7,7 @@
   flex-direction: column;
 
   > .eyebrow {
-    margin-bottom: $padding-font-x;
+    margin-bottom: $spacing-4;
   }
 
   > .members {
@@ -20,23 +20,18 @@
 .member-block {
   width: 28%;
 
-  > .job {
-    margin-bottom: $padding-font-x;
-  }
-
-  > img {
-    width: 100%;
-    height: auto;
-    margin-bottom: $padding-font-x;
+  > img,
+  > .job,
+  > .text {
+    margin-bottom: $spacing-4;
   }
 }
 
 .member-social {
   display: flex;
-  margin-top: $padding-font-x;
 
   > .item {
-    margin-right: $padding-font;
+    margin-right: $spacing-1;
   }
 
   .icon {

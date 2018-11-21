@@ -4,21 +4,15 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  > .logo {
-    width: 200px;
-    height: 38px;
-    border: 0;
-
-    &::after {
-      display: none;
-    }
+  > .logo::after {
+    display: none;
   }
 
   > .menu {
     display: flex;
 
     > .item {
-      padding-left: $padding-font-x;
+      padding-left: $spacing-4;
     }
   }
 }

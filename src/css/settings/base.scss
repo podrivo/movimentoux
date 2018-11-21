@@ -70,6 +70,13 @@ input {
   }
 }
 
-img, svg {
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+svg {
   display: block;
 }

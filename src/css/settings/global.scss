@@ -11,7 +11,7 @@ body {
   line-height: 1.8em;
   font-weight: 400;
   color: $white;
-  padding: $spacing-body-x $spacing-body-y $spacing-body-y;
+  padding: $spacing-body-y $spacing-body-x $spacing-body-x;
 
   &::after {
     content: '';
