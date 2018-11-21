@@ -4,13 +4,13 @@
   justify-content: flex-end;
   padding: 60vh 0 0;
 
-  > .title {
+  > .text .title {
     margin: $spacing-1 0;
   }
 
-  > .keywords {
+  > .text .keywords {
     position: relative;
-    line-height: 0.8rem;
+    // line-height: 0.8rem;
   }
 
   > .number {
@@ -37,9 +37,9 @@
     align-self: center;
   }
 
-  &:not(.-inside) > .title,
-  &:not(.-inside) > .eyebrow,
-  &:not(.-inside) > .keywords,
+  &:not(.-inside) > .text .title,
+  &:not(.-inside) > .text .eyebrow,
+  &:not(.-inside) > .text .keywords,
   &:not(.-inside) > .number {
     pointer-events: none;
   }
