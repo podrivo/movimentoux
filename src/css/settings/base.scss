@@ -43,13 +43,23 @@ a {
   }
 
   &.btn {
-    background-color: transparent;
-    color: $white;
-    border: 2px solid $white;
-    padding: $spacing-4;
+    border: 1px solid $white;
     text-align: center;
     display: block;
     transition: all $timing-fast $easing;
+
+    &.-lg {
+      padding: $spacing-4;
+      background-color: transparent;
+      color: $white;
+    }
+
+    &.-sm {
+      background-color: $white;
+      color: $black;
+      padding: $spacing-1 $spacing-2;
+      align-self: flex-start;
+    }
 
     &:hover,
     &:focus {
