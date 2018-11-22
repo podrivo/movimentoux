@@ -1,19 +1,38 @@
 header {
-  position: fixed;
+  // background-color: $black;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: $spacing-body-y $spacing-body-x;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  padding: $spacing-body-y $spacing-body-x 0;
   z-index: 99;
 
-  > .logo::after {
+  > .wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // &::after {
+    //   content: '';
+    //   width: 100%;
+    //   height: 100%;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   background-color: $black;
+    // }
+  }
+
+  .logo::after {
     display: none;
   }
 
-  > .menu {
+  .menu {
     display: flex;
 
     > .item {

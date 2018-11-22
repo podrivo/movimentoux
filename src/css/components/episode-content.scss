@@ -1,8 +1,9 @@
 .episode-content {
-  position: relative;
-  left: -$spacing-body-x;
-  width: calc(100% + (#{$spacing-body-x} * 2));
-  margin-bottom: -$spacing-body-x;
+  // position: relative;
+  // left: -$spacing-body-x;
+  // width: calc(100% + (#{$spacing-body-x} * 2));
+  width: 100%;
+  // margin-bottom: -$spacing-body-x;
   padding: $spacing-body-y $spacing-body-x;
   background-color: $white;
   color: $black;
@@ -37,14 +38,14 @@
       margin-top: 0;
     }
 
-    > blockquote {
-      font-size: 2rem;
-      line-height: 2.4rem;
-      font-weight: 500;
-      margin-top: $spacing-8;
-      padding: $spacing-8 0;
-      border-top: 1px solid rgba($black, 0.1);
-      border-bottom: 1px solid rgba($black, 0.1);
-    }
+  }
+  blockquote {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+    margin-bottom: $spacing-4;
+    padding: $spacing-8 0;
+    // border-top: 1px solid rgba($black, 0.1);
+    // border-bottom: 1px solid rgba($black, 0.1);
   }
 }
