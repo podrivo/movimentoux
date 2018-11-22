@@ -3,4 +3,8 @@
   bottom: $spacing-body-x;
   right: $spacing-body-x;
   text-align: right;
+
+  &.-home {
+    position: absolute;
+  }
 }

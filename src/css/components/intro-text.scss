@@ -1,11 +1,15 @@
 .intro-text {
-  margin-top: 25vh;
+  // margin-top: 25vh;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  width: 100vw;
+  height: 100vh;
+  justify-content: flex-end;
+  // align-items: flex-end;
+  flex-direction: column;
+  padding: $spacing-body-y $spacing-body-x $spacing-body-x;
 
   > .title {
-    bottom: -1vw;
-    line-height: 1.1em;
+    // bottom: -1vw;
+    // line-height: 1.1em;
   }
 }

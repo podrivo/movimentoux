@@ -2,6 +2,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 body {
@@ -11,7 +12,6 @@ body {
   line-height: 1.8em;
   font-weight: 400;
   color: $white;
-  padding: $spacing-body-y $spacing-body-x $spacing-body-x;
 
   &::after {
     content: '';

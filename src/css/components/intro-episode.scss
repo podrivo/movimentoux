@@ -1,9 +1,16 @@
 .intro-episode {
   position: relative;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 30vh 0 0;
+  // padding: 30vh 0 0;
+  padding: $spacing-body-y $spacing-body-x $spacing-body-x;
+
+  > .text {
+    // align-self: flex-end;
+  }
 
   > .text .title {
     margin: $spacing-1 0;
@@ -15,7 +22,7 @@
   }
 
   > .number {
-    font-size: 8.2vw;
+    font-size: 8.1vw;
     line-height: 0.9em;
     font-weight: 700;
     position: absolute;
@@ -44,6 +51,28 @@
     }
   }
 
+  // > .cover {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   margin: auto;
+  //   max-width: 560px;
+  //   opacity: 0.8;
+  //
+  //   &::after {
+  //     content: '';
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     z-index: 100;
+  //     width: 127px;
+  //     height: 127px;
+  //     background: url('/img/play.svg') no-repeat;
+  //   }
+  // }
+
   &.-inside {
     padding: 0;
     height: 64vh;
@@ -67,21 +96,74 @@
 }
 
 .episode-cover {
-  max-width: 42%;
-  position: absolute;
-  align-self: center;
-  perspective: 1000;
+  // // max-width: 42%;
+  // max-width: 560px;
+  // // height: 100vh;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
+  // margin: auto;
+  // align-self: center;
+  // perspective: 1000;
 
-  > img {
-    max-width: 560px;
-    width: 100%;
-    height: auto;
-    backface-visibility: hidden;
-    transition: transform $timing $easing;
+  > .cover {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   margin: auto;
+    // max-width: 560px;
+  //   width: 100%;
+  //   height: auto;
+  //   backface-visibility: hidden;
+  //   transition: transform $timing $easing;
   }
 
-  &:hover > img,
-  &:focus > img {
-    transform: rotateY(18deg);
+  // > .play {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   margin: auto;
+  // }
+
+  // &:hover > img,
+  // &:focus > img {
+  //   transform: rotateY(18deg);
+  // }
+}
+
+.episode-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover {
+  position: relative;
+  width: 560px;
+  height: 560px;
+  background: #333;
+
+  > img {
+    // width
+  }
+
+  > .play-badge {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin: -60px -60px 0 0;
+    width: 120px;
+    height: 120px;
   }
 }

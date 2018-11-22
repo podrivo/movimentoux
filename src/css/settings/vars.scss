@@ -20,9 +20,9 @@ $spacing-10: $spacing * 10;
 }
 
 // colors
-$black: #1b1b1b;
+$black: #000;
 $white: #fff;
-$selection: yellow;
+$selection: $white;
 
 //paddings
 $padding-responsive: rem-to-px(1.4rem);
