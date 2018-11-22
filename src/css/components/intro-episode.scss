@@ -10,6 +10,7 @@
 
   > .text {
     // align-self: flex-end;
+    // z-index: 10;
   }
 
   > .text .title {
@@ -74,25 +75,26 @@
   // }
 
   &.-inside {
-    padding: 0;
-    height: 64vh;
-    margin-bottom: $spacing-10;
+    // padding: 0 $spacing-body-x;
+    height: calc(96vh - 70px);
+    // margin-bottom: $spacing-10;
   }
+  //
+  &.-inside .cover {
+    // width: 36%;
+    // height: auto;
+    // max-width: 560px;
 
-  &.-inside img {
-    width: 100%;
-    height: auto;
-    max-width: 560px;
-    position: absolute;
-    align-self: center;
+    // position: absolute;
+    // align-self: center;
   }
-
-  &:not(.-inside) > .text .title,
-  &:not(.-inside) > .text .eyebrow,
-  &:not(.-inside) > .text .keywords,
-  &:not(.-inside) > .number {
-    pointer-events: none;
-  }
+  //
+  // &:not(.-inside) > .text .title,
+  // &:not(.-inside) > .text .eyebrow,
+  // &:not(.-inside) > .text .keywords,
+  // &:not(.-inside) > .number {
+  //   pointer-events: none;
+  // }
 }
 
 .episode-cover {
@@ -146,13 +148,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  // z-index: -1;
 }
 
 .cover {
   position: relative;
   width: 560px;
-  height: 560px;
+  // height: 560px;
   background: #333;
+  max-width: 36%;
+  height: auto;
+  // max-width: 560px;
+  // z-index: -1;
 
   > img {
     // width
@@ -165,5 +172,10 @@
     margin: -60px -60px 0 0;
     width: 120px;
     height: 120px;
+    z-index: 99;
+
+    svg {
+      width: 100%;
+    }
   }
 }
