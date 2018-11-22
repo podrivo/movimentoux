@@ -1,15 +1,16 @@
 .intro-episode {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 60vh 0 0;
+  padding: 30vh 0 0;
 
   > .text .title {
     margin: $spacing-1 0;
   }
 
   > .text .keywords {
-    position: relative;
+    // position: relative;
     // line-height: 0.8rem;
   }
 
@@ -21,6 +22,26 @@
     align-self: flex-end;
     color: $black;
     text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
+  }
+
+  > .buttons {
+    // position: absolute;
+    // bottom: 0;
+    // left: $spacing-body-x;
+    // bottom: $spacing-body-x;
+    display: flex;
+    align-items: center;
+    margin-top: $spacing-8;
+
+    .link {
+      margin-left: $spacing-2;
+    }
+
+    span {
+      transform: translateY(1px);
+      display: inline-block;
+      margin-right: 4px;
+    }
   }
 
   &.-inside {
