@@ -1,14 +1,14 @@
 header {
-  // background-color: $black;
-  position: absolute;
-  top: 0;
+  background-color: $black;
+  position: fixed;
+  top: 14px;
   left: 0;
   width: 100%;
   // display: flex;
   // justify-content: space-between;
   // align-items: center;
-  padding: $spacing-body-y $spacing-body-x 0;
-  z-index: 99;
+  padding: $spacing-3 $spacing-body-x;
+  z-index: 999;
 
   > .wrapper {
     position: relative;
