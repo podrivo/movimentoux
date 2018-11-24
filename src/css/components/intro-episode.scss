@@ -100,48 +100,6 @@
 }
 
 .episode-cover {
-  // // max-width: 42%;
-  // max-width: 560px;
-  // // height: 100vh;
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // right: 0;
-  // bottom: 0;
-  // margin: auto;
-  // align-self: center;
-  // perspective: 1000;
-
-  > .cover {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   margin: auto;
-    // max-width: 560px;
-  //   width: 100%;
-  //   height: auto;
-  //   backface-visibility: hidden;
-  //   transition: transform $timing $easing;
-  }
-
-  // > .play {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   margin: auto;
-  // }
-
-  // &:hover > img,
-  // &:focus > img {
-  //   transform: rotateY(18deg);
-  // }
-}
-
-.episode-cover {
   position: absolute;
   top: 0;
   left: 0;
@@ -150,30 +108,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // z-index: -1;
 }
 
 .cover {
   position: relative;
   width: 560px;
-  // height: 560px;
   background: #333;
   max-width: 36%;
   height: auto;
-  // max-width: 560px;
-  // z-index: -1;
-
-  > img {
-    // width
-  }
 
   > .play-badge {
     position: absolute;
-    top: 50%;
+    top: 0;
     right: 0;
-    margin: -60px -60px 0 0;
-    width: 120px;
-    height: 120px;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 90px;
+    height: 90px;
     z-index: 99;
 
     svg {
