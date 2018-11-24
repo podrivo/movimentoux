@@ -27,7 +27,7 @@ body {
 }
 
 @mixin selection {
-  background-color: rgba($selection, 0.05);
+  background-color: rgba($selection, 0.1);
   color: $selection;
 }
 *::-moz-selection {@include selection}
