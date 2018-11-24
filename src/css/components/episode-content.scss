@@ -1,17 +1,14 @@
 .episode-content {
-  // position: relative;
-  // left: -$spacing-body-x;
-  // width: calc(100% + (#{$spacing-body-x} * 2));
   width: 100%;
-  // margin-bottom: -$spacing-body-x;
   padding: $spacing-body-y $spacing-body-x calc(#{$spacing-body-x} + #{$spacing-8});
   background-color: $white;
   color: $black;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   > .text {
-    width: 60%;
+    max-width: 700px;
+    margin-right: $spacing-body-x * 2;
 
     img, p, ul {
       margin-bottom: $spacing-4;
@@ -20,10 +17,17 @@
     *:last-child {
       margin-bottom: 0;
     }
+
+    .caption {
+      margin-top: -$spacing-4;
+      margin-bottom: $spacing-4;
+      font-size: 0.9rem;
+      text-align: right;
+      display: block;
+    }
   }
 
-  > .details {
-    width: 20%;
+  > .sidebar {
 
     .eyebrow {
       margin-top: $spacing-4;
@@ -35,11 +39,24 @@
 
   }
 
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+
+    .img {
+      max-width: 48%;
+    }
+  }
+
+  .links {
+    margin-top: -$spacing-4;
+  }
+
   blockquote {
     font-size: 2rem;
     line-height: 2.6rem;
     font-weight: 500;
-    margin: $spacing-10 0 $spacing-10;
+    margin: $spacing-8 0 $spacing-8;
     padding: $spacing-8 0;
     border-top: 2px solid $gray;
     border-bottom: 2px solid $gray;
