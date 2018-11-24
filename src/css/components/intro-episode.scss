@@ -16,7 +16,7 @@
 
   > .text .title {
     margin: $spacing-1 0;
-    pointer-events: none;
+    // pointer-events: none;
     z-index: 99;
   }
 
@@ -79,11 +79,13 @@
 
   &.-inside {
     // padding: 0 $spacing-body-x;
-    height: calc(96vh - 70px);
+    // height: calc(96vh - 70px);
     // margin-bottom: $spacing-10;
+    justify-content: center;
   }
   //
-  &.-inside .cover {
+  &.-inside .text {
+    pointer-events: all;
     // width: 36%;
     // height: auto;
     // max-width: 560px;

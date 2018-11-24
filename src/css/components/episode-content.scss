@@ -4,7 +4,7 @@
   // width: calc(100% + (#{$spacing-body-x} * 2));
   width: 100%;
   // margin-bottom: -$spacing-body-x;
-  padding: $spacing-body-y $spacing-body-x;
+  padding: $spacing-body-y $spacing-body-x calc(#{$spacing-body-x} + #{$spacing-8});
   background-color: $white;
   color: $black;
   display: flex;
@@ -13,11 +13,7 @@
   > .text {
     width: 60%;
 
-    img {
-      margin-bottom: $spacing-4;
-    }
-
-    p {
+    img, p, ul {
       margin-bottom: $spacing-4;
     }
 
