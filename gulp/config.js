@@ -13,11 +13,11 @@ var config = {
   },
   'html': {
     'watch': [
-      './src/pug/**/*.pug',
-      './src/*.pug'
+      './src/**/*.pug'
     ],
     'src': [
-      './src/*.pug'
+      '!./src/pug/**/*.pug',
+      './src/**/*.pug'
     ],
     'dest': 'dist'
   },

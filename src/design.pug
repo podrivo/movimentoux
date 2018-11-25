@@ -1,32 +1,39 @@
-extends pug/global
-block content
+include pug/meta
+include pug/header
+include pug/js
+
++meta
+
+body
   
-  include pug/header.pug
+  +header('', 'about')
   
-  body
-    #barba-wrapper
-      .barba-container
-        article.intro-text
-          p.eyebrow Temporada 1
-          h1.title UX <br> Design
-          p Fev/2016 — Conversas sobre o universo de design de experiência de uso.
-          
-        .social-links.-home
-          p.eyebrow Acompanhe
-          ul
-            li.subtitle #[a(href='https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73?si=TQbtAiiPTr-NfTAJTz2Qew' title='Spotify' target='_blank' rel='noopener').link Spotify]
-            li.subtitle #[a(href='https://itunes.apple.com/br/podcast/movimento-ux/id1093322366' title='iTunes' target='_blank' rel='noopener').link iTunes]
-            li.subtitle #[a(href='https://www.stitcher.com/podcast/movimentoux' title='Stitcher' target='_blank' rel='noopener').link Stitcher]
-            li.subtitle #[a(href='https://soundcloud.com/movimento-ux' title='SoundCloud' target='_blank' rel='noopener').link SoundCloud]
+  #barba-wrapper
+    .barba-container
+      article.intro-text
+        p.eyebrow Temporada 1
+        h1.title UX <br> Design
+        p Fev/2016 — Conversas sobre o universo de design de experiência de uso.
         
-        
-        section.intro-episode
-          .episode-cover
-            .cover
-              img(src='img/18-foto-andre-amaral.jpg' alt='Fotografia de André do Amaral')
-              a(href='paola.html' title='Ir para episódio').play-badge
-                svg(src='img/play.svg')
-          .text
-            h2.title André do <br>Amaral
-            p.keywords Designer na Netflix, User Experience, Visual Design
-          span.number 18
+      .social-links.-home
+        p.eyebrow Acompanhe
+        ul
+          li.subtitle #[a(href='https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73?si=TQbtAiiPTr-NfTAJTz2Qew' title='Spotify' target='_blank' rel='noopener').link Spotify]
+          li.subtitle #[a(href='https://itunes.apple.com/br/podcast/movimento-ux/id1093322366' title='iTunes' target='_blank' rel='noopener').link iTunes]
+          li.subtitle #[a(href='https://www.stitcher.com/podcast/movimentoux' title='Stitcher' target='_blank' rel='noopener').link Stitcher]
+          li.subtitle #[a(href='https://soundcloud.com/movimento-ux' title='SoundCloud' target='_blank' rel='noopener').link SoundCloud]
+      
+      
+      section.intro-episode
+        .episode-cover
+          .cover
+            img(src='img/18-foto-andre-amaral.jpg' alt='Fotografia de André do Amaral')
+            a(href='paola.html' title='Ir para episódio').play-badge
+              svg(src='img/play.svg')
+        .text
+          h2.title André do <br>Amaral
+          p.keywords Designer na Netflix, User Experience, Visual Design
+        span.number 18
+
+//- last, but not least
++js

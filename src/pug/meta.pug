@@ -1,0 +1,30 @@
+mixin meta(path, title, description, href)
+  doctype html
+  html
+    
+    head
+      meta(charset='utf-8')
+      title= title
+      meta(name='description' content= description)
+      link(rel='canonical', href= href)
+      meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+
+      meta(property='og:type', content='website')
+      meta(property='og:title', content= title)
+      meta(property='og:description', content= description)
+      meta(property='og:image', content='http://movimentoux.com/img/share.png')
+      meta(property='og:url', content= href)
+
+      meta(itemprop='name', content= title)
+      meta(itemprop='description', content= description)
+      meta(itemprop='image', content='http://movimentoux.com/img/share.png')
+      meta(itemprop='url', content= href)
+
+      meta(name='twitter:card', content='summary')
+      meta(name='twitter:title', content= title)
+      meta(name='twitter:description', content= description)
+      meta(name='twitter:image', content='http://movimentoux.com/img/share.png')
+
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,500,700')
+      link(rel='stylesheet' href= path + 'css/main.min.css')
+      link(rel='author' href='/humans.txt')

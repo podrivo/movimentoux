@@ -1,10 +1,11 @@
-header
-  .wrapper
-    a(href='index.html' title='Movimento UX - Página Principal').logo
-      svg(src='img/movimentoux-logo.svg')
-    ul.menu.-desktop
-      li.item #[a(href='design.html' title='UX Design').link Temporada 1]
-      li.item #[a(href='index.html' title='UX Research').link Temporada 2]
-      li.item #[a(href='sobre.html' title='Sobre').link Sobre]
-    ul.menu.-mobile
-      li.item #[a(href='#!' title='UX Design').link.-mobile Menu]
+mixin header(index, about)
+  header
+    .wrapper
+      a(href='/' title='Página Principal' data-teste= index).logo
+        svg(src='img/movimentoux-logo.svg')
+      ul.menu.-desktop
+        li.item #[a(href='http://movimentoux.com/episodios/' title='Temporada 1' class= index).link Temporada 1]
+        li.item #[a(href='/' title='Temporada 2').link Temporada 2]
+        li.item #[a(href='sobre/' title='Sobre' class= about).link Sobre]
+      ul.menu.-mobile
+        li.item #[a(href='#!' title='Home').link.-mobile Menu]
