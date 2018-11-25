@@ -1,2 +1,10 @@
 mixin js
   script(src='/js/main.min.js')
+  
+  //- Global site tag (gtag.js) - Google Analytics
+  script(src='https://www.googletagmanager.com/gtag/js?id=UA-77370908-2' async)
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-77370908-2');
