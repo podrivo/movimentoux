@@ -1,8 +1,9 @@
+// type
 $font-size: 18px;
 
+// spacing
 $spacing-body-x: 5vw;
 $spacing-body-y: 4vw;
-
 $spacing: 10px;
 $spacing-1: $spacing * 1;
 $spacing-2: $spacing * 2;
@@ -11,29 +12,11 @@ $spacing-4: $spacing * 4;
 $spacing-8: $spacing * 8;
 $spacing-10: $spacing * 10;
 
-@function parse-int($n) {
-  @return $n / ($n * 0 + 1);
-}
-
-@function rem-to-px($size) {
-  $value: parse-int($size) * $font-size;
-  @return round($value);
-}
-
 // colors
 $black: #000;
 $white: #fff;
 $gray: #e9e9e8;
 $selection: gray;
-
-//paddings
-$padding-responsive: rem-to-px(1.4rem);
-$padding-responsive-y: $padding-responsive * 3;
-$padding-responsive-x: $padding-responsive * 4;
-
-$padding-font: 0.6rem;
-$padding-font-y: $padding-font * 1;
-$padding-font-x: $padding-font * 3;
 
 // motion
 $timing: 460ms;
