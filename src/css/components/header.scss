@@ -8,7 +8,6 @@ header {
   z-index: 999;
 
   @media (max-width: $sm) {
-    // display: none;
     padding: $spacing-2 $spacing-4;
   }
 
@@ -21,7 +20,7 @@ header {
   }
 
   .logo {
-    z-index: 101;
+    z-index: 102;
 
     @media (max-width: $sm) {
       width: 30px;
@@ -46,10 +45,6 @@ header {
 
     @media (max-width: $sm) {
       &.-desktop {
-        display: none;
-      }
-
-      &.-desktop.teste {
         position: fixed;
         top: 0;
         left: 0;
@@ -61,23 +56,37 @@ header {
         flex-direction: column;
         font-size: 2rem;
         line-height: 4rem;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform $timing*2 $easing;
+        pointer-events: none;
+
+        .item {
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+
+      &.-desktop.-mobile-active {
+        transform: scaleY(1);
         z-index: 100;
+        pointer-events: all;
+
+        .item {
+          opacity: 1;
+          pointer-events: all;
+          transition: opacity $timing $timing $easing;
+        }
       }
     }
 
     &.-mobile {
       display: none;
 
-      .link:hover::before,
-      .link:focus::before {
-        display: none;
-      }
-
       @media (max-width: $sm) {
         display: block;
       }
     }
-
 
     > .item {
       padding-left: $spacing-4;

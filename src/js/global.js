@@ -144,6 +144,14 @@
 // $(ui.play).addEventListener('click', togglePlay)
 // $(ui.audio).addEventListener('timeupdate', initProgressBar)
 
+// $(function(){
+//   document.body.getAttribute('data-page') == 'pagetype'
+//   if($('body').is('.PageType')){
+//     //add dynamic script tag  using createElement()
+//     // OR
+//     //call specific functions
+//   }
+// });
 
 
 var soundcloud = new SoundCloudAudio('y1nMl2njKSB6eNKPiU4jTxp9lNt2LE8d')
@@ -235,15 +243,17 @@ var menuDesktop = document.querySelector('.menu.-desktop')
 var menuMobile = document.querySelector('.menu.-mobile')
 var linkMobile = document.querySelector('.link.-mobile')
 
-linkMobile.addEventListener('click', function(event){
+// ['click', 'touchstart'].forEach(function(event){
+// })
+linkMobile.addEventListener('click', function(e){
   // console.log('yo');
-  event.preventDefault()
+  e.preventDefault()
 
-  if (menuDesktop.classList.contains('teste')) {
-    menuDesktop.classList.remove('teste')
+  if (menuDesktop.classList.contains('-mobile-active')) {
+    menuDesktop.classList.remove('-mobile-active')
     this.innerHTML = 'Menu'
   } else {
-    menuDesktop.classList.add('teste')
+    menuDesktop.classList.add('-mobile-active')
     this.innerHTML = 'Fechar'
   }
 })

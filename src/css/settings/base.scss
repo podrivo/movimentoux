@@ -25,6 +25,10 @@ a {
     height: 1px;
     backface-visibility: hidden;
     z-index: -1;
+
+    @media (max-width: $sm) {
+      display: none;
+    }
   }
 
   &.link::before {
