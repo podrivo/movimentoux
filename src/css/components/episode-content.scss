@@ -36,7 +36,11 @@
     }
 
     .links {
-      margin-top: -$spacing-4;
+      margin-top: -$spacing-3;
+    }
+
+    .links li {
+      margin-bottom: $spacing-1;
     }
   }
 

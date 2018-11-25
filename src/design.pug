@@ -2,18 +2,22 @@ include pug/meta
 include pug/header
 include pug/js
 
-+meta
++meta(
+  'Temporada 1 — Movimento UX',
+  'UX Design — Conversas sobre o universo de design de experiência de uso.',
+  'http://movimentoux.com/ux-design/'
+)
 
 body
   
-  +header('', 'about')
+  +header('on', '', '')
   
   #barba-wrapper
     .barba-container
       article.intro-text
         p.eyebrow Temporada 1
         h1.title UX <br> Design
-        p Fev/2016 — Conversas sobre o universo de design de experiência de uso.
+        p Fev, 2016 — Conversas sobre o universo de design de experiência de uso.
         
       .social-links.-home
         p.eyebrow Acompanhe
@@ -35,5 +39,6 @@ body
           p.keywords Designer na Netflix, User Experience, Visual Design
         span.number 18
 
-//- last, but not least
+//- last
+//- but not least
 +js
