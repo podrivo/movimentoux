@@ -5,28 +5,25 @@ Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Us
 Acesse pelo link — [movimentoux.com](http://movimentoux.com/)
 
 
-## Technology
+## Usage
 `gulp` `pug` `sass` `postcss` `browsersync`
 
-
-## Installation
-Install [node.js](https://nodejs.org/).
-
-Run `install` with npm.
+Install [node.js](https://nodejs.org/). Then run `install` with npm.
 
 ```
 [sudo] npm install
 ```
 
-## Usage
-Run `start` with npm.
+After installing, run `start` with npm.
 
 ```
 [sudo] npm start
 ```
 
-+ You can write CSS in `.css, .scss, .sass`.
-+ There's a global file `/css/global.scss` and a components folder `/css/components/`.
++ You can write CSS in `.css, .scss, .sass`
++ There's a main file `/css/main.scss`
++ And a settings folder `/css/settings/`
++ And a components folder `/css/components/`
 
 Access URLs:
 + Local site: [localhost:8000](http://localhost:8000/)
@@ -34,11 +31,13 @@ Access URLs:
 + You can use your local network for external access. Check your terminal for URLs.
 
 ## Colophon
++ [Rubki Typeface](http://hubertfischer.com/work/type-rubik)
 + [node.js](https://nodejs.org/)
 + [Gulp](https://gulpjs.com/)
 + [Browsersync](https://browsersync.io/)
 + [Pug](https://pugjs.org/)
 + [Sass](http://sass-lang.com/)
++ [RSCSS](http://rscss.io/)
 + [PostCSS](http://postcss.org/)
 + [Autoprefixer](https://github.com/postcss/autoprefixer/)
 + [Eric Meyer CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
