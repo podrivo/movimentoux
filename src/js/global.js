@@ -153,88 +153,92 @@
 //   }
 // });
 
+var body = document.body
 
-var soundcloud = new SoundCloudAudio('y1nMl2njKSB6eNKPiU4jTxp9lNt2LE8d')
-var audio = soundcloud.audio
-var player = document.querySelector('.episode-player')
-var timeCurrent = document.querySelector('.-current')
-var timeDuration = document.querySelector('.-duration')
-var timeline = document.querySelector('.timeline')
-var percentage = document.querySelector('.percentage')
-var percentageMouse = document.querySelector('.mouse')
-var volume = document.querySelector('.volume')
-var backwards = document.querySelector('.backwards')
-var forwards = document.querySelector('.forwards')
+if(body.getAttribute('data-page') == 'episode'){
+  var soundcloud = new SoundCloudAudio('y1nMl2njKSB6eNKPiU4jTxp9lNt2LE8d')
+  var audio = soundcloud.audio
+  var player = document.querySelector('.episode-player')
+  var timeCurrent = document.querySelector('.-current')
+  var timeDuration = document.querySelector('.-duration')
+  var timeline = document.querySelector('.timeline')
+  var percentage = document.querySelector('.percentage')
+  var percentageMouse = document.querySelector('.mouse')
+  var volume = document.querySelector('.volume')
+  var backwards = document.querySelector('.backwards')
+  var forwards = document.querySelector('.forwards')
 
-function formatTime(timeCurrent) {
-  var seconds = parseInt(timeCurrent % 60)
-  var minutes = parseInt((timeCurrent / 60) % 60)
-  var hours = parseInt((timeCurrent / 3600) % 60)
+  function formatTime(timeCurrent) {
+    var seconds = parseInt(timeCurrent % 60)
+    var minutes = parseInt((timeCurrent / 60) % 60)
+    var hours = parseInt((timeCurrent / 3600) % 60)
 
-  var format = (hours <= 0 ? '' : hours + ':') + (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds)
+    var format = (hours <= 0 ? '' : hours + ':') + (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds)
 
-  return format
+    return format
+  }
+
+  soundcloud.resolve('https://soundcloud.com/movimento-ux/andredoamaral', function(track) {
+    timeDuration.innerHTML = formatTime(soundcloud.duration)
+    soundcloud.play()
+    soundcloud.pause()
+  })
+
+  soundcloud.on('timeupdate', function() {
+    var timelinePercentage = (audio.currentTime * 100 / audio.duration).toFixed(2)
+    percentage.style.width = timelinePercentage + '%'
+    timeCurrent.innerHTML = formatTime(audio.currentTime)
+
+    timeline.addEventListener('click', function(e){
+      var percent = e.offsetX / this.offsetWidth
+      audio.currentTime = percent * audio.duration
+    })
+  })
+
+
+  var playButton = document.querySelector('.episode-player > .play')
+  playButton.addEventListener('click', function(){
+    if (soundcloud.playing) {
+      soundcloud.pause()
+      this.classList.remove('-on')
+    } else {
+      soundcloud.play()
+      this.classList.add('-on')
+    }
+  })
+
+  timeline.addEventListener('mousemove', function(event){
+    var hoverPercentage = (event.offsetX * 100 / this.offsetWidth).toFixed(2)
+    percentageMouse.style.width = hoverPercentage + '%'
+    percentageMouse.style.opacity = '1'
+  })
+
+
+  timeline.addEventListener('mouseleave', function(event){
+    setTimeout(function(){
+      percentageMouse.style.opacity = '0'
+    })
+  })
+
+  volume.addEventListener('click', function(event){
+    if (this.classList.contains('-off')){
+      soundcloud.setVolume(1)
+      this.classList.remove('-off')
+    } else {
+      soundcloud.setVolume(0)
+      this.classList.add('-off')
+    }
+  })
+
+  forwards.addEventListener('click', function(event){
+    audio.currentTime = audio.currentTime + 15
+  })
+
+  backwards.addEventListener('click', function(event){
+    audio.currentTime = audio.currentTime - 15
+  })
 }
 
-soundcloud.resolve('https://soundcloud.com/movimento-ux/andredoamaral', function(track) {
-  timeDuration.innerHTML = formatTime(soundcloud.duration)
-  soundcloud.play()
-  soundcloud.pause()
-})
-
-soundcloud.on('timeupdate', function() {
-  var timelinePercentage = (audio.currentTime * 100 / audio.duration).toFixed(2)
-  percentage.style.width = timelinePercentage + '%'
-  timeCurrent.innerHTML = formatTime(audio.currentTime)
-
-  timeline.addEventListener('click', function(e){
-    var percent = e.offsetX / this.offsetWidth
-    audio.currentTime = percent * audio.duration
-  })
-})
-
-
-var playButton = document.querySelector('.episode-player > .play')
-playButton.addEventListener('click', function(){
-  if (soundcloud.playing) {
-    soundcloud.pause()
-    this.classList.remove('-on')
-  } else {
-    soundcloud.play()
-    this.classList.add('-on')
-  }
-})
-
-timeline.addEventListener('mousemove', function(event){
-  var hoverPercentage = (event.offsetX * 100 / this.offsetWidth).toFixed(2)
-  percentageMouse.style.width = hoverPercentage + '%'
-  percentageMouse.style.opacity = '1'
-})
-
-
-timeline.addEventListener('mouseleave', function(event){
-  setTimeout(function(){
-    percentageMouse.style.opacity = '0'
-  })
-})
-
-volume.addEventListener('click', function(event){
-  if (this.classList.contains('-off')){
-    soundcloud.setVolume(1)
-    this.classList.remove('-off')
-  } else {
-    soundcloud.setVolume(0)
-    this.classList.add('-off')
-  }
-})
-
-forwards.addEventListener('click', function(event){
-  audio.currentTime = audio.currentTime + 15
-})
-
-backwards.addEventListener('click', function(event){
-  audio.currentTime = audio.currentTime - 15
-})
 
 
 

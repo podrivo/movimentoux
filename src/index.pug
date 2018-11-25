@@ -3,31 +3,32 @@ block content
   
   include pug/header.pug
   
-  #barba-wrapper
-    .barba-container
-      article.intro-text
-        p.eyebrow Temporada 2
-        h1.title UX <br> Research
-        p Nov/2018 — Conversas sobre pesquisa para produto. 
+  body
+    #barba-wrapper
+      .barba-container
+        article.intro-text
+          p.eyebrow Temporada 2
+          h1.title UX <br> Research
+          p Nov/2018 — Conversas sobre pesquisa para produto. 
+          
+        .social-links.-home
+          p.eyebrow Acompanhe
+          ul
+            li.subtitle #[a(href='https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73?si=TQbtAiiPTr-NfTAJTz2Qew' title='Spotify' target='_blank' rel='noopener').link Spotify]
+            li.subtitle #[a(href='https://itunes.apple.com/br/podcast/movimento-ux/id1093322366' title='iTunes' target='_blank' rel='noopener').link iTunes]
+            li.subtitle #[a(href='https://www.stitcher.com/podcast/movimentoux' title='Stitcher' target='_blank' rel='noopener').link Stitcher]
+            li.subtitle #[a(href='https://soundcloud.com/movimento-ux' title='SoundCloud' target='_blank' rel='noopener').link SoundCloud]
         
-      .social-links.-home
-        p.eyebrow Acompanhe
-        ul
-          li.subtitle #[a(href='https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73?si=TQbtAiiPTr-NfTAJTz2Qew' title='Spotify' target='_blank' rel='noopener').link Spotify]
-          li.subtitle #[a(href='https://itunes.apple.com/br/podcast/movimento-ux/id1093322366' title='iTunes' target='_blank' rel='noopener').link iTunes]
-          li.subtitle #[a(href='https://www.stitcher.com/podcast/movimentoux' title='Stitcher' target='_blank' rel='noopener').link Stitcher]
-          li.subtitle #[a(href='https://soundcloud.com/movimento-ux' title='SoundCloud' target='_blank' rel='noopener').link SoundCloud]
-      
-      
-      section.intro-episode
-        .episode-cover
-          .cover
-            img(src='img/19-foto-paola-sales.jpg' alt='Fotografia de Paola Sales')
-            a(href='paola.html' title='Ir para episódio').play-badge
-              svg(src='img/play.svg')
-        .text
-          span.eyebrow Novo episódio
-          h2.title Paola<br>Sales
-          p.keywords Head de User Studies no Descomplica
-          p.keywords Pesquisa Humanizada, Empatia e Criação de Área
-        span.number 19
+        
+        section.intro-episode
+          .episode-cover
+            .cover
+              img(src='img/19-foto-paola-sales.jpg' alt='Fotografia de Paola Sales')
+              a(href='paola.html' title='Ir para episódio').play-badge
+                svg(src='img/play.svg')
+          .text
+            span.eyebrow Novo episódio
+            h2.title Paola<br>Sales
+            p.keywords Head de User Studies no Descomplica
+            p.keywords Pesquisa Humanizada, Empatia e Criação de Área
+          span.number 19
