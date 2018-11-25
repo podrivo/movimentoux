@@ -52,6 +52,7 @@ a {
     opacity: 1;
   }
 
+  &.link.on::before,
   &.link:hover::before,
   &.link:focus::before {
     transform: scaleX(1);
