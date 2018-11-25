@@ -178,7 +178,7 @@ if (body.getAttribute('data-page') === 'episode') {
     return format
   }
 
-  soundcloud.resolve('https://soundcloud.com/movimento-ux/andredoamaral', function(track) {
+  soundcloud.resolve('https://soundcloud.com/movimento-ux/paolasales', function(track) {
     timeDuration.innerHTML = formatTime(soundcloud.duration)
     soundcloud.play()
     soundcloud.pause()
