@@ -240,15 +240,10 @@ backwards.addEventListener('click', function(event){
 
 //menu mobile
 var menuDesktop = document.querySelector('.menu.-desktop')
-var menuMobile = document.querySelector('.menu.-mobile')
 var linkMobile = document.querySelector('.link.-mobile')
 
-// ['click', 'touchstart'].forEach(function(event){
-// })
 linkMobile.addEventListener('click', function(e){
-  // console.log('yo');
   e.preventDefault()
-
   if (menuDesktop.classList.contains('-mobile-active')) {
     menuDesktop.classList.remove('-mobile-active')
     this.innerHTML = 'Menu'
