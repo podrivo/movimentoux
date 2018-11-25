@@ -5,7 +5,6 @@
   align-items: flex-end;
 
   > .description {
-    width: 60%;
 
     @media (max-width: $sm) {
       width: 100%;
@@ -21,7 +20,7 @@
   }
 
   > .description p {
-    // width: 60%;
+    width: 60%;
     padding-bottom: $spacing-4;
 
     @media (max-width: $sm) {

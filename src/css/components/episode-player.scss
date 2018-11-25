@@ -88,11 +88,11 @@
   }
 
   > .backwards {
-    background-image: url('/img/player-backwards.svg');
+    background-image: url('img/player-backwards.svg');
   }
 
   > .forwards {
-    background-image: url('/img/player-forwards.svg');
+    background-image: url('img/player-forwards.svg');
     margin-right: $spacing-2;
   }
 
@@ -157,7 +157,7 @@
     > span {
       width: 100%;
       height: 100%;
-      background-image: url('/img/player-volume-on.svg');
+      background-image: url('img/player-volume-on.svg');
       background-position: left center;
       background-repeat: no-repeat;
       display: block;
