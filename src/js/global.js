@@ -227,3 +227,23 @@ forwards.addEventListener('click', function(event){
 backwards.addEventListener('click', function(event){
   audio.currentTime = audio.currentTime - 15
 })
+
+
+
+//menu mobile
+var menuDesktop = document.querySelector('.menu.-desktop')
+var menuMobile = document.querySelector('.menu.-mobile')
+var linkMobile = document.querySelector('.link.-mobile')
+
+linkMobile.addEventListener('click', function(event){
+  // console.log('yo');
+  event.preventDefault()
+
+  if (menuDesktop.classList.contains('teste')) {
+    menuDesktop.classList.remove('teste')
+    this.innerHTML = 'Menu'
+  } else {
+    menuDesktop.classList.add('teste')
+    this.innerHTML = 'Fechar'
+  }
+})

@@ -8,7 +8,8 @@ header {
   z-index: 999;
 
   @media (max-width: $sm) {
-    display: none;
+    // display: none;
+    padding: $spacing-2 $spacing-4;
   }
 
   > .wrapper {
@@ -19,12 +20,64 @@ header {
     align-items: center;
   }
 
-  .logo::after {
-    display: none;
+  .logo {
+    z-index: 101;
+
+    @media (max-width: $sm) {
+      width: 30px;
+
+      svg {
+        pointer-events: none
+      }
+
+      svg .logo-type {
+        display: none;
+      }
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .menu {
     display: flex;
+    z-index: 101;
+
+    @media (max-width: $sm) {
+      &.-desktop {
+        display: none;
+      }
+
+      &.-desktop.teste {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: $black;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 2rem;
+        line-height: 4rem;
+        z-index: 100;
+      }
+    }
+
+    &.-mobile {
+      display: none;
+
+      .link:hover::before,
+      .link:focus::before {
+        display: none;
+      }
+
+      @media (max-width: $sm) {
+        display: block;
+      }
+    }
+
 
     > .item {
       padding-left: $spacing-4;
