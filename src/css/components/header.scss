@@ -58,7 +58,7 @@ header {
         line-height: 4rem;
         transform: scaleY(0);
         transform-origin: top;
-        transition: transform $timing*2 $easing;
+        transition: transform $timing * 1.4 $easing;
         pointer-events: none;
 
         .item {

@@ -12,6 +12,11 @@ a {
     &.-alt {
       color: $black;
       text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
+
+      @media (max-width: $sm) {
+        border-bottom: 1px solid $black;
+        white-space: normal;
+      }
     }
   }
 
@@ -73,6 +78,11 @@ a {
       padding: $spacing-4;
       background-color: transparent;
       color: $white;
+
+      @media (max-width: $sm) {
+        padding: $spacing-2 0;
+        word-break: break-word;
+      }
     }
 
     &.-sm {

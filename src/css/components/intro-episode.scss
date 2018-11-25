@@ -55,6 +55,10 @@
 
   &.-inside {
     justify-content: center;
+
+    @media (max-width: $sm) {
+      padding-top: $spacing-10;
+    }
   }
 
   &.-inside .text {
