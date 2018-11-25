@@ -2,14 +2,23 @@
   position: relative;
   left: -0.5vw;
   font-size: 8.1vw;
-  line-height: 0.9em;
+  line-height: 1em;
   font-weight: 700;
   z-index: 0;
+
+  @media (max-width: $sm) {
+    font-size: 14vw;
+  }
 }
 
 .subtitle {
   font-size: 1.6rem;
   line-height: 2.4rem;
+
+  @media (max-width: $sm) {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
 }
 
 .eyebrow {

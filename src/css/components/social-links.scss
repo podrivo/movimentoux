@@ -4,6 +4,14 @@
   right: $spacing-body-x;
   text-align: right;
 
+  @media (max-width: $sm) {
+    position: relative;
+    bottom: auto;
+    left: 0;
+    right: auto;
+    display: none;
+  }
+
   &.-home {
     position: absolute;
   }
