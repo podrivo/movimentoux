@@ -20,15 +20,16 @@ After installing, run `start` with npm.
 [sudo] npm start
 ```
 
-+ You can write CSS in `.css, .scss, .sass`
-+ There's a main file `/css/main.scss`
-+ And a settings folder `/css/settings/`
-+ And a components folder `/css/components/`
-
 Access URLs:
 + Local site: [localhost:8000](http://localhost:8000/)
 + Browsersync options: [localhost:8001](http://localhost:8001/).
 + You can use your local network for external access. Check your terminal for URLs.
+
+Writing CSS:
++ You can write CSS in `.css, .scss, .sass`
++ There's a main file `/css/main.scss`
++ And a settings folder `/css/settings/`
++ And a components folder `/css/components/`
 
 ## Colophon
 + [Rubki Typeface](http://hubertfischer.com/work/type-rubik)
