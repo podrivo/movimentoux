@@ -154,6 +154,7 @@ var timeDuration = document.querySelector('.-duration')
 var timeline = document.querySelector('.timeline')
 var percentage = document.querySelector('.percentage')
 var percentageMouse = document.querySelector('.mouse')
+var volume = document.querySelector('.volume')
 
 function formatTime(timeCurrent) {
   var seconds = parseInt(timeCurrent % 60)
@@ -201,8 +202,18 @@ timeline.addEventListener('mousemove', function(event){
 })
 
 
-player.addEventListener('mouseleave', function(event){
+timeline.addEventListener('mouseleave', function(event){
   setTimeout(function(){
     percentageMouse.style.opacity = '0'
   })
+})
+
+volume.addEventListener('click', function(event){
+  if (this.classList.contains('-off')){
+    soundcloud.setVolume(1)
+    this.classList.remove('-off')
+  } else {
+    soundcloud.setVolume(0)
+    this.classList.add('-off')
+  }
 })
