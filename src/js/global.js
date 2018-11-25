@@ -155,6 +155,8 @@ var timeline = document.querySelector('.timeline')
 var percentage = document.querySelector('.percentage')
 var percentageMouse = document.querySelector('.mouse')
 var volume = document.querySelector('.volume')
+var backwards = document.querySelector('.backwards')
+var forwards = document.querySelector('.forwards')
 
 function formatTime(timeCurrent) {
   var seconds = parseInt(timeCurrent % 60)
@@ -216,4 +218,12 @@ volume.addEventListener('click', function(event){
     soundcloud.setVolume(0)
     this.classList.add('-off')
   }
+})
+
+forwards.addEventListener('click', function(event){
+  audio.currentTime = audio.currentTime + 15
+})
+
+backwards.addEventListener('click', function(event){
+  audio.currentTime = audio.currentTime - 15
 })

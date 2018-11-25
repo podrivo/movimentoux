@@ -12,12 +12,19 @@
 
   > .play {
     position: relative;
-    width: 26px;
+    min-width: 22px;
     height: 28px;
     font-size: 1.6rem;
-    margin-right: $padding-font-x;
+    margin: 0 $spacing-2;
     cursor: pointer;
     box-sizing: content-box;
+    opacity: 0.8;
+    transition: opacity $timing $easing;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
 
     &::before,
     &::after {
@@ -64,6 +71,29 @@
       border-left-width: 0.28em;
       height: 100%;
     }
+  }
+
+  > .backwards,
+  > .forwards {
+    min-width: 29px;
+    height: 26px;
+    opacity: 0.7;
+    transition: opacity $timing $easing;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+
+  > .backwards {
+    background-image: url('/img/player-backwards.svg');
+  }
+
+  > .forwards {
+    background-image: url('/img/player-forwards.svg');
+    margin-right: $spacing-2;
   }
 
   > .time {
@@ -120,7 +150,7 @@
   }
 
   > .volume {
-    width: 29px;
+    min-width: 29px;
     height: 26px;
     margin-left: $spacing-2;
 
@@ -131,12 +161,12 @@
       background-position: left center;
       background-repeat: no-repeat;
       display: block;
-      opacity: 0.8;
+      opacity: 0.7;
       transition: all $timing / 2 $easing;
     }
 
     &.-off span {
-      width: 65%;
+      width: 56%;
       opacity: 0.6;
     }
 
