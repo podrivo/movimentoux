@@ -1,15 +1,92 @@
 header {
+  background-color: $black;
+  position: fixed;
+  top: 14px;
+  left: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: $spacing-3 $spacing-body-x;
+  z-index: 999;
 
-  > .logo::after {
-    display: none;
+  @media (max-width: $sm) {
+    padding: $spacing-2 $spacing-4;
   }
 
-  > .menu {
+  > .wrapper {
+    position: relative;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    z-index: 102;
+
+    @media (max-width: $sm) {
+      width: 30px;
+
+      svg {
+        pointer-events: none;
+      }
+
+      svg .logo-type {
+        display: none;
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .menu {
+    display: flex;
+    z-index: 101;
+
+    @media (max-width: $sm) {
+      &.-desktop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: $black;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 2rem;
+        line-height: 4rem;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform $timing * 1.4 $easing;
+        pointer-events: none;
+
+        .item {
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+
+      &.-desktop.-mobile-active {
+        transform: scaleY(1);
+        z-index: 100;
+        pointer-events: all;
+
+        .item {
+          opacity: 1;
+          pointer-events: all;
+          transition: opacity $timing $timing $easing;
+        }
+      }
+    }
+
+    &.-mobile {
+      display: none;
+
+      @media (max-width: $sm) {
+        display: block;
+      }
+    }
 
     > .item {
       padding-left: $spacing-4;

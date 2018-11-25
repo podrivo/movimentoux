@@ -1,11 +1,22 @@
 .intro-text {
-  margin-top: 25vh;
+  width: 100%;
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: $spacing-body-y $spacing-body-x $spacing-body-x;
 
-  > .title {
-    bottom: -1vw;
-    line-height: 1.1em;
+  @media (max-width: $sm) {
+    justify-content: center;
+    padding: $spacing-2 $spacing-4;
+  }
+
+  .title {
+    margin: $spacing-2 0;
+  }
+
+  &.-about {
+    margin-top: 30vh;
+    height: auto;
   }
 }

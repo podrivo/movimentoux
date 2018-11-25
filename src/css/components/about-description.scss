@@ -1,18 +1,35 @@
 .about-description {
   width: 100%;
-  margin-top: 6vw;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 
   > .description {
-    width: 60%;
 
-    p {
-      padding-bottom: $spacing-4;
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+  }
+
+  > .description .title {
+    margin-bottom: $spacing-8;
+
+    @media (max-width: $sm) {
+      margin-bottom: $spacing-2;
+      font-size: 10vw;
+    }
+  }
+
+  > .description p {
+    width: 60%;
+    padding-bottom: $spacing-4;
+
+    @media (max-width: $sm) {
+      width: 100%;
+      padding-bottom: $spacing-2;
     }
 
-    p:last-child {
+    &:last-child {
       padding-bottom: 0;
     }
   }

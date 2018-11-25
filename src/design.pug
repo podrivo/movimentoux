@@ -2,22 +2,18 @@ include pug/meta
 include pug/header
 include pug/js
 
-+meta(
-  'Movimento UX',
-  'Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário.',
-  'http://movimentoux.com/'
-)
++meta
 
 body
   
-  +header('', 'on', '')
+  +header('', 'about')
   
   #barba-wrapper
     .barba-container
       article.intro-text
-        p.eyebrow Temporada 2
-        h1.title UX <br> Research
-        p Nov/2018 — Conversas sobre pesquisa para produto. 
+        p.eyebrow Temporada 1
+        h1.title UX <br> Design
+        p Fev/2016 — Conversas sobre o universo de design de experiência de uso.
         
       .social-links.-home
         p.eyebrow Acompanhe
@@ -29,17 +25,15 @@ body
       
       
       section.intro-episode
-        .cover-wrap
+        .episode-cover
           .cover
-            a(href='paola-sales/' title='Ir para episódio').play-badge
-              img(src='img/19-foto-paola-sales.jpg' alt='Fotografia de Paola Sales')
+            img(src='img/18-foto-andre-amaral.jpg' alt='Fotografia de André do Amaral')
+            a(href='paola.html' title='Ir para episódio').play-badge
               svg(src='img/play.svg')
         .text
-          span.eyebrow Novo episódio
-          h2.title Paola<br>Sales
-          p.keywords Head de User Studies no Descomplica
-          p.keywords Pesquisa Humanizada, Empatia e Criação de Área
-        span.number 19
+          h2.title André do <br>Amaral
+          p.keywords Designer na Netflix, User Experience, Visual Design
+        span.number 18
 
 //- last, but not least
 +js

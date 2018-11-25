@@ -1,34 +1,43 @@
 .intro-episode {
   position: relative;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 30vh 0 0;
+  padding: $spacing-body-y $spacing-body-x $spacing-body-x;
+
+  @media (max-width: $sm) {
+    display: block;
+    height: auto;
+    padding: $spacing-2 $spacing-4 $spacing-4;
+  }
+
+  > .text {
+    z-index: 99;
+    pointer-events: none;
+  }
 
   > .text .title {
     margin: $spacing-1 0;
-  }
-
-  > .text .keywords {
-    // position: relative;
-    // line-height: 0.8rem;
+    z-index: 99;
   }
 
   > .number {
-    font-size: 8.2vw;
+    font-size: 8.1vw;
     line-height: 0.9em;
     font-weight: 700;
     position: absolute;
     align-self: flex-end;
     color: $black;
     text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
+
+    @media (max-width: $sm) {
+      display: none;
+    }
   }
 
   > .buttons {
-    // position: absolute;
-    // bottom: 0;
-    // left: $spacing-body-x;
-    // bottom: $spacing-body-x;
     display: flex;
     align-items: center;
     margin-top: $spacing-8;
@@ -45,43 +54,77 @@
   }
 
   &.-inside {
-    padding: 0;
-    height: 64vh;
-    margin-bottom: $spacing-10;
+    justify-content: center;
+
+    @media (max-width: $sm) {
+      padding-top: $spacing-10;
+    }
   }
 
-  &.-inside img {
-    width: 100%;
-    height: auto;
-    max-width: 560px;
-    position: absolute;
-    align-self: center;
-  }
-
-  &:not(.-inside) > .text .title,
-  &:not(.-inside) > .text .eyebrow,
-  &:not(.-inside) > .text .keywords,
-  &:not(.-inside) > .number {
-    pointer-events: none;
+  &.-inside .text {
+    pointer-events: all;
   }
 }
 
-.episode-cover {
-  max-width: 42%;
+.cover-wrap {
   position: absolute;
-  align-self: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   perspective: 1000;
 
-  > img {
-    max-width: 560px;
-    width: 100%;
+  @media (max-width: $sm) {
+    position: relative;
     height: auto;
-    backface-visibility: hidden;
-    transition: transform $timing $easing;
+    display: block;
+    justify-content: flex-start;
+    margin-bottom: $spacing-2;
   }
 
-  &:hover > img,
-  &:focus > img {
-    transform: rotateY(18deg);
+  .cover {
+    position: relative;
+    width: 560px;
+    background: #333;
+    max-width: 36%;
+    height: auto;
+    transform: rotateY(0);
+    transition: transform $timing $easing;
+
+    &:hover,
+    &focus {
+      transform: rotateY(18deg);
+    }
+
+    @media (max-width: $sm) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .play-badge {
+    z-index: 99;
+    display: block;
+
+    @media (max-width: $sm) {
+      width: 100%;
+      height: 100%;
+    }
+
+    svg {
+      position: absolute;
+      right: $spacing-2;
+      bottom: $spacing-2;
+      width: 90px;
+      height: 90px;
+
+      @media (max-width: $sm) {
+        left: $spacing-1;
+        bottom: $spacing-1;
+      }
+    }
   }
 }

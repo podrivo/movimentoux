@@ -1,129 +1,205 @@
 .episode-player {
-  position: sticky;
-  top: $padding-responsive;
-  // position: fixed;
-  // left: $padding-responsive;
-  // bottom: $padding-responsive;
-  // width: calc(100% - (#{$padding-responsive} * 2));
-  width: calc(100% + #{$padding-responsive-y} * 2);
-  height: auto;
-  margin-left: -$padding-responsive-y;
-  margin-bottom: $padding-font-x;
-  padding: $padding-responsive $padding-responsive-y;
+  position: fixed;
+  bottom: 14px;
+  width: 100%;
+  padding: $spacing-2 $spacing-body-x;
   background-color: $black;
   color: $white;
-  z-index: 999;
-
+  z-index: 99;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
+  @media (max-width: $sm) {
+    padding: $spacing-2 $spacing-4;
+  }
 
-// #radioIcon {
-//   width: 30px;
-//   height: 30px;
-//   background: url('https://image.flaticon.com/icons/svg/149/149429.svg') no-repeat center;
-// }
+  > .play {
+    position: relative;
+    min-width: 22px;
+    height: 28px;
+    font-size: 1.6rem;
+    margin: 0 $spacing-2;
+    cursor: pointer;
+    box-sizing: content-box;
+    opacity: 0.8;
+    transition: opacity $timing $easing;
 
-// .play {
-//   // -webkit-appearance: none;
-//   // outline: none;
-//   margin-right: $padding-font-x;
-//   cursor: pointer;
-//   // border: none;
-//   width: 30px;
-//   height: 30px;
-//   background: url('/img/player-play.svg') no-repeat center;
-//   // background-size: contain;
-//
-//   &.pause {
-//     background: url('https://image.flaticon.com/icons/svg/149/149127.svg') no-repeat center;
-//     // background-size: contain;
-//   }
-// }
+    @media (max-width: $sm) {
+      opacity: 1;
+    }
 
-.timeline {
-  position: relative;
-  width: 100%;
-  // margin: 0 $padding-font;
-  height: 8px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
 
-.seek-obj {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: $white;
-  margin: 0 $padding-font-x;
-  // border: 1px solid black;
-}
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      box-sizing: content-box;
+    }
 
-.percentage {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  background-color: coral;
-}
+    &::before {
+      content: '';
+      right: 0;
+      width: 0;
+      height: 100%;
+      border-top: 0 solid transparent;
+      border-bottom: 0 solid transparent;
+      border-left: 0.3em solid #fff;
+      transition: all 0.15s;
+      opacity: 0;
+    }
 
+    &::after {
+      content: '';
+      left: 0;
+      width: 0;
+      height: 0;
+      border-top: 0.5em solid transparent;
+      border-bottom: 0.5em solid transparent;
+      border-left: 0.833334em solid #fff;
+      transition: all 0.25s;
+    }
 
+    &.-on::before {
+      border-top-width: 0;
+      border-bottom-width: 0;
+      border-left-width: 0.28em;
+      height: 100%;
+      opacity: 1;
+    }
 
-.play {
-  position: relative;
-  width: 28px;
-  height: 30px;
-  font-size: 2rem;
-  margin-right: $padding-font-x;
-  cursor: pointer;
-  box-sizing: content-box;
-}
+    &.-on::after {
+      border-top-width: 0;
+      border-bottom-width: 0;
+      border-left-width: 0.28em;
+      height: 100%;
+    }
+  }
 
-.play::before,
-.play::after {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  box-sizing: content-box;
-}
+  > .backwards,
+  > .forwards {
+    min-width: 29px;
+    height: 26px;
+    opacity: 0.7;
+    transition: opacity $timing $easing;
 
-.play::before {
-  content: '';
-  right: 0;
-  width: 0;
-  height: 100%;
-  border-top: 0 solid transparent;
-  border-bottom: 0 solid transparent;
-  border-left: 0.3em solid #fff;
-  transition: all 0.2s linear;
-  opacity: 0;
-}
+    @media (max-width: $sm) {
+      opacity: 1;
+    }
 
-.play::after {
-  content: '';
-  left: 0;
-  width: 0;
-  height: 0;
-  border-top: 0.5em solid transparent;
-  border-bottom: 0.5em solid transparent;
-  border-left: 0.833334em solid #fff;
-  transition: all 0.2s linear;
-}
+    &:hover,
+    &:focus {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
 
-.play.on::before {
-  border-top-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0.28em;
-  height: 100%;
-  opacity: 1;
-}
+  > .backwards {
+    background-image: url('../img/player-backwards.svg');
+  }
 
-.play.on::after {
-  border-top-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0.28em;
-  height: 100%;
+  > .forwards {
+    background-image: url('../img/player-forwards.svg');
+    margin-right: $spacing-2;
+  }
+
+  > .time {
+    width: 60px;
+    font-size: 0.8rem;
+    text-align: center;
+
+    @media (max-width: $sm) {
+      width: 44px;
+    }
+
+    &.-current {
+      text-align: right;
+    }
+
+    &.-duration {
+      text-align: left;
+    }
+  }
+
+  > .timeline {
+    position: relative;
+    width: 100%;
+    margin: 0 $spacing-1;
+    height: 8px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba($white, 0.25);
+    overflow: hidden;
+    cursor: pointer;
+
+    @media (max-width: $sm) {
+      display: none;
+    }
+
+    > .percentage,
+    > .mouse {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      border-radius: 8px;
+    }
+
+    > .mouse {
+      background-color: rgba($white, 0.15);
+      transition: all $timing $easing;
+    }
+
+    > .mouse.teste {
+      height: 140%;
+      top: -20%;
+    }
+
+    > .percentage {
+      background-color: $white;
+      transition: all $timing $easing;
+    }
+  }
+
+  > .volume {
+    min-width: 29px;
+    height: 26px;
+    margin-left: $spacing-2;
+
+    @media (max-width: $sm) {
+      display: none;
+    }
+
+    > span {
+      width: 100%;
+      height: 100%;
+      background-image: url('../img/player-volume-on.svg');
+      background-position: left center;
+      background-repeat: no-repeat;
+      display: block;
+      opacity: 0.7;
+      transition: all $timing / 2 $easing;
+    }
+
+    &.-off span {
+      width: 56%;
+      opacity: 0.6;
+    }
+
+    &:hover,
+    &:focus,
+    &:hover span,
+    &:focus span {
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
 }
