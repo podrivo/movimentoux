@@ -155,7 +155,7 @@
 
 var body = document.body
 
-if(body.getAttribute('data-page') == 'episode'){
+if (body.getAttribute('data-page') === 'episode') {
   var soundcloud = new SoundCloudAudio('y1nMl2njKSB6eNKPiU4jTxp9lNt2LE8d')
   var audio = soundcloud.audio
   var player = document.querySelector('.episode-player')
