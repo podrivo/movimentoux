@@ -1,4 +1,4 @@
-mixin meta(path, title, description, href)
+mixin meta(title, description, href)
   doctype html
   html
     
@@ -26,5 +26,5 @@ mixin meta(path, title, description, href)
       meta(name='twitter:image', content='http://movimentoux.com/img/share.png')
 
       link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,500,700')
-      link(rel='stylesheet' href= path + 'css/main.min.css')
+      link(rel='stylesheet' href= '/css/main.min.css')
       link(rel='author' href='/humans.txt')
