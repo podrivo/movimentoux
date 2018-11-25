@@ -1,130 +1,123 @@
 .episode-player {
   position: fixed;
   bottom: 14px;
-  // position: fixed;
-  // left: $padding-responsive;
-  // bottom: $padding-responsive;
-  // width: calc(100% - (#{$padding-responsive} * 2));
   width: 100%;
-  // margin-left: -$padding-responsive-y;
-  // margin-bottom: $spacing-body-x;
-  // padding: 0 $spacing-body-x $spacing-body-x;
-  // margin: $spacing-4 0;
   padding: $spacing-2 $spacing-body-x;
   background-color: $black;
   color: $white;
   z-index: 999;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
+  > .play {
+    position: relative;
+    width: 26px;
+    height: 28px;
+    font-size: 1.6rem;
+    margin-right: $padding-font-x;
+    cursor: pointer;
+    box-sizing: content-box;
 
-// #radioIcon {
-//   width: 30px;
-//   height: 30px;
-//   background: url('https://image.flaticon.com/icons/svg/149/149429.svg') no-repeat center;
-// }
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      box-sizing: content-box;
+    }
 
-// .play {
-//   // -webkit-appearance: none;
-//   // outline: none;
-//   margin-right: $padding-font-x;
-//   cursor: pointer;
-//   // border: none;
-//   width: 30px;
-//   height: 30px;
-//   background: url('/img/player-play.svg') no-repeat center;
-//   // background-size: contain;
-//
-//   &.pause {
-//     background: url('https://image.flaticon.com/icons/svg/149/149127.svg') no-repeat center;
-//     // background-size: contain;
-//   }
-// }
+    &::before {
+      content: '';
+      right: 0;
+      width: 0;
+      height: 100%;
+      border-top: 0 solid transparent;
+      border-bottom: 0 solid transparent;
+      border-left: 0.3em solid #fff;
+      transition: all 0.15s;
+      opacity: 0;
+    }
 
-.timeline {
-  position: relative;
-  width: 100%;
-  // margin: 0 $padding-font;
-  height: 8px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+    &::after {
+      content: '';
+      left: 0;
+      width: 0;
+      height: 0;
+      border-top: 0.5em solid transparent;
+      border-bottom: 0.5em solid transparent;
+      border-left: 0.833334em solid #fff;
+      transition: all 0.25s;
+    }
 
-.seek-obj {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: $white;
-  margin: 0 $padding-font-x;
-  // border: 1px solid black;
-}
+    &.-on::before {
+      border-top-width: 0;
+      border-bottom-width: 0;
+      border-left-width: 0.28em;
+      height: 100%;
+      opacity: 1;
+    }
 
-.percentage {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  background-color: coral;
-}
+    &.-on::after {
+      border-top-width: 0;
+      border-bottom-width: 0;
+      border-left-width: 0.28em;
+      height: 100%;
+    }
+  }
 
+  > .time {
+    width: 60px;
+    font-size: 0.8rem;
+    text-align: center;
 
+    &.-current {
+      text-align: right;
+    }
 
-.play {
-  position: relative;
-  width: 28px;
-  height: 30px;
-  font-size: 2rem;
-  margin-right: $padding-font-x;
-  cursor: pointer;
-  box-sizing: content-box;
-}
+    &.-duration {
+      text-align: left;
+    }
+  }
 
-.play::before,
-.play::after {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  box-sizing: content-box;
-}
+  > .timeline {
+    position: relative;
+    width: 100%;
+    margin: 0 $spacing-1;
+    height: 8px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba($white, 0.25);
+    overflow: hidden;
+    cursor: pointer;
 
-.play::before {
-  content: '';
-  right: 0;
-  width: 0;
-  height: 100%;
-  border-top: 0 solid transparent;
-  border-bottom: 0 solid transparent;
-  border-left: 0.3em solid #fff;
-  transition: all 0.2s linear;
-  opacity: 0;
-}
+    &.-active {cursor: pointer;}
 
-.play::after {
-  content: '';
-  left: 0;
-  width: 0;
-  height: 0;
-  border-top: 0.5em solid transparent;
-  border-bottom: 0.5em solid transparent;
-  border-left: 0.833334em solid #fff;
-  transition: all 0.2s linear;
-}
+    > .percentage,
+    > .mouse {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      border-radius: 8px;
+    }
 
-.play.on::before {
-  border-top-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0.28em;
-  height: 100%;
-  opacity: 1;
-}
+    > .mouse {
+      background-color: rgba($white, 0.15);
+      transition: all $timing / 2 $easing;
+    }
 
-.play.on::after {
-  border-top-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0.28em;
-  height: 100%;
+    > .mouse.teste {
+      height: 140%;
+      top: -20%;
+    }
+
+    > .percentage {
+      background-color: $white;
+      transition: all $timing $easing;
+    }
+  }
 }
