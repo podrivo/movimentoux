@@ -16,12 +16,13 @@
 
     @media (max-width: $sm) {
       margin-bottom: $spacing-2;
-      font-size: 10vw;
+      font-size: 9.2vw;
+      line-height: 1.2em;
     }
   }
 
   > .description p {
-    width: 60%;
+    width: 75%;
     padding-bottom: $spacing-4;
 
     @media (max-width: $sm) {

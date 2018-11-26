@@ -1,14 +1,10 @@
 .title {
   position: relative;
   left: -0.5vw;
-  font-size: 8.1vw;
+  font-size: 8.2vw;
   line-height: 1em;
   font-weight: 700;
   z-index: 0;
-
-  @media (max-width: $sm) {
-    font-size: 14vw;
-  }
 }
 
 .subtitle {
