@@ -256,3 +256,13 @@ linkMobile.addEventListener('click', function(e){
     this.innerHTML = 'Fechar'
   }
 })
+
+
+var header = document.querySelector('header')
+document.addEventListener('scroll', function(){
+  if (window.scrollY >= 100){
+    header.classList.add('-scrolled')
+  } else {
+    header.classList.remove('-scrolled')
+  }
+})
