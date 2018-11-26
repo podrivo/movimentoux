@@ -1,10 +1,11 @@
 header {
-  background-color: $black;
+  background-color: rgba($black, 0.9);
   position: fixed;
   top: 14px;
   left: 0;
   width: 100%;
   padding: $spacing-3 $spacing-body-x;
+  margin-top: $spacing-2;
   z-index: 999;
 
   @media (max-width: $sm) {

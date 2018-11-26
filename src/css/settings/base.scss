@@ -11,7 +11,7 @@ a {
 
     &.-alt {
       color: $black;
-      text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
+      text-shadow: -2px 0 $clear-white, 0 2px $clear-white, 2px 0 $clear-white, 0 -2px $clear-white;
 
       @media (max-width: $sm) {
         border-bottom: 1px solid $black;
