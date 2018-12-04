@@ -1,7 +1,8 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var cache = require('gulp-cache');
-var imageMin = require('gulp-imagemin');
+var imagemin = require('gulp-imagemin');
+var mozjpeg = require('imagemin-mozjpeg');
 var plumber = require('gulp-plumber');
 
 var log = require('../log/log.js');
@@ -13,7 +14,9 @@ module.exports = function(config, log, error, success) {
       .pipe(plumber({
         errorHandler: error
       }))
-      .pipe(cache(imageMin()))
+      .pipe(imagemin([
+        mozjpeg()
+      ]))
       .pipe(gulp.dest(config.images.dest))
       .pipe(browserSync.stream())
     .pipe(plumber.stop());
