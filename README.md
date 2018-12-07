@@ -5,33 +5,33 @@ Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Us
 Acesse pelo link — [movimentoux.com](http://movimentoux.com/)
 
 
-## Usage
+## Uso
 `gulp` `pug` `sass` `postcss` `browsersync`
 
-Install [node.js](https://nodejs.org/). Then run `install` with npm.
+Instale [node.js](https://nodejs.org/). Então rode `install` usando npm.
 
 ```
 [sudo] npm install
 ```
 
-After installing, run `start` with npm.
+Depois de instalar, rode `start` usando npm.
 
 ```
 [sudo] npm start
 ```
 
-Access URLs:
-+ Local site: [localhost:8000](http://localhost:8000/)
-+ Browsersync options: [localhost:8001](http://localhost:8001/).
-+ You can use your local network for external access. Check your terminal for URLs.
+URLs de acesso:
++ Local: [localhost:8000](http://localhost:8000/)
++ Browsersync: [localhost:8001](http://localhost:8001/).
++ Você pode usar sua rede local como acesso externo. Busque as URLs no terminal.
 
-Writing CSS:
-+ You can write CSS in `.css, .scss, .sass`
-+ There's a main file `/css/main.scss`
-+ And a settings folder `/css/settings/`
-+ And a components folder `/css/components/`
+Escrevendo CSS:
++ Você pode escrever CSS nos formatos `.css, .scss, .sass`
++ Tem um arquivo principal `/css/main.scss`
++ E uma pasta com configurações `/css/settings/`
++ E uma pasta com componentes `/css/components/`
 
-## Colophon
+## Tecnologia
 + [Rubki Typeface](http://hubertfischer.com/work/type-rubik)
 + [node.js](https://nodejs.org/)
 + [Gulp](https://gulpjs.com/)
@@ -43,7 +43,7 @@ Writing CSS:
 + [Autoprefixer](https://github.com/postcss/autoprefixer/)
 + [Eric Meyer CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
 
-## Author
+## Autor
 Pedro Ivo Hudson — @podrivo
 
 + [podrivo.com](http://podrivo.com/)
