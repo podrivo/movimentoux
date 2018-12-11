@@ -1,0 +1,19 @@
+mixin social(variant)
+  .social-links(class= variant)
+    p.eyebrow Acompanhe
+    ul
+      li.subtitle #[a(href='http://feeds.movimentoux.com' title='RSS Feed' target='_blank' rel='noopener' type='application/rss+xml').link RSS]
+      li.subtitle #[a(href='https://itunes.apple.com/br/podcast/movimento-ux/id1093322366' title='iTunes' target='_blank' rel='noopener').link iTunes]
+      li.subtitle #[a(href='https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73?si=TQbtAiiPTr-NfTAJTz2Qew' title='Spotify' target='_blank' rel='noopener').link Spotify]
+      //- li.subtitle #[a(href='https://www.stitcher.com/podcast/movimentoux' title='Stitcher' target='_blank' rel='noopener').link Stitcher]
+      li.subtitle #[a(href='https://soundcloud.com/movimento-ux' title='SoundCloud' target='_blank' rel='noopener').link SoundCloud]
+  //- header
+    .wrapper
+      a(href='/' title='Página Principal' data-teste= index).logo
+        svg(src='img/movimentoux-logo.svg')
+      ul.menu.-desktop
+        li.item #[a(href='/temporada-um/' title='Temporada 1' class= link1).link Temporada 1]
+        li.item #[a(href='/temporada-dois/' title='Temporada 2' class= link2).link Temporada 2]
+        li.item #[a(href='/sobre/' title='Sobre' class= link3).link Sobre]
+      ul.menu.-mobile
+        li.item #[a(href='#!' title='Home').link.-mobile Menu]
