@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  flex-shrink: 0;
   padding: $spacing-body-y $spacing-body-x $spacing-body-x;
 
   @media (max-width: $sm) {
@@ -127,4 +128,12 @@
       }
     }
   }
+}
+
+
+.episode-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
