@@ -9,7 +9,7 @@ include ../pug/js
   'http://movimentoux.com/ux-design/'
 )
 
-body
+body(data-page='season')
 
   +header('on', '', '')
 
@@ -21,6 +21,10 @@ body
         p Fev, 2016 — Conversas sobre o universo de design de experiência de uso.
 
       +social('-home')
+
+      ul.list-grid
+        li.list list
+        li.grid grid
 
       .episode-wrapper
         section.intro-episode
