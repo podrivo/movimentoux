@@ -1,5 +1,6 @@
 .intro-episode {
-  background-color: $black;;
+  // background-color: $black;
+  visibility: hidden;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -9,6 +10,14 @@
   flex-shrink: 0;
   padding: $spacing-body-y $spacing-body-x $spacing-body-x;
   // transition: all $timing $easing;
+
+  &.-clone {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
 
   @media (max-width: $sm) {
     display: block;
@@ -24,7 +33,7 @@
   > .text .title {
     margin: $spacing-1 0;
     z-index: 99;
-    transition: all $timing $easing;
+    // transition: all ($timing * 2.3) $easing;
   }
 
   > .number {
@@ -70,12 +79,16 @@
   }
 }
 
+
+
+
+
 .cover-wrap {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,7 +109,7 @@
     max-width: 36%;
     height: auto;
     transform: rotateY(0);
-    // transition: transform $timing $easing;
+    transition: transform $timing $easing;
 
     &:hover,
     &focus {
@@ -131,44 +144,4 @@
       }
     }
   }
-}
-
-
-.episode-wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-
-  &.-grid {
-    flex-direction: row;
-
-    .intro-episode {
-      width: 32%;
-    }
-
-    .intro-episode .number {
-      display: none;
-    }
-
-    .intro-episode .title {
-      font-size: 2vw;
-    }
-  }
-}
-
-.list-grid {
-  position: sticky;
-  top: $spacing-body-x;
-  text-align: right;
-  padding: $spacing-body-y $spacing-body-x $spacing-body-x;
-  z-index: 999;
-}
-
-.item-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  // opacity: 0;
 }

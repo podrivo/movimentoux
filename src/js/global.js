@@ -383,48 +383,48 @@ list.addEventListener('click', function(){
 // ANIMATIONS
 // ===========================================================================
 // var inputs = document.querySelectorAll("input");
-var nodes = document.querySelectorAll(".intro-episode");
-var total = nodes.length;
-var dirty = true;
-var time = 0.9;
-var omega = 12;
-var zeta = 0.9;
-var boxes = [];
+var episodes = document.querySelectorAll('.intro-episode')
+var total = episodes.length
+var dirty = true
+var time = 0.9
+var omega = 12
+var zeta = 0.9
+var boxes = []
 
 for (var i = 0; i < total; i++) {
 
-  var node = nodes[i];
-  var width = node.offsetWidth;
-  var height = node.offsetHeight;
+  var ep = episodes[i]
+  var width = ep.offsetWidth
+  var height = ep.offsetHeight
   // var color = "transparent";
 
   // Need another element to animate width & height... use clone instead of editing HTML
-  var content = node.cloneNode(true);
-  content.classList.add("item-content");
+  var clone = ep.cloneNode(true)
+  clone.classList.add('-clone')
 
-  TweenLite.set(node, { x: "+=0" });
-  TweenLite.set(content, { width: width, height: height });
+  TweenLite.set(ep, {x: "+=0", y: '+=0'})
+  TweenLite.set(clone, {width: width, height: height})
   // TweenLite.set([node, node.children], { backgroundColor: color, color: color });
 
-  node.appendChild(content);
-  console.log(node);
+  ep.appendChild(clone)
 
-  var transform = node._gsTransform;
-  var x = node.offsetLeft;
-  var y = node.offsetTop;
+  // console.log(node)
 
-  boxes[i] = { content: content, height: height, node: node, transform: transform, width: width, x: x, y: y };
+  var transform = ep._gsTransform
+  var x = ep.offsetLeft
+  var y = ep.offsetTop
+
+  boxes[i] = {clone: clone, height: height, ep: ep, transform: transform, width: width, x: x, y: y}
 }
 
 // for (var i = 0; i < inputs.length; i++) {
 //   inputs[i].addEventListener("change", layout);
 // }
 
-// window.addEventListener("resize", function () {dirty = true;});
-//
-// TweenLite.ticker.addEventListener("tick", function () {return dirty && layout();});
+window.addEventListener('resize', function () {dirty = true})
+TweenLite.ticker.addEventListener('tick', function () {return dirty && layout()})
 
-// layout();
+layout()
 
 function layout() {
 
@@ -432,45 +432,39 @@ function layout() {
 
   for (var i = 0; i < total; i++) {
 
-    var box = boxes[i];
+    var box = boxes[i]
 
-    var lastX = box.x;
-    var lastY = box.y;
+    var lastX = box.x
+    var lastY = box.y
+    var lastW = box.width
+    var lastH = box.height
 
-    var lastW = box.width;
-    var lastH = box.height;
+    var width = box.width = box.ep.offsetWidth
+    var height = box.height = box.ep.offsetHeight
 
-    var width = box.width = box.node.offsetWidth;
-    var height = box.height = box.node.offsetHeight;
-
-    console.log(box.content);
-
-    box.x = box.node.offsetLeft;
-    box.y = box.node.offsetTop;
+    box.x = box.ep.offsetLeft
+    box.y = box.ep.offsetTop
 
     if (lastX !== box.x || lastY !== box.y) {
 
-      var x = box.transform.x + lastX - box.x;
-      var y = box.transform.y + lastY - box.y;
+      var x = box.transform.x + lastX - box.x
+      var y = box.transform.y + lastY - box.y
 
       // Tween to 0 to remove the transforms
-      TweenLite.set(box.node, { x: x, y: y });
-      TweenLite.to(box.node, time, { x: 0, y: 0, ease: ease });
+      // TweenLite.set(box.node, {x: x, y: y})
+      TweenLite.to(box.ep, time, {x: 0, y: 0, ease: ease})
     }
 
     if (lastW !== box.width || lastH !== box.height) {
-
-      TweenLite.to(box.content, time, { autoRound: false, width: width, height: height, ease: ease });
+      TweenLite.to(box.clone, time, {autoRound: false, width: width, height: height, ease: ease})
     }
   }
 }
 
 function ease(progress) {
-  var beta = Math.sqrt(1.0 - zeta * zeta);
-  progress = 1 - Math.cos(progress * Math.PI / 2);
-  progress = 1 / beta *
-  Math.exp(-zeta * omega * progress) *
-  Math.sin(beta * omega * progress + Math.atan(beta / zeta));
+  var beta = Math.sqrt(1.0 - zeta * zeta)
+  progress = 1 - Math.cos(progress * Math.PI / 2)
+  progress = 1 / beta * Math.exp(-zeta * omega * progress) * Math.sin(beta * omega * progress + Math.atan(beta / zeta))
 
-  return 1 - progress;
+  return 1 - progress
 }

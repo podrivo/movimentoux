@@ -1,0 +1,47 @@
+.episode-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  // flex-direction: row;
+
+  &.-grid {
+    flex-direction: row;
+
+    .intro-episode {
+      width: 33%;
+      height: auto;
+      justify-content: center;
+    }
+
+    .intro-episode:nth-child(3n+2) {
+      margin-top: $spacing-body-x * 3;
+    }
+
+    .intro-episode .cover-wrap {
+      top: -$spacing-11;
+    }
+
+    .intro-episode .cover-wrap .cover {
+      max-width: 50%
+    }
+
+    .intro-episode .number {
+      display: none;
+    }
+
+    .intro-episode .title {
+      font-size: 2.6vw;
+      left: -0.1vw;
+    }
+  }
+}
+
+.list-grid {
+  position: sticky;
+  top: $spacing-body-x;
+  text-align: right;
+  padding: $spacing-body-y $spacing-body-x $spacing-body-x;
+  z-index: 999;
+}
