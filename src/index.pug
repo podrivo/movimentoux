@@ -1,5 +1,6 @@
 include pug/meta
 include pug/header
+include pug/episode
 include pug/social
 include pug/js
 
@@ -21,19 +22,15 @@ body
         p Nov, 2018 — Conversas sobre pesquisa para produto. 
 
       +social('-home')
-
-      section.intro-episode
-        .cover-wrap
-          .cover
-            a(href='paola-sales/' title='Ir para episódio').play-badge
-              img(src='/img/19-foto-paola-sales.jpg' alt='Fotografia de Paola Sales')
-              svg(src='/img/play.svg')
-        .text
-          span.eyebrow Novo episódio
-          h2.title Paola<br>Sales
-          p.keywords Head de User Studies no Descomplica.
-          p.keywords Pesquisa humanizada, empatia e criação de área.
-        span.number 19
+      
+      +episode(
+        'Paola Sales',
+        'Head de User Studies no Descomplica.',
+        'Pesquisa humanizada, empatia e criação de área.',
+        '19',
+        '19-foto-paola-sales.jpg',
+        '/paola-sales/'
+      )
 
 //- last
 //- but not least

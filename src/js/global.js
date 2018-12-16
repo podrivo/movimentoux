@@ -400,6 +400,7 @@ for (var i = 0; i < total; i++) {
 
   // Need another element to animate width & height... use clone instead of editing HTML
   var clone = ep.cloneNode(true)
+  ep.classList.add('-hide')
   clone.classList.add('-clone')
 
   TweenLite.set(ep, {x: "+=0", y: '+=0'})

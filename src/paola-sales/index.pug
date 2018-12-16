@@ -1,9 +1,10 @@
 include ../pug/meta
 include ../pug/header
+include ../pug/episode
 include ../pug/js
 
 +meta(
-  'Paola Sales — Movimento UX',
+  'Paola Sales, Episódio 19 — Movimento UX',
   'Head de User Studies no Descomplica. Pesquisa Humanizada, Empatia e Criação de Área',
   'http://movimentoux.com/paola-sales/'
 )
@@ -14,16 +15,16 @@ body(data-page='episode')
   
   #barba-wrapper
     .barba-container
-      section.intro-episode.-inside
-        .cover-wrap
-          .cover
-            img(src='../img/19-foto-paola-sales.jpg' alt='Fotografia de Paola Sales')
-        .text
-          span.eyebrow Novo episódio
-          h2.title Paola<br>Sales
-          p.keywords Head de User Studies no Descomplica.
-          p.keywords Pesquisa humanizada, empatia e criação de área.
-        span.number 19
+      +episode(
+        'Paola Sales',
+        'Head de User Studies no Descomplica.',
+        'Pesquisa humanizada, empatia e criação de área.',
+        '19',
+        '19-foto-paola-sales.jpg',
+        '',
+        '-inside',
+        ''
+      )
       
       aside.episode-player
         .backwards
