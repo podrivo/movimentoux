@@ -1,6 +1,7 @@
 include ../pug/meta
 include ../pug/header
 include ../pug/social
+include ../pug/episode
 include ../pug/js
 
 +meta(
@@ -27,41 +28,152 @@ body(data-page='season')
         li.grid grid
 
       .episode-wrapper
-        section.intro-episode
-          .cover-wrap
-            .cover
-              a(href='#!' title='Ir para episódio').play-badge
-                img(src='/img/18-foto-andre-amaral.jpg' alt='Fotografia de André do Amaral')
-                svg(src='/img/play.svg')
-          .text
-            h2.title André do <br>Amaral
-            p.keywords Designer de Produto na Netflix
-            p.keywords Visual design, design digital, UX em outros países.
-          span.number 18
-
-        section.intro-episode
-          .cover-wrap
-            .cover
-              a(href='#!' title='Ir para episódio').play-badge
-                img(src='/img/17-foto-carolina-leslie.jpg' alt='Fotografia de André do Amaral')
-                svg(src='/img/play.svg')
-          .text
-            h2.title Carolina <br>Leslie
-            p.keywords Sócia fundadora da Saiba+.
-            p.keywords Consultoria, pesquisa com usuários, usabilidade.
-          span.number 17
-
-        section.intro-episode
-          .cover-wrap
-            .cover
-              a(href='#!' title='Ir para episódio').play-badge
-                img(src='/img/16-foto-felipe-memoria.jpg' alt='Fotografia de André do Amaral')
-                svg(src='/img/play.svg')
-          .text
-            h2.title Felipe <br>Memória
-            p.keywords Sócio fundador da Work & Co.
-            p.keywords Produto digital, inovação, liderança em design.
-          span.number 16
+        +episode(
+          'André do Amaral',
+          'Designer de Produto na Netflix.',
+          'Visual design, design digital, UX em outros países.',
+          '18',
+          '18-foto-andre-do-amaral.jpg',
+          '/andre-do-amaral'
+        )
+        +episode(
+          'Carolina Leslie',
+          'Sócia fundadora da Saiba+.',
+          'Consultoria, pesquisa com usuários, usabilidade.',
+          '17',
+          '17-foto-carolina-leslie.jpg',
+          '/carolina-leslie'
+        )
+        +episode(
+          'Felipe Memória',
+          'Sócio fundador da Work & Co.',
+          'Produto digital, inovação, liderança em design.',
+          '16',
+          '16-foto-felipe-memoria.jpg',
+          '/felipe-memoria'
+        )
+        +episode(
+          'Guilherme Neumann',
+          'UX Lead no Nubank.',
+          'Cultura de experiência, design de produto, liderança em design.',
+          '15',
+          '15-foto-guilherme-neumann.jpg',
+          '/guilherme-neumann'
+        )
+        +episode(
+          'Fabricio Dore',
+          'Diretor Executivo de UX na McKinsey.',
+          'Design de interação, inovação digital, UX em outros países.',
+          '14',
+          '14-foto-fabricio-dore.jpg',
+          '/fabricio-dore'
+        )
+        +episode(
+          'Fernanda Barbato',
+          'UX Lead na Designit.',
+          'Hyper Island, pesquisa com usuários, UX em outros países.',
+          '13',
+          '13-foto-fernanda-barbato.jpg',
+          '/fernanda-barbato'
+        )
+        +episode(
+          'Sérgio Salvador',
+          'Diretor de UX na Huge.',
+          'Consultoria, liderança, design antecipatório.',
+          '12',
+          '12-foto-sergio-salvador.jpg',
+          '/sergio-salvador'
+        )
+        +episode(
+          'Robson Santos',
+          'Designer Estratégico na PorQueNão.',
+          'Pesquisa para produto, estratégia de UX, usabilidade.',
+          '11',
+          '11-foto-robson-santos.jpg',
+          '/robson-santos'
+        )
+        +episode(
+          'Érico Fileno',
+          'Head de Inovação na Visa.',
+          'Design estratégico, inovação em serviços e experiência do usuário.',
+          '10',
+          '10-foto-erico-fileno.jpg',
+          '/erico-fileno'
+        )
+        +episode(
+          'Karine Drumond',
+          'Sócia-fundadora da Negócio de Mulher.',
+          'Usabilidade, design de interação, empreendedorismo.',
+          '09',
+          '09-foto-karine-drumond.jpg',
+          '/karine-drumond'
+        )
+        +episode(
+          'Pedro Beleza e Thiago Esser',
+          'Sócios-fundadores da UXConf.',
+          'Conteúdo sobre UX, importância de comunidade, eventos de UX.',
+          '08',
+          '08-foto-pedro-e-thiago.jpg',
+          '/pedro-e-thiago',
+          '',
+          '-two'
+        )
+        +episode(
+          'Jane Vita',
+          'Service Creator na Futurice.',
+          'Design de serviços, futures thinking, UX em outros países.',
+          '07',
+          '07-foto-jane-vita.jpg',
+          '/jane-vita'
+        )
+        +episode(
+          'Elisa Volpato',
+          'Fundadora na TESTR.',
+          'Pesquisa para produto, teste de usabilidade, consultoria.',
+          '06',
+          '06-foto-elisa-volpato.jpg',
+          '/elisa-volpato'
+        )
+        +episode(
+          'Fabrício Teixeira',
+          'Diretor de UX na R/GA.',
+          'UX em agências, arquitetura de informação,UX em outros países.',
+          '05',
+          '05-foto-fabricio-teixeira.jpg',
+          '/fabricio-teixeira'
+        )
+        +episode(
+          'Koji Pereira',
+          'Designer de Produto no Google',
+          'Design digital, prototipação, UX em outros países.',
+          '04',
+          '04-foto-koji-pereira.jpg',
+          '/koji-pereira'
+        )
+        +episode(
+          'Eduardo Loureiro',
+          'Sócio gerente DesignThinkers Brasil.',
+          'Co-criação, transição de agências, empreendedorismo.',
+          '03',
+          '03-foto-eduardo-loureiro.jpg',
+          '/eduardo-loureiro'
+        )
+        +episode(
+          'Rodrigo Medeiros',
+          'Líder local no IxDA Recife.',
+          'Design centrado no usuário, design thinking e mercado de UX.',
+          '02',
+          '02-foto-rodrigo-medeiros.jpg',
+          '/rodrigo-medeiros'
+        )
+        +episode(
+          'Caio César',
+          'Professor de Design de Interação na PUC-MG.',
+          'Introdução ao tema UX, possibilidades de atuação e dicas pra começar.',
+          '01',
+          '01-foto-caio-cesar.jpg',
+          '/caio-cesar'
+        )
 
 //- last
 //- but not least
