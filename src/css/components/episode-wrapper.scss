@@ -48,6 +48,21 @@
   text-align: right;
   padding: $spacing-body-y $spacing-body-x $spacing-body-x;
   z-index: 999;
+  display: flex;
+  justify-content: flex-end;
+
+  > li {
+    margin-left: $spacing-2;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity $timing $easing;
+
+    &:hover,
+    &:focus,
+    &.-on {
+      opacity: 1;
+    }
+  }
 
   @media (max-width: $sm) {
     display: none;

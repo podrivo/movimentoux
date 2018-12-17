@@ -325,15 +325,21 @@ if (body.getAttribute('data-page') === 'season') {
 
 
 
-
-
-  grid.addEventListener('click', function(){
-    wrapper.classList.add('-grid')
+  list.addEventListener('click', function(){
+    if (!this.classList.contains('-on')) {
+      wrapper.classList.remove('-grid')
+      list.classList.toggle('-on')
+      grid.classList.toggle('-on')
+    }
     layout()
   })
 
-  list.addEventListener('click', function(){
-    wrapper.classList.remove('-grid')
+  grid.addEventListener('click', function(){
+    if (!this.classList.contains('-on')) {
+      wrapper.classList.add('-grid')
+      list.classList.toggle('-on')
+      grid.classList.toggle('-on')
+    }
     layout()
   })
 
