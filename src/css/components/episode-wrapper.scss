@@ -8,11 +8,14 @@
   &.-grid {
     flex-direction: row;
     justify-content: space-around;
+    padding: 0 $spacing-4;
 
     .intro-episode {
       width: 33%;
       height: auto;
       justify-content: center;
+      padding: ($spacing-body-x * 2.6) $spacing-body-y 0;
+      margin-bottom: $spacing-body-x;
 
       @media (max-width: $sm) {
         width: 100%;
@@ -20,33 +23,49 @@
     }
 
     .intro-episode:nth-child(3n+2) {
-      margin-top: $spacing-body-x * 3;
+      top: $spacing-body-x * 2;
     }
 
-    .intro-episode .cover-wrap {
-      top: -$spacing-11;
+    .intro-episode .episode-cover {
+      // top: -$spacing-11;
     }
 
-    .intro-episode .cover-wrap .cover {
-      max-width: 50%
+    .intro-episode .cover {
+      max-width: 45%;
+
+      @media (max-width: $sm) {
+        max-width: 100%;
+      }
+    }
+
+    .intro-episode svg {
+      transform: scale(0.6) translate(30px, 30px);
     }
 
     .intro-episode .number {
-      display: none;
+      top: $spacing-body-x;
+      font-size: 2.6vw;
+      align-self: flex-start;
+      text-shadow: -1px 0 $white, 0 1px $white, 1px 0 $white, 0 -1px $white;
     }
 
     .intro-episode .title {
-      font-size: 2.6vw;
+      font-size: 3vw;
       left: -0.1vw;
+      max-width: 60%;
+
+      @media (max-width: $sm) {
+        font-size: 8vw;
+        width: 100%;
+      }
     }
   }
 }
 
 .list-grid {
   position: sticky;
-  top: $spacing-body-x;
-  text-align: right;
-  padding: $spacing-body-y $spacing-body-x $spacing-body-x;
+  top: $spacing-12;
+  margin: $spacing-body-y $spacing-body-x $spacing-body-x;
   z-index: 999;
   display: flex;
   justify-content: flex-end;

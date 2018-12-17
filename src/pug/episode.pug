@@ -1,7 +1,7 @@
 mixin episode(speaker, description, keywords, number, image, url, variantInside, variantTitle)
   section(class= variantInside).intro-episode
     if variantInside == '-inside'
-      .cover-wrap
+      .episode-cover
         .cover
           img(src='/img/' + image alt='Fotografia de ' + speaker)
       .text
@@ -10,7 +10,7 @@ mixin episode(speaker, description, keywords, number, image, url, variantInside,
         p.keywords= keywords
       span.number= number
     else
-      .cover-wrap
+      .episode-cover
         .cover
           a(href= url title='Ir para episódio').play-badge
             img(src='/img/' + image alt='Fotografia de ' + speaker)
