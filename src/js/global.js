@@ -182,7 +182,8 @@ if (body.getAttribute('data-page') === 'episode') {
     return format
   }
 
-  soundcloud.resolve('https://soundcloud.com/movimento-ux/paolasales', function(track) {
+  var url = player.getAttribute('data-soundcloud')
+  soundcloud.resolve(url, function(track) {
     timeDuration.innerHTML = formatTime(soundcloud.duration)
     soundcloud.play()
     soundcloud.pause()
@@ -282,190 +283,192 @@ document.addEventListener('scroll', function(){
 
 
 // list-grid
-var list = document.querySelector('.list')
-var grid = document.querySelector('.grid')
-var wrapper = document.querySelector('.episode-wrapper')
-//
-// var group = document.querySelector(".episode-wrapper");
-// var nodes = document.querySelectorAll(".intro-episode");
-// var total = nodes.length;
-// var ease  = Power1.easeInOut;
-// var boxes = [];
+if (body.getAttribute('data-page') === 'season') {
+  var list = document.querySelector('.list')
+  var grid = document.querySelector('.grid')
+  var wrapper = document.querySelector('.episode-wrapper')
+  //
+  // var group = document.querySelector(".episode-wrapper");
+  // var nodes = document.querySelectorAll(".intro-episode");
+  // var total = nodes.length;
+  // var ease  = Power1.easeInOut;
+  // var boxes = [];
 
-// for (var i = 0; i < total; i++) {
-//
-//   var node = nodes[i]
-//   var width = node.offsetWidth;
-//   var height = node.offsetHeight;
-//
-//   var content = node.cloneNode(true);
-//   console.log(content);
-//   content.classList.add("item-content");
-//
-//   // Initialize transforms on node
-//   // TweenLite.set(node, { x: 0 });
-//   TweenLite.set(node, { x: 0 });
-//   TweenLite.set(content, { width: width, height: height });
-//   // TweenLite.set([node, node.children], { backgroundColor: color, color: color }); //?
-//
-//   node.appendChild(content);
-//
-//   boxes[i] = {
-//     content: content,
-//     transform: node._gsTransform,
-//     x: node.offsetLeft,
-//     y: node.offsetTop,
-//     width: node.offsetWidth,
-//     height: node.offsetHeight,
-//     node: node
-//   };
-// };
-
-
-
-
-
-grid.addEventListener('click', function(){
-  wrapper.classList.add('-grid')
-  layout()
-})
-
-list.addEventListener('click', function(){
-  wrapper.classList.remove('-grid')
-  layout()
-})
-
-// var content = node.cloneNode(true);
-// content.classList.add("item-content");
-
-// function layout() {
-//
-//   // group.classList.toggle("reorder");
-//
-//   for (var i = 0; i < total; i++) {
-//
-//     var box = boxes[i]
-//
-//     var lastX = box.x
-//     var lastY = box.y
-//
-//     var lastW = box.width;
-//     var lastH = box.height;
-//
-//     box.x = box.node.offsetLeft
-//     box.y = box.node.offsetTop
-//
-//     var width  = box.width  = box.node.offsetWidth;
-//     var height = box.height = box.node.offsetHeight;
-//
-//     // Continue if box hasn't moved
-//     if (lastX === box.x && lastY === box.y) {
-//       // Reversed delta values taking into account current transforms
-//       var x = box.transform.x + lastX - box.x
-//       var y = box.transform.y + lastY - box.y
-//
-//       // Tween to 0 to remove the transforms
-//       // TweenLite.fromTo(box.node, 2.5, {x: x, y: y}, {x: 0, y: 0, ease: ease})
-//       TweenLite.set(box.node, { x: x, y: y });
-//       TweenLite.to(box.node, time, { x: 0, y: 0, ease: ease });
-//     }
-//
-//     if (lastW !== box.width || lastH !== box.height) {
-//       TweenLite.to(box.content, 2.5, {autoRound: false, width: width, height: height, ease: ease})
-//     }
-//   }
-// }
+  // for (var i = 0; i < total; i++) {
+  //
+  //   var node = nodes[i]
+  //   var width = node.offsetWidth;
+  //   var height = node.offsetHeight;
+  //
+  //   var content = node.cloneNode(true);
+  //   console.log(content);
+  //   content.classList.add("item-content");
+  //
+  //   // Initialize transforms on node
+  //   // TweenLite.set(node, { x: 0 });
+  //   TweenLite.set(node, { x: 0 });
+  //   TweenLite.set(content, { width: width, height: height });
+  //   // TweenLite.set([node, node.children], { backgroundColor: color, color: color }); //?
+  //
+  //   node.appendChild(content);
+  //
+  //   boxes[i] = {
+  //     content: content,
+  //     transform: node._gsTransform,
+  //     x: node.offsetLeft,
+  //     y: node.offsetTop,
+  //     width: node.offsetWidth,
+  //     height: node.offsetHeight,
+  //     node: node
+  //   };
+  // };
 
 
 
 
-//
-// ANIMATIONS
-// ===========================================================================
-// var inputs = document.querySelectorAll("input");
-var episodes = document.querySelectorAll('.intro-episode')
-var total = episodes.length
-var dirty = true
-var time = 0.9
-var omega = 12
-var zeta = 0.9
-var boxes = []
 
-for (var i = 0; i < total; i++) {
+  grid.addEventListener('click', function(){
+    wrapper.classList.add('-grid')
+    layout()
+  })
 
-  var ep = episodes[i]
-  var width = ep.offsetWidth
-  var height = ep.offsetHeight
-  // var color = "transparent";
+  list.addEventListener('click', function(){
+    wrapper.classList.remove('-grid')
+    layout()
+  })
 
-  // Need another element to animate width & height... use clone instead of editing HTML
-  var clone = ep.cloneNode(true)
-  ep.classList.add('-hide')
-  clone.classList.add('-clone')
+  // var content = node.cloneNode(true);
+  // content.classList.add("item-content");
 
-  TweenLite.set(ep, {x: "+=0", y: '+=0'})
-  TweenLite.set(clone, {width: width, height: height})
-  // TweenLite.set([node, node.children], { backgroundColor: color, color: color });
+  // function layout() {
+  //
+  //   // group.classList.toggle("reorder");
+  //
+  //   for (var i = 0; i < total; i++) {
+  //
+  //     var box = boxes[i]
+  //
+  //     var lastX = box.x
+  //     var lastY = box.y
+  //
+  //     var lastW = box.width;
+  //     var lastH = box.height;
+  //
+  //     box.x = box.node.offsetLeft
+  //     box.y = box.node.offsetTop
+  //
+  //     var width  = box.width  = box.node.offsetWidth;
+  //     var height = box.height = box.node.offsetHeight;
+  //
+  //     // Continue if box hasn't moved
+  //     if (lastX === box.x && lastY === box.y) {
+  //       // Reversed delta values taking into account current transforms
+  //       var x = box.transform.x + lastX - box.x
+  //       var y = box.transform.y + lastY - box.y
+  //
+  //       // Tween to 0 to remove the transforms
+  //       // TweenLite.fromTo(box.node, 2.5, {x: x, y: y}, {x: 0, y: 0, ease: ease})
+  //       TweenLite.set(box.node, { x: x, y: y });
+  //       TweenLite.to(box.node, time, { x: 0, y: 0, ease: ease });
+  //     }
+  //
+  //     if (lastW !== box.width || lastH !== box.height) {
+  //       TweenLite.to(box.content, 2.5, {autoRound: false, width: width, height: height, ease: ease})
+  //     }
+  //   }
+  // }
 
-  ep.appendChild(clone)
 
-  // console.log(node)
 
-  var transform = ep._gsTransform
-  var x = ep.offsetLeft
-  var y = ep.offsetTop
 
-  boxes[i] = {clone: clone, height: height, ep: ep, transform: transform, width: width, x: x, y: y}
-}
-
-// for (var i = 0; i < inputs.length; i++) {
-//   inputs[i].addEventListener("change", layout);
-// }
-
-window.addEventListener('resize', function () {dirty = true})
-TweenLite.ticker.addEventListener('tick', function () {return dirty && layout()})
-
-layout()
-
-function layout() {
-
-  // dirty = false;
+  //
+  // ANIMATIONS
+  // ===========================================================================
+  // var inputs = document.querySelectorAll("input");
+  var episodes = document.querySelectorAll('.intro-episode')
+  var total = episodes.length
+  var dirty = true
+  var time = 0.9
+  var omega = 12
+  var zeta = 0.9
+  var boxes = []
 
   for (var i = 0; i < total; i++) {
 
-    var box = boxes[i]
+    var ep = episodes[i]
+    var width = ep.offsetWidth
+    var height = ep.offsetHeight
+    // var color = "transparent";
 
-    var lastX = box.x
-    var lastY = box.y
-    var lastW = box.width
-    var lastH = box.height
+    // Need another element to animate width & height... use clone instead of editing HTML
+    var clone = ep.cloneNode(true)
+    ep.classList.add('-hide')
+    clone.classList.add('-clone')
 
-    var width = box.width = box.ep.offsetWidth
-    var height = box.height = box.ep.offsetHeight
+    TweenLite.set(ep, {x: "+=0", y: '+=0'})
+    TweenLite.set(clone, {width: width, height: height})
+    // TweenLite.set([node, node.children], { backgroundColor: color, color: color });
 
-    box.x = box.ep.offsetLeft
-    box.y = box.ep.offsetTop
+    ep.appendChild(clone)
 
-    if (lastX !== box.x || lastY !== box.y) {
+    // console.log(node)
 
-      var x = box.transform.x + lastX - box.x
-      var y = box.transform.y + lastY - box.y
+    var transform = ep._gsTransform
+    var x = ep.offsetLeft
+    var y = ep.offsetTop
 
-      // Tween to 0 to remove the transforms
-      // TweenLite.set(box.node, {x: x, y: y})
-      TweenLite.to(box.ep, time, {x: 0, y: 0, ease: ease})
-    }
+    boxes[i] = {clone: clone, height: height, ep: ep, transform: transform, width: width, x: x, y: y}
+  }
 
-    if (lastW !== box.width || lastH !== box.height) {
-      TweenLite.to(box.clone, time, {autoRound: false, width: width, height: height, ease: ease})
+  // for (var i = 0; i < inputs.length; i++) {
+  //   inputs[i].addEventListener("change", layout);
+  // }
+
+  window.addEventListener('resize', function () {dirty = true})
+  TweenLite.ticker.addEventListener('tick', function () {return dirty && layout()})
+
+  layout()
+
+  function layout() {
+
+    // dirty = false;
+
+    for (var i = 0; i < total; i++) {
+
+      var box = boxes[i]
+
+      var lastX = box.x
+      var lastY = box.y
+      var lastW = box.width
+      var lastH = box.height
+
+      var width = box.width = box.ep.offsetWidth
+      var height = box.height = box.ep.offsetHeight
+
+      box.x = box.ep.offsetLeft
+      box.y = box.ep.offsetTop
+
+      if (lastX !== box.x || lastY !== box.y) {
+
+        var x = box.transform.x + lastX - box.x
+        var y = box.transform.y + lastY - box.y
+
+        // Tween to 0 to remove the transforms
+        // TweenLite.set(box.node, {x: x, y: y})
+        TweenLite.to(box.ep, time, {x: 0, y: 0, ease: ease})
+      }
+
+      if (lastW !== box.width || lastH !== box.height) {
+        TweenLite.to(box.clone, time, {autoRound: false, width: width, height: height, ease: ease})
+      }
     }
   }
-}
 
-function ease(progress) {
-  var beta = Math.sqrt(1.0 - zeta * zeta)
-  progress = 1 - Math.cos(progress * Math.PI / 2)
-  progress = 1 / beta * Math.exp(-zeta * omega * progress) * Math.sin(beta * omega * progress + Math.atan(beta / zeta))
+  function ease(progress) {
+    var beta = Math.sqrt(1.0 - zeta * zeta)
+    progress = 1 - Math.cos(progress * Math.PI / 2)
+    progress = 1 / beta * Math.exp(-zeta * omega * progress) * Math.sin(beta * omega * progress + Math.atan(beta / zeta))
 
-  return 1 - progress
+    return 1 - progress
+  }
 }
