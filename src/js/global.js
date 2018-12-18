@@ -487,11 +487,12 @@ if (body.getAttribute('data-page') === 'season') {
 
 
 
-
-var carousel = document.querySelector('.carousel')
-var flkty = new Flickity(carousel, {
-  // cellAlign: 'left',
-  // contain: true
-  autoPlay: true,
-  pageDots: false
+document.addEventListener('DOMContentLoaded', function() {
+  var carousel = document.querySelector('.carousel')
+  var flkty = new Flickity(carousel, {
+    // cellAlign: 'left',
+    // contain: true
+    autoPlay: true,
+    pageDots: false
+  })
 })
