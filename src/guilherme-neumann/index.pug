@@ -1,0 +1,150 @@
+include ../pug/meta
+include ../pug/header
+include ../pug/episode
+include ../pug/link
+include ../pug/js
+
++meta(
+  'Guilherme Neumann, Episódio 15 — Movimento UX',
+  'UX Lead no Nubank. Cultura de experiência, design de produto, liderança em design.',
+  'http://movimentoux.com/guilherme-neumann/'
+)
+
+body(data-page='episode')
+  
+  +header('on', '', '')
+  
+  #barba-wrapper
+    .barba-container
+      +episode(
+        'Guilherme Neumann',
+        'UX Lead no Nubank.',
+        'Cultura de experiência, design de produto, liderança em design.',
+        '15',
+        '15-foto-guilherme-neumann.jpg',
+        '',
+        '-inside',
+        ''
+      )
+      
+      aside(data-soundcloud='guilhermeneumann').episode-player
+        .backwards
+        .play
+        .forwards
+        .time.-current 00:00
+        .timeline
+          .percentage
+          .mouse
+        .time.-duration 0:00:00
+        .volume #[span]
+      
+      section.episode-content
+        .text
+          p Ei, pessoal!
+          p Neste 15º episódio, tive uma conversa fantástica com o Guilherme Neumann, que lidera o Design/UX no Nubank.
+          p A gente conversou sobre sua trajetória de mais de 15 anos como Designer de Experiência de Uso e Interface, e também sobre suas experiências na Globo.com, no Yahoo de São Paulo e São Francisco, além da sua volta pro Brasil e o desafio atual no Nubank.
+          p Também falamos sobre como a Arquitetura influencia seu mindset como Designer, o dia a dia e a cultura de Experiência do Nubank, como ele aprendeu sobre UX e muito mais.
+          
+          img(src='/img/15-foto-01.jpg' alt='')
+          span.caption Barra de Limite, Nubank.
+          
+          img(src='/img/15-foto-02.jpg' alt='')
+          span.caption Co-design, Nubank.
+          
+          blockquote “A solução de design ou de interface que surge é consequência não só do trabalho que o designer faz, mas da preocupação que todo mundo no Nubank tem com a experiência de quem usa o produto.”
+          
+          ul.carousel
+            li.item #[img(src='/img/15-foto-03.jpg' alt='')]
+            li.item #[img(src='/img/15-foto-04.jpg' alt='')]
+            li.item #[img(src='/img/15-foto-05.jpg' alt='')]
+            li.item #[img(src='/img/15-foto-06.jpg' alt='')]
+            li.item #[img(src='/img/15-foto-07.jpg' alt='')]
+            li.item #[img(src='/img/15-foto-08.jpg' alt='')]
+            li.item #[img(src='/img/15-foto-09.jpg' alt='')]
+            li.item #[img(src='/img/15-foto-10.jpg' alt='')]
+          
+          p E ele deixou muitas dicas legais pra gente, olhem só.
+          
+          //- img(src='/img/15-foto-03.jpg' alt='')
+          
+          //- blockquote “Acredito em solucionar problemas do dia a dia — que talvez alguém já tenha pensado em como resolvê-los, mas aplico uma nova perspectiva sobre como solucioná-los. Esse é o jeito que penso em novos produtos.”
+          
+          //- .gallery
+            .img
+              img(src='/img/18-foto-04.jpg' alt='')
+              span.caption Grid personalizado.
+            .img
+              img(src='/img/18-foto-05.jpg' alt='')
+              span.caption Upload de imagens mobile.
+          
+          //- blockquote “Acredito em solucionar problemas do dia a dia — que talvez alguém já tenha pensado em como resolvê-los, mas aplico uma nova perspectiva sobre como solucioná-los. Esse é o jeito que penso em novos produtos.”
+          
+          //- .gallery
+            .img
+              img(src='/img/16-foto-10.jpg' alt='')
+              span.caption Escritório Portland.
+            .img
+              img(src='/img/16-foto-11.jpg' alt='')
+              span.caption Escritório Rio de Janeiro.
+            
+          p Pessoas pra seguir no Twitter:
+          ul.links
+            +link(
+              'Daniel Burka',
+              'https://twitter.com/dburka'
+            )
+            +link(
+              'Chris Sacca',
+              'https://twitter.com/sacca'
+            )
+            +link(
+              'Mike Rundle',
+              'https://twitter.com/flyosity'
+            )
+            +link(
+              'Jon Wiley',
+              'https://twitter.com/jonwiley'
+            )
+
+          p Livros:
+          ul.links
+            +link(
+              'Addiction by Design',
+              'https://www.amazon.com/Addiction-Design-Machine-Gambling-Vegas/dp/0691160880'
+            )
+            +link(
+              'Sketching User Experiences',
+              'https://www.amazon.com/Sketching-User-Experiences-Interactive-Technologies/dp/0123740371'
+            )
+          
+          p Outros links:
+          ul.links
+            +link(
+              'Palestra do Joi Ito + Tim Brown, CEO da IDEO, no SxSW',
+              'https://www.youtube.com/watch?v=JA2HN4aClQQ'
+            )
+            +link(
+              'Dribbble do Nubank',
+              'https://dribbble.com/nubank'
+            )
+          
+          p No próximo podcast, vou conversar com a Carolina Leslie, sócia fundadora da Saiba+.
+          p Pra fechar, uma dica minha: #[a(href='https://play.spotify.com/user/12184063773/playlist/5Bxhm5LY03DHSqko3YRBKf' title='Entrevista no Creative Doc' target='_blank' rel='noopener').link.-alt entrevista] muito bacana que ele deu pra um projeto que adoro, o Creative Doc do Gláuber Sampaio.
+          p No próximo episódio, o Movimento UX completa seu primeiro ano de vida e, pra comemorar, o convidado é pra lá de especial. Esse vai ser surpresa!
+          p Até lá!
+
+        .sidebar
+          h3.eyebrow Localização
+          p São Paulo
+          
+          h3.eyebrow Site
+          p #[a(href='https://nubank.com.br/' title='Nubank' target='_blank' rel='noopener').link.-alt Nubank]
+          
+          h3.eyebrow Social
+          p #[a(href='http://gneumann.me/' title='Site pessoal' target='_blank' rel='noopener').link.-alt Site pessoal]
+          p #[a(href='http://twitter.com/gneumann' title='Twitter' target='_blank' rel='noopener').link.-alt Twitter]
+          p #[a(href='https://dribbble.com/gneumann' title='Dribbble' target='_blank' rel='noopener').link.-alt Dribbble]
+
+//- last
+//- but not least
++js
