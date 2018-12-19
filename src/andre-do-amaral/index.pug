@@ -1,6 +1,8 @@
 include ../pug/meta
 include ../pug/header
 include ../pug/episode
+include ../pug/player
+include ../pug/link
 include ../pug/js
 
 +meta(
@@ -26,16 +28,7 @@ body(data-page='episode')
         ''
       )
       
-      aside(data-soundcloud='andredoamaral').episode-player
-        .backwards
-        .play
-        .forwards
-        .time.-current 00:00
-        .timeline
-          .percentage
-          .mouse
-        .time.-duration 0:00:00
-        .volume #[span]
+      +player('andredoamaral')
       
       section.episode-content
         .text
