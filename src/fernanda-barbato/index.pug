@@ -1,0 +1,105 @@
+include ../pug/meta
+include ../pug/header
+include ../pug/episode
+include ../pug/player
+include ../pug/link
+include ../pug/js
+
++meta(
+  'Fabricio Dore, Episódio 13 — Movimento UX',
+  'UX Lead na Designit. Hyper Island, pesquisa com usuários, UX em outros países.',
+  'http://movimentoux.com/fernanda-barbato/'
+)
+
+body(data-page='episode')
+  
+  +header('on', '', '')
+  
+  #barba-wrapper
+    .barba-container
+      +episode(
+        'Fernanda Barbato',
+        'UX Lead na Designit.',
+        'Hyper Island, pesquisa com usuários, UX em outros países.',
+        '13',
+        '13-foto-fernanda-barbato.jpg',
+        '',
+        '-inside',
+        ''
+      )
+      
+      +player('fernandabarbato')
+      
+      section.episode-content
+        .text
+          p Oi, pessoal!
+          p No 13º episódio do Movimento UX, tive uma conversa inspiradora com a Fernanda Barbato, Industry Leader na Hyper Island e UX Lead na Designit em Estocolmo/SWE.
+          p A Fernanda é mineira de Belo Horizonte, mas mora há 6 anos na Suécia. Além de nos contar sobre seu extenso background, ela falou sobre a jornada de aprendizado no curso de Interactive Art Director na Hyper Island, de como descobriu o desejo de criar produtos centrados nos usuários - veio de um papo com um taxista bósnio - e da sua experiência de estágio na IDEO de Munique.
+          p Também conversamos sobre seu dia a dia de trabalho de pesquisa com os usuários na consultoria VeryDay, os desafios e oportunidades que vivenciou ao fazer parte da equipe da startup Narrative Clip, a primeira câmera wearable do mundo, a sua missão na Designit e várias outras coisas!
+          
+          p As dicas que ela deixou pra gente são:
+          ul.links
+            +link(
+              'Livro Isto é Design Thinking de Serviços',
+              'http://www.saraiva.com.br/isto-e-design-thinking-de-servicos-7909978.html'
+            )
+            +link(
+              'Livro About Face do Alan Cooper',
+              'http://www.amazon.com.br/About-Face-Essentials-Interaction-Design/dp/1118766571/'
+            )
+            +link(
+              'Lean UX',
+              'https://www.amazon.com.br/Lean-UX-Applying-Principles-Experience/dp/1449311652/'
+            )
+            +link(
+              'UXPin no Medium',
+              'https://medium.com/@uxpin'
+            )
+            +link(
+              'Dave Malouf no Medium',
+              'https://medium.com/@daveixd'
+            )
+            +link(
+              'The Ready no Medium',
+              'https://medium.com/the-ready'
+            )
+            +link(
+              'Christina Wodtke no Medium',
+              'https://medium.com/@cwodtke'
+            )
+
+          p E aqui estão alguns links sobre os quais falamos neste podcast: 
+          ul.links
+            +link(
+              'Start up Narrative Clip',
+              'http://getnarrative.com/'
+            )
+            +link(
+              'Consultoria VeryDay',
+              'http://veryday.com/'
+            )
+            +link(
+              'Métodos e ferramentas utilizados na HyperIsland',
+              'http://toolbox.hyperisland.com/'
+            )
+          
+          p Ah, e pra quem quiser saber um pouco mais sobre o dia a dia do curso de Interactive Art Director na Hyper Island de Estocolmo é só escrever pro Cristiano! Ele vai ter o maior prazer de responder: #[a(href='http://twitter.com/cristianodoes' title='twitter.com/cristianodoes' target='_blank' rel='noopener').link.-alt twitter.com/cristianodoes]. Você também pode acompanhar a jornada dele pelo snap: hicristiano.
+          p No próximo podcast, vou conversar com o Fabricio Dore, Diretor Executivo de Design na McKinsey.
+          p Obrigada por acompanhar o Movimento UX e até a próxima edição!
+          p Obs: se você tiver qualquer dúvida ou quiser me dar um feedback é só me escrever no twitter.com/izabeladefatima ou no izabeladefatima@gmail.com 🙂
+
+        .sidebar
+          h3.eyebrow Localização
+          p Estocolmo
+          
+          //- h3.eyebrow Site
+          //- p #[a(href='https://work.co/' title='Work & Co' target='_blank' rel='noopener').link.-alt Work & Co]
+          //- 
+          //- h3.eyebrow Social
+          //- p #[a(href='http://fmemoria.com.br/' title='Site pessoal' target='_blank' rel='noopener').link.-alt Site pessoal]
+          //- p #[a(href='https://twitter.com/paolasalesetc' title='Twitter' target='_blank' rel='noopener').link.-alt Twitter]
+          //- p #[a(href='https://instagram.com/paolasales/' title='Instagram' target='_blank' rel='noopener').link.-alt Instagram]
+
+//- last
+//- but not least
++js
