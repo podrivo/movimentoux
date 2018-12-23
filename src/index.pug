@@ -5,12 +5,12 @@ include pug/social
 include pug/js
 
 +meta(
-  'Movimento UX',
-  'Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário.',
+  'Temporada 2 — Movimento UX',
+  'UX Design. Conversas sobre pesquisa para produto. — Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário.',
   'http://movimentoux.com/'
 )
 
-body
+body(data-page='season')
 
   +header('', 'on', '')
 
@@ -23,14 +23,27 @@ body
 
       +social('-home')
       
-      +episode(
-        'Paola Sales',
-        'Head de User Studies no Descomplica.',
-        'Pesquisa humanizada, empatia e criação de área.',
-        '19',
-        '19-foto-paola-sales.jpg',
-        '/paola-sales/'
-      )
+      ul.list-grid
+        li.list.-on #[svg(src='img/ep-list.svg')]
+        li.grid #[svg(src='img/ep-grid.svg')]
+      
+      .episode-wrapper
+        +episode(
+          'Fulana Beltrana',
+          'UX Specialist no Siclano.',
+          'Pesquisa humanizada, empatia e criação de área.',
+          '20',
+          'dummy.jpg',
+          '/paola-sales/'
+        )
+        +episode(
+          'Paola Sales',
+          'Head de User Studies no Descomplica.',
+          'Pesquisa humanizada, empatia e criação de área.',
+          '19',
+          '19-foto-paola-sales.jpg',
+          '/paola-sales/'
+        )
 
 //- last
 //- but not least
