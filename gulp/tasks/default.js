@@ -6,8 +6,8 @@ module.exports = function(config, log, error, success) {
   gulp.task('default', function(callback) {
     var msg = gutil.colors.bgBlack(' 🚴  ') + gutil.colors.black.bgGreen(' Start building. ');
     console.log(msg);
-    
-    runSequence('clean', ['fonts', 'html', 'images', 'scripts', 'styles'], success);
+
+    runSequence('clean', ['fonts', 'html', 'images', 'scripts', 'styles', 'media'], success);
     callback;
   });
 };

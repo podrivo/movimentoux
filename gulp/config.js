@@ -48,6 +48,12 @@ var config = {
       ],
       'dest': './dist/css'
     }
+  },
+  'media': {
+    'src': [
+      './src/img/**/*.{mp4,mp3}'
+    ],
+    'dest': './dist/img'
   }
 };
 
