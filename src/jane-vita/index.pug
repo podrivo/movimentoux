@@ -12,9 +12,9 @@ include ../pug/js
 )
 
 body(data-page='episode')
-  
+
   +header('on', '', '')
-  
+
   #barba-wrapper
     .barba-container
       +episode(
@@ -26,93 +26,56 @@ body(data-page='episode')
         '',
         '-inside'
       )
-      
+
       +player('janevita')
-      
+
       section.episode-content
         .text
-          p ei gente!
-          //- p No 12º episódio do Movimento UX, tive o prazer de conversar com o Sergio Salvador, diretor de Experiência do Usuário na Huge do Rio de Janeiro.
-          //- p Há 5 anos na Huge, Sergio é responsável por projetos como o App Do Bem Máquina, a redefinição da experiência digital dos bancos colombianos Davivienda e Banco de Bogotá, o novo site da Bradesco Seguros e o projeto da seguradora mundial XL Group, reconhecido como uma das melhores intranets do mundo pelo Nielsen Norman Group em 2013.
-          //- p Falamos sobre sua trajetória profissional, o processo de UX da HUGE, sobre Design Antecipatório, Machine Learning, Inteligência Artificial e os desafios e oportunidades que esses temas trazem pra gente e muito mais.
-          //- 
-          //- p O Sergio também é fã de podcasts e deixou algumas dicas pra gente:
-          //- ul.links
-          //-   +link(
-          //-     'Podcast do Jared Spool',
-          //-     'https://www.uie.com/brainsparks/topics/podcasts/'
-          //-   )
-          //-   +link(
-          //-     'Ted Radio Hour',
-          //-     'http://www.amazon.com.br/About-Face-Essentials-Interaction-Design/dp/1118766571/'
-          //-   )
-          //-   +link(
-          //-     'Reply All da Gimlet Media',
-          //-     'https://gimletmedia.com/show/reply-all/'
-          //-   )
-          //-   +link(
-          //-     'Braincast',
-          //-     'http://www.b9.com.br/podcasts/braincast/'
-          //-   )
-          //- 
-          //- 
-          //- p Os profissionais que o inspiram são:
-          //- ul.links
-          //-   +link(
-          //-     'Jakob Nielsen',
-          //-     'https://www.nngroup.com/people/jakob-nielsen/'
-          //-   )
-          //-   +link(
-          //-     'Luke W.',
-          //-     'https://twitter.com/lukew'
-          //-   )
-          //-   +link(
-          //-     'Brad Frost',
-          //-     'https://twitter.com/brad_frost'
-          //-   )
-          //-   +link(
-          //-     'Jared Spool',
-          //-     'https://twitter.com/jmspool'
-          //-   )
-          //-   +link(
-          //-     'Don Norman',
-          //-     'https://twitter.com/jnd1er'
-          //-   )
-          //-   +link(
-          //-     'Paola Sales',
-          //-     'https://twitter.com/paolasalesetc'
-          //-   )
-          //-   +link(
-          //-     'Anna Raquel Serra',
-          //-     'https://twitter.com/ladyars'
-          //-   )
-          //-   +link(
-          //-     'Fabrício Marchezini',
-          //-     'https://twitter.com/zeroseis'
-          //-   )
-          //- 
-          //- p E estão aqui alguns links sobre os quais falamos neste episódio:
-          //- ul.links
-          //-   +link(
-          //-     'Palestra do Jared Spool no Interaction South America de 2013 em Recife',
-          //-     'https://www.youtube.com/watch?v=LHphp_EzVpQ&feature=youtu.be&list=PLqWrdV5mKT65qLt3CG8zqp41LmLAtwJhd'
-          //-   )
-          //-   +link(
-          //-     'Palestra do Sergio sobre o poder e os desafios do design antecipatório',
-          //-     'https://www.youtube.com/watch?v=12hy3HU66RA'
-          //-   )
-          //-   +link(
-          //-     'A lava-louças da GE que compra o próprio detergente na Amazon',
-          //-     'http://readwrite.com/2016/10/12/ge-provides-connected-dishwashers-dl4/'
-          //-   )
-          //- 
-          //- p No próximo podcast, vou conversar com a Fernanda Barbato, diretora de UX na Designit e na Hyper Island em Estocolmo/SWE.
-          //- p Até o próximo episódio! =)
+          p A Jane trabalha com Design há 19 anos e tem experiência em muitas das competências da disciplina, como em experiência do usuário, interação, serviços, interface, estratégia e pesquisa. Com uma bagagem enorme, ela já passou por diversas empresas em diferentes cidades brasileiras. Hoje está em Helsinki, na Finlândia, onde trabalha como Service Creator na Futurice, consultoria de inovação.
+          p Entre tantas coisas, a gente conversou sobre sua experiência profissional, sua atuação na Futurice e outros trabalhos na Finlândia, os estudos em Inovação e Design de Serviços e Futures Thinking, o Design na Finlândia e ela ainda deu dicas de livros pra quem quer aprender sobre esses temas.
+
+          p As dicas que a Jane passou pra gente são:
+          ul.links
+            +link(
+              'Podcast: TheThingCast',
+              'https://soundcloud.com/thethingcast'
+            )
+            +link(
+              'Revista: UXmag',
+              'https://uxmag.com/'
+            )
+            +link(
+              'Livro: Services Marketing — Integrating Customer Focus Across the Firm',
+              'https://www.amazon.com/Services-Marketing-6th-Valerie-Zeithalm/dp/0078112052/'
+            )
+            +link(
+              'Livro: Designing for the Digital Age',
+              'https://www.amazon.com/Designing-Digital-Age-Human-Centered-Products/dp/0470229101/'
+            )
+            +link(
+              'Livro: Designing Interactions',
+              'https://www.amazon.com.br/Designing-Interactions-Press-Bill-Moggridge-ebook/dp/B00DDTJ3GM/'
+            )
+            +link(
+              'Livro: This is Service Design Thinking',
+              'https://www.amazon.com.br/This-Service-Design-Thinking-Basics-Tools-Cases-ebook/dp/B00BAVJW8Y/'
+            )
+            +link(
+              'Livro: Trend-Driven Innovation',
+              'https://www.amazon.com.br/Trend-Driven-Innovation-Accelerating-Customer-Expectations-ebook/dp/B017TJ12QK/'
+            )
+            +link(
+              'Apresentação: Innovation and Futures Thinking — Are you Leading or Following?',
+              'https://www.amazon.com.br/Trend-Driven-Innovation-Accelerating-Customer-Expectations-ebook/dp/B017TJ12QK/'
+            )
+
+          p Se você quiser conhecer mais sobre o trabalho e os estudos da Jane, é só acessar o site dela e a apresentação Innovation and Futures Thinking — Are you Leading or Following? que ela cita no podcast.
+          p Até o próximo episódio! 🙂
 
         .sidebar
           h3.eyebrow Localização
           p Vancouver
-          
+
           h3.eyebrow Site
           p #[a(href='http://www.janevita.com/' title='Site pessoal' target='_blank' rel='noopener').link.-alt Site pessoal]
 

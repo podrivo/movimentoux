@@ -12,9 +12,9 @@ include ../pug/js
 )
 
 body(data-page='episode')
-  
+
   +header('on', '', '')
-  
+
   #barba-wrapper
     .barba-container
       +episode(
@@ -26,95 +26,52 @@ body(data-page='episode')
         '',
         '-inside'
       )
-      
+
       +player('elisa-volpato')
-      
+
       section.episode-content
         .text
-          p ei gente!
-          //- p No 12º episódio do Movimento UX, tive o prazer de conversar com o Sergio Salvador, diretor de Experiência do Usuário na Huge do Rio de Janeiro.
-          //- p Há 5 anos na Huge, Sergio é responsável por projetos como o App Do Bem Máquina, a redefinição da experiência digital dos bancos colombianos Davivienda e Banco de Bogotá, o novo site da Bradesco Seguros e o projeto da seguradora mundial XL Group, reconhecido como uma das melhores intranets do mundo pelo Nielsen Norman Group em 2013.
-          //- p Falamos sobre sua trajetória profissional, o processo de UX da HUGE, sobre Design Antecipatório, Machine Learning, Inteligência Artificial e os desafios e oportunidades que esses temas trazem pra gente e muito mais.
-          //- 
-          //- p O Sergio também é fã de podcasts e deixou algumas dicas pra gente:
-          //- ul.links
-          //-   +link(
-          //-     'Podcast do Jared Spool',
-          //-     'https://www.uie.com/brainsparks/topics/podcasts/'
-          //-   )
-          //-   +link(
-          //-     'Ted Radio Hour',
-          //-     'http://www.amazon.com.br/About-Face-Essentials-Interaction-Design/dp/1118766571/'
-          //-   )
-          //-   +link(
-          //-     'Reply All da Gimlet Media',
-          //-     'https://gimletmedia.com/show/reply-all/'
-          //-   )
-          //-   +link(
-          //-     'Braincast',
-          //-     'http://www.b9.com.br/podcasts/braincast/'
-          //-   )
-          //- 
-          //- 
-          //- p Os profissionais que o inspiram são:
-          //- ul.links
-          //-   +link(
-          //-     'Jakob Nielsen',
-          //-     'https://www.nngroup.com/people/jakob-nielsen/'
-          //-   )
-          //-   +link(
-          //-     'Luke W.',
-          //-     'https://twitter.com/lukew'
-          //-   )
-          //-   +link(
-          //-     'Brad Frost',
-          //-     'https://twitter.com/brad_frost'
-          //-   )
-          //-   +link(
-          //-     'Jared Spool',
-          //-     'https://twitter.com/jmspool'
-          //-   )
-          //-   +link(
-          //-     'Don Norman',
-          //-     'https://twitter.com/jnd1er'
-          //-   )
-          //-   +link(
-          //-     'Paola Sales',
-          //-     'https://twitter.com/paolasalesetc'
-          //-   )
-          //-   +link(
-          //-     'Anna Raquel Serra',
-          //-     'https://twitter.com/ladyars'
-          //-   )
-          //-   +link(
-          //-     'Fabrício Marchezini',
-          //-     'https://twitter.com/zeroseis'
-          //-   )
-          //- 
-          //- p E estão aqui alguns links sobre os quais falamos neste episódio:
-          //- ul.links
-          //-   +link(
-          //-     'Palestra do Jared Spool no Interaction South America de 2013 em Recife',
-          //-     'https://www.youtube.com/watch?v=LHphp_EzVpQ&feature=youtu.be&list=PLqWrdV5mKT65qLt3CG8zqp41LmLAtwJhd'
-          //-   )
-          //-   +link(
-          //-     'Palestra do Sergio sobre o poder e os desafios do design antecipatório',
-          //-     'https://www.youtube.com/watch?v=12hy3HU66RA'
-          //-   )
-          //-   +link(
-          //-     'A lava-louças da GE que compra o próprio detergente na Amazon',
-          //-     'http://readwrite.com/2016/10/12/ge-provides-connected-dishwashers-dl4/'
-          //-   )
-          //- 
-          //- p No próximo podcast, vou conversar com a Fernanda Barbato, diretora de UX na Designit e na Hyper Island em Estocolmo/SWE.
-          //- p Até o próximo episódio! =)
+          p No 6º episódio do Movimento UX você vai acompanhar o ótimo papo que tive com a Elisa Volpato.
+          p Conversamos sobre a trajetória da Elisa desde a Try Consultoria, passando pela AgênciaClick, UOL, Predicta, Itaú até a concepção da consultoria UX Dialog e da ferramenta de teste de usabilidade remoto TESTR — empresas em que ela está à frente hoje.
+          p Também falamos sobre como ela desenvolveu suas habilidades em usabilidade, arquitetura de informação, design de interação e UX ao longo dos anos, sobre dicas pra quem quer trabalhar de forma independente com UX, os desafios dos testes de usabilidade com as novas formas de interação que estão surgindo e muito mais.
+
+          p As dicas que a Elisa passou pra gente são:
+          ul.links
+            +link(
+              'Livro: 100 coisas que todo designer deve saber sobre pessoas',
+              'https://www.amazon.com.br/dp/0321767535/'
+            )
+            +link(
+              'Blog: Arquitetura de Informação',
+              'http://arquiteturadeinformacao.com/'
+            )
+            +link(
+              'Associação: UXPA Profissionais de Experiência do Usuário',
+              'http://uxpasp.com/'
+            )
+
+          p Você pode saber mais sobre o trabalho da Elisa aqui:
+          ul.links
+            +link(
+              'Consultoria UX Dialog',
+              'http://uxdialog.com.br/'
+            )
+            +link(
+              'Ferramenta de Teste de Usabilidade RemotoTESTR',
+              'http://testr.com.br/'
+            )
+
+          p Tenho uma novidade bem legal pra você. Nos dias 20 e 21 de maio, vai rolar a #[a(href='http://www.wildtech.com.br/uxconfbr' title='UXConf' target='_blank' rel='noopener').link.-alt UXConf], uma conferência de UX brasileira, em Porto Alegre. E consegui um desconto de 10% no valor do ingresso pra quem ouve o Movimento UX! Para isso, é só usar o código promocional MovimentoUX na página do evento. 🙂
+          p No próximo episódio o papo será com a Jane Vita que é Designer e Service Creator na Futurice em Helsinki/FI.
+          p Até lá!
 
         .sidebar
           h3.eyebrow Localização
           p São Paulo
-          
-          h3.eyebrow Site
+
+          h3.eyebrow Social
           p #[a(href='http://testr.com.br/' title='TESTR' target='_blank' rel='noopener').link.-alt TESTR]
+          p #[a(href='https://www.linkedin.com/in/elisavolpato/pt' title='LinkedIn' target='_blank' rel='noopener').link.-alt LinkedIn]
 
 //- last
 //- but not least
