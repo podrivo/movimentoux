@@ -27,10 +27,6 @@
     margin: $spacing-1 0;
     z-index: 99;
     // transition: all ($timing * 2.3) $easing;
-
-    &.-two {
-      max-width: 83%;
-    }
   }
 
   > .number {

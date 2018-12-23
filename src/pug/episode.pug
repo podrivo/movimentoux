@@ -1,11 +1,11 @@
-mixin episode(speaker, description, keywords, number, image, url, variantInside, variantTitle)
+mixin episode(speaker, description, keywords, number, image, url, variantInside)
   section(class= variantInside).intro-episode
     if variantInside == '-inside'
       .episode-cover
         .cover
           img(src='/img/' + image alt='Fotografia de ' + speaker)
       .text
-        h2(class= variantTitle).title= speaker
+        h2.title= speaker
         p.keywords= description
         p.keywords= keywords
       span.number= number
@@ -16,7 +16,7 @@ mixin episode(speaker, description, keywords, number, image, url, variantInside,
             img(src='/img/' + image alt='Fotografia de ' + speaker)
             svg(src='/img/play.svg')
       .text
-        h2(class= variantTitle).title= speaker
+        h2.title= speaker
         p.keywords= description
         p.keywords= keywords
       span.number= number
