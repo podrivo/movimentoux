@@ -3,6 +3,7 @@ include ../pug/header
 include ../pug/episode
 include ../pug/player
 include ../pug/link
+include ../pug/link-alt
 include ../pug/js
 
 +meta(
@@ -58,48 +59,50 @@ body(data-page='episode')
             
           p As dicas que ele deixou pra gente são:
           ul.links
-            li #[a(href='https://vimeo.com/ondemand/designisone/55444397' title='Documentário Design is One do Massimo Vignelli' target='_blank' rel='noopener').link.-alt Documentário Design is One do Massimo Vignelli]
-            li #[a(href='https://jobs.netflix.com/culture/#introduction' title='Como é a cultura na Netflix' target='_blank' rel='noopener').link.-alt Como é a cultura na Netflix]
-            li #[a(href='https://www.nytimes.com/2016/06/19/magazine/can-netflix-survive-in-the-new-world-it-created.html' title='A reunião "Strat" na sede da Netflix em Los Gatos' target='_blank' rel='noopener').link.-alt A reunião "Strat" na sede da Netflix em Los Gatos]
-            li #[a(href='https://medium.com/@eeismann/things-i-have-learned-5027704572f9' title='Texto do Ethan Eismann, Design Lead na Uber' target='_blank' rel='noopener').link.-alt Texto do Ethan Eismann, Design Lead na Uber]
-            li #[a(href='https://medium.com/@dresouzax' title='Medium do Andre Souza, Designer na Apple' target='_blank' rel='noopener').link.-alt Medium do Andre Souza, Designer na Apple]
+            li #[+link-alt('Documentário Design is One do Massimo Vignelli', 'https://vimeo.com/ondemand/designisone/55444397')]
+            li #[+link-alt('Como é a cultura na Netflix', 'https://jobs.netflix.com/culture/#introduction')]
+            li #[+link-alt('A reunião "Strat" na sede da Netflix em Los Gatos', 'https://www.nytimes.com/2016/06/19/magazine/can-netflix-survive-in-the-new-world-it-created.html')]
+            li #[+link-alt('Texto do Ethan Eismann, Design Lead na Uber', 'https://medium.com/@eeismann/things-i-have-learned-5027704572f9')]
+            li #[+link-alt('Medium do Andre Souza, Designer na Apple', 'https://medium.com/@dresouzax')]
           
           p Projetos do Andre sobre os quais falamos durante o podcast:
           ul.links
-            li #[a(href='https://www.behance.net/doamaral' title='Portfólio' target='_blank' rel='noopener').link.-alt Portfólio] e #[a(href='http://www.doamaral.com/' title='Site' target='_blank' rel='noopener').link.-alt site]
-            li #[a(href='https://medium.com/@oamaral/how-we-built-an-app-in-just-3-days-f2682cbd4319' title='Move to Apple' target='_blank' rel='noopener').link.-alt Move to Apple]
-            li #[a(href='http://bit.ly/2tUqnz5' title='Savee - The best way for you to save and share inspiration' target='_blank' rel='noopener').link.-alt Savee - The best way for you to save and share inspiration]
+            li #[+link-alt('Portfólio', 'https://www.behance.net/doamaral')]
+            li #[+link-alt('Move to Apple', 'https://medium.com/@oamaral/how-we-built-an-app-in-just-3-days-f2682cbd4319')]
+            li #[+link-alt('Savee - The best way for you to save and share inspiration', 'http://bit.ly/2tUqnz5')]
           
           p Alguns coisas que li sobre ele pra produzir o episódio:
           ul.links
-            li #[a(href='http://creativedoc.co/squarespace' title='Entrevista dele no Creative Doc do Gláuber' target='_blank' rel='noopener').link.-alt Entrevista dele no Creative Doc do Gláuber], nessa época ele trabalhava no Squarespace
-            li #[a(href='https://eyeondesign.aiga.org/huges-senior-art-director-on-what-success-really-means-why-design-rock-stars-are-seriously-overrated/' title='Entrevista dele no Eye On Design' target='_blank' rel='noopener').link.-alt Entrevista dele no Eye On Design], enquanto estava na Huge
-            li #[a(href='https://medium.com/netflix-design/why-i-chose-netflix-a34d680bed4b' title='Artigo dele sobre o processo de seleção na Netflix' target='_blank' rel='noopener').link.-alt Artigo dele sobre o processo de seleção na Netflix]
+            li #[+link-alt('Entrevista no Creative Doc do Gláuber Sampaio', 'http://creativedoc.co/squarespace')]
+            li #[+link-alt('Entrevista no Eye On Design', 'https://eyeondesign.aiga.org/huges-senior-art-director-on-what-success-really-means-why-design-rock-stars-are-seriously-overrated/')]
+            li #[+link-alt('Artigo sobre o processo de seleção na Netflix', 'https://medium.com/netflix-design/why-i-chose-netflix-a34d680bed4b')]
           
           p E pra fechar com chave de ouro:
-          p A gente fez uma parceria com o Interaction South America para oferecer a você desconto de 10% no ingresso e 1 camiseta do podcast - no caso da camiseta, a promoção é válida para as 15 primeiras pessoas que usarem o código promocional movimentoux na #[a(href='https://www.sympla.com.br/interaction-south-america-floripa-2017__108278?d=movimentoux' title='na hora de comprar' target='_blank' rel='noopener').link.-alt na hora de comprar].
+          p A gente fez uma parceria com o Interaction South America para oferecer a você desconto de 10% no ingresso e 1 camiseta do podcast - no caso da camiseta, a promoção é válida para as 15 primeiras pessoas que usarem o código promocional movimentoux na 
+            | #[+link-alt('hora de comprar', 'https://www.sympla.com.br/interaction-south-america-floripa-2017__108278?d=movimentoux')]
           
-          p O evento vai acontecer nos dias 09, 10 e 11 de novembro em Florianópolis #[a(href='http://bit.ly/2tVm5Ye' title='Lista de palestrantes' target='_blank' rel='noopener').link.-alt e conta com uma lista de palestrantes de peso]: Rob Nero (Spotify), Andrew Kaufteil (Cooper) e Janaki Kumar (SAP Labs). E ainda vem mais nomes por aí.
+          p O evento vai acontecer nos dias 09, 10 e 11 de novembro em Florianópolis e conta com uma 
+            | #[+link-alt('lista de palestrantes', 'http://bit.ly/2tVm5Ye')] 
+            | de peso: Rob Nero (Spotify), Andrew Kaufteil (Cooper) e Janaki Kumar (SAP Labs). E ainda vem mais nomes por aí.
           
-          p Você pode pegar a sua camiseta comigo lá no ISA 2017. Qualquer dúvida é só deixar seu comentário aqui ou me escrever no #[a(href='mailto: movimentoux@gmail.com' title='Mail to: movimentoux@gmail.com' target='_blank' rel='noopener').link.-alt movimentoux@gmail.com]
+          p Você pode pegar a sua camiseta comigo lá no ISA 2017. Qualquer dúvida é só deixar seu comentário aqui ou me escrever no 
+            | #[+link-alt('movimentoux@gmail.com', 'mailto: movimentoux@gmail.com')]
           
-          p Atualização da parceria com o Interaction South America 2017: também conseguimos 10% de desconto para a compra do ingresso do workshop da Sophie Kleber (Huge)! É só usar o código promocional #[em movimentoux] #[a(href='http://bit.ly/isasophiework' title='Workshop da Sophie Kleber' target='_blank' rel='noopener').link.-alt na hora de comprar].
+          p Atualização da parceria com o Interaction South America 2017: também conseguimos 10% de desconto para a compra do ingresso do workshop da Sophie Kleber (Huge)! É só usar o código promocional #[em movimentoux] 
+            | #[+link-alt('na hora de comprar', 'http://bit.ly/isasophiework')]
           
-          p Aproveitando pra contar que a equipe cresceu. Eu e o Cristiano estamos muito felizes com a chegada do #[a(href='http://podrivo.com/' title='Pedro Ivo Hudson' target='_blank' rel='noopener').link.-alt Pedro Ivo Hudson]. <3
+          p Aproveitando pra contar que a equipe cresceu. Eu e o Cristiano estamos muito felizes com a chegada do 
+            | #[+link-alt('Pedro Ivo Hudson', 'http://podrivo.com/')]. <3
           
-          p O próximo podcast será em novembro! <br> Obrigada por acompanhar o Movimento UX e até lá! 
+          p O próximo podcast será em novembro!
+          p Obrigada por acompanhar o Movimento UX e até lá! 
 
         .sidebar
           h3.eyebrow Localização
           p São Francisco
           
-          h3.eyebrow Site
-          p #[a(href='http://netflix.com' title='Netflix' target='_blank' rel='noopener').link.-alt Netflix]
-          
-          //- h3.eyebrow Social
-          //- p #[a(href='https://br.linkedin.com/in/paolasales' title='LinkedIn' target='_blank' rel='noopener').link.-alt LinkedIn]
-          //- p #[a(href='https://twitter.com/paolasalesetc' title='Twitter' target='_blank' rel='noopener').link.-alt Twitter]
-          //- p #[a(href='https://instagram.com/paolasales/' title='Instagram' target='_blank' rel='noopener').link.-alt Instagram]
+          h3.eyebrow Social
+          p #[a(href='http://www.doamaral.com/' title='Site pessoal' target='_blank' rel='noopener').link.-alt Site pessoal]
 
 //- last
 //- but not least
