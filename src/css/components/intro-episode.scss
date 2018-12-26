@@ -1,6 +1,4 @@
 .intro-episode {
-  // background-color: $black;
-  // visibility: hidden;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -9,7 +7,6 @@
   justify-content: flex-end;
   flex-shrink: 0;
   padding: $spacing-body-y $spacing-body-x $spacing-body-x;
-  // transition: all $timing $easing;
 
   @media (max-width: $sm) {
     display: block;
@@ -26,7 +23,6 @@
     max-width: 50%;
     margin: $spacing-1 0;
     z-index: 99;
-    // transition: all ($timing * 2.3) $easing;
   }
 
   > .number {
@@ -59,12 +55,7 @@
     }
   }
 
-  &.-hide {
-    visibility: hidden;
-  }
-
   &.-clone {
-    visibility: visible;
     position: absolute;
     top: 0;
     left: 0;
@@ -73,7 +64,6 @@
 
   &.-inside {
     justify-content: center;
-    // visibility: visible;
 
     @media (max-width: $sm) {
       padding-top: $spacing-10;

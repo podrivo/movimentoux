@@ -306,8 +306,8 @@ if (body.getAttribute('data-page') === 'season') {
     layout()
   })
 
-  // Code from 'Animated Flexbox Playground', by Blake Bowen — https://codepen.io/osublake
-  // https://codepen.io/osublake/pen/dMLQJr
+  // Code from 'Animated Flexbox Playground' — https://codepen.io/osublake/pen/dMLQJr
+  // by Blake Bowen — https://codepen.io/osublake
   window.addEventListener('resize', function() {dirty = true;})
   TweenLite.ticker.addEventListener('tick', function() {return dirty && layout()})
   layout()
