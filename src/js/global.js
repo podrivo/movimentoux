@@ -287,43 +287,6 @@ if (body.getAttribute('data-page') === 'season') {
   var list = document.querySelector('.list')
   var grid = document.querySelector('.grid')
   var wrapper = document.querySelector('.episode-wrapper')
-  //
-  // var group = document.querySelector(".episode-wrapper");
-  // var nodes = document.querySelectorAll(".intro-episode");
-  // var total = nodes.length;
-  // var ease  = Power1.easeInOut;
-  // var boxes = [];
-
-  // for (var i = 0; i < total; i++) {
-  //
-  //   var node = nodes[i]
-  //   var width = node.offsetWidth;
-  //   var height = node.offsetHeight;
-  //
-  //   var content = node.cloneNode(true);
-  //   console.log(content);
-  //   content.classList.add("item-content");
-  //
-  //   // Initialize transforms on node
-  //   // TweenLite.set(node, { x: 0 });
-  //   TweenLite.set(node, { x: 0 });
-  //   TweenLite.set(content, { width: width, height: height });
-  //   // TweenLite.set([node, node.children], { backgroundColor: color, color: color }); //?
-  //
-  //   node.appendChild(content);
-  //
-  //   boxes[i] = {
-  //     content: content,
-  //     transform: node._gsTransform,
-  //     x: node.offsetLeft,
-  //     y: node.offsetTop,
-  //     width: node.offsetWidth,
-  //     height: node.offsetHeight,
-  //     node: node
-  //   };
-  // };
-
-
 
   list.addEventListener('click', function(){
     if (!this.classList.contains('-on')) {
@@ -343,108 +306,60 @@ if (body.getAttribute('data-page') === 'season') {
     layout()
   })
 
-  // var content = node.cloneNode(true);
-  // content.classList.add("item-content");
+  // Code from 'Animated Flexbox Playground', by Blake Bowen — https://codepen.io/osublake
+  // https://codepen.io/osublake/pen/dMLQJr
+  window.addEventListener('resize', function() {dirty = true;})
+  TweenLite.ticker.addEventListener('tick', function() {return dirty && layout()})
+  layout()
 
-  // function layout() {
-  //
-  //   // group.classList.toggle("reorder");
-  //
-  //   for (var i = 0; i < total; i++) {
-  //
-  //     var box = boxes[i]
-  //
-  //     var lastX = box.x
-  //     var lastY = box.y
-  //
-  //     var lastW = box.width;
-  //     var lastH = box.height;
-  //
-  //     box.x = box.node.offsetLeft
-  //     box.y = box.node.offsetTop
-  //
-  //     var width  = box.width  = box.node.offsetWidth;
-  //     var height = box.height = box.node.offsetHeight;
-  //
-  //     // Continue if box hasn't moved
-  //     if (lastX === box.x && lastY === box.y) {
-  //       // Reversed delta values taking into account current transforms
-  //       var x = box.transform.x + lastX - box.x
-  //       var y = box.transform.y + lastY - box.y
-  //
-  //       // Tween to 0 to remove the transforms
-  //       // TweenLite.fromTo(box.node, 2.5, {x: x, y: y}, {x: 0, y: 0, ease: ease})
-  //       TweenLite.set(box.node, { x: x, y: y });
-  //       TweenLite.to(box.node, time, { x: 0, y: 0, ease: ease });
-  //     }
-  //
-  //     if (lastW !== box.width || lastH !== box.height) {
-  //       TweenLite.to(box.content, 2.5, {autoRound: false, width: width, height: height, ease: ease})
-  //     }
-  //   }
-  // }
-
-
-
-
-  //
-  // ANIMATIONS
-  // ===========================================================================
-  // var inputs = document.querySelectorAll("input");
-  var episodes = document.querySelectorAll('.intro-episode')
-  var total = episodes.length
+  var episodes = document.querySelectorAll('.intro-episode');
+  var episodesTotal = episodes.length
   var dirty = true
   var time = 0.9
-  var omega = 12
-  var zeta = 0.9
   var boxes = []
 
-  for (var i = 0; i < total; i++) {
+  for (var i = 0; i < episodesTotal; i++) {
 
     var ep = episodes[i]
     var width = ep.offsetWidth
     var height = ep.offsetHeight
-    // var color = "transparent";
 
-    // Need another element to animate width & height... use clone instead of editing HTML
-    var clone = ep.cloneNode(true)
-    ep.classList.add('-hide')
-    clone.classList.add('-clone')
+    var epClone = ep.cloneNode(true)
+    epClone.classList.add('-clone')
 
-    TweenLite.set(ep, {x: "+=0", y: '+=0'})
-    TweenLite.set(clone, {width: width, height: height})
-    // TweenLite.set([node, node.children], { backgroundColor: color, color: color });
+    TweenLite.set(ep, {x: '+=0'})
+    TweenLite.set(epClone, {width: width, height: height})
+    TweenLite.set([ep, ep.children], {visibility: 'hidden'})
+    TweenLite.set([epClone, epClone.children], {visibility: 'visible'})
 
-    ep.appendChild(clone)
-
-    // console.log(node)
+    ep.appendChild(epClone)
 
     var transform = ep._gsTransform
     var x = ep.offsetLeft
     var y = ep.offsetTop
 
-    boxes[i] = {clone: clone, height: height, ep: ep, transform: transform, width: width, x: x, y: y}
+    boxes[i] = {
+      width: width,
+      height: height,
+      x: x,
+      y: y,
+      ep: ep,
+      epClone: epClone,
+      transform: transform
+    }
   }
-
-  // for (var i = 0; i < inputs.length; i++) {
-  //   inputs[i].addEventListener("change", layout);
-  // }
-
-  window.addEventListener('resize', function () {dirty = true})
-  TweenLite.ticker.addEventListener('tick', function () {return dirty && layout()})
-
-  layout()
 
   function layout() {
 
-    // dirty = false;
+    dirty = false
 
-    for (var i = 0; i < total; i++) {
+    for (var i = 0; i < episodesTotal; i++) {
 
       var box = boxes[i]
 
       var lastX = box.x
       var lastY = box.y
+
       var lastW = box.width
       var lastH = box.height
 
@@ -459,23 +374,15 @@ if (body.getAttribute('data-page') === 'season') {
         var x = box.transform.x + lastX - box.x
         var y = box.transform.y + lastY - box.y
 
-        // Tween to 0 to remove the transforms
-        // TweenLite.set(box.node, {x: x, y: y})
-        TweenLite.to(box.ep, time, {x: 0, y: 0, ease: ease})
+        TweenLite.set(box.ep, {x: x, y: y})
+        TweenLite.to(box.ep, time, {x: 0, y: 0, ease: Power1.easeInOut})
       }
 
       if (lastW !== box.width || lastH !== box.height) {
-        TweenLite.to(box.clone, time, {autoRound: false, width: width, height: height, ease: ease})
+
+        TweenLite.to(box.epClone, time, {autoRound: false, width: width, height: height, ease: Power1.easeInOut})
       }
     }
-  }
-
-  function ease(progress) {
-    var beta = Math.sqrt(1.0 - zeta * zeta)
-    progress = 1 - Math.cos(progress * Math.PI / 2)
-    progress = 1 / beta * Math.exp(-zeta * omega * progress) * Math.sin(beta * omega * progress + Math.atan(beta / zeta))
-
-    return 1 - progress
   }
 }
 
@@ -489,10 +396,10 @@ if (body.getAttribute('data-page') === 'season') {
 
 document.addEventListener('DOMContentLoaded', function() {
   var carousel = document.querySelector('.carousel')
-  var flkty = new Flickity(carousel, {
-    // cellAlign: 'left',
-    // contain: true
-    autoPlay: true,
-    pageDots: false
-  })
+  if (carousel) {
+    var flkty = new Flickity(carousel, {
+      autoPlay: true,
+      pageDots: false
+    })
+  }
 })
