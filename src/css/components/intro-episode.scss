@@ -17,12 +17,14 @@
   > .text {
     z-index: 99;
     pointer-events: none;
+    transition: all $easing $timing * 3;
   }
 
   > .text .title {
     max-width: 50%;
     margin: $spacing-1 0;
     z-index: 99;
+    transition: all $easing $timing * 3;
   }
 
   > .number {
@@ -30,9 +32,11 @@
     line-height: 0.9em;
     font-weight: 700;
     position: absolute;
+    display: flex;
     align-self: flex-end;
     color: $black;
     text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
+    transition: all $easing $timing * 3;
 
     @media (max-width: $sm) {
       display: none;

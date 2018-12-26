@@ -315,7 +315,8 @@ if (body.getAttribute('data-page') === 'season') {
   var episodes = document.querySelectorAll('.intro-episode');
   var episodesTotal = episodes.length
   var dirty = true
-  var time = 0.9
+  var time = 2
+  var ease = Expo.easeOut
   var boxes = []
 
   for (var i = 0; i < episodesTotal; i++) {
@@ -375,12 +376,12 @@ if (body.getAttribute('data-page') === 'season') {
         var y = box.transform.y + lastY - box.y
 
         TweenLite.set(box.ep, {x: x, y: y})
-        TweenLite.to(box.ep, time, {x: 0, y: 0, ease: Power1.easeInOut})
+        TweenLite.to(box.ep, time, {x: 0, y: 0, ease: ease})
       }
 
       if (lastW !== box.width || lastH !== box.height) {
 
-        TweenLite.to(box.epClone, time, {autoRound: false, width: width, height: height, ease: Power1.easeInOut})
+        TweenLite.to(box.epClone, time, {autoRound: false, width: width, height: height, ease: ease})
       }
     }
   }
