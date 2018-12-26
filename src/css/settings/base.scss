@@ -5,13 +5,11 @@ a {
 
   &.link {
     color: $white;
-    text-shadow: -2px 0 $black, 0 2px $black, 2px 0 $black, 0 -2px $black;
     white-space: nowrap;
     z-index: 1;
 
     &.-alt {
       color: $black;
-      text-shadow: -2px 0 $clear-white, 0 2px $clear-white, 2px 0 $clear-white, 0 -2px $clear-white;
 
       @media (max-width: $sm) {
         border-bottom: 1px solid $black;
@@ -24,10 +22,9 @@ a {
   &.link.-alt::before {
     content: '';
     position: absolute;
-    bottom: 2px;
     left: 0;
     width: 100%;
-    height: 1px;
+    height: 2px;
     backface-visibility: hidden;
     z-index: -1;
 
@@ -37,6 +34,7 @@ a {
   }
 
   &.link::before {
+    bottom: -5px;
     background: $white;
     transform: scaleX(0);
     transform-origin: right center;
@@ -45,6 +43,7 @@ a {
   }
 
   &.link.-alt::before {
+    bottom: -2px;
     background: $black;
     transform: scaleX(1);
     transform-origin: left center;
