@@ -24,7 +24,7 @@
     max-width: 50%;
     margin: $spacing-1 0;
     z-index: 99;
-    transition: all $easing $timing * 3;
+    transition: all cubic-bezier(0.86, 0, 0.07, 1) $timing * 3;
   }
 
   > .number {
@@ -36,7 +36,7 @@
     align-self: flex-end;
     color: $black;
     text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
-    transition: all $easing $timing * 3;
+    transition: all cubic-bezier(0.86, 0, 0.07, 1) $timing * 3;
 
     @media (max-width: $sm) {
       display: none;

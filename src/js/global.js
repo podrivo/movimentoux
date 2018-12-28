@@ -316,7 +316,7 @@ if (body.getAttribute('data-page') === 'season') {
   var episodesTotal = episodes.length
   var dirty = true
   var time = 2
-  var ease = Expo.easeOut
+  var ease = Quint.easeInOut
   var boxes = []
 
   for (var i = 0; i < episodesTotal; i++) {
