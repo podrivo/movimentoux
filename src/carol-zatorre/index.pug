@@ -4,6 +4,7 @@ include ../pug/episode
 include ../pug/player
 include ../pug/link
 include ../pug/js
+include ../pug/ad
 
 +meta(
   'Carol Zatorre, Episódio 20 — Movimento UX',
@@ -13,7 +14,7 @@ include ../pug/js
 
 body(data-page='episode')
   
-  +header('on', '', '')
+  +header('', 'on', '')
   
   #barba-wrapper
     .barba-container
@@ -27,7 +28,7 @@ body(data-page='episode')
         '-inside'
       )
       
-      +player('sergiosalvador')
+      +player('asd')
       
       section.episode-content
         .text
@@ -112,6 +113,8 @@ body(data-page='episode')
         .sidebar
           h3.eyebrow Localização
           p São Paulo
+          
+          +ad
 
 //- last
 //- but not least
