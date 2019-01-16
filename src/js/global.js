@@ -270,13 +270,19 @@ linkMobile.addEventListener('click', function(e){
 
 //header after scrolling
 var header = document.querySelector('header')
-document.addEventListener('scroll', function(){
-  if (window.scrollY >= 100){
-    header.classList.add('-scrolled')
-  } else {
-    header.classList.remove('-scrolled')
-  }
+var headroom  = new Headroom(header, {
+  offset: 80,
+  tolerance: 40
 })
+headroom.init()
+// document.addEventListener('scroll', function(){
+//   if (window.scrollY >= 100){
+//     header.classList.add('-scrolled')
+//   } else {
+//     header.classList.remove('-scrolled')
+//   }
+// })
+
 
 
 
