@@ -1,10 +1,11 @@
 header {
+  background: $black;
   position: fixed;
-  top: 14px;
+  top: $spacing-border;
   left: 0;
   width: 100%;
   padding: $spacing-3 $spacing-body-x;
-  margin-top: $spacing-2;
+  // margin-top: $spacing-2;
   transition: margin $timing $easing;
   z-index: 999;
 
@@ -12,9 +13,9 @@ header {
     padding: $spacing-2 $spacing-4;
   }
 
-  &.-scrolled {
-    margin-top: 0;
-  }
+  // &.-scrolled {
+  //   margin-top: 0;
+  // }
 
   > .wrapper {
     position: relative;
@@ -96,5 +97,19 @@ header {
     > .item {
       padding-left: $spacing-4;
     }
+  }
+}
+
+
+.headroom {
+  transition: transform $timing * 2 $easing;
+  will-change: transform;
+
+  &--pinned {
+    transform: translateY(0);
+  }
+
+  &--unpinned {
+    transform: translateY(-102%);
   }
 }
