@@ -1,4 +1,4 @@
-mixin meta(title, description, href)
+mixin meta(title, description, href, share)
   doctype html
   html
 
@@ -16,8 +16,11 @@ mixin meta(title, description, href)
       meta(property='og:type' content='website')
       meta(property='og:title' content= title)
       meta(property='og:description' content= description)
-      meta(property='og:image' content='http://movimentoux.com/img/share.png')
       meta(property='og:url' content= href)
+      if share
+        meta(property='og:image' content= share)
+      else
+        meta(property='og:image' content='http://movimentoux.com/img/share.png')
 
       meta(itemprop='name' content= title)
       meta(itemprop='description' content= description)
