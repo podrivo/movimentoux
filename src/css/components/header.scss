@@ -27,6 +27,8 @@ header {
 
   .logo {
     z-index: 102;
+    font-size: 0;
+    line-height: 0;
 
     @media (max-width: $sm) {
       width: 30px;
