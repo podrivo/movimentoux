@@ -21,6 +21,10 @@ var config = {
     ],
     'dest': 'dist'
   },
+  'sitemap': {
+    'src': './dist/**/*.html',
+    'dest': './dist/'
+  },
   'scripts': {
     'lint': {
       'src': [
