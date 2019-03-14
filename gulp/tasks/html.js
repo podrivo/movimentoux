@@ -12,7 +12,8 @@ module.exports = function(config, log, error, success) {
   gulp.task('html', function() {
     return gulp.src(config.html.src)
       .pipe(pug({
-        pretty: true
+        pretty: true,
+        basedir: './src'
       }))
       .pipe(embedSvg({
         root: './src'
