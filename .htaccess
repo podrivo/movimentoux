@@ -17,5 +17,9 @@ Redirect 301 /work/nubank /guilherme-neumann
 Redirect 301 /work/felipememoria /felipe-memoria
 Redirect 301 /work/carolina-leslie /carolina-leslie
 Redirect 301 /work/netflix /andre-do-amaral
-Redirect 301 /episodios /temporada-um
+Redirect 301 /paola-sales /ux-research/paola-sales
+Redirect 301 /carol-zatorre /ux-research/carol-zatorre
+Redirect 301 /caio-gama /ux-research/caio-gama
+Redirect 301 /episodios /ux-design
+Redirect 301 /temporada-um /ux-design
 Redirect 301 /loja /
