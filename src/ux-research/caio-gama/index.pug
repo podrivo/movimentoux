@@ -33,7 +33,7 @@ body(data-page='episode')
       +player('caiogama')
 
       section.episode-content
-        ul.content-tabs
+        ul.episode-tabs
           li.tab-item #[a(href='#intro').link.on Apresentação]
           li.tab-item #[a(href='#transcricao').link Transcrição]
         
@@ -86,7 +86,7 @@ body(data-page='episode')
 
             +ad
         .tab#transcricao
-          p Teste
+          include transcricao.pug
 
 //- last
 //- but not least

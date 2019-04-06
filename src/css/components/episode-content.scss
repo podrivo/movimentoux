@@ -24,9 +24,8 @@
   }
 
   .text {
-    // width: 100%;
-    // max-width: 700px;
-    margin-right: $spacing-body-x * 2;
+    width: 100%;
+    margin-right: $spacing-10 * 2;
 
     @media (max-width: $sm) {
       margin-right: 0;
@@ -117,36 +116,5 @@
       margin: $spacing-4 0 $spacing-6;
       padding: $spacing-4 0;
     }
-  }
-}
-
-
-//tabs
-.content-tabs {
-  width: 100%;
-  max-width: 1200px;
-  margin-bottom: $spacing-4;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.tab-item {
-  margin-right: $spacing-4;
-  font-size: $font-size * 1.25;
-  line-height: 1.8em;
-  font-weight: 500;
-
-  > .link {
-    // font-size
-    color: $black;
-
-    &::before {
-      background: $black;
-    }
-  }
-
-  &.-on {
-
   }
 }

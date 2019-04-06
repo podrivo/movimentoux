@@ -1,0 +1,28 @@
+.episode-tabs {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: $spacing-4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.tab-item {
+  margin-right: $spacing-4;
+  font-size: $font-size * 1.25;
+  line-height: 1.8em;
+  font-weight: 500;
+
+  > .link {
+    // font-size
+    color: $black;
+
+    &::before {
+      background: $black;
+    }
+  }
+
+  &.-on {
+
+  }
+}
