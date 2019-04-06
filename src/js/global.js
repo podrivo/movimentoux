@@ -399,9 +399,7 @@ if (body.getAttribute('data-page') === 'season') {
 
 
 
-
-
-
+// flickity carousel
 document.addEventListener('DOMContentLoaded', function() {
   var carousel = document.querySelector('.carousel')
   if (carousel) {
@@ -411,3 +409,33 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   }
 })
+
+
+
+
+
+// tabs
+window.addEventListener('load', function() {
+  // store tabs variable
+  var myTabs = document.querySelectorAll('.tab-item a');
+  function myTabClicks(tabClickEvent) {
+    for (var i = 0; i < myTabs.length; i++) {
+      myTabs[i].classList.remove('on');
+    }
+    var clickedTab = tabClickEvent.currentTarget;
+    clickedTab.classList.add('on');
+    tabClickEvent.preventDefault();
+
+    var myContentPanes = document.querySelectorAll('.tab');
+    for (i = 0; i < myContentPanes.length; i++) {
+      myContentPanes[i].classList.remove('on');
+    }
+    var anchorReference = tabClickEvent.target;
+    var activePaneId = anchorReference.getAttribute('href');
+    var activePane = document.querySelector(activePaneId);
+    activePane.classList.add('on');
+  }
+  for (i = 0; i < myTabs.length; i++) {
+    myTabs[i].addEventListener('click', myTabClicks)
+  }
+});
