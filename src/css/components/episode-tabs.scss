@@ -14,15 +14,10 @@
   font-weight: 500;
 
   > .link {
-    // font-size
     color: $black;
 
     &::before {
       background: $black;
     }
-  }
-
-  &.-on {
-
   }
 }
