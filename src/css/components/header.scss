@@ -5,17 +5,12 @@ header {
   left: 0;
   width: 100%;
   padding: $spacing-body-y $spacing-body-x $spacing-3;
-  // margin-top: $spacing-2;
   transition: margin $timing $easing;
   z-index: 999;
 
   @media (max-width: $sm) {
     padding: $spacing-2 $spacing-4;
   }
-
-  // &.-scrolled {
-  //   margin-top: 0;
-  // }
 
   > .wrapper {
     position: relative;
@@ -103,6 +98,7 @@ header {
 }
 
 
+//headroom plugin
 .headroom {
   transition: transform $timing * 2 $easing;
   will-change: transform;
