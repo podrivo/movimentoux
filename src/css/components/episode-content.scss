@@ -39,6 +39,12 @@
       font-style: italic;
     }
 
+    hr {
+      width: 100%;
+      border: 1px solid $gray;
+      margin: $spacing-8 0;
+    }
+
     *:last-child {
       margin-bottom: 0;
     }
