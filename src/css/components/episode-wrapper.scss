@@ -64,7 +64,7 @@
 
 .list-grid {
   position: sticky;
-  top: $spacing-12;
+  top: $spacing-12 * 2;
   margin: $spacing-body-y $spacing-body-x $spacing-body-x;
   z-index: 999;
   display: flex;
