@@ -1,0 +1,37 @@
+include /pug/meta
+include /pug/header
+include /pug/episode
+include /pug/player
+include /pug/js
+
++meta(
+  'Fabricio Dore, Episódio 14 — Movimento UX',
+  'Diretor Executivo de UX na McKinsey. Design de interação, inovação digital, UX em outros países.',
+  'http://movimentoux.com/ux-design/fabricio-dore/'
+)
+
+body(data-page='episode')
+
+  +header('on', '', '')
+
+  #barba-wrapper
+    .barba-container
+      +episode(
+        'Fabricio Dore',
+        'Diretor Executivo de UX na McKinsey.',
+        'Design de interação, inovação digital, UX em outros países.',
+        '14',
+        '14-foto-fabricio-dore.jpg',
+        '',
+        '-inside'
+      )
+
+      +player('fabriciodore')
+
+      section.episode-content
+        .tab.on#intro
+          include intro.pug
+
+//- last
+//- but not least
++js

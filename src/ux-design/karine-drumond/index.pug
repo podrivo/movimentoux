@@ -1,0 +1,37 @@
+include /pug/meta
+include /pug/header
+include /pug/episode
+include /pug/player
+include /pug/js
+
++meta(
+  'Karine Drumond, Episódio 9 — Movimento UX',
+  'Sócia-fundadora da Negócio de Mulher. Usabilidade, design de interação, empreendedorismo.',
+  'http://movimentoux.com/ux-design/karine-drumond/'
+)
+
+body(data-page='episode')
+
+  +header('on', '', '')
+
+  #barba-wrapper
+    .barba-container
+      +episode(
+        'Karine Drumond',
+        'Sócia-fundadora da Negócio de Mulher.',
+        'Usabilidade, design de interação, empreendedorismo.',
+        '09',
+        '09-foto-karine-drumond.jpg',
+        '',
+        '-inside'
+      )
+
+      +player('karine-drumond')
+
+      section.episode-content
+        .tab.on#intro
+          include intro.pug
+
+//- last
+//- but not least
++js

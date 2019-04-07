@@ -1,0 +1,37 @@
+include /pug/meta
+include /pug/header
+include /pug/episode
+include /pug/player
+include /pug/js
+
++meta(
+  'Guilherme Neumann, Episódio 15 — Movimento UX',
+  'UX Lead no Nubank. Cultura de experiência, design de produto, liderança em design.',
+  'http://movimentoux.com/ux-design/guilherme-neumann/'
+)
+
+body(data-page='episode')
+
+  +header('on', '', '')
+
+  #barba-wrapper
+    .barba-container
+      +episode(
+        'Guilherme Neumann',
+        'UX Lead no Nubank.',
+        'Cultura de experiência, design de produto, liderança em design.',
+        '15',
+        '15-foto-guilherme-neumann.jpg',
+        '',
+        '-inside'
+      )
+
+      +player('guilhermeneumann')
+
+      section.episode-content
+        .tab.on#intro
+          include intro.pug
+
+//- last
+//- but not least
++js

@@ -1,0 +1,37 @@
+include /pug/meta
+include /pug/header
+include /pug/episode
+include /pug/player
+include /pug/js
+
++meta(
+  'Fabricio Dore, Episódio 13 — Movimento UX',
+  'UX Lead na Designit. Hyper Island, pesquisa com usuários, UX em outros países.',
+  'http://movimentoux.com/ux-design/fernanda-barbato/'
+)
+
+body(data-page='episode')
+
+  +header('on', '', '')
+
+  #barba-wrapper
+    .barba-container
+      +episode(
+        'Fernanda Barbato',
+        'UX Lead na Designit.',
+        'Hyper Island, pesquisa com usuários, UX em outros países.',
+        '13',
+        '13-foto-fernanda-barbato.jpg',
+        '',
+        '-inside'
+      )
+
+      +player('fernandabarbato')
+
+      section.episode-content
+        .tab.on#intro
+          include intro.pug
+
+//- last
+//- but not least
++js
