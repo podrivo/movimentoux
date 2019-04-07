@@ -441,7 +441,6 @@ window.addEventListener('load', function() {
     clickedTab.classList.add('on')
     tabClickEvent.preventDefault()
 
-    // myContentPanes = document.querySelectorAll('.tab')
     for (i = 0; i < myContentPanes.length; i++) {
       myContentPanes[i].classList.remove('on')
     }
