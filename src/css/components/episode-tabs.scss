@@ -18,6 +18,10 @@
 
     &::before {
       background: $black;
+
+      @media (max-width: $sm) {
+        display: block;
+      }
     }
   }
 }
