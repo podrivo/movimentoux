@@ -10,7 +10,6 @@
 
   @media (max-width: $sm) {
     padding: $spacing-2 $spacing-4 $spacing-10;
-    flex-direction: column-reverse;
   }
 
   .tab {
@@ -18,8 +17,13 @@
     display: none;
     flex-direction: row;
 
+    @media (max-width: $sm) {
+      flex-direction: column-reverse;
+    }
+
     &.on {
       display: flex;
+      animation: tabShow 0.8s $easing backwards;
     }
   }
 
@@ -71,6 +75,7 @@
     max-width: 270px;
 
     @media (max-width: $sm) {
+      max-width: 100%;
       margin-bottom: $spacing-4;
     }
 
@@ -122,5 +127,17 @@
       margin: $spacing-4 0 $spacing-6;
       padding: $spacing-4 0;
     }
+  }
+}
+
+@keyframes tabShow {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
