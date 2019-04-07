@@ -2,8 +2,7 @@ include /pug/meta
 include /pug/header
 include /pug/episode
 include /pug/player
-include /pug/link-alt
-include /pug/link-ad
+include /pug/tabs
 include /pug/js
 include /pug/ad
 
@@ -33,9 +32,7 @@ body(data-page='episode')
       +player('caiogama')
 
       section.episode-content
-        ul.episode-tabs
-          li.tab-item #[a(href='#intro').link.on Apresentação]
-          li.tab-item #[a(href='#transcricao').link Transcrição]
+        +tabs
 
         .tab.on#intro
           include intro.pug

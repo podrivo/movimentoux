@@ -3,7 +3,6 @@ include /pug/header
 include /pug/episode
 include /pug/player
 include /pug/tabs
-include /pug/link
 include /pug/js
 
 +meta(
@@ -36,8 +35,8 @@ body(data-page='episode')
         .tab.on#intro
           include intro.pug
         
-        //- .tab#transcricao
-        //-   include transcricao.pug
+        .tab#transcricao
+          include transcricao.pug
 
 //- last
 //- but not least

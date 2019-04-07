@@ -1,4 +1,3 @@
-include /pug/link
 include /pug/link-alt
 
 .text
@@ -28,14 +27,17 @@ include /pug/link-alt
     li #[+link-alt('Interviewing Users: Steve Portigal', 'https://www.amazon.com/Interviewing-Users-Uncover-Compelling-Insights/dp/193382011X')]
     li #[+link-alt('Ferramenta para otimizar agenda do recrutamento', 'https://youcanbook.me/')]
     li #[+link-alt('Grupo UX Research Brasil no Linkedin', 'https://www.linkedin.com/groups/8636716/')]
+    
+    //- #[+link-alt('', 'https://')]
 
   p Pra quem gostou da trilha e quiser conhecer o trabalho do DJ Bittencourt:
   ul.links
-    li #[a(href='http://www.radionoir.com.br/' title='www.radionoir.com.br' target='_blank' rel='noopener').link.-alt site] e as #[a(href='https://open.spotify.com/user/rbittencourt?si=ZJXyHPR6TaSNhFMBwKpKHQ' title='Ótimas playlists' target='_blank' rel='noopener').link.-alt ótimas playlists]
+    li #[+link-alt('www.radionoir.com.br', 'http://www.radionoir.com.br/')] e as #[+link-alt('ótimas playlists', 'https://open.spotify.com/user/rbittencourt?si=ZJXyHPR6TaSNhFMBwKpKHQ')]
 
   p E mudando de assunto, você já respondeu a pesquisa sobre o mercado brasileiro de UX, realizada pela Saiba+/Zoly? Eu já! :)
   ul.links
-    li #[a(href='https://saiba-mais.typeform.com/to/Mo1J4m' title='Responda e participe da pesquisa do Panorama UX 2018' target='_blank' rel='noopener').link.-alt Responda e participe da pesquisa do Panorama UX 2018]
+    //- li #[a(href='https://saiba-mais.typeform.com/to/Mo1J4m' title='Responda e participe da pesquisa do Panorama UX 2018' target='_blank' rel='noopener').link.-alt Responda e participe da pesquisa do Panorama UX 2018]
+    li #[+link-alt('Responda e participe da pesquisa do Panorama UX 2018', 'https://saiba-mais.typeform.com/to/Mo1J4m')]
 
   p No próximo episódio a convidada é a Carol Zatorre. Até já!
 
@@ -44,9 +46,9 @@ include /pug/link-alt
   p Rio de Janeiro
 
   h3.eyebrow Site
-  p #[a(href='https://descomplica.com.br' title='Descomplica' target='_blank' rel='noopener').link.-alt Descomplica]
+  p #[+link-alt('Descomplica', 'https://descomplica.com.br')]
 
   h3.eyebrow Social
-  p #[a(href='https://br.linkedin.com/in/paolasales' title='LinkedIn' target='_blank' rel='noopener').link.-alt LinkedIn]
-  p #[a(href='https://twitter.com/paolasalesetc' title='Twitter' target='_blank' rel='noopener').link.-alt Twitter]
-  p #[a(href='https://instagram.com/paolasales/' title='Instagram' target='_blank' rel='noopener').link.-alt Instagram]
+  p #[+link-alt('LinkedIn', 'https://br.linkedin.com/in/paolasales')]
+  p #[+link-alt('Twitter', 'https://twitter.com/paolasalesetc')]
+  p #[+link-alt('Instagram', 'https://instagram.com/paolasales/')]
