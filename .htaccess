@@ -43,4 +43,9 @@ Redirect 301 /caio-gama /ux-research/caio-gama
 
 Redirect 301 /episodios /ux-design
 Redirect 301 /temporada-um /ux-design
+Redirect 301 /temporada-dois /ux-research
+Redirect 301 /temporada-1 /ux-design
+Redirect 301 /temporada-2 /ux-research
+Redirect 301 /temporada1 /ux-design
+Redirect 301 /temporada2 /ux-research
 Redirect 301 /loja /
