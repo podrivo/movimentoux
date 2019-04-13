@@ -1,0 +1,37 @@
+include /pug/meta
+include /pug/header
+include /pug/episode
+include /pug/player
+include /pug/js
+
++meta(
+  'Robson Santos, Episódio 11 — Movimento UX',
+  'Designer Estratégico na PorQueNão?. Pesquisa para produto, estratégia de UX, usabilidade.',
+  'http://movimentoux.com/ux-design/robson-santos/'
+)
+
+body(data-page='episode')
+
+  +header('on', '', '')
+
+  #barba-wrapper
+    .barba-container
+      +episode(
+        'Robson Santos',
+        'Designer Estratégico na PorQueNão?.',
+        'Pesquisa para produto, estratégia de UX, usabilidade.',
+        '11',
+        '11-foto-robson-santos.jpg',
+        '',
+        '-inside'
+      )
+
+      +player('robsonsantos')
+
+      section.episode-content
+        .tab.on#intro
+          include intro.pug
+
+//- last
+//- but not least
++js

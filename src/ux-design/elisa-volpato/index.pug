@@ -1,0 +1,37 @@
+include /pug/meta
+include /pug/header
+include /pug/episode
+include /pug/player
+include /pug/js
+
++meta(
+  'Elisa Volpato, Episódio 6 — Movimento UX',
+  'Fundadora na TESTR. Pesquisa para produto, teste de usabilidade, consultoria.',
+  'http://movimentoux.com/ux-design/elisa-volpato/'
+)
+
+body(data-page='episode')
+
+  +header('on', '', '')
+
+  #barba-wrapper
+    .barba-container
+      +episode(
+        'Elisa Volpato',
+        'Fundadora na TESTR.',
+        'Pesquisa para produto, teste de usabilidade, consultoria.',
+        '06',
+        '06-foto-elisa-volpato.jpg',
+        '',
+        '-inside'
+      )
+
+      +player('elisa-volpato')
+
+      section.episode-content
+        .tab.on#intro
+          include intro.pug
+
+//- last
+//- but not least
++js

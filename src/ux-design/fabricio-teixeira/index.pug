@@ -1,0 +1,37 @@
+include /pug/meta
+include /pug/header
+include /pug/episode
+include /pug/player
+include /pug/js
+
++meta(
+  'Fabrício Teixeira, Episódio 5 — Movimento UX',
+  'Diretor de UX na R/GA. UX em agências, arquitetura de informação,UX em outros países.',
+  'http://movimentoux.com/ux-design/fabricio-teixeira/'
+)
+
+body(data-page='episode')
+
+  +header('on', '', '')
+
+  #barba-wrapper
+    .barba-container
+      +episode(
+        'Fabrício Teixeira',
+        'Diretor de UX na R/GA.',
+        'UX em agências, arquitetura de informação,UX em outros países.',
+        '05',
+        '05-foto-fabricio-teixeira.jpg',
+        '',
+        '-inside'
+      )
+
+      +player('episodio-05-fabricio-teixeira')
+
+      section.episode-content
+        .tab.on#intro
+          include intro.pug
+
+//- last
+//- but not least
++js
