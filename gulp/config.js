@@ -1,22 +1,22 @@
 var config = {
   'fonts': {
     'src': [
-      './src/fonts/**/*'
+      './src/_assets/fonts/**/*'
     ],
-    'dest': './dist/fonts'
+    'dest': './dist/_assets/fonts'
   },
   'images': {
     'src': [
-      './src/img/**/*.{gif,ico,png,jpg,jpeg,svg}'
+      './src/_assets/img/**/*.{gif,ico,png,jpg,jpeg,svg}'
     ],
-    'dest': './dist/img'
+    'dest': './dist/_assets/img'
   },
   'html': {
     'watch': [
       './src/**/*.pug'
     ],
     'src': [
-      '!./src/pug/**/*.pug',
+      '!./src/_assets/pug/**/*.pug',
       './src/**/index.pug'
     ],
     'dest': 'dist'
@@ -28,36 +28,36 @@ var config = {
   'scripts': {
     'lint': {
       'src': [
-        './src/js/**/*.js'
+        './src/_assets/js/**/*.js'
       ]
     },
     'build': {
       'src': [
-        './src/js/vendors/**/*.js',
-        './src/js/plugins/**/*.js',
-        './src/js/**/*.js'
+        './src/_assets/js/vendors/**/*.js',
+        './src/_assets/js/plugins/**/*.js',
+        './src/_assets/js/**/*.js'
       ],
-      'dest': './dist/js'
+      'dest': './dist/_assets/js'
     }
   },
   'styles': {
     'lint': {
       'src': [
-        './src/css/**/*.{css,scss,sass}'
+        './src/_assets/css/**/*.{css,scss,sass}'
       ]
     },
     'build': {
       'src': [
-        './src/css/main.scss'
+        './src/_assets/css/main.scss'
       ],
-      'dest': './dist/css'
+      'dest': './dist/_assets/css'
     }
   },
   'media': {
     'src': [
-      './src/img/**/*.{mp4,mp3}'
+      './src/_assets/img/**/*.{mp4,mp3}'
     ],
-    'dest': './dist/img'
+    'dest': './dist/_assets/img'
   }
 };
 

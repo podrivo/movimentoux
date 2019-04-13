@@ -1,10 +1,10 @@
-include /pug/meta
-include /pug/header
-include /pug/episode
-include /pug/player
-include /pug/tabs
-include /pug/js
-include /pug/ad
+include /_assets/pug/meta
+include /_assets/pug/header
+include /_assets/pug/episode
+include /_assets/pug/player
+include /_assets/pug/tabs
+include /_assets/pug/js
+include /_assets/pug/ad
 
 +meta(
   'Caio Gama, User Researcher no Nubank. Episódio 21 — Movimento UX. Conversas sobre pesquisa para produto. UX Research.',
@@ -40,6 +40,5 @@ body(data-page='episode')
         .tab#transcricao
           include transcricao.pug
 
-//- last
-//- but not least
+//- don't forget js
 +js
