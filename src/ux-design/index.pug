@@ -1,8 +1,8 @@
-include /pug/meta
-include /pug/header
-include /pug/social
-include /pug/episode
-include /pug/js
+include /_assets/pug/meta
+include /_assets/pug/header
+include /_assets/pug/social
+include /_assets/pug/episode
+include /_assets/pug/js
 
 +meta(
   'Movimento UX — Primeira Temporada. Conversas sobre o universo de design de experiência de uso. UX Design.',
@@ -24,8 +24,8 @@ body(data-page='season')
       +social('-home')
 
       ul.list-grid
-        li.list.-on #[svg(src='img/ep-list.svg')]
-        li.grid #[svg(src='img/ep-grid.svg')]
+        li.list.-on #[svg(src='_assets/img/ep-list.svg')]
+        li.grid #[svg(src='_assets/img/ep-grid.svg')]
 
       .episode-wrapper
         +episode(
