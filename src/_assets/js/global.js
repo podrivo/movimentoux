@@ -183,7 +183,7 @@ if (body.getAttribute('data-page') === 'episode') {
     return format
   }
 
-  var url = 'https://soundcloud.com/movimento-ux/' + player.getAttribute('data-soundcloud')
+  var url = 'https://soundcloud.com/movimentoux/' + player.getAttribute('data-soundcloud')
   soundcloud.resolve(url, function(track) {
     timeDuration.innerHTML = formatTime(soundcloud.duration)
     soundcloud.play()
