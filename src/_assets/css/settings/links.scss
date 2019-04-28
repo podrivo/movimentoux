@@ -99,29 +99,3 @@ a {
     }
   }
 }
-
-input {
-  font-size: 1rem;
-  background: transparent;
-  color: $white;
-
-  &[type='text'] {
-    border: 0;
-    border-bottom: 2px solid $white;
-  }
-}
-
-
-img, video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-svg {
-  display: block;
-}
-
-strong {
-  font-weight: 700;
-}
