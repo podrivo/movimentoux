@@ -9,6 +9,14 @@ body {
   font-size: $font-size;
   line-height: $line-height;
   font-weight: 400;
+
+  @media (max-width: $sm) {
+    font-size: $font-size-sm;
+  }
+
+  @media (min-width: $xl) {
+    font-size: $font-size-xl;
+  }
 }
 
 .title {
