@@ -1,6 +1,6 @@
 include /_assets/pug/link-alt
-include /_assets/pug/link-ad
-include /_assets/pug/ad-testr
+include /_assets/pug/supporter-link
+include /_assets/pug/supporter-sidebar
 
 .text
   p [Música]
@@ -11,7 +11,7 @@ include /_assets/pug/ad-testr
 
   p Também falamos sobre como ele fez a transição de desenvolvedor para a pesquisador UX, o dia a dia no Nubank, dicas para você começar a usar data no processo de pesquisa e muito mais. 
 
-  p Esse episódio tem o apoio do TESTR, a plataforma completa de testes de usabilidade ágil. A gente sabe que rodar pesquisa no tempo do produto é um super desafio e o TESTR entrega todo o processo de testes com usuários de forma automatizada, incluindo o recrutamento, execução, recompensa aos participantes e também relatório com resultados. E isso tudo em uma média de 48 horas. Para saber mais informações e também para ganhar três participantes extras na contratação de qualquer plano, é só acessar: #[+link-ad('aqui', 'http://bit.ly/testeremoto', 'Content Transcrição 01')].
+  p Esse episódio tem o apoio do TESTR, a plataforma completa de testes de usabilidade ágil. A gente sabe que rodar pesquisa no tempo do produto é um super desafio e o TESTR entrega todo o processo de testes com usuários de forma automatizada, incluindo o recrutamento, execução, recompensa aos participantes e também relatório com resultados. E isso tudo em uma média de 48 horas. Para saber mais informações e também para ganhar três participantes extras na contratação de qualquer plano, é só acessar: #[+supporter-link('aqui', 'http://bit.ly/testeremoto', 'TESTR', 'Content Transcrição 01')].
 
   p E mais uma dica bem rápido: vocês sabiam que vem aí o primeiro livro sobre UX Research em português? As autoras Denise Pilar, Cecília Henriques e Elizete Ignácio lançaram uma campanha de pré-venda com várias opções para contribuir e recompensas bem legais. Eu já apoiei e garanti o meu livro. Os últimos exemplares dessa pré-venda estão em #[+link-alt('Dá uma olhada', 'http://bit.ly/livropesquisa')]. Corre que é só até dia 1º de março!
 
@@ -243,11 +243,17 @@ include /_assets/pug/ad-testr
 
   p Estamos chegando ao fim deste terceiro episódio. Espero que você tenha gostado! 
 
-  p Esta edição teve o apoio do TESTR, que é uma plataforma completa de testes de usabilidade ágil. O TESTR entrega todo o processo de testes com usuários de forma automatizada, incluindo o recrutamento, execução, recompensa aos participantes e também relatório com os resultados. Isso tudo em uma média de 48 horas. Agora você não tem mais desculpa para dizer que não dá para rodar pesquisa na sprint. Você que acompanha o Movimento UX tem a vantagem de ganhar três participantes extras na contratação de qualquer plano. É só acessar: #[+link-ad('aqui', 'http://bit.ly/testeremoto', 'Content Transcrição 02')].
+  p Esta edição teve o apoio do TESTR, que é uma plataforma completa de testes de usabilidade ágil. O TESTR entrega todo o processo de testes com usuários de forma automatizada, incluindo o recrutamento, execução, recompensa aos participantes e também relatório com os resultados. Isso tudo em uma média de 48 horas. Agora você não tem mais desculpa para dizer que não dá para rodar pesquisa na sprint. Você que acompanha o Movimento UX tem a vantagem de ganhar três participantes extras na contratação de qualquer plano. É só acessar: #[+supporter-link('aqui', 'http://bit.ly/testeremoto', 'TESTR', 'Content Transcrição 02')].
 
   p Obrigada por ouvir até aqui e até já.
 
   p [Música]
 
 .sidebar
-  +ad-testr
+  +supporter-sidebar(
+    'Apoiador deste episódio',
+    'TESTR',
+    'Plataforma completa de teste de usabilidade ágil.',
+    'http://bit.ly/testeremoto',
+    'TESTR-logo.png'
+  )

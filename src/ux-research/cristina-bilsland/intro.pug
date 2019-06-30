@@ -1,6 +1,6 @@
 include /_assets/pug/link-alt
-include /_assets/pug/link-ad
-include /_assets/pug/ad-testr
+include /_assets/pug/supporter-link
+include /_assets/pug/supporter-sidebar
 
 .text
   p Neste podcast a conversa foi com a Cristina Bilsland, User Experience Researcher Senior no Google Londres.
@@ -31,7 +31,7 @@ include /_assets/pug/ad-testr
     li — Estamos no #[+link-alt('Spotify', 'https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73')]!
     li — Lançamos a transcrição dos episódios desta segunda temporada! Estão na página de cada um dos episódios. 
 
-  p Esse episódio teve o apoio do TESTR - plataforma completa de teste de usabilidade ágil. Além de apoiar nosso trabalho, o TESTR resolve um problema comum de todo mundo que faz pesquisa para produto: o tempo. Entrega todo o processo de teste com usuários de forma automatizada (recrutamento, execução, recompensa aos participantes e relatório com resultados, em uma média de 48 horas). E você pode ganhar 3 participantes extras na contratação de qualquer plano. Mais infos #[+link-ad('aqui', 'http://bit.ly/testeremoto', 'Content')].
+  p Esse episódio teve o apoio do TESTR - plataforma completa de teste de usabilidade ágil. Além de apoiar nosso trabalho, o TESTR resolve um problema comum de todo mundo que faz pesquisa para produto: o tempo. Entrega todo o processo de teste com usuários de forma automatizada (recrutamento, execução, recompensa aos participantes e relatório com resultados, em uma média de 48 horas). E você pode ganhar 3 participantes extras na contratação de qualquer plano. Mais infos #[+supporter-link('aqui', 'http://bit.ly/testeremoto', 'TESTR', 'Content')].
 
   p As músicas de abertura e encerramento são do Lowz (músico e produtor brasiliense Aloizio) e fazem parte do #[+link-alt('Tomorrow People', 'https://tmwppl.bandcamp.com/')] - selo de música eletrônica experimental criado por ele.
 
@@ -56,4 +56,10 @@ include /_assets/pug/ad-testr
   p #[+link-alt('LinkedIn', 'https://www.linkedin.com/in/cris-bilsland-1941364/')]
   p #[+link-alt('One Designer A Day', 'http://www.onedesigneraday.com/bilsland')]
 
-  +ad-testr
+  +supporter-sidebar(
+    'Apoiador deste episódio',
+    'TESTR',
+    'Plataforma completa de teste de usabilidade ágil.',
+    'http://bit.ly/testeremoto',
+    'TESTR-logo.png'
+  )

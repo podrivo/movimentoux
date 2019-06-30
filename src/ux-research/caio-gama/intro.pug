@@ -1,6 +1,6 @@
 include /_assets/pug/link-alt
-include /_assets/pug/link-ad
-include /_assets/pug/ad-testr
+include /_assets/pug/supporter-link
+include /_assets/pug/supporter-sidebar
 
 .text
   p O terceiro podcast da nova temporada foi com o Caio Gama, User Experience Researcher no Nubank. Ele tem formação em Ciência da Computação, trabalhou como desenvolvedor back-end por 8 anos e traz um visão bem interessante sobre como podemos mesclar dados de uso e técnicas qualitativa e quantitativa para conhecer as pessoas que usam os produtos e serviços que vamos investigar.
@@ -25,7 +25,7 @@ include /_assets/pug/ad-testr
     li #[+link-alt('Vaga de UX Research no Nubank', 'https://nubank.workable.com/j/0A9DD6DA2C')]
     li #[+link-alt('Plano de pesquisa usado no Nubank', 'https://medium.com/nubank-design/why-we-have-a-research-plan-at-nubank-7db687141077')]
 
-  p E esse episódio também teve apoio do TESTR. <3 Nós estamos usando e adorando. E você? Já está conseguindo rodar pesquisa no tempo do produto? A gente sabe que o tempo é um super desafio e o TESTR resolve esse problema porque entrega todo o processo de teste com usuários (recrutamento, execução, recompensa aos participantes e relatório com resultados), em uma média de 48 horas! E pra quem acompanha o podcast ganha 3 participantes extras na contratação de qualquer plano. o/ Mais infos #[+link-ad('aqui', 'http://bit.ly/testeremoto', 'Content')].
+  p E esse episódio também teve apoio do TESTR. <3 Nós estamos usando e adorando. E você? Já está conseguindo rodar pesquisa no tempo do produto? A gente sabe que o tempo é um super desafio e o TESTR resolve esse problema porque entrega todo o processo de teste com usuários (recrutamento, execução, recompensa aos participantes e relatório com resultados), em uma média de 48 horas! E pra quem acompanha o podcast ganha 3 participantes extras na contratação de qualquer plano. o/ Mais infos #[+supporter-link('aqui', 'http://bit.ly/testeremoto', 'TESTR', 'Content')].
   p Uma outra coisa legal que a gente falou no podcast é que o primeiro livro sobre UX Research em português está saindo do forno. As autoras Denise Pilar, Cecília Henriques e Elizete Ignacio estão escrevendo o livro “UX Research com sotaque brasileiro” e lançaram uma campanha de pré-venda, para que a gente possa comprar o livro antes mesmo de ser lançado. Ah, além do livro, existem outras recompensas ótimas pra gente contribuir com essa conquista tão legal pro nosso mercado. #[+link-alt('Dá uma olhada', 'http://bit.ly/livropesquisa')] e corre porque é só até dia 11 de março.
 
   .gallery
@@ -48,4 +48,10 @@ include /_assets/pug/ad-testr
   p #[+link-alt('LinkedIn', 'https://www.linkedin.com/in/thecaiogama/')]
   p #[+link-alt('Medium', 'https://medium.com/@thecaiogama')]
 
-  +ad-testr
+  +supporter-sidebar(
+    'Apoiador deste episódio',
+    'TESTR',
+    'Plataforma completa de teste de usabilidade ágil.',
+    'http://bit.ly/testeremoto',
+    'TESTR-logo.png'
+  )

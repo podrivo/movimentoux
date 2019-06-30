@@ -1,6 +1,6 @@
 include /_assets/pug/link-alt
-include /_assets/pug/link-ad
-include /_assets/pug/ad-testr
+include /_assets/pug/supporter-link
+include /_assets/pug/supporter-sidebar
 
 .text
   p [Música]
@@ -17,7 +17,7 @@ include /_assets/pug/ad-testr
 
   p Como você vai ouvir, uma das barreiras mais comuns para fazer pesquisa em ambiente ágil é o tempo. E esse é exatamente o problema que o TESTR resolve: entrega todo o processo de teste com usuários de forma automatizada - incluindo recrutamento, execução, recompensa aos participantes e também relatório com resultados, em uma média de 48 horas.
  
-  p E o mais legal é que quem acompanha o Movimento UX tem a vantagem de ganhar três participantes extras na contratação de qualquer plano. É só acessar #[+link-ad('aqui', 'http://bit.ly/testeremoto', 'Content Transcrição 01')] Agora você não tem mais desculpa para dizer que não dá pra rodar pesquisa dentro da sprint, hein?!
+  p E o mais legal é que quem acompanha o Movimento UX tem a vantagem de ganhar três participantes extras na contratação de qualquer plano. É só acessar #[+supporter-link('aqui', 'http://bit.ly/testeremoto', 'TESTR', 'Content Transcrição 01')] Agora você não tem mais desculpa para dizer que não dá pra rodar pesquisa dentro da sprint, hein?!
 
   p E seguindo a linha do episódio anterior, as trilhas usadas neste podcast são de produtores brasileiros de música eletrônica. Essas faixas que estão no início e no fim do episódio são parte do projeto Aeoner do produtor Richard Garrell. As faixas sampleiam sons 8 bits, discos de vinil, fitas cassete e gravações de campo feitas no Japão. As informações e links deste projeto, assim como as do TESTR estão no #[+link-alt('movimentoux.com', 'https://movimentoux.com')].
 
@@ -181,9 +181,15 @@ include /_assets/pug/ad-testr
 
   p #[strong Izabela:] Estamos chegando ao fim deste segundo episódio e espero que você tenha gostado!
 
-  p Essa edição teve o apoio do TESTR, que é uma plataforma completa de teste de usabilidade ágil. O TESTR entrega todo o processo de teste com usuários de forma automatizada – incluindo recrutamento, execução, recompensa aos participantes e também relatório com os resultados. Isso tudo em uma média de 48 horas. Agora você não tem mais desculpa para dizer que não dá pra rodar pesquisa na sprint. E para você que acompanha o Movimento UX tem a vantagem de ganhar três participantes extras na contratação de qualquer plano. É só acessar #[+link-ad('aqui', 'http://bit.ly/testeremoto', 'Content Transcrição 02')].
+  p Essa edição teve o apoio do TESTR, que é uma plataforma completa de teste de usabilidade ágil. O TESTR entrega todo o processo de teste com usuários de forma automatizada – incluindo recrutamento, execução, recompensa aos participantes e também relatório com os resultados. Isso tudo em uma média de 48 horas. Agora você não tem mais desculpa para dizer que não dá pra rodar pesquisa na sprint. E para você que acompanha o Movimento UX tem a vantagem de ganhar três participantes extras na contratação de qualquer plano. É só acessar #[+supporter-link('aqui', 'http://bit.ly/testeremoto', 'TESTR', 'Content Transcrição 02')].
 
   p Obrigada por ouvir até aqui e até já!
 
 .sidebar
-  +ad-testr
+  +supporter-sidebar(
+    'Apoiador deste episódio',
+    'TESTR',
+    'Plataforma completa de teste de usabilidade ágil.',
+    'http://bit.ly/testeremoto',
+    'TESTR-logo.png'
+  )
