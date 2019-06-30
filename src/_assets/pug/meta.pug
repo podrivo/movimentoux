@@ -20,17 +20,17 @@ mixin meta(title, description, href, share)
       if share
         meta(property='og:image' content= share)
       else
-        meta(property='og:image' content='http://movimentoux.com/_assets/img/share.png')
+        meta(property='og:image' content='http://movimentoux.com/_assets/img/share/share.png')
 
       meta(itemprop='name' content= title)
       meta(itemprop='description' content= description)
-      meta(itemprop='image' content='http://movimentoux.com/_assets/img/share.png')
+      meta(itemprop='image' content='http://movimentoux.com/_assets/img/share/share.png')
       meta(itemprop='url' content= href)
 
       meta(name='twitter:card' content='summary')
       meta(name='twitter:title' content= title)
       meta(name='twitter:description' content= description)
-      meta(name='twitter:image' content='http://movimentoux.com/_assets/img/share.png')
+      meta(name='twitter:image' content='http://movimentoux.com/_assets/img/share/share.png')
 
       link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,500,700')
       link(rel='stylesheet' href= 'https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css')
