@@ -3,7 +3,7 @@ mixin episode(speaker, description, keywords, number, image, url, variantInside)
     if variantInside == '-inside'
       .episode-cover
         .cover
-          img(src='/_assets/img/' + image alt='Fotografia de ' + speaker)
+          img(src='/_assets/img/perfil/' + image alt='Fotografia de ' + speaker)
       .text
         h2.title= speaker
         p.keywords= description
@@ -13,7 +13,7 @@ mixin episode(speaker, description, keywords, number, image, url, variantInside)
       .episode-cover
         .cover
           a(href= url title='Ir para episódio').play-badge
-            img(src='/_assets/img/' + image alt='Fotografia de ' + speaker)
+            img(src='/_assets/img/perfil/' + image alt='Fotografia de ' + speaker)
             svg(src='/_assets/img/play.svg')
       .text
         h2.title= speaker
