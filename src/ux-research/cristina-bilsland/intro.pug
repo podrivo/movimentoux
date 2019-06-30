@@ -1,4 +1,4 @@
-include /_assets/pug/link-alt
+include /_assets/pug/link
 include /_assets/pug/supporter-link
 include /_assets/pug/supporter-sidebar
 
@@ -21,19 +21,19 @@ include /_assets/pug/supporter-sidebar
 
   p As dicas que ela deixou são:
   ul.links
-    li Livro — #[+link-alt('"It’s Our research", Tomer Sharon', 'https://amzn.to/2XMPi20')]
-    li Livro — #[+link-alt('"Interviewing Users", Steve Portigal', 'https://amzn.to/2DyFUr5')]
-    li Livro — #[+link-alt('"Userpalooza", Nick Bowmast', 'https://www.amazon.com/USERPALOOZA-Researchers-because-customer-understand/dp/0473458764/')]
-    li Conferência — #[+link-alt('"Epic Conference"', 'https://www.epicpeople.org/')]
+    li Livro — #[+link('"It’s Our research", Tomer Sharon', 'https://amzn.to/2XMPi20')]
+    li Livro — #[+link('"Interviewing Users", Steve Portigal', 'https://amzn.to/2DyFUr5')]
+    li Livro — #[+link('"Userpalooza", Nick Bowmast', 'https://www.amazon.com/USERPALOOZA-Researchers-because-customer-understand/dp/0473458764/')]
+    li Conferência — #[+link('"Epic Conference"', 'https://www.epicpeople.org/')]
 
   p E a gente também tem duas novidades pra vocês:
   ul.links
-    li — Estamos no #[+link-alt('Spotify', 'https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73')]!
+    li — Estamos no #[+link('Spotify', 'https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73')]!
     li — Lançamos a transcrição dos episódios desta segunda temporada! Estão na página de cada um dos episódios. 
 
   p Esse episódio teve o apoio do TESTR - plataforma completa de teste de usabilidade ágil. Além de apoiar nosso trabalho, o TESTR resolve um problema comum de todo mundo que faz pesquisa para produto: o tempo. Entrega todo o processo de teste com usuários de forma automatizada (recrutamento, execução, recompensa aos participantes e relatório com resultados, em uma média de 48 horas). E você pode ganhar 3 participantes extras na contratação de qualquer plano. Mais infos #[+supporter-link('aqui', 'http://bit.ly/testeremoto', 'TESTR', 'Content')].
 
-  p As músicas de abertura e encerramento são do Lowz (músico e produtor brasiliense Aloizio) e fazem parte do #[+link-alt('Tomorrow People', 'https://tmwppl.bandcamp.com/')] - selo de música eletrônica experimental criado por ele.
+  p As músicas de abertura e encerramento são do Lowz (músico e produtor brasiliense Aloizio) e fazem parte do #[+link('Tomorrow People', 'https://tmwppl.bandcamp.com/')] - selo de música eletrônica experimental criado por ele.
 
   .gallery
     .img
@@ -50,11 +50,11 @@ include /_assets/pug/supporter-sidebar
   p Londres
 
   h3.eyebrow Site
-  p #[+link-alt('crisbils.com', 'http://crisbils.com/')]
+  p #[+link('crisbils.com', 'http://crisbils.com/')]
 
   h3.eyebrow Social
-  p #[+link-alt('LinkedIn', 'https://www.linkedin.com/in/cris-bilsland-1941364/')]
-  p #[+link-alt('One Designer A Day', 'http://www.onedesigneraday.com/bilsland')]
+  p #[+link('LinkedIn', 'https://www.linkedin.com/in/cris-bilsland-1941364/')]
+  p #[+link('One Designer A Day', 'http://www.onedesigneraday.com/bilsland')]
 
   +supporter-sidebar(
     'Apoiador deste episódio',
