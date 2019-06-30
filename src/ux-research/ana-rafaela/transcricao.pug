@@ -1,6 +1,6 @@
 include /_assets/pug/link-alt
 include /_assets/pug/link-ad
-include /_assets/pug/ad-hotmart
+include /_assets/pug/friends
 
 .text
   p [Música]
@@ -17,7 +17,7 @@ include /_assets/pug/ad-hotmart
 
   p A Hotmart é pioneira e líder na América Latina na venda de produtos digitais, atua nas áreas de educação à distância, marketing digital e fintech. Está em amplo crescimento internacional e o desafio de desenvolver produtos globais. 
 
-  p E a boa notícia é que tem várias vagas pros times de design e de desenvolvimento. Então se você é designer de produto ou desenvolvedor com habilidades em UX, pesquisa e interface, mora em Belo Horizonte minha cidade do coração, ou topa viver em terras mineiras, pode se cadastrar no banco de talentos pelo link #[+link-ad('bit.ly/vagasdahotmart', 'http://bit.ly/vagasdahotmart', 'Hotmart - Content Transcrição 01')].
+  p E a boa notícia é que tem várias vagas pros times de design e de desenvolvimento. Então se você é designer de produto ou desenvolvedor com habilidades em UX, pesquisa e interface, mora em Belo Horizonte minha cidade do coração, ou topa viver em terras mineiras, pode se cadastrar no banco de talentos pelo link #[+link-ad('bit.ly/vagasdahotmart', 'http://bit.ly/vagasdahotmart', 'Hotmart', 'Content Transcrição 01')].
 
   p As músicas que estão no início e no fim deste episódio são parte do projeto Aeoner do produtor Richard Garrell.
 
@@ -228,9 +228,14 @@ include /_assets/pug/ad-hotmart
 
   p Essa edição teve o patrocínio da Hotmart, pioneira e líder na América Latina na venda de produtos digitais e atua nas áreas de educação à distância, marketing digital e fintech. Está em amplo crescimento internacional e o desafio de desenvolver produtos globais. 
 
-  p E a boa notícia é que tem várias vagas pros times de design e de desenvolvimento. Se você é designer de produto ou desenvolvedor com habilidades em UX, pesquisa ou interface, mora em Belo Horizonte, minha cidade do coração, ou topa viver em terras mineiras, pode se cadastrar no banco de talentos pelo link #[+link-ad('bit.ly/vagasdahotmart', 'http://bit.ly/vagasdahotmart', 'Hotmart - Content Transcrição 02')].
+  p E a boa notícia é que tem várias vagas pros times de design e de desenvolvimento. Se você é designer de produto ou desenvolvedor com habilidades em UX, pesquisa ou interface, mora em Belo Horizonte, minha cidade do coração, ou topa viver em terras mineiras, pode se cadastrar no banco de talentos pelo link #[+link-ad('bit.ly/vagasdahotmart', 'http://bit.ly/vagasdahotmart', 'Hotmart', 'Content Transcrição 02')].
 
   p Obrigada por ouvir até aqui e até o próximo episódio!
 
 .sidebar
-  +ad-hotmart
+  +friends(
+    'Hotmart',
+    'A Hotmart é pioneira e líder na América Latina na venda de produtos digitais.',
+    'http://bit.ly/vagasdahotmart',
+    'hotmart-logo.png'
+  )
