@@ -1,6 +1,6 @@
-include /_assets/pug/link-alt
-include /_assets/pug/link-ad
-include /_assets/pug/ad
+include /_assets/pug/link
+include /_assets/pug/supporter-link
+include /_assets/pug/supporter-sidebar
 
 .text
   p [Música]
@@ -11,7 +11,7 @@ include /_assets/pug/ad
 
   p Ela tem bastante experiência em pesquisa para design. Trabalhou em empresas e consultorias como a Head, VeryDay, Nokia e Itaú, em São Paulo, Londres e Estocolmo. Eu conheci o trabalho dela através do Cristiano Sarmento, meu dupla nesse projeto, que teve aulas com ela em Estocolmo.
 
-  p Esse episódio tem o apoio do TESTR – plataforma completa de teste de usabilidade ágil. Fazer a pesquisa acontecer no tempo do produto é um super desafio e o TESTR entrega todo o processo de teste com usuários de forma automatizada - incluindo recrutamento, execução, recompensa aos participantes relatório com resultados, em uma média de 48 horas. Para saber mais informações e também para ganhar 3 participantes extras na contratação de qualquer plano é só acessar: #[+link-ad('aqui', 'http://bit.ly/testeremoto', 'Content Transcrição 01')].
+  p Esse episódio tem o apoio do TESTR – plataforma completa de teste de usabilidade ágil. Fazer a pesquisa acontecer no tempo do produto é um super desafio e o TESTR entrega todo o processo de teste com usuários de forma automatizada - incluindo recrutamento, execução, recompensa aos participantes relatório com resultados, em uma média de 48 horas. Para saber mais informações e também para ganhar 3 participantes extras na contratação de qualquer plano é só acessar: #[+supporter-link('aqui', 'http://bit.ly/testeremoto', 'TESTR', 'Content Transcrição 01')].
 
   p E uma novidade que estamos suuuuper felizes: agora vocês podem ler a transcrição dos episódios no site do Movimento UX. Essa iniciativa é liderada pela UX Researcher Renata Moreira e tem o objetivo de permitir que pessoas com deficiência auditiva tenham acesso ao podcast, além de facilitar o acesso de todos ao conteúdo em formato de texto. As transcrições das entrevistas desta segunda temporada estão na página de cada um dos episódios. 
 
@@ -19,7 +19,7 @@ include /_assets/pug/ad
 
   p As músicas de abertura e encerramento são do Lowz (músico e produtor brasiliense, Aloizio) e fazem parte do Tomorrow People – selo de música eletrônica experimental criado por ele.
 
-  p Lembrando que todas as informações e links que falei estão em #[+link-alt('movimentoux.com', 'https://movimentoux.com')]. 
+  p Lembrando que todas as informações e links que falei estão em #[+link('movimentoux.com', 'https://movimentoux.com')]. 
 
   p Então vamos lá… Eu sou a Izabela de Fátima e essa é a segunda temporada do Movimento UX.
 
@@ -201,7 +201,7 @@ include /_assets/pug/ad
 
   p Estamos chegando ao fim deste episódio e espero que você tenha gostado!
 
-  p Essa edição teve o apoio do TESTR, que é uma plataforma completa de teste de usabilidade ágil. O TESTR entrega todo o processo de teste com usuários de forma automatizada - incluindo recrutamento, execução, recompensa aos participantes e também relatório com os resultados. E isso tudo em uma média de 48 horas. Agora você não tem mais desculpa pra dizer que não dá pra rodar pesquisa na sprint. E para você que acompanha o Movimento UX tem a vantagem de ganhar 3 participantes extras na contratação de qualquer plano. É só acessar: #[+link-ad('aqui', 'http://bit.ly/testeremoto', 'Content Transcrição 02')].
+  p Essa edição teve o apoio do TESTR, que é uma plataforma completa de teste de usabilidade ágil. O TESTR entrega todo o processo de teste com usuários de forma automatizada - incluindo recrutamento, execução, recompensa aos participantes e também relatório com os resultados. E isso tudo em uma média de 48 horas. Agora você não tem mais desculpa pra dizer que não dá pra rodar pesquisa na sprint. E para você que acompanha o Movimento UX tem a vantagem de ganhar 3 participantes extras na contratação de qualquer plano. É só acessar: #[+supporter-link('aqui', 'http://bit.ly/testeremoto', 'TESTR', 'Content Transcrição 02')].
 
   p No próximo episódio o papo vai ser com a Ana Rafaela Guerra, UX Researcher no YouTube.
 
@@ -211,4 +211,10 @@ include /_assets/pug/ad
 
 
 .sidebar
-  +ad
+  +supporter-sidebar(
+    'Apoiador deste episódio',
+    'TESTR',
+    'Plataforma completa de teste de usabilidade ágil.',
+    'http://bit.ly/testeremoto',
+    'TESTR-logo.png'
+  )

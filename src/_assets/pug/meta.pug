@@ -11,7 +11,7 @@ mixin meta(title, description, href, share)
 
       link(rel='canonical' href= href)
       link(rel='alternate' type='application/rss+xml' title='RSS Feed' href='http://feeds.feedburner.com/movimentoux')
-      link(rel='icon' href='/_assets/img/favicon.png')
+      link(rel='icon' href='/_assets/img/ui/favicon.png')
 
       meta(property='og:type' content='website')
       meta(property='og:title' content= title)
@@ -20,17 +20,17 @@ mixin meta(title, description, href, share)
       if share
         meta(property='og:image' content= share)
       else
-        meta(property='og:image' content='http://movimentoux.com/_assets/img/share.png')
+        meta(property='og:image' content='http://movimentoux.com/_assets/img/share/share.png')
 
       meta(itemprop='name' content= title)
       meta(itemprop='description' content= description)
-      meta(itemprop='image' content='http://movimentoux.com/_assets/img/share.png')
+      meta(itemprop='image' content='http://movimentoux.com/_assets/img/share/share.png')
       meta(itemprop='url' content= href)
 
       meta(name='twitter:card' content='summary')
       meta(name='twitter:title' content= title)
       meta(name='twitter:description' content= description)
-      meta(name='twitter:image' content='http://movimentoux.com/_assets/img/share.png')
+      meta(name='twitter:image' content='http://movimentoux.com/_assets/img/share/share.png')
 
       link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,500,700')
       link(rel='stylesheet' href= 'https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css')

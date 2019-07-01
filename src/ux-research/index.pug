@@ -24,16 +24,24 @@ body(data-page='season')
       +social('-home')
       
       ul.list-grid
-        li.list.-on #[svg(src='_assets/img/ep-list.svg')]
-        li.grid #[svg(src='_assets/img/ep-grid.svg')]
+        li.list.-on #[svg(src='_assets/img/ui/ep-list.svg')]
+        li.grid #[svg(src='_assets/img/ui/ep-grid.svg')]
       
       .episode-wrapper
+        +episode(
+          'Ana Rafaela',
+          'User Experience Researcher no YouTube San Bruno/CA.',
+          'Pesquisa global, técnicas híbridas de pesquisa, repositório de aprendizados.',
+          '23',
+          '23-ana-rafaela.jpg',
+          '/ux-research/ana-rafaela/'
+        )
         +episode(
           'Cristina Bilsland',
           'User Experience Researcher Senior no Google UK.',
           'Pesquisa global, estratégia de pesquisa, design sprint.',
           '22',
-          '22-foto-cristina-bilsland.jpg',
+          '22-cristina-bilsland.jpg',
           '/ux-research/cristina-bilsland/'
         )
         +episode(
@@ -41,7 +49,7 @@ body(data-page='season')
           'User Researcher no Nubank.',
           'Data & analytics, mix de técnicas de pesquisa qualitativa e quantitativa.',
           '21',
-          '21-foto-caio-gama.jpg',
+          '21-caio-gama.jpg',
           '/ux-research/caio-gama/'
         )
         +episode(
@@ -49,7 +57,7 @@ body(data-page='season')
           'Head de Pesquisa na Kyvo.',
           'Consultoria, pesquisa qualitativa e pesquisa na sprint.',
           '20',
-          '20-foto-carol-zatorre.jpg',
+          '20-carol-zatorre.jpg',
           '/ux-research/carol-zatorre/'
         )
         +episode(
@@ -57,7 +65,7 @@ body(data-page='season')
           'Head de User Studies no Descomplica.',
           'Pesquisa humanizada, empatia e criação de área.',
           '19',
-          '19-foto-paola-sales.jpg',
+          '19-paola-sales.jpg',
           '/ux-research/paola-sales/'
         )
 

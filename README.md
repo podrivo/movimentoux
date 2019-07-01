@@ -32,7 +32,6 @@ Escrevendo CSS:
 + E uma pasta com componentes `/css/components/`
 
 ## Tecnologia
-+ [Rubki Typeface](http://hubertfischer.com/work/type-rubik)
 + [node.js](https://nodejs.org/)
 + [Gulp](https://gulpjs.com/)
 + [Browsersync](https://browsersync.io/)
@@ -42,6 +41,7 @@ Escrevendo CSS:
 + [PostCSS](http://postcss.org/)
 + [Autoprefixer](https://github.com/postcss/autoprefixer/)
 + [Eric Meyer CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
++ [Rubik Typeface](http://hubertfischer.com/work/type-rubik)
 
 ## Autor
 Pedro Ivo Hudson — @podrivo
