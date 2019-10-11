@@ -9,6 +9,12 @@
     @media (max-width: $sm) {
       width: 100%;
     }
+
+    .pesquisa-logo {
+      max-width: 300px;
+      margin-top: -50px;
+      margin-bottom: $spacing-8;
+    }
   }
 
   > .description .title {
