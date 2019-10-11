@@ -1,4 +1,7 @@
-# 301 Redirect URLs.
+# 404 Error
+ErrorDocument 404 /404/
+
+# 301 Redirect URLs
 Redirect 301 /work/ep1_caiocesar /ux-design/caio-cesar
 Redirect 301 /work/rodrigo-medeiros /ux-design/rodrigo-medeiros
 Redirect 301 /work/ep3_eduardoloureiro /ux-design/eduardo-loureiro
@@ -18,7 +21,7 @@ Redirect 301 /work/felipememoria /ux-design/felipe-memoria
 Redirect 301 /work/carolina-leslie /ux-design/carolina-leslie
 Redirect 301 /work/netflix /ux-design/andre-do-amaral
 
-Redirect 301 /caio-cesar /ux-design/caio-cesar
+Redirect 301 /uxdesign /ux-design
 Redirect 301 /rodrigo-medeiros /ux-design/rodrigo-medeiros
 Redirect 301 /eduardo-loureiro /ux-design/eduardo-loureiro
 Redirect 301 /koji-pereira /ux-design/koji-pereira
@@ -37,13 +40,20 @@ Redirect 301 /felipe-memoria /ux-design/felipe-memoria
 Redirect 301 /carolina-leslie /ux-design/carolina-leslie
 Redirect 301 /andre-do-amaral /ux-design/andre-do-amaral
 
+Redirect 301 /uxresearch /ux-research
 Redirect 301 /paola-sales /ux-research/paola-sales
 Redirect 301 /carol-zatorre /ux-research/carol-zatorre
 Redirect 301 /caio-gama /ux-research/caio-gama
 
+Redirect 301 /pesquisaux /pesquisa-uxr
+Redirect 301 /pesquisa-ux /pesquisa-uxr
+Redirect 301 /pesquisauxr /pesquisa-uxr
+
 Redirect 301 /episodios /ux-design
 Redirect 301 /temporada-um /ux-design
 Redirect 301 /temporada-dois /ux-research
+Redirect 301 /temporadaum /ux-design
+Redirect 301 /temporadadois /ux-research
 Redirect 301 /temporada-1 /ux-design
 Redirect 301 /temporada-2 /ux-research
 Redirect 301 /temporada1 /ux-design
