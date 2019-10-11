@@ -25,6 +25,10 @@
     margin: $spacing-1 0;
     z-index: 99;
     transition: all cubic-bezier(0.86, 0, 0.07, 1) $timing * 3;
+
+    @media (max-width: $sm) {
+      max-width: 100%;
+    }
   }
 
   > .number {
