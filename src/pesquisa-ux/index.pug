@@ -1,0 +1,75 @@
+include /_assets/pug/meta
+include /_assets/pug/header
+include /_assets/pug/social
+include /_assets/pug/js
+
++meta(
+  'Pesquisa UX — Movimento UX + Panorama UX',
+  'Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário.',
+  'http://movimentoux.com/pesquisa-ux/'
+)
+
+body
+
+  +header('', '', 'on', '')
+
+  #barba-wrapper
+    .barba-container
+      article.intro-text.-about
+        section.about-description
+          .description
+            h1.title Pesquisa <br>sobre o <br>mercado de <br>UX Research
+            p Olá! Essa é uma iniciativa do Movimento UX e da pesquisa Panorama UX.
+            p Após uma temporada sobre UX Research, decidimos investigar a fundo como está o mercado entre os brasileiros. Estamos fazendo uma parceria com a pesquisa Panorama UX que há 5 anos investiga o mercado. Dessa parceria vai nascer uma análise especialmente sobre os profissionais e o mercado de UX Research.
+            p O objetivo aqui é te chamar para contribuir! Cadastre seu nome e e-mail para receber o formulário do Panorama UX no dia que for lançado. Lembrando que ao participar, você também receberá os resultados fresquinhos no seu e-mail.  
+            p Prometemos que este cadastro será usado exclusivamente para o envio da pesquisa.
+            p Um grande abraço, <br>Equipe Movimento UX + Panorama UX
+            .iframe-box
+              iframe(src='https://docs.google.com/forms/d/e/1FAIpQLScd8qu_usyE3SnlZzrx7QRJhGKKEkJBKzZubQJ6naJlcmxOZQ/viewform?embedded=true' frameborder='0' marginheight='0' marginwidth='0')
+
+          //- +social('')
+
+      //- section.about-team
+        //- p.eyebrow Equipe
+        //- .members
+        //-   .member-block
+        //-     img(src='/_assets/img/team/izabela.jpg' alt='Fotografia de Izabela de Fátima')
+        //-     h2.subtitle Izabela de Fátima
+        //-     h3.job Pesquisadora UX & Apresentadora
+        //-     ul.member-social
+        //-       //- li.item
+        //-         a(href='http://izabeladefatima.com/' title='Website' target='_blank' rel='noopener').icon #[svg(src='_assets/img/social-website.svg')]
+        //-       li.item
+        //-         a(href='https://www.linkedin.com/in/izabeladefatima/' title='LinkedIn' target='_blank' rel='noopener').icon #[svg(src='_assets/img/ui/social-linkedin.svg')]
+        //-       li.item
+        //-         a(href='https://twitter.com/izabeladefatima' title='Twitter' target='_blank' rel='noopener').icon #[svg(src='_assets/img/ui/social-twitter.svg')]
+          
+        //-   .member-block
+        //-     img(src='/_assets/img/team/cristiano.jpg' alt='Fotografia de Cristiano Sarmento')
+        //-     h2.subtitle Cristiano Sarmento
+        //-     h3.job Designer & Diretor de Arte
+        //-     ul.member-social
+        //-       li.item
+        //-         a(href='http://cristiano.do/' title='Website' target='_blank' rel='noopener').icon #[svg(src='_assets/img/ui/social-website.svg')]
+        //-       li.item
+        //-         a(href='https://www.linkedin.com/in/hicristiano/' title='LinkedIn' target='_blank' rel='noopener').icon #[svg(src='_assets/img/ui/social-linkedin.svg')]
+        //-       li.item
+        //-         a(href='https://twitter.com/cristianodoes' title='Twitter' target='_blank' rel='noopener').icon #[svg(src='_assets/img/ui/social-twitter.svg')]
+          
+        //-   .member-block
+        //-     img(src='/_assets/img/team/pedro-ivo.jpg' alt='Fotografia de Pedro Ivo Hudson')
+        //-     h2.subtitle Pedro Ivo Hudson
+        //-     h3.job Designer
+        //-     ul.member-social
+        //-       li.item
+        //-         a(href='http://podrivo.com/' title='Website' target='_blank' rel='noopener').icon #[svg(src='_assets/img/ui/social-website.svg')]
+        //-       li.item
+        //-         a(href='https://www.linkedin.com/in/pedroivohudson/' title='LinkedIn' target='_blank' rel='noopener').icon #[svg(src='_assets/img/ui/social-linkedin.svg')]
+        //-       li.item
+        //-         a(href='https://twitter.com/podrivo' title='Twitter' target='_blank' rel='noopener').icon #[svg(src='_assets/img/ui/social-twitter.svg')]
+      
+      //- footer
+      //-   a(href='mailto:contato@movimentoux.com' title='envie email para — contato@movimentoux.com').btn.-lg envie email para — contato@movimentoux.com
+
+//- don't forget js
++js
