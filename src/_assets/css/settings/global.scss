@@ -1,15 +1,13 @@
-html, body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+@mixin selection {
+  background-color: rgba($selection, 0.1);
+  color: $selection;
 }
+
+*::-moz-selection {@include selection}
+*::selection {@include selection}
 
 body {
   background-color: $black;
-  font-family: 'Rubik', -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
-  font-size: $font-size;
-  line-height: 1.8em;
-  font-weight: 400;
   color: $white;
   overflow-x: hidden;
 
@@ -26,9 +24,27 @@ body {
   }
 }
 
-@mixin selection {
-  background-color: rgba($selection, 0.1);
-  color: $selection;
+input {
+  font-size: 1rem;
+  background: transparent;
+  color: $white;
+
+  &[type='text'] {
+    border: 0;
+    border-bottom: 2px solid $white;
+  }
 }
-*::-moz-selection {@include selection}
-*::selection {@include selection}
+
+img, video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+svg {
+  display: block;
+}
+
+strong {
+  font-weight: 700;
+}
