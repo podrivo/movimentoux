@@ -2,6 +2,7 @@ include /_assets/pug/meta
 include /_assets/pug/header
 include /_assets/pug/episode
 include /_assets/pug/player
+include /_assets/pug/tabs
 include /_assets/pug/js
 
 +meta(
@@ -29,8 +30,13 @@ body(data-page='episode')
       +player('episodio-05-fabricio-teixeira')
 
       section.episode-content
+        +tabs
+
         .tab.on#intro
           include intro.pug
+
+        .tab#transcricao
+          include transcricao.pug
 
 //- don't forget js
 +js
