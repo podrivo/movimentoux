@@ -48,3 +48,17 @@ svg {
 strong {
   font-weight: 700;
 }
+
+.pesquisa-logo {
+  max-width: 430px;
+  margin-bottom: $spacing-8;
+
+  &.-invert {
+    margin-top: $spacing-8;
+    margin-bottom: $spacing-4;
+
+    path {
+      fill: $black;
+    }
+  }
+}
