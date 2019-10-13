@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "autoprefixer": "^8.0.0",
-    "browser-sync": "^2.23.6",
-    "css-loader": "^0.28.9",
+    "browser-sync": "^2.26.7",
+    "css-loader": "^3.2.0",
     "del": "^3.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-cache": "^1.0.2",
     "gulp-clean-css": "^3.9.2",
     "gulp-concat": "^2.6.1",
@@ -31,11 +31,13 @@
     "gulp-sitemap": "^6.2.0",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "gulp-version-number": "^0.2.0",
     "imagemin-mozjpeg": "^8.0.0",
     "node-sass": "^4.7.2",
     "run-sequence": "^2.2.1",
     "sass-loader": "^6.0.6",
     "through2": "^2.0.3"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.1"
   }
 }
