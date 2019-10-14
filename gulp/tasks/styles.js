@@ -14,9 +14,6 @@ var sassGlob = require('gulp-sass-glob')
 module.exports = function(config, error) {
   gulp.task('styles:lint', function() {
     return gulp.src(config.styles.lint)
-      .pipe(plumber({
-        errorHandler: error
-      }))
       .pipe(sassLint({
         rules: {
           'single-line-per-selector': 0,
@@ -42,9 +39,6 @@ module.exports = function(config, error) {
       .pipe(sass({
         noCache: true
       }).on('error', error))
-      .pipe(plumber({
-        errorHandler: error
-      }))
       .pipe(mmq({
         log: true
       }))

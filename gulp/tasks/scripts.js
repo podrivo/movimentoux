@@ -6,12 +6,9 @@ var concat = require('gulp-concat')
 var eslint = require('gulp-eslint')
 var uglify = require('gulp-uglify')
 
-module.exports = function(config, error) {
+module.exports = function(config) {
   gulp.task('scripts:lint', function() {
     return gulp.src(config.scripts.lint)
-      .pipe(plumber({
-        errorHandler: error
-      }))
       .pipe(eslint())
       .pipe(eslint.format())
       .pipe(plumber.stop())
@@ -19,9 +16,6 @@ module.exports = function(config, error) {
 
   gulp.task('scripts:build', function() {
     return gulp.src(config.scripts.src)
-      .pipe(plumber({
-        errorHandler: error
-      }))
       .pipe(concat('main.min.js'))
       .pipe(uglify())
       .pipe(gulp.dest(config.scripts.dest))
