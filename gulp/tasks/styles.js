@@ -11,10 +11,9 @@ var sass = require('gulp-sass');
 var sassLint = require('gulp-sass-lint');
 var sassGlob = require('gulp-sass-glob');
 
-var log = require('../log/log.js');
-var notifyError = require('../notify/error.js');
+// var log = require('../log/log.js');
 
-module.exports = function(config, log, error, success) {
+module.exports = function(config, error) {
   gulp.task('styles:lint', function() {
     return gulp.src(config.styles.lint.src)
       .pipe(plumber({

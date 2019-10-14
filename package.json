@@ -15,7 +15,6 @@
     "css-loader": "^3.2.0",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
-    "gulp-cache": "^1.0.2",
     "gulp-clean-css": "^3.9.2",
     "gulp-concat": "^2.6.1",
     "gulp-embed-svg": "^1.0.2",

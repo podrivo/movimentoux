@@ -1,7 +1,7 @@
 var gulp = require('gulp')
 var del = require('del')
 
-module.exports = function(config, log, error, success) {
+module.exports = function() {
   gulp.task('clean', function() {
     return del('./dist')
   })

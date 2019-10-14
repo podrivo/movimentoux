@@ -4,10 +4,9 @@ var browserSync = require('browser-sync').create();
 var plumber = require('gulp-plumber');
 var embedSvg = require('gulp-embed-svg');
 
-var log = require('../log/log.js');
-var notifyError = require('../notify/error.js');
+// var log = require('../log/log.js');
 
-module.exports = function(config, log, error, success) {
+module.exports = function(config, error) {
   gulp.task('html', function() {
     return gulp.src(config.html.src)
       .pipe(pug({
