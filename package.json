@@ -1,9 +1,9 @@
 {
-  "name": "default",
-  "version": "3.0.0",
-  "description": "Basic site skeleton. Worry about doing it.",
+  "name": "Movimento UX",
+  "version": "1.0.0",
+  "description": "Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário.",
   "main": "gulpfile.js",
-  "repository": "https://github.com/podrivo/default.git",
+  "repository": "https://github.com/podrivo/movimentoux.git",
   "author": "Pedro Ivo Hudson <hello@podrivo.com> (http://podrivo.com)",
   "license": "MIT",
   "scripts": {
