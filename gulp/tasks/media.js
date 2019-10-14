@@ -1,12 +1,13 @@
 var gulp = require('gulp')
-var browserSync = require('browser-sync').create()
 var plumber = require('gulp-plumber')
+var browserSync = require('browser-sync').create()
 
-// var log = require('../log/log.js')
-
-module.exports = function(config) {
+module.exports = function(config, error) {
   gulp.task('media', function() {
     return gulp.src(config.media.src)
+      .pipe(plumber({
+        errorHandler: error
+      }))
       .pipe(gulp.dest(config.media.dest))
       .pipe(browserSync.stream())
       .pipe(plumber.stop())

@@ -1,26 +1,24 @@
-var gulp = require('gulp');
-var pug = require('gulp-pug');
-var browserSync = require('browser-sync').create();
-var plumber = require('gulp-plumber');
-var embedSvg = require('gulp-embed-svg');
-
-// var log = require('../log/log.js');
+var gulp = require('gulp')
+var plumber = require('gulp-plumber')
+var browserSync = require('browser-sync').create()
+var pug = require('gulp-pug')
+var embedSvg = require('gulp-embed-svg')
 
 module.exports = function(config, error) {
   gulp.task('html', function() {
     return gulp.src(config.html.src)
       .pipe(pug({
         pretty: true,
-        basedir: './src'
+        basedir: config.baseDir
       }))
       .pipe(embedSvg({
-        root: './src'
+        root: config.baseDir
       }))
       .pipe(plumber({
         errorHandler: error
       }))
       .pipe(gulp.dest(config.html.dest))
       .pipe(browserSync.stream())
-      .pipe(plumber.stop());
-  });
-};
+      .pipe(plumber.stop())
+  })
+}

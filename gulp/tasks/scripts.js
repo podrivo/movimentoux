@@ -1,12 +1,10 @@
 var gulp = require('gulp')
+var plumber = require('gulp-plumber')
 var browserSync = require('browser-sync').create()
+var runSequence = require('gulp4-run-sequence')
 var concat = require('gulp-concat')
 var eslint = require('gulp-eslint')
-var plumber = require('gulp-plumber')
-var runSequence = require('gulp4-run-sequence')
 var uglify = require('gulp-uglify')
-
-// var log = require('../log/log.js')
 
 module.exports = function(config, error) {
   gulp.task('scripts:lint', function() {

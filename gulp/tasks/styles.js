@@ -1,21 +1,19 @@
-var gulp = require('gulp');
-var autoprefixer = require('autoprefixer');
-var browserSync = require('browser-sync').create();
-var cleanCss = require('gulp-clean-css');
-var concat = require('gulp-concat');
-var mmq = require('gulp-merge-media-queries');
-var plumber = require('gulp-plumber');
-var postCss = require('gulp-postcss');
-var runSequence = require('gulp4-run-sequence');
-var sass = require('gulp-sass');
-var sassLint = require('gulp-sass-lint');
-var sassGlob = require('gulp-sass-glob');
-
-// var log = require('../log/log.js');
+var gulp = require('gulp')
+var plumber = require('gulp-plumber')
+var browserSync = require('browser-sync').create()
+var runSequence = require('gulp4-run-sequence')
+var autoprefixer = require('autoprefixer')
+var concat = require('gulp-concat')
+var cleanCss = require('gulp-clean-css')
+var mmq = require('gulp-merge-media-queries')
+var postCss = require('gulp-postcss')
+var sass = require('gulp-sass')
+var sassLint = require('gulp-sass-lint')
+var sassGlob = require('gulp-sass-glob')
 
 module.exports = function(config, error) {
   gulp.task('styles:lint', function() {
-    return gulp.src(config.styles.lint.src)
+    return gulp.src(config.styles.lint)
       .pipe(plumber({
         errorHandler: error
       }))
@@ -35,11 +33,11 @@ module.exports = function(config, error) {
       }))
       .pipe(sassLint.format())
       .pipe(sassLint.failOnError())
-      .pipe(plumber.stop());
-  });
+      .pipe(plumber.stop())
+  })
 
   gulp.task('styles:build', function() {
-    return gulp.src(config.styles.build.src)
+    return gulp.src(config.styles.src)
       .pipe(sassGlob())
       .pipe(sass({
         noCache: true
@@ -57,12 +55,12 @@ module.exports = function(config, error) {
       .pipe(cleanCss({
         level: 0
       }))
-      .pipe(gulp.dest(config.styles.build.dest))
+      .pipe(gulp.dest(config.styles.dest))
       .pipe(browserSync.stream())
-      .pipe(plumber.stop());
-  });
+      .pipe(plumber.stop())
+  })
 
   gulp.task('styles', function(callback) {
-    runSequence('styles:lint', ['styles:build'], callback);
-  });
-};
+    runSequence('styles:lint', ['styles:build'], callback)
+  })
+}

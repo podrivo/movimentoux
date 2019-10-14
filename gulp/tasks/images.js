@@ -1,22 +1,20 @@
 var gulp = require('gulp')
+var plumber = require('gulp-plumber')
 var browserSync = require('browser-sync').create()
 var imagemin = require('gulp-imagemin')
 var mozjpeg = require('imagemin-mozjpeg')
-var plumber = require('gulp-plumber')
-
-// var log = require('../log/log.js');
 
 module.exports = function(config, error) {
   gulp.task('images', function() {
     return gulp.src(config.images.src)
-      .pipe(plumber({
-        errorHandler: error
-      }))
       .pipe(imagemin([
         mozjpeg()
       ]))
+      .pipe(plumber({
+        errorHandler: error
+      }))
       .pipe(gulp.dest(config.images.dest))
       .pipe(browserSync.stream())
-    .pipe(plumber.stop())
+      .pipe(plumber.stop())
   })
 }

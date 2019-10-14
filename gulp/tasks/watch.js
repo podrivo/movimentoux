@@ -9,7 +9,7 @@ function reload(done) {
 module.exports = function(config) {
   gulp.task('watch', function() {
     browserSync.init({
-      server: './dist',
+      server: config.watch,
       port: 8000,
       ui: {
         port: 8001
@@ -18,11 +18,11 @@ module.exports = function(config) {
       notify: false
     })
 
-    gulp.watch(config.fonts.src, gulp.series('fonts', reload))
+    gulp.watch(config.fonts.watch, gulp.series('fonts', reload))
     gulp.watch(config.html.watch, gulp.series('html', reload))
-    gulp.watch(config.images.src, gulp.series('images', reload))
-    gulp.watch(config.scripts.build.src, gulp.series('scripts', reload))
-    gulp.watch(config.styles.lint.src, gulp.series('styles', reload))
-    gulp.watch(config.media.src, gulp.series('media', reload))
+    gulp.watch(config.images.watch, gulp.series('images', reload))
+    gulp.watch(config.scripts.watch, gulp.series('scripts', reload))
+    gulp.watch(config.styles.watch, gulp.series('styles', reload))
+    gulp.watch(config.media.watch, gulp.series('media', reload))
   })
 }
