@@ -9,7 +9,7 @@ function reload(done) {
 module.exports = function(config) {
   gulp.task('watch', function() {
     browserSync.init({
-      server: config.watch,
+      server: config.baseDist,
       port: 8000,
       ui: {
         port: 8001

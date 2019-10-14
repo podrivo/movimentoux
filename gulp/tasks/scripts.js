@@ -8,7 +8,7 @@ var uglify = require('gulp-uglify')
 
 module.exports = function(config, error) {
   gulp.task('scripts:lint', function() {
-    return gulp.src(config.scripts.lint.src)
+    return gulp.src(config.scripts.lint)
       .pipe(plumber({
         errorHandler: error
       }))
@@ -18,13 +18,13 @@ module.exports = function(config, error) {
   })
 
   gulp.task('scripts:build', function() {
-    return gulp.src(config.scripts.build.src)
+    return gulp.src(config.scripts.src)
       .pipe(plumber({
         errorHandler: error
       }))
       .pipe(concat('main.min.js'))
       .pipe(uglify())
-      .pipe(gulp.dest(config.scripts.build.dest))
+      .pipe(gulp.dest(config.scripts.dest))
       .pipe(browserSync.stream())
       .pipe(plumber.stop())
   })
