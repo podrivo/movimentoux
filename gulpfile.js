@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var glob = require('glob');
-var runSequence = require('run-sequence').use(gulp);
+var runSequence = require('gulp4-run-sequence').use(gulp);
 var config = require('./gulp/config');
 
 var log = require('./gulp/log/log');

@@ -1,24 +1,24 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
-var reload = browserSync.reload;
+var gulp = require('gulp')
+var browserSync = require('browser-sync').create()
+var reload = browserSync.reload
 
-module.exports = function(config, log, error, success) {
+module.exports = function(config) {
   gulp.task('watch', function() {
     browserSync.init({
-      server: "./dist",
+      server: './dist',
       port: 8000,
       ui: {
         port: 8001
       },
       open: false,
       notify: false
-    });
+    })
 
-    gulp.watch(config.fonts.src, ['fonts', reload]);
-    gulp.watch(config.html.watch, ['html', reload]);
-    gulp.watch(config.images.src, ['images', reload]);
-    gulp.watch(config.scripts.build.src, ['scripts', reload]);
-    gulp.watch(config.styles.lint.src, ['styles', reload]);
-    gulp.watch(config.media.src, ['media', reload]);
-  });
-};
+    gulp.watch(config.fonts.src, gulp.series('fonts', reload))
+    gulp.watch(config.html.watch, gulp.series('html', reload))
+    gulp.watch(config.images.src, gulp.series('images', reload))
+    gulp.watch(config.scripts.build.src, gulp.series('scripts', reload))
+    gulp.watch(config.styles.lint.src, gulp.series('styles', reload))
+    gulp.watch(config.media.src, gulp.series('media', reload))
+  })
+}

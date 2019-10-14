@@ -59,6 +59,6 @@ var config = {
     ],
     'dest': './dist/_assets/img'
   }
-};
+}
 
-module.exports = config;
+module.exports = config
