@@ -1,6 +1,10 @@
 var gulp = require('gulp')
 var browserSync = require('browser-sync').create()
-var reload = browserSync.reload
+
+function reload(done) {
+  browserSync.reload()
+  done()
+}
 
 module.exports = function(config) {
   gulp.task('watch', function() {
