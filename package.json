@@ -12,7 +12,6 @@
   "dependencies": {
     "autoprefixer": "^8.0.0",
     "browser-sync": "^2.26.7",
-    "css-loader": "^3.2.0",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^3.9.2",
@@ -30,11 +29,6 @@
     "gulp-sitemap": "^6.2.0",
     "gulp-uglify": "^3.0.0",
     "gulp4-run-sequence": "^1.0.0",
-    "imagemin-mozjpeg": "^8.0.0",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6"
-  },
-  "devDependencies": {
-    "webpack": "^4.41.1"
+    "imagemin-mozjpeg": "^8.0.0"
   }
 }
