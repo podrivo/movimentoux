@@ -15,25 +15,25 @@ body(data-page='episode')
 
   +header('on', '', '')
 
-      +episode(
-        'Fabrício Teixeira',
-        'Diretor de UX na R/GA.',
-        'UX em agências, arquitetura de informação,UX em outros países.',
-        '05',
-        '05-fabricio-teixeira.jpg',
-        '',
-        '-inside'
-      )
+  +episode(
+    'Fabrício Teixeira',
+    'Diretor de UX na R/GA.',
+    'UX em agências, arquitetura de informação,UX em outros países.',
+    '05',
+    '05-fabricio-teixeira.jpg',
+    '',
+    '-inside'
+  )
 
-      +player('episodio-05-fabricio-teixeira')
+  +player('episodio-05-fabricio-teixeira')
 
-      section.episode-content
-        +tabs
+  section.episode-content
+    +tabs
 
-        .tab.on#intro
-          include intro.pug
+    .tab.on#intro
+      include intro.pug
 
-        .tab#transcricao
-          include transcricao.pug
+    .tab#transcricao
+      include transcricao.pug
 
 +js

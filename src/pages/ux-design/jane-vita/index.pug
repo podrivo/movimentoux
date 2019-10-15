@@ -15,25 +15,25 @@ body(data-page='episode')
 
   +header('on', '', '')
 
-      +episode(
-        'Jane Vita',
-        'Service Creator na Futurice.',
-        'Design de serviços, futures thinking, UX em outros países.',
-        '07',
-        '07-jane-vita.jpg',
-        '',
-        '-inside'
-      )
+  +episode(
+    'Jane Vita',
+    'Service Creator na Futurice.',
+    'Design de serviços, futures thinking, UX em outros países.',
+    '07',
+    '07-jane-vita.jpg',
+    '',
+    '-inside'
+  )
 
-      +player('janevita')
+  +player('janevita')
 
-      section.episode-content
-        +tabs
+  section.episode-content
+    +tabs
 
-        .tab.on#intro
-          include intro.pug
+    .tab.on#intro
+      include intro.pug
 
-        .tab#transcricao
-          include transcricao.pug
+    .tab#transcricao
+      include transcricao.pug
 
 +js

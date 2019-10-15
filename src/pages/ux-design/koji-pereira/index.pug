@@ -15,25 +15,25 @@ body(data-page='episode')
 
   +header('on', '', '')
 
-      +episode(
-        'Koji Pereira',
-        'Designer de Produto no Google.',
-        'Design digital, prototipação, UX em outros países.',
-        '04',
-        '04-koji-pereira.jpg',
-        '',
-        '-inside'
-      )
+  +episode(
+    'Koji Pereira',
+    'Designer de Produto no Google.',
+    'Design digital, prototipação, UX em outros países.',
+    '04',
+    '04-koji-pereira.jpg',
+    '',
+    '-inside'
+  )
 
-      +player('ep4-kojipereira')
+  +player('ep4-kojipereira')
 
-      section.episode-content
-        +tabs
+  section.episode-content
+    +tabs
 
-        .tab.on#intro
-          include intro.pug
+    .tab.on#intro
+      include intro.pug
 
-        .tab#transcricao
-          include transcricao.pug
+    .tab#transcricao
+      include transcricao.pug
 
 +js

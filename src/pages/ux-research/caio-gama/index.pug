@@ -16,25 +16,25 @@ body(data-page='episode')
 
   +header('', 'on', '')
 
-      +episode(
-        'Caio Gama',
-        'User Researcher no Nubank.',
-        'Data & analytics, mix de técnicas de pesquisa qualitativa e quantitativa.',
-        '21',
-        '21-caio-gama.jpg',
-        '',
-        '-inside'
-      )
+  +episode(
+    'Caio Gama',
+    'User Researcher no Nubank.',
+    'Data & analytics, mix de técnicas de pesquisa qualitativa e quantitativa.',
+    '21',
+    '21-caio-gama.jpg',
+    '',
+    '-inside'
+  )
 
-      +player('caiogama')
+  +player('caiogama')
 
-      section.episode-content
-        +tabs
+  section.episode-content
+    +tabs
 
-        .tab.on#intro
-          include intro.pug
+    .tab.on#intro
+      include intro.pug
 
-        .tab#transcricao
-          include transcricao.pug
+    .tab#transcricao
+      include transcricao.pug
 
 +js

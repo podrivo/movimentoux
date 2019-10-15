@@ -15,25 +15,25 @@ body(data-page='episode')
 
   +header('on', '', '')
 
-      +episode(
-        'Eduardo Loureiro',
-        'Sócio gerente DesignThinkers Brasil.',
-        'Co-criação, transição de agências, empreendedorismo.',
-        '03',
-        '03-eduardo-loureiro.jpg',
-        '',
-        '-inside'
-      )
+  +episode(
+    'Eduardo Loureiro',
+    'Sócio gerente DesignThinkers Brasil.',
+    'Co-criação, transição de agências, empreendedorismo.',
+    '03',
+    '03-eduardo-loureiro.jpg',
+    '',
+    '-inside'
+  )
 
-      +player('episodio-3-eduardo-loureiro')
+  +player('episodio-3-eduardo-loureiro')
 
-      section.episode-content
-        +tabs
+  section.episode-content
+    +tabs
 
-        .tab.on#intro
-          include intro.pug
+    .tab.on#intro
+      include intro.pug
 
-        .tab#transcricao
-          include transcricao.pug
+    .tab#transcricao
+      include transcricao.pug
 
 +js

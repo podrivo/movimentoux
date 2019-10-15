@@ -14,20 +14,20 @@ body(data-page='episode')
 
   +header('on', '', '')
 
-      +episode(
-        'Fabricio Dore',
-        'Diretor Executivo de UX na McKinsey.',
-        'Design de interação, inovação digital, UX em outros países.',
-        '14',
-        '14-fabricio-dore.jpg',
-        '',
-        '-inside'
-      )
+  +episode(
+    'Fabricio Dore',
+    'Diretor Executivo de UX na McKinsey.',
+    'Design de interação, inovação digital, UX em outros países.',
+    '14',
+    '14-fabricio-dore.jpg',
+    '',
+    '-inside'
+  )
 
-      +player('fabriciodore')
+  +player('fabriciodore')
 
-      section.episode-content
-        .tab.on#intro
-          include intro.pug
+  section.episode-content
+    .tab.on#intro
+      include intro.pug
 
 +js

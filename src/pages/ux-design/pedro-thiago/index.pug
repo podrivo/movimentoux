@@ -15,25 +15,25 @@ body(data-page='episode')
 
   +header('on', '', '')
 
-      +episode(
-        'Pedro e Thiago',
-        'Sócios-fundadores da UXConf.',
-        'Conteúdo sobre UX, importância de comunidade, eventos de UX.',
-        '08',
-        '08-pedro-thiago.jpg',
-        '',
-        '-inside'
-      )
+  +episode(
+    'Pedro e Thiago',
+    'Sócios-fundadores da UXConf.',
+    'Conteúdo sobre UX, importância de comunidade, eventos de UX.',
+    '08',
+    '08-pedro-thiago.jpg',
+    '',
+    '-inside'
+  )
 
-      +player('uxconfbr')
+  +player('uxconfbr')
 
-      section.episode-content
-        +tabs
+  section.episode-content
+    +tabs
 
-        .tab.on#intro
-          include intro.pug
+    .tab.on#intro
+      include intro.pug
 
-        .tab#transcricao
-          include transcricao.pug
+    .tab#transcricao
+      include transcricao.pug
 
 +js

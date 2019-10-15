@@ -15,25 +15,25 @@ body(data-page='episode')
   
   +header('on', '', '')
   
-      +episode(
-        'Caio César',
-        'Professor de Design de Interação na PUC-MG.',
-        'Introdução ao tema UX, possibilidades de atuação e dicas pra começar.',
-        '01',
-        '01-caio-cesar.jpg',
-        '',
-        '-inside'
-      )
-      
-      +player('movimento-ux-episodio-1-caio-cesar')
-      
-      section.episode-content
-        +tabs
+  +episode(
+    'Caio César',
+    'Professor de Design de Interação na PUC-MG.',
+    'Introdução ao tema UX, possibilidades de atuação e dicas pra começar.',
+    '01',
+    '01-caio-cesar.jpg',
+    '',
+    '-inside'
+  )
+  
+  +player('movimento-ux-episodio-1-caio-cesar')
+  
+  section.episode-content
+    +tabs
 
-        .tab.on#intro
-          include intro.pug
+    .tab.on#intro
+      include intro.pug
 
-        .tab#transcricao
-          include transcricao.pug
+    .tab#transcricao
+      include transcricao.pug
 
 +js

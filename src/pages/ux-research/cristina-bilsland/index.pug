@@ -16,25 +16,25 @@ body(data-page='episode')
 
   +header('', 'on', '')
 
-      +episode(
-        'Cristina Bilsland',
-        'User Experience Researcher Senior no Google UK.',
-        'Pesquisa global, estratégia de pesquisa, design sprint.',
-        '22',
-        '22-cristina-bilsland.jpg',
-        '',
-        '-inside'
-      )
+  +episode(
+    'Cristina Bilsland',
+    'User Experience Researcher Senior no Google UK.',
+    'Pesquisa global, estratégia de pesquisa, design sprint.',
+    '22',
+    '22-cristina-bilsland.jpg',
+    '',
+    '-inside'
+  )
 
-      +player('cristinabilsland')
+  +player('cristinabilsland')
 
-      section.episode-content
-        +tabs
+  section.episode-content
+    +tabs
 
-        .tab.on#intro
-          include intro.pug
+    .tab.on#intro
+      include intro.pug
 
-        .tab#transcricao
-          include transcricao.pug
+    .tab#transcricao
+      include transcricao.pug
 
 +js

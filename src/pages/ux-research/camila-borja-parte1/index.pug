@@ -16,25 +16,25 @@ body(data-page='episode')
 
   +header('', 'on', '')
 
-      +episode(
-        'Camila Borja 01',
-        'User Experience Researcher no Itaú.',
-        'Capacitação em Pesquisa, Atomic Research e Gestão e organização dos aprendizados.',
-        '24',
-        '24-camila-borja.jpg',
-        '',
-        '-inside'
-      )
+  +episode(
+    'Camila Borja 01',
+    'User Experience Researcher no Itaú.',
+    'Capacitação em Pesquisa, Atomic Research e Gestão e organização dos aprendizados.',
+    '24',
+    '24-camila-borja.jpg',
+    '',
+    '-inside'
+  )
 
-      +player('camilaborja-parte1')
+  +player('camilaborja-parte1')
 
-      section.episode-content
-        +tabs
+  section.episode-content
+    +tabs
 
-        .tab.on#intro
-          include intro.pug
+    .tab.on#intro
+      include intro.pug
 
-        .tab#transcricao
-          include transcricao.pug
+    .tab#transcricao
+      include transcricao.pug
 
 +js

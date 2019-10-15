@@ -15,25 +15,25 @@ body(data-page='episode')
 
   +header('', 'on', '')
 
-      +episode(
-        'Carol Zatorre',
-        'Head de Pesquisa na Kyvo.',
-        'Consultoria, pesquisa qualitativa e pesquisa na sprint.',
-        '20',
-        '20-carol-zatorre.jpg',
-        '',
-        '-inside'
-      )
+  +episode(
+    'Carol Zatorre',
+    'Head de Pesquisa na Kyvo.',
+    'Consultoria, pesquisa qualitativa e pesquisa na sprint.',
+    '20',
+    '20-carol-zatorre.jpg',
+    '',
+    '-inside'
+  )
 
-      +player('carolzatorre')
+  +player('carolzatorre')
 
-      section.episode-content
-        +tabs
+  section.episode-content
+    +tabs
 
-        .tab.on#intro
-          include intro.pug
+    .tab.on#intro
+      include intro.pug
 
-        .tab#transcricao
-          include transcricao.pug
+    .tab#transcricao
+      include transcricao.pug
 
 +js
