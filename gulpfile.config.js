@@ -17,7 +17,8 @@ var config = {
     'watch': './src/**/*.pug',
     'src': [
       '!./src/components/**/*.pug',
-      './src/pages/**/index.pug'
+      './src/pages/**/index.pug',
+      './src/pages/404.pug'
     ],
     'dest': 'dist'
   },
