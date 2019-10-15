@@ -9,10 +9,10 @@ module.exports = function(config) {
     return gulp.src(config.html.src)
       .pipe(pug({
         pretty: true,
-        basedir: config.baseDir
+        basedir: config.base.dir
       }))
       .pipe(embedSvg({
-        root: config.baseDir
+        root: config.base.dir
       }))
       .pipe(gulp.dest(config.html.dest))
       .pipe(browserSync.stream())

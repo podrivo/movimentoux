@@ -1,6 +1,8 @@
 var config = {
-  'baseDir': './src',
-  'baseDist': './dist',
+  'base': {
+    'dir': './src',
+    'dist': './dist'
+  },
   'fonts': {
     'watch': './src/assets/fonts/**/*',
     'src': './src/assets/fonts/**/*',
@@ -27,11 +29,11 @@ var config = {
     'watch': './src/assets/js/**/*.js',
     'lint': [
       './src/assets/js/**/*.js',
-      '!./src/assets/js/plugins/*.js',
+      '!./src/assets/js/plugins/*.js'
     ],
     'src': [
       './src/assets/js/plugins/*.js',
-      './src/assets/js/global.js',
+      './src/assets/js/global.js'
     ],
     'dest': './dist/assets/js'
   },
