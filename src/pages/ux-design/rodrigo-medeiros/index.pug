@@ -1,0 +1,42 @@
+include /assets/pug/meta
+include /assets/pug/header
+include /assets/pug/episode
+include /assets/pug/player
+include /assets/pug/tabs
+include /assets/pug/js
+
++meta(
+  'Rodrigo Medeiros, Episódio 2 — Movimento UX',
+  'Líder local no IxDA Recife. Design centrado no usuário, design thinking e mercado de UX.',
+  'http://movimentoux.com/ux-design/rodrigo-medeiros/'
+)
+
+body(data-page='episode')
+  
+  +header('on', '', '')
+  
+  #barba-wrapper
+    .barba-container
+      +episode(
+        'Rodrigo Medeiros',
+        'Líder local no IxDA Recife.',
+        'Design centrado no usuário, design thinking e mercado de UX.',
+        '02',
+        '02-rodrigo-medeiros.jpg',
+        '',
+        '-inside'
+      )
+      
+      +player('movimento-ux-ep-2-rodrigo-medeiros')
+      
+      section.episode-content
+        +tabs
+
+        .tab.on#intro
+          include intro.pug
+
+        .tab#transcricao
+          include transcricao.pug
+
+//- don't forget js
++js

@@ -1,0 +1,43 @@
+include /assets/pug/meta
+include /assets/pug/header
+include /assets/pug/episode
+include /assets/pug/player
+include /assets/pug/tabs
+include /assets/pug/js
+
++meta(
+  'Cristina Bilsland, User Experience Researcher Senior no Google UK. Episódio 22 — Movimento UX. Conversas sobre pesquisa para produto. UX Research.',
+  'Pesquisa global, estratégia de pesquisa, design sprint — Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Segunda Temporada. Conversas sobre pesquisa para produto. UX Research.',
+  'http://movimentoux.com/ux-research/cristina-bilsland/',
+  'http://movimentoux.com/assets/img/share/22-cristina-bilsland.jpg'
+)
+
+body(data-page='episode')
+
+  +header('', 'on', '')
+
+  #barba-wrapper
+    .barba-container
+      +episode(
+        'Cristina Bilsland',
+        'User Experience Researcher Senior no Google UK.',
+        'Pesquisa global, estratégia de pesquisa, design sprint.',
+        '22',
+        '22-cristina-bilsland.jpg',
+        '',
+        '-inside'
+      )
+
+      +player('cristinabilsland')
+
+      section.episode-content
+        +tabs
+
+        .tab.on#intro
+          include intro.pug
+
+        .tab#transcricao
+          include transcricao.pug
+
+//- don't forget js
++js

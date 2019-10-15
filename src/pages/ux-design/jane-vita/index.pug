@@ -1,0 +1,42 @@
+include /assets/pug/meta
+include /assets/pug/header
+include /assets/pug/episode
+include /assets/pug/player
+include /assets/pug/tabs
+include /assets/pug/js
+
++meta(
+  'Jane Vita, Episódio 7 — Movimento UX',
+  'Service Creator na Futurice. Design de serviços, futures thinking, UX em outros países.',
+  'http://movimentoux.com/ux-design/jane-vita/'
+)
+
+body(data-page='episode')
+
+  +header('on', '', '')
+
+  #barba-wrapper
+    .barba-container
+      +episode(
+        'Jane Vita',
+        'Service Creator na Futurice.',
+        'Design de serviços, futures thinking, UX em outros países.',
+        '07',
+        '07-jane-vita.jpg',
+        '',
+        '-inside'
+      )
+
+      +player('janevita')
+
+      section.episode-content
+        +tabs
+
+        .tab.on#intro
+          include intro.pug
+
+        .tab#transcricao
+          include transcricao.pug
+
+//- don't forget js
++js

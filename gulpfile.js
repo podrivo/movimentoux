@@ -1,7 +1,7 @@
 var glob = require('glob')
-var config = require('./gulp/settings/config')
+var config = require('./gulpfile.config.js')
 
-glob.sync('./gulp/tasks/*.js', {
+glob.sync('./tasks/*.js', {
   realpath: true
 }).forEach(function(file) {
   require(file)(config, function() {

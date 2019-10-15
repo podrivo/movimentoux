@@ -1,0 +1,36 @@
+include /assets/pug/meta
+include /assets/pug/header
+include /assets/pug/episode
+include /assets/pug/player
+include /assets/pug/js
+
++meta(
+  'Felipe Memória, Episódio 16 — Movimento UX',
+  'Sócio fundador da Work & Co. Produto digital, inovação, liderança em design.',
+  'http://movimentoux.com/ux-design/felipe-memoria/'
+)
+
+body(data-page='episode')
+
+  +header('on', '', '')
+
+  #barba-wrapper
+    .barba-container
+      +episode(
+        'Felipe Memória',
+        'Sócio fundador da Work & Co.',
+        'Produto digital, inovação, liderança em design.',
+        '16',
+        '16-felipe-memoria.jpg',
+        '',
+        '-inside'
+      )
+
+      +player('felipememoria')
+
+      section.episode-content
+        .tab.on#intro
+          include intro.pug
+
+//- don't forget js
++js
