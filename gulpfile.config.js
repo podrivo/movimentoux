@@ -47,6 +47,10 @@ var config = {
     'watch': './src/assets/img/**/*.{mp4,mp3}',
     'src': './src/assets/img/**/*.{mp4,mp3}',
     'dest': './dist/assets/img'
+  },
+  'netlify': {
+    'src': './_redirects',
+    'dest': './dist'
   }
 }
 
