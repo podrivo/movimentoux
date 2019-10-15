@@ -43,9 +43,9 @@ Escrevendo CSS:
 + [Eric Meyer CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
 + [Rubik Typeface](http://hubertfischer.com/work/type-rubik)
 
-## Autor
-Pedro Ivo Hudson — @podrivo
+## Autores
+Feito com <3 em Belo Horizonte, São Paulo e Stockholm
 
-+ [podrivo.com](http://podrivo.com/)
-+ [github.com/podrivo](http://github.com/podrivo/)
-+ [twitter.com/podrivo](http://twitter.com/podrivo/)
++ [Cristiano Sarmento](http://cristiano.do/)
++ [Izabela de Fátima](http://twitter.com/izabeladefatima/)
++ [Pedro Ivo Hudson](http://podrivo.com/)

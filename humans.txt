@@ -1,13 +1,13 @@
-﻿# Host, Research
-# Izabela de Fátima
-# twitter.com/izabeladefatima
-
-# Design, Branding
+﻿# Design, Branding
 # Cristiano Sarmento
 # cristiano.do
+
+# Host, Research
+# Izabela de Fátima
+# twitter.com/izabeladefatima
 
 # Design, Code
 # Pedro Ivo Hudson @podrivo
 # podrivo.com
 
-# Built with <3 in Belo Horizonte, São Paulo, Stockholm
+# Built with <3 in Belo Horizonte, São Paulo and Stockholm
