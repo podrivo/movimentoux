@@ -14,7 +14,7 @@ var config = {
   'html': {
     'watch': './src/**/*.pug',
     'src': [
-      '!./src/assets/pug/**/*.pug',
+      '!./src/components/**/*.pug',
       './src/pages/**/index.pug'
     ],
     'dest': 'dist'
