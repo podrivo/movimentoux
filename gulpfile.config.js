@@ -25,8 +25,14 @@ var config = {
   },
   'scripts': {
     'watch': './src/assets/js/**/*.js',
-    'lint': './src/assets/js/**/*.js',
-    'src': './src/assets/js/**/*.js',
+    'lint': [
+      './src/assets/js/**/*.js',
+      '!./src/assets/js/plugins/*.js',
+    ],
+    'src': [
+      './src/assets/js/plugins/*.js',
+      './src/assets/js/global.js',
+    ],
     'dest': './dist/assets/js'
   },
   'styles': {
