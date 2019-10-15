@@ -1,0 +1,33 @@
+include /components/meta
+include /components/header
+include /components/js
+
++meta(
+  'Pesquisa: Mercado UXR — Movimento UX & Panorama UX',
+  'Essa é uma iniciativa do Movimento UX e da pesquisa Panorama UX. - Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário.',
+  'http://movimentoux.com/pesquisa-uxr/',
+  'http://movimentoux.com/assets/img/share/pesquisa-uxr.png'
+)
+
+body
+
+  +header('', '', 'on', '')
+
+  article.intro-text.-about
+    section.about-description
+      .description
+        h1.title Pesquisa sobre <br>o mercado de <br>UX Research
+        
+        p Olá! Essa é uma iniciativa do Movimento UX e da pesquisa Panorama UX.
+        p Após uma temporada sobre UX Research, decidimos investigar a fundo como está o mercado entre os brasileiros. Estamos fazendo uma parceria com a pesquisa Panorama UX que há 5 anos investiga o mercado. Dessa parceria vai nascer uma análise especialmente sobre os profissionais e o mercado de UX Research.
+        p O objetivo aqui é te chamar para contribuir! Cadastre seu nome e e-mail para receber o formulário do Panorama UX no dia que for lançado. Lembrando que ao participar, você também receberá os resultados fresquinhos no seu e-mail.  
+        p É um mercado novo e informação é importante para a gente se conhecer. Participe!
+        p Prometemos que este cadastro será usado exclusivamente para o envio da pesquisa.
+        p Um grande abraço, <br>Equipes Movimento UX & Panorama UX
+        
+        svg(src='/assets/img/media/pesquisa-uxr-logo.svg' alt='Movimento UX & Panorama UX').pesquisa-logo
+
+        .iframe-box
+          iframe(src='https://docs.google.com/forms/d/e/1FAIpQLSdMC9k-RjpvbRSGyUnG5oeOO0i1B6NYwQDaWObAUVs-_86xpw/viewform?embedded=true' frameborder='0' marginheight='0' marginwidth='0')
+
++js

@@ -1,0 +1,6 @@
+mixin supporter-sidebar(eyebrow, name, slogan, link, logo)
+  .episode-supporter
+    p.eyebrow= eyebrow
+    a(href= link title= slogan target='_blank' rel='noopener')
+      img(src='/assets/img/supporter/' + logo alt='Logo da ' + name data-category= name data-label='Sidebar').analytics
+    p= slogan

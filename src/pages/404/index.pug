@@ -1,0 +1,23 @@
+include /components/meta
+include /components/header
+include /components/social
+include /components/js
+
++meta(
+  'Página não encontrada — Movimento UX',
+  'Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário',
+  'http://movimentoux.com/'
+)
+
+body(data-page='season')
+
+  +header('', '', '', '')
+
+  article.intro-text
+    p.eyebrow Error
+    h1.title 404
+    p A página que você tentou acessar não foi encontrada.
+
+  +social('-home')
+
++js

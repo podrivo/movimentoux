@@ -1,0 +1,33 @@
+include /components/meta
+include /components/header
+include /components/episode
+include /components/player
+include /components/js
+
++meta(
+  'André do Amaral, Episódio 18 — Movimento UX',
+  'Designer de Produto na Netflix. Visual design, design digital, UX em outros países.',
+  'http://movimentoux.com/ux-design/andre-do-amaral/'
+)
+
+body(data-page='episode')
+
+  +header('on', '', '')
+
+  +episode(
+    'André do Amaral',
+    'Designer de Produto na Netflix.',
+    'Visual design, design digital, UX em outros países.',
+    '18',
+    '18-andre-do-amaral.jpg',
+    '',
+    '-inside'
+  )
+
+  +player('andredoamaral')
+
+  section.episode-content
+    .tab.on#intro
+      include intro.pug
+
++js

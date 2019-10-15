@@ -1,0 +1,39 @@
+include /components/meta
+include /components/header
+include /components/episode
+include /components/player
+include /components/tabs
+include /components/js
+
++meta(
+  'Koji Pereira, Episódio 4 — Movimento UX',
+  'Designer de Produto no Google. Design digital, prototipação, UX em outros países.',
+  'http://movimentoux.com/ux-design/koji-pereira/'
+)
+
+body(data-page='episode')
+
+  +header('on', '', '')
+
+  +episode(
+    'Koji Pereira',
+    'Designer de Produto no Google.',
+    'Design digital, prototipação, UX em outros países.',
+    '04',
+    '04-koji-pereira.jpg',
+    '',
+    '-inside'
+  )
+
+  +player('ep4-kojipereira')
+
+  section.episode-content
+    +tabs
+
+    .tab.on#intro
+      include intro.pug
+
+    .tab#transcricao
+      include transcricao.pug
+
++js

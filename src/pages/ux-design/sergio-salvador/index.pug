@@ -1,0 +1,33 @@
+include /components/meta
+include /components/header
+include /components/episode
+include /components/player
+include /components/js
+
++meta(
+  'Sérgio Salvador, Episódio 12 — Movimento UX',
+  'Diretor de UX na Huge. Consultoria, liderança, design antecipatório.',
+  'http://movimentoux.com/ux-design/sergio-salvador/'
+)
+
+body(data-page='episode')
+
+  +header('on', '', '')
+
+  +episode(
+    'Sérgio Salvador',
+    'Diretor de UX na Huge.',
+    'Consultoria, liderança, design antecipatório.',
+    '12',
+    '12-sergio-salvador.jpg',
+    '',
+    '-inside'
+  )
+
+  +player('sergiosalvador')
+
+  section.episode-content
+    .tab.on#intro
+      include intro.pug
+
++js
