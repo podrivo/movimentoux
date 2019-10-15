@@ -37,8 +37,6 @@ Escrevendo CSS:
 + [Browsersync](https://browsersync.io/)
 + [Pug](https://pugjs.org/)
 + [Sass](http://sass-lang.com/)
-+ [RSCSS](http://rscss.io/)
-+ [PostCSS](http://postcss.org/)
 + [Autoprefixer](https://github.com/postcss/autoprefixer/)
 + [Eric Meyer CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
 + [Rubik Typeface](http://hubertfischer.com/work/type-rubik)
