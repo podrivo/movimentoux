@@ -16,28 +16,25 @@ body(data-page='episode')
 
   +header('', 'on', '')
 
-  #barba-wrapper
-    .barba-container
-      +episode(
-        'Camila Borja 02',
-        'User Experience Researcher no Itaú.',
-        'Operação de pesquisa (Research Ops), Síntese de aprendizados e Storytelling.',
-        '25',
-        '24-camila-borja.jpg',
-        '',
-        '-inside'
-      )
+  +episode(
+    'Camila Borja 02',
+    'User Experience Researcher no Itaú.',
+    'Operação de pesquisa (Research Ops), Síntese de aprendizados e Storytelling.',
+    '25',
+    '24-camila-borja.jpg',
+    '',
+    '-inside'
+  )
 
-      +player('camilaborja-parte2')
+  +player('camilaborja-parte2')
 
-      section.episode-content
-        +tabs
+  section.episode-content
+    +tabs
 
-        .tab.on#intro
-          include intro.pug
+    .tab.on#intro
+      include intro.pug
 
-        .tab#transcricao
-          include transcricao.pug
+    .tab#transcricao
+      include transcricao.pug
 
-//- don't forget js
 +js
