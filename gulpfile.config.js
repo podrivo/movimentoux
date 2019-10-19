@@ -35,14 +35,17 @@ var config = {
     'src': './src/assets/fonts/**/*',
     'dest': './dist/assets/fonts'
   },
+  'media': {
+    'watch': './src/assets/img/**/*.{gif,ico,png,jpg,jpeg,svg,mp4}'
+  },
   'images': {
     'watch': './src/assets/img/**/*.{gif,ico,png,jpg,jpeg,svg}',
     'src': './src/assets/img/**/*.{gif,ico,png,jpg,jpeg,svg}',
     'dest': './dist/assets/img'
   },
   'videos': {
-    'watch': './src/assets/img/**/*.{mp4,mp3}',
-    'src': './src/assets/img/**/*.{mp4,mp3}',
+    'watch': './src/assets/img/**/*.{mp4}',
+    'src': './src/assets/img/**/*.{mp4}',
     'dest': './dist/assets/img'
   },
   'sitemap': {

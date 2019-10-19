@@ -7,7 +7,8 @@
   "author": "Pedro Ivo Hudson <hello@podrivo.com> (http://podrivo.com)",
   "license": "MIT",
   "scripts": {
-    "start": "gulp default && gulp watch"
+    "start": "gulp default",
+    "build": "gulp build"
   },
   "dependencies": {
     "autoprefixer": "^9.6.5",

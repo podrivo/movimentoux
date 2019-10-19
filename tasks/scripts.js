@@ -13,7 +13,15 @@ module.exports = function(config) {
       .pipe(eslint.failAfterError())
   })
 
-  gulp.task('scripts:build', function() {
+  gulp.task('scripts:concat', function() {
+    return gulp.src(config.scripts.src)
+      .pipe(plumber())
+      .pipe(concat('main.min.js'))
+      .pipe(gulp.dest(config.scripts.dest))
+      .pipe(plumber.stop())
+  })
+
+  gulp.task('scripts:uglify', function() {
     return gulp.src(config.scripts.src)
       .pipe(plumber())
       .pipe(concat('main.min.js'))
@@ -22,7 +30,11 @@ module.exports = function(config) {
       .pipe(plumber.stop())
   })
 
-  gulp.task('scripts', function(callback) {
-    return runSequence('scripts:lint', ['scripts:build'], callback)
+  gulp.task('scripts:default', function(callback) {
+    return runSequence('scripts:lint', ['scripts:concat'], callback)
+  })
+
+  gulp.task('scripts:build', function(callback) {
+    return runSequence('scripts:lint', ['scripts:uglify'], callback)
   })
 }
