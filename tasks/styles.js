@@ -39,9 +39,7 @@ module.exports = function(config, error) {
       .pipe(sass({
         noCache: true
       }).on('error', error))
-      .pipe(mmq({
-        log: true
-      }))
+      .pipe(mmq())
       .pipe(postCss([autoprefixer({
         browsers: ['last 2 version']
       })]))
