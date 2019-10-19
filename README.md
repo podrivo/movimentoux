@@ -21,8 +21,8 @@ Depois de instalar, rode `start` usando npm.
 ```
 
 URLs de acesso:
-+ Local: [localhost:8000](http://localhost:8000/)
-+ Browsersync: [localhost:8001](http://localhost:8001/).
++ Site: [localhost:3000](http://localhost:3000/)
++ Painel: [localhost:3001](http://localhost:3001/).
 + Você pode usar sua rede local como acesso externo. Busque as URLs no terminal.
 
 Escrevendo CSS:
