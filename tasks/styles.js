@@ -1,17 +1,16 @@
 var gulp = require('gulp')
 var plumber = require('gulp-plumber')
-var browserSync = require('browser-sync').create()
 var runSequence = require('gulp4-run-sequence')
 var autoprefixer = require('autoprefixer')
 var concat = require('gulp-concat')
-var cleanCss = require('gulp-clean-css')
+var cleanCSS = require('gulp-clean-css')
 var mmq = require('gulp-merge-media-queries')
-var postCss = require('gulp-postcss')
+var postCSS = require('gulp-postcss')
 var sass = require('gulp-sass')
 var sassLint = require('gulp-sass-lint')
 var sassGlob = require('gulp-sass-glob')
 
-module.exports = function(config, error) {
+module.exports = function(config) {
   gulp.task('styles:lint', function() {
     return gulp.src(config.styles.lint)
       .pipe(sassLint({
@@ -30,25 +29,20 @@ module.exports = function(config, error) {
       }))
       .pipe(sassLint.format())
       .pipe(sassLint.failOnError())
-      .pipe(plumber.stop())
   })
 
   gulp.task('styles:build', function() {
     return gulp.src(config.styles.src)
+      .pipe(plumber())
       .pipe(sassGlob())
-      .pipe(sass({
-        noCache: true
-      }).on('error', error))
+      .pipe(sass())
       .pipe(mmq())
-      .pipe(postCss([autoprefixer({
-        browsers: ['last 2 version']
-      })]))
+      .pipe(postCSS([autoprefixer()]))
       .pipe(concat('main.min.css'))
-      .pipe(cleanCss({
+      .pipe(cleanCSS({
         level: 0
       }))
       .pipe(gulp.dest(config.styles.dest))
-      .pipe(browserSync.stream())
       .pipe(plumber.stop())
   })
 

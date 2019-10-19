@@ -7,7 +7,7 @@ function reload(done) {
 }
 
 module.exports = function(config) {
-  gulp.task('watch', function() {
+  gulp.task('watch', function (done) {
     browserSync.init({
       server: config.base.dist,
       port: 8000,
@@ -17,6 +17,7 @@ module.exports = function(config) {
       open: false,
       notify: false
     })
+    done()
 
     gulp.watch(config.fonts.watch, gulp.series('fonts', reload))
     gulp.watch(config.html.watch, gulp.series('html', reload))
