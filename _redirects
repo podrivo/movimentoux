@@ -1,4 +1,6 @@
 # Links antigos
+/loja /
+/work /
 /work/ep1_caiocesar /ux-design/caio-cesar
 /work/rodrigo-medeiros /ux-design/rodrigo-medeiros
 /work/ep3_eduardoloureiro /ux-design/eduardo-loureiro
@@ -17,9 +19,9 @@
 /work/felipememoria /ux-design/felipe-memoria
 /work/carolina-leslie /ux-design/carolina-leslie
 /work/netflix /ux-design/andre-do-amaral
-/loja /
 
 # UX Design
+/design /ux-design
 /uxdesign /ux-design
 /rodrigo-medeiros /ux-design/rodrigo-medeiros
 /eduardo-loureiro /ux-design/eduardo-loureiro
@@ -40,10 +42,23 @@
 /andre-do-amaral /ux-design/andre-do-amaral
 
 # UX Research
+/research /ux-research
 /uxresearch /ux-research
 /paola-sales /ux-research/paola-sales
 /carol-zatorre /ux-research/carol-zatorre
 /caio-gama /ux-research/caio-gama
+/carol-zatorre /ux-research/carol-zatorre
+/cristina-bilsland /ux-research/cristina-bilsland
+/ana-rafaela /ux-research/ana-rafaela
+
+# Parte 1 e 2
+/ux-research/camila-borja-parte1 /ux-research/camila-borja-pt1
+/ux-research/camila-borja-parte2 /ux-research/camila-borja-pt2
+/camila-borja /ux-research/camila-borja-pt1
+/camila-borja-parte1 /ux-research/camila-borja-pt1
+/camila-borja-pt1 /ux-research/camila-borja-pt1
+/camila-borja-parte2 /ux-research/camila-borja-pt2
+/camila-borja-pt2 /ux-research/camila-borja-pt2
 
 # Pesquisa UXR
 /pesquisa /pesquisa-uxr
