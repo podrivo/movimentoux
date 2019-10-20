@@ -13,7 +13,6 @@
   }
 
   .tab {
-    max-width: 1200px;
     display: none;
     flex-direction: row;
 
@@ -29,14 +28,18 @@
 
   .text {
     width: 100%;
-    margin-right: $spacing-10 * 2;
+    margin-right: $spacing-8;
 
     @media (max-width: $sm) {
       margin-right: 0;
     }
 
-    img, p, ul, video {
-      margin-bottom: $spacing-4;
+    p {
+      @include paragraph;
+    }
+
+    img, ul, video {
+      margin: $spacing-4 0 $spacing-8;
     }
 
     em {
@@ -54,11 +57,11 @@
     }
 
     .caption {
-      margin-top: -$spacing-4;
-      margin-bottom: $spacing-4;
-      font-size: 0.9rem;
-      text-align: right;
+      text-align: left;
       display: block;
+      position: relative;
+      top: calc(-#{$spacing-8} + #{$spacing});
+      color: $grayer;
     }
 
     .links {
@@ -67,12 +70,13 @@
 
     .links li {
       margin-bottom: $spacing-1;
+      font-size: $font-size-text;
     }
   }
 
   .sidebar {
     width: 100%;
-    max-width: 270px;
+    max-width: 14rem;
 
     @media (max-width: $sm) {
       max-width: 100%;
@@ -115,15 +119,15 @@
   }
 
   blockquote {
-    font-size: 2rem;
-    line-height: 2.6rem;
+    font-size: $font-size-quote;
     font-weight: 500;
     margin: $spacing-8 0;
-    padding: $spacing-8 0;
+    padding: $spacing-6 0;
     border-top: 2px solid $gray;
     border-bottom: 2px solid $gray;
 
     @media (max-width: $sm) {
+      font-size: $font-size-text;
       margin: $spacing-4 0 $spacing-6;
       padding: $spacing-4 0;
     }

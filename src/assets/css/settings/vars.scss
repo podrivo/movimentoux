@@ -4,17 +4,12 @@ $font-size-base-xl: 22px;
 $font-size-base-xxl: 30px;
 $line-height-base: 1.5;
 
-$font-size-large: 8.2vw;
-$line-height-large: 1;
-$font-size-medium: 1.25rem;
+$font-size-header: 8.2vw;
+$line-height-header: 1;
 $font-size-regular: 1rem;
-$font-size-small: 0.75rem;
-
-// $font-size-small: 0.75rem;
-// $line-height-small: 1.5rem;
-
-// $font-size-sm: 16px;
-// $font-size-xl: 1.4vw;
+$font-size-text: 1.25rem;
+$font-size-eyebrow: 0.75rem;
+$font-size-quote: 2rem;
 
 // spacing
 $spacing-border: $font-size-base;
@@ -43,7 +38,8 @@ $xxl: 2340px;
 $black: #000;
 $white: #fff;
 $clear-white: white;
-$gray: #e9e9e8;
+$gray: #ddd;
+$grayer: #757575;
 $selection: gray;
 
 // motion

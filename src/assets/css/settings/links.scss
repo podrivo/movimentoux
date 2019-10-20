@@ -19,7 +19,8 @@ a {
   }
 
   &.link::before,
-  &.link.-alt::before {
+  &.link.-alt::before,
+  &.link.-alt::after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -44,10 +45,12 @@ a {
 
   &.link.-alt::before {
     background: $black;
-    transform: scaleX(1);
-    transform-origin: left center;
-    transition: transform $timing $easing, opacity 10ms 0s;
-    opacity: 1;
+    z-index: 1;
+  }
+
+  &.link.-alt::after {
+    background: $gray;
+    z-index: 0;
   }
 
   &.link.on::before,
@@ -61,10 +64,10 @@ a {
 
   &.link.-alt:hover::before,
   &.link.-alt:focus::before {
-    transform: scaleX(0);
-    transform-origin: right center;
-    transition: transform $timing $easing, opacity 10ms ($timing * 0.8);
-    opacity: 0;
+    // transform: scaleX(0);
+    // transform-origin: right center;
+    // transition: transform $timing $easing, opacity 10ms ($timing * 0.8);
+    // opacity: 0;
   }
 
   &.btn {

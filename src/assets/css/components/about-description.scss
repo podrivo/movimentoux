@@ -22,9 +22,7 @@
   }
 
   > .description p {
-    // width: 60%;
-    // width: 34.375rem;
-    // padding-bottom: $spacing-4;
+    @include paragraph;
 
     @media (max-width: $sm) {
       width: 100%;

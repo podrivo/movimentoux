@@ -4,9 +4,16 @@ html, body {
   text-rendering: optimizeLegibility;
 
   font-family: 'Rubik', -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
   font-weight: 400;
+  line-height: $line-height-base;
+}
+
+html {
+  font-size: $font-size-base;
+}
+
+body {
+  font-size: $font-size-regular;
 
   @media (min-width: $xl) {
     font-size: $font-size-base-xl;
@@ -18,33 +25,31 @@ html, body {
 }
 
 p {
-  font-size: $font-size-medium;
-  // width: 100%;
-  // max-width: 38rem;
-  // padding-bottom: $spacing-4;
+  font-size: $font-size-text;
+}
+
+@mixin paragraph() {
+  width: 100%;
+  max-width: 38rem;
+  margin-bottom: $spacing-4;
 }
 
 .header {
   position: relative;
   left: -0.5vw;
-  font-size: $font-size-large;
-  line-height: $line-height-large;
+  font-size: $font-size-header;
+  line-height: $line-height-header;
   font-weight: 700;
   z-index: 0;
 }
 
 .subtitle {
-  font-size: $font-size-medium;
-
-  @media (max-width: $sm) {
-    // font-size: 1.4rem;
-    // line-height: 2.2rem;
-  }
+  font-size: $font-size-text;
 }
 
 .eyebrow {
   position: relative;
   text-transform: uppercase;
-  font-size: $font-size-small;
+  font-size: $font-size-eyebrow;
   font-weight: 500;
 }
