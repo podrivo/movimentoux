@@ -1,27 +1,27 @@
 // type
 $font-size-base: 16px;
+$font-size-base-xl: 22px;
+$font-size-base-xxl: 30px;
 $line-height-base: 1.5;
 
-$line-height-sm: 1.5;
-$line-height-xl: 1.5;
-
-// $font-size-text: 1.375rem;
-// $line-height-text: 1.875rem;
-
-$font-size-text: 1.25rem;
-// $line-height-p: 1.875;
-
+$font-size-large: 8.2vw;
+$line-height-large: 1;
+$font-size-medium: 1.25rem;
+$font-size-regular: 1rem;
 $font-size-small: 0.75rem;
-$line-height-small: 1.5rem;
 
-$font-size-sm: 16px;
-$font-size-xl: 1.4vw;
+// $font-size-small: 0.75rem;
+// $line-height-small: 1.5rem;
+
+// $font-size-sm: 16px;
+// $font-size-xl: 1.4vw;
 
 // spacing
 $spacing-border: $font-size-base;
 $spacing-body-x: 5vw;
 $spacing-body-y: 4vw;
-$spacing: $font-size-base / 2;
+
+$spacing: 0.5rem;
 $spacing-1: $spacing * 1;
 $spacing-2: $spacing * 2;
 $spacing-3: $spacing * 3;
@@ -37,6 +37,7 @@ $sm: 768px;
 $md: 992px;
 $lg: 1200px;
 $xl: 1919px;
+$xxl: 2340px;
 
 // colors
 $black: #000;

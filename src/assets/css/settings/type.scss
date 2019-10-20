@@ -8,40 +8,37 @@ html, body {
   line-height: $line-height-base;
   font-weight: 400;
 
-  @media (max-width: $sm) {
-    font-size: $font-size-sm;
+  @media (min-width: $xl) {
+    font-size: $font-size-base-xl;
   }
 
-  @media (min-width: $xl) {
-    font-size: $font-size-xl;
+  @media (min-width: $xxl) {
+    font-size: $font-size-base-xxl;
   }
 }
 
 p {
-  font-size: $font-size-text;
-  width: 100%;
-  max-width: 38rem;
+  font-size: $font-size-medium;
+  // width: 100%;
+  // max-width: 38rem;
   // padding-bottom: $spacing-4;
 }
 
-.title {
+.header {
   position: relative;
   left: -0.5vw;
-  font-size: 8.2vw;
-  line-height: 1em;
+  font-size: $font-size-large;
+  line-height: $line-height-large;
   font-weight: 700;
   z-index: 0;
 }
 
 .subtitle {
-  // font-size: 1.6rem;
-  // line-height: 2.4rem;
-  font-size: $font-size-text;
-  // line-height: $line-height-text;
+  font-size: $font-size-medium;
 
   @media (max-width: $sm) {
-    font-size: 1.4rem;
-    line-height: 2.2rem;
+    // font-size: 1.4rem;
+    // line-height: 2.2rem;
   }
 }
 
