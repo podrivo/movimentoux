@@ -12,7 +12,7 @@
   }
 
   > .description .title {
-    margin-bottom: $spacing-8;
+    // margin-bottom: $spacing-8;
 
     @media (max-width: $sm) {
       margin-bottom: $spacing-2;
@@ -22,8 +22,9 @@
   }
 
   > .description p {
-    width: 60%;
-    padding-bottom: $spacing-4;
+    // width: 60%;
+    // width: 34.375rem;
+    // padding-bottom: $spacing-4;
 
     @media (max-width: $sm) {
       width: 100%;

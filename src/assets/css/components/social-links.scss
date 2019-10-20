@@ -4,6 +4,10 @@
   right: $spacing-body-x;
   text-align: right;
 
+  > .eyebrow {
+    margin-bottom: $spacing-1;
+  }
+
   @media (max-width: $sm) {
     position: relative;
     bottom: auto;

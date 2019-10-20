@@ -9,8 +9,8 @@
 
 .tab-item {
   margin-right: $spacing-4;
-  font-size: $font-size * 1.25;
-  line-height: 1.8em;
+  font-size: $font-size-text;
+  // line-height: 1.8em;
   font-weight: 500;
 
   > .link {

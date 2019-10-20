@@ -22,9 +22,10 @@ a {
   &.link.-alt::before {
     content: '';
     position: absolute;
+    bottom: -2px;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 1px;
     backface-visibility: hidden;
     z-index: -1;
 
@@ -34,7 +35,6 @@ a {
   }
 
   &.link::before {
-    bottom: -5px;
     background: $white;
     transform: scaleX(0);
     transform-origin: right center;
@@ -43,7 +43,6 @@ a {
   }
 
   &.link.-alt::before {
-    bottom: -2px;
     background: $black;
     transform: scaleX(1);
     transform-origin: left center;
