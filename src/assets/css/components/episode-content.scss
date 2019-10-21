@@ -11,6 +11,10 @@
     flex-direction: column-reverse;
   }
 
+  .content {
+    width: 100%;
+  }
+
   .tab {
     width: 100%;
     display: none;
@@ -33,8 +37,8 @@
       @include paragraph;
     }
 
-    img, ul, video {
-      margin: $spacing-4 0 $spacing-8;
+    figure, ul, video {
+      margin: $spacing-8 0;
     }
 
     em {
@@ -51,11 +55,11 @@
       margin-bottom: 0;
     }
 
-    .caption {
-      text-align: left;
+    figcaption {
       display: block;
       position: relative;
-      top: calc(-#{$spacing-8} + #{$spacing});
+      padding-top: $spacing;
+      // margin-top: calc(-#{$spacing-8} + #{$spacing});
       color: $grayer;
     }
 
@@ -115,11 +119,9 @@
 
   blockquote {
     font-size: $font-size-quote;
+    line-height: $line-height-quote;
     font-weight: 500;
     margin: $spacing-8 0;
-    // padding: $spacing-6 0;
-    // border-top: 2px solid $gray;
-    // border-bottom: 2px solid $gray;
 
     @media (max-width: $sm) {
       font-size: $font-size-text;

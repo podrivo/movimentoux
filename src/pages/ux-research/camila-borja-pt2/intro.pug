@@ -1,4 +1,5 @@
 include /components/link
+include /components/image
 include /components/supporter-link
 
 .text
@@ -8,14 +9,18 @@ include /components/supporter-link
 
   blockquote "Essa parte operacional de pesquisa é desgastante. Quem faz recrutamento, sabe o quanto que é desafiador [...] Isso é tão importante e tão operacional que precisa de uma estrutura de operação e de um modelo. Precisa que alguém centralize. Então, Research Ops vem para resolver essa e uma série de outras coisas..."
 
-  img(src='/assets/img/media/25-foto-01.jpg' alt='As 3 lentes de domínios de linguagem')
-  span.caption As 3 lentes de domínios de linguagem.
+  +image('25-foto-01.jpg','As 3 lentes de domínios de linguagem.')
+  +image('25-foto-02.jpg','Condução de dinâmicas com clientes e time.')
+  +image('25-foto-03.jpg','Treinamento de Lego Serious Play na Dinamarca.')
+  //- .teste
+  //-   img(src='/assets/img/media/25-foto-01.jpg' alt='As 3 lentes de domínios de linguagem')
+  //-   span.caption As 3 lentes de domínios de linguagem.
 
-  img(src='/assets/img/media/25-foto-02.jpg' alt='Condução de dinâmicas com clientes e time')
-  span.caption Condução de dinâmicas com clientes e time.
+  //- img(src='/assets/img/media/25-foto-02.jpg' alt='Condução de dinâmicas com clientes e time')
+  //- span.caption Condução de dinâmicas com clientes e time.
 
-  img(src='/assets/img/media/25-foto-03.jpg' alt='Treinamento de Lego Serious Play na Dinamarca')
-  span.caption Encontro anual de facilitadores em LEGO Serious Play em Billund - Dinamarca.
+  //- img(src='/assets/img/media/25-foto-03.jpg' alt='Treinamento de Lego Serious Play na Dinamarca')
+  //- span.caption Encontro anual de facilitadores em LEGO Serious Play em Billund - Dinamarca.
 
   p Os links sobre os quais falamos são:
   ul.links
