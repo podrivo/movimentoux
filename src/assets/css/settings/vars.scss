@@ -9,7 +9,7 @@ $line-height-header: 1;
 $font-size-regular: 1rem;
 $font-size-text: 1.25rem;
 $font-size-eyebrow: 0.75rem;
-$font-size-quote: 2rem;
+$font-size-quote: 2.25rem;
 
 // spacing
 $spacing-border: $font-size-base;
@@ -35,13 +35,11 @@ $xl: 1919px;
 $xxl: 2340px;
 
 // colors
-$black: #000;
-$white: #fff;
-$clear-white: white;
-$grayish: #f6f6f6;
+$black: black;
+$white: white;
 $gray: #ddd;
 $grayer: #757575;
-$selection: gray;
+$selection: $grayer;
 
 // motion
 $timing: 460ms;

@@ -10,10 +10,6 @@ html, body {
 
 html {
   font-size: $font-size-base;
-}
-
-body {
-  font-size: $font-size-regular;
 
   @media (min-width: $xl) {
     font-size: $font-size-base-xl;
@@ -22,6 +18,10 @@ body {
   @media (min-width: $xxl) {
     font-size: $font-size-base-xxl;
   }
+}
+
+body {
+  font-size: $font-size-regular;
 }
 
 p {

@@ -1,12 +1,10 @@
 .episode-content {
   width: 100%;
   padding: $spacing-body-y $spacing-body-x calc(#{$spacing-body-x} + #{$spacing-8});
-  background-color: $clear-white;
+  background-color: $white;
   color: $black;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  flex-direction: row;
 
   @media (max-width: $sm) {
     padding: $spacing-2 $spacing-4 $spacing-10;
@@ -123,9 +121,9 @@
     font-size: $font-size-quote;
     font-weight: 500;
     margin: $spacing-8 0;
-    padding: $spacing-6 0;
-    border-top: 2px solid $gray;
-    border-bottom: 2px solid $gray;
+    // padding: $spacing-6 0;
+    // border-top: 2px solid $gray;
+    // border-bottom: 2px solid $gray;
 
     @media (max-width: $sm) {
       font-size: $font-size-text;
