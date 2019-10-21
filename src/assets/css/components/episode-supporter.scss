@@ -16,10 +16,19 @@
     position: relative;
     display: block;
     color: $black;
+    transition: color $timing $easing;
 
-    &:hover::before {
-      opacity: 1;
-      transform: scale(1) translateY(0);
+    &:hover {
+      color: $white;
+
+      &::before {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+
+      img {
+        filter: brightness(0) invert(1);
+      }
     }
 
     &::before {
@@ -29,10 +38,10 @@
       left: -$spacing-3;
       width: calc(100% + #{$spacing-6});
       height: calc(100% + #{$spacing-4});
-      background-color: $grayish;
-      transform: scale(0.9) translateY(20px);
+      background-color: $black;
+      transform: scale(0.95) translateY($spacing);
       opacity: 0;
-      transition: all $timing $easing;
+      transition: transform $timing $easing, opacity $timing $easing;
     }
 
     p {
@@ -45,6 +54,7 @@
       max-width: 200px;
       margin: $spacing-2 0;
       display: block;
+      transition: filter $timing $easing;
     }
   }
 }
