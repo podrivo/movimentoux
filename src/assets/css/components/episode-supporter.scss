@@ -1,4 +1,6 @@
 .episode-supporter {
+  position: sticky;
+  top: calc(#{$spacing-border} + #{$spacing-2});
   margin-top: $spacing-4;
 
   &:first-child {
@@ -13,7 +15,6 @@
   }
 
   .supporter {
-    position: relative;
     display: block;
     color: $black;
     transition: color $timing $easing;
