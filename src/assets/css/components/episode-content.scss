@@ -82,6 +82,11 @@
       margin-bottom: $spacing-4;
     }
 
+    .info {
+      transition: margin-bottom 920ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      backface-visibility: hidden;
+    }
+
     .eyebrow {
       margin-top: $spacing-4;
 

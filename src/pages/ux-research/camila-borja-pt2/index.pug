@@ -40,13 +40,14 @@ body(data-page='episode')
         include transcricao.pug
     
     .sidebar
-      h3.eyebrow Localização
-      p São Paulo
+      .info
+        h3.eyebrow Localização
+        p São Paulo
 
-      h3.eyebrow Social
-      p #[+link('LinkedIn', 'https://www.linkedin.com/in/camilaborja/')]
-      p #[+link('Twitter', 'https://twitter.com/camila_borja')]
-      p #[+link('UX Collective', 'https://uxdesign.cc/@camila.brj')]
+        h3.eyebrow Social
+        p #[+link('LinkedIn', 'https://www.linkedin.com/in/camilaborja/')]
+        p #[+link('Twitter', 'https://twitter.com/camila_borja')]
+        p #[+link('UX Collective', 'https://uxdesign.cc/@camila.brj')]
 
       +supporter-sidebar(
         'Patrocinador do episódio',

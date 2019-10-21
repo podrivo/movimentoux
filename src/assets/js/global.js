@@ -270,9 +270,20 @@ linkMobile.addEventListener('click', function(e){
 
 //header after scrolling
 var header = document.querySelector('header')
+var headerHeight = header.offsetHeight
+var sidebarInfo = document.querySelector('.sidebar .info')
+var supporter = document.querySelector('.supporter')
 var headroom  = new Headroom(header, {
   offset: 80,
-  tolerance: 40
+  tolerance: 40,
+  onPin: function() {
+    supporter.style.transform = 'translateY(' + header.offsetHeight + 'px)'
+    sidebarInfo.style.marginBottom = '-' + header.offsetHeight + 'px'
+  },
+  onUnpin: function() {
+    supporter.style.transform = 'translateY(0)'
+    sidebarInfo.style.marginBottom = '0'
+  }
 })
 headroom.init()
 // document.addEventListener('scroll', function(){

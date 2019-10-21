@@ -4,7 +4,8 @@ header {
   top: $spacing-border;
   left: 0;
   width: 100%;
-  padding: $spacing-body-y $spacing-body-x $spacing-3;
+  // padding: $spacing-body-y $spacing-body-x $spacing-3;
+  padding: $spacing-3 $spacing-body-x;
   transition: margin $timing $easing;
   z-index: 999;
 

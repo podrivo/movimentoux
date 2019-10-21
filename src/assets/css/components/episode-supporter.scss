@@ -1,6 +1,6 @@
 .episode-supporter {
   position: sticky;
-  top: calc(#{$spacing-border} + #{$spacing-2});
+  top: calc(#{$spacing-border} + #{$spacing-4});
   margin-top: $spacing-4;
 
   &:first-child {
@@ -17,7 +17,8 @@
   .supporter {
     display: block;
     color: $black;
-    transition: color $timing $easing;
+    transition: color $timing $easing, transform 920ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    backface-visibility: hidden;
 
     &:hover {
       color: $white;
