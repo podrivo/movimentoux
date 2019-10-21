@@ -67,14 +67,6 @@ a {
     opacity: 1;
   }
 
-  // &.link.-alt:hover::before,
-  // &.link.-alt:focus::before {
-  // transform: scaleX(0);
-  // transform-origin: right center;
-  // transition: transform $timing $easing, opacity 10ms ($timing * 0.8);
-  // opacity: 0;
-  // }
-
   &.btn {
     border: 1px solid $white;
     text-align: center;
