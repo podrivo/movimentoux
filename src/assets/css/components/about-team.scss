@@ -14,9 +14,9 @@
   > .eyebrow {
     margin-bottom: $spacing-4;
 
-    @media (max-width: $sm) {
-      // margin-bottom: $spacing-2;
-    }
+    // @media (max-width: $sm) {
+    // margin-bottom: $spacing-2;
+    // }
   }
 
   > .members {
@@ -35,6 +35,10 @@
 
   @media (max-width: $sm) {
     width: 100%;
+  }
+
+  .name {
+    font-size: $font-size-text;
   }
 
   > img,

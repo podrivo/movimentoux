@@ -8,16 +8,17 @@
 
   @media (max-width: $sm) {
     padding: $spacing-2 $spacing-4 $spacing-10;
+    flex-direction: column-reverse;
   }
 
   .tab {
     width: 100%;
     display: none;
-    flex-direction: row;
+    // flex-direction: row;
 
-    @media (max-width: $sm) {
-      flex-direction: column-reverse;
-    }
+    // @media (max-width: $sm) {
+    //   flex-direction: row-reverse;
+    // }
 
     &.on {
       display: flex;

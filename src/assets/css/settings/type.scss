@@ -28,7 +28,7 @@ p {
   font-size: $font-size-text;
 }
 
-@mixin paragraph() {
+@mixin paragraph {
   width: 100%;
   max-width: 38rem;
   margin-bottom: $spacing-4;
@@ -41,10 +41,6 @@ p {
   line-height: $line-height-header;
   font-weight: 700;
   z-index: 0;
-}
-
-.subtitle {
-  font-size: $font-size-text;
 }
 
 .eyebrow {
