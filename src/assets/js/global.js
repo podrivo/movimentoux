@@ -277,12 +277,16 @@ var headroom  = new Headroom(header, {
   offset: 80,
   tolerance: 40,
   onPin: function() {
-    supporter.style.transform = 'translateY(' + header.offsetHeight + 'px)'
-    sidebarInfo.style.marginBottom = '-' + header.offsetHeight + 'px'
+    if (body.getAttribute('data-page') === 'episode') {
+      supporter.style.transform = 'translateY(' + header.offsetHeight + 'px)'
+      sidebarInfo.style.marginBottom = '-' + header.offsetHeight + 'px'
+    }
   },
   onUnpin: function() {
-    supporter.style.transform = 'translateY(0)'
-    sidebarInfo.style.marginBottom = '0'
+    if (body.getAttribute('data-page') === 'episode') {
+      supporter.style.transform = 'translateY(0)'
+      sidebarInfo.style.marginBottom = '0'
+    }
   }
 })
 headroom.init()
