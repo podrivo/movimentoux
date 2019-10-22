@@ -44,8 +44,8 @@ var config = {
     'dest': './dist/assets/img'
   },
   'videos': {
-    'watch': './src/assets/img/**/*.{mp4}',
-    'src': './src/assets/img/**/*.{mp4}',
+    'watch': './src/assets/img/**/*.mp4',
+    'src': './src/assets/img/**/*.mp4',
     'dest': './dist/assets/img'
   },
   'sitemap': {
