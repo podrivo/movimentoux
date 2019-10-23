@@ -2,6 +2,7 @@ include /components/meta
 include /components/header
 include /components/episode
 include /components/player
+include /components/episode-tabs
 include /components/js
 
 +meta(
@@ -27,7 +28,13 @@ body(data-page='episode')
   +player('sergiosalvador')
 
   section.episode-content
-    .tab.on#intro
-      include intro.pug
+    //- +episode-tabs
+
+    .wrapper
+      .content
+        include intro.pug
+        //- include transcricao.pug
+
+      include sidebar.pug
 
 +js
