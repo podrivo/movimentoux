@@ -2,7 +2,7 @@ include /components/meta
 include /components/header
 include /components/episode
 include /components/player
-include /components/tabs
+include /components/episode-tabs
 include /components/js
 
 +meta(
@@ -28,7 +28,7 @@ body(data-page='episode')
   +player('paolasales')
   
   section.episode-content
-    +tabs
+    +episode-tabs
     
     .tab.on#intro
       include intro.pug

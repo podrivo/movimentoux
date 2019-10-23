@@ -4,11 +4,18 @@
   background-color: $white;
   color: $black;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   @media (max-width: $sm) {
-    padding: $spacing-2 $spacing-4 $spacing-10;
-    flex-direction: column-reverse;
+    padding: $spacing-4 $spacing-4 $spacing-10;
+  }
+
+  .wrapper {
+    display: flex;
+
+    @media (max-width: $sm) {
+      flex-direction: column-reverse;
+    }
   }
 
   .content {
@@ -47,6 +54,7 @@
 
     hr {
       width: 100%;
+      max-width: 38rem;
       border: 1px solid $gray;
       margin: $spacing-8 0;
     }
@@ -59,7 +67,6 @@
       display: block;
       position: relative;
       padding-top: $spacing;
-      // margin-top: calc(-#{$spacing-8} + #{$spacing});
       color: $grayer;
     }
 
@@ -79,7 +86,7 @@
 
     @media (max-width: $sm) {
       max-width: 100%;
-      margin-bottom: $spacing-4;
+      margin-bottom: $spacing-8;
     }
 
     .info {

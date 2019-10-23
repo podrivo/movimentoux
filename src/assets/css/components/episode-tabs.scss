@@ -2,16 +2,18 @@
   width: 100%;
   margin-bottom: $spacing-body-y;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
 
-.tab-item {
-  margin-right: $spacing-4;
-  font-size: $font-size-text;
-  font-weight: 500;
+  @media (max-width: $sm) {
+    margin-bottom: $spacing-6;
+  }
 
-  > .link {
+  li {
+    margin-right: $spacing-4;
+    font-size: $font-size-text;
+    font-weight: 500;
+  }
+
+  .link {
     color: $black;
 
     &::before {

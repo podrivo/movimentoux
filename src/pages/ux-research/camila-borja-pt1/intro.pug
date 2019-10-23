@@ -1,6 +1,5 @@
 include /components/link
 include /components/supporter-link
-include /components/supporter-sidebar
 
 .text
   p Este episódio é a primeira parte de um papo descontraído e cheio de aprendizados com a Camila Borja, Especialista de User Research no Itaú.
@@ -42,20 +41,3 @@ include /components/supporter-sidebar
   
   p E a segunda parte da conversa? Daqui 2 semanas a gente compartilha mais um episódio com a outra parte desta conversa.
   p Até já!
-
-.sidebar
-  h3.eyebrow Localização
-  p São Paulo
-
-  h3.eyebrow Social
-  p #[+link('LinkedIn', 'https://www.linkedin.com/in/camilaborja/')]
-  p #[+link('Twitter', 'https://twitter.com/camila_borja')]
-  p #[+link('UX Collective', 'https://uxdesign.cc/@camila.brj')]
-
-  +supporter-sidebar(
-    'Patrocinador do episódio',
-    'Hotmart',
-    'A Hotmart é pioneira e líder na América Latina na venda de produtos digitais.',
-    'http://bit.ly/vagasdahotmart',
-    'hotmart-logo.png'
-  )

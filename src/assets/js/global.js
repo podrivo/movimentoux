@@ -273,16 +273,24 @@ var header = document.querySelector('header')
 var headerHeight = header.offsetHeight
 var sidebarInfo = document.querySelector('.sidebar .info')
 var supporter = document.querySelector('.supporter')
+var mqSmall = window.matchMedia('(min-width: 768px)')
+
 var headroom  = new Headroom(header, {
   offset: 80,
   tolerance: 40,
   onPin: function() {
-    if (body.getAttribute('data-page') === 'episode') {
+    if (body.getAttribute('data-page') === 'episode' && mqSmall.matches) {
       supporter.style.transform = 'translateY(' + header.offsetHeight + 'px)'
       sidebarInfo.style.marginBottom = '-' + header.offsetHeight + 'px'
     }
   },
   onUnpin: function() {
+    if (body.getAttribute('data-page') === 'episode' && mqSmall.matches) {
+      supporter.style.transform = 'translateY(0)'
+      sidebarInfo.style.marginBottom = '0'
+    }
+  },
+  onTop: function() {
     if (body.getAttribute('data-page') === 'episode') {
       supporter.style.transform = 'translateY(0)'
       sidebarInfo.style.marginBottom = '0'
@@ -290,13 +298,6 @@ var headroom  = new Headroom(header, {
   }
 })
 headroom.init()
-// document.addEventListener('scroll', function(){
-//   if (window.scrollY >= 100){
-//     header.classList.add('-scrolled')
-//   } else {
-//     header.classList.remove('-scrolled')
-//   }
-// })
 
 
 
@@ -431,7 +432,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // tabs
 window.addEventListener('load', function() {
-  var myTabs = document.querySelectorAll('.tab-item a')
+  var myTabs = document.querySelectorAll('.episode-tabs .link')
   var myContentPanes = document.querySelectorAll('.tab')
   var hash = location.hash.replace('#','')
 

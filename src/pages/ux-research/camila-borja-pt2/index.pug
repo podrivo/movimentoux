@@ -2,7 +2,7 @@ include /components/meta
 include /components/header
 include /components/episode
 include /components/player
-include /components/tabs
+include /components/episode-tabs
 include /components/js
 include /components/supporter-sidebar
 
@@ -30,31 +30,29 @@ body(data-page='episode')
   +player('camilaborja-parte2')
 
   section.episode-content
-    .content
-      +tabs
+    +episode-tabs
 
-      .tab.on#intro
+    .wrapper
+      .content
         include intro.pug
-
-      .tab#transcricao
         include transcricao.pug
-    
-    .sidebar
-      .info
-        h3.eyebrow Localização
-        p São Paulo
+      
+      .sidebar
+        .info
+          h3.eyebrow Localização
+          p São Paulo
 
-        h3.eyebrow Social
-        p #[+link('LinkedIn', 'https://www.linkedin.com/in/camilaborja/')]
-        p #[+link('Twitter', 'https://twitter.com/camila_borja')]
-        p #[+link('UX Collective', 'https://uxdesign.cc/@camila.brj')]
+          h3.eyebrow Social
+          p #[+link('LinkedIn', 'https://www.linkedin.com/in/camilaborja/')]
+          p #[+link('Twitter', 'https://twitter.com/camila_borja')]
+          p #[+link('UX Collective', 'https://uxdesign.cc/@camila.brj')]
 
-      +supporter-sidebar(
-        'Patrocinador do episódio',
-        'Hotmart',
-        'A Hotmart é pioneira e líder na América Latina na venda de produtos digitais.',
-        'http://bit.ly/vagasdahotmart',
-        'hotmart-logo.png'
-      )
+        +supporter-sidebar(
+          'Patrocinador do episódio',
+          'Hotmart',
+          'A Hotmart é pioneira e líder na América Latina na venda de produtos digitais.',
+          'http://bit.ly/vagasdahotmart',
+          'hotmart-logo.png'
+        )
 
 +js

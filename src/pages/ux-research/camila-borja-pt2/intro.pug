@@ -2,66 +2,41 @@ include /components/link
 include /components/image
 include /components/supporter-link
 
-.text
-  p Chegamos no 25º episódio! :)
-  p Esta é continuação da conversa sobre pesquisa UX democratizada com a Camila Borja, Especialista de User Research no Itaú.
-  p Nessa segunda parte da conversa, o formato é bem mais uma discussão do que entrevista. Compartilhei bastante sobre o meu ponto de vista como UX Researcher. A gente falou sobre: operação de pesquisa ou research-ops, síntese de aprendizados, o que vem pela frente e muito mais.
+.tab.on#intro
+  .text
+    p Chegamos no 25º episódio! :)
+    p Esta é continuação da conversa sobre pesquisa UX democratizada com a Camila Borja, Especialista de User Research no Itaú.
+    p Nessa segunda parte da conversa, o formato é bem mais uma discussão do que entrevista. Compartilhei bastante sobre o meu ponto de vista como UX Researcher. A gente falou sobre: operação de pesquisa ou research-ops, síntese de aprendizados, o que vem pela frente e muito mais.
 
-  blockquote "Essa parte operacional de pesquisa é desgastante. Quem faz recrutamento, sabe o quanto que é desafiador [...] Isso é tão importante e tão operacional que precisa de uma estrutura de operação e de um modelo. Precisa que alguém centralize. Então, Research Ops vem para resolver essa e uma série de outras coisas..."
+    blockquote "Essa parte operacional de pesquisa é desgastante. Quem faz recrutamento, sabe o quanto que é desafiador [...] Isso é tão importante e tão operacional que precisa de uma estrutura de operação e de um modelo. Precisa que alguém centralize. Então, Research Ops vem para resolver essa e uma série de outras coisas..."
 
-  +image('25-foto-01.jpg','As 3 lentes de domínios de linguagem.')
-  +image('25-foto-02.jpg','Condução de dinâmicas com clientes e time.')
-  +image('25-foto-03.jpg','Treinamento de Lego Serious Play na Dinamarca.')
-  //- .teste
-  //-   img(src='/assets/img/media/25-foto-01.jpg' alt='As 3 lentes de domínios de linguagem')
-  //-   span.caption As 3 lentes de domínios de linguagem.
+    +image('25-foto-01.jpg','As 3 lentes de domínios de linguagem.')
+    +image('25-foto-02.jpg','Condução de dinâmicas com clientes e time.')
+    +image('25-foto-03.jpg','Treinamento de Lego Serious Play na Dinamarca.')
 
-  //- img(src='/assets/img/media/25-foto-02.jpg' alt='Condução de dinâmicas com clientes e time')
-  //- span.caption Condução de dinâmicas com clientes e time.
+    p Os links sobre os quais falamos são:
+    ul.links
+      li Texto — #[+link('"As 3 linguagens do pesquisador", do Caio Casseb', 'https://medium.com/@caiocasseb/as-3-linguagens-do-pesquisador-e6eb4cd364d')]
+      li Livro — #[+link('"Rocket Surgery Made Easy", do Steve Krug', 'https://amzn.to/329zlpm')]
+      li Texto — #[+link('"The 9 Rules of Design Research", da Erika Hall', 'https://medium.com/mule-design/the-9-rules-of-design-research-1a273fdd1d3b')]
+      li Vídeo — #[+link('"Powers of Ten", do Eames', 'https://www.youtube.com/watch?v=0fKBhvDjuy0')]
+      li Vídeo — #[+link('Microsoft Office 2007: The Story of the Ribbon', 'https://youtu.be/Tl9kD693ie4')]
+      li Documentário — #[+link('Privacidade Hackeada', 'https://www.netflix.com/title/80117542')]
+      li Tweet — #[+link('Jobs To Be Done, do Jared Spool', 'https://twitter.com/jmspool/status/1085982138128912384')]
+      li Tweet — #[+link('Pesquisa com 5-8 usuários, do Jared Spool', 'https://twitter.com/jmspool/status/1150947701695156224')]
+      li Artigo — #[+link('Plataforma de Inteligência Artificial, do Grupo Publicis', 'https://www.meioemensagem.com.br/home/comunicacao/2018/05/24/publicis-groupe-apresenta-marcel.html')]
+      li Download — #[+link('Todos os 25 episódios do Movimento UX', 'https://soundcloud.com/movimento-ux')]
 
-  //- img(src='/assets/img/media/25-foto-03.jpg' alt='Treinamento de Lego Serious Play na Dinamarca')
-  //- span.caption Encontro anual de facilitadores em LEGO Serious Play em Billund - Dinamarca.
+    svg(src='/assets/img/media/pesquisa-uxr-logo.svg' alt='Movimento UX & Panorama UX').pesquisa-logo.-invert
+    p #[strong Parceria Movimento UX & Panorama UX:] vamos investigar a fundo o mercado de UX Research entre os brasileiros com uma pesquisa online.
+    p Estamos unindo forças com a pesquisa Panorama UX que há 5 anos investiga o mercado. Dessa parceria vai nascer uma análise especialmente sobre os profissionais e o mercado de UX Research. &lt;3
+    p Para participar e receber o formulário do Panorama UX no dia que lançar, inclua seu nome e e-mail no link abaixo. Ao participar, você também receberá os resultados fresquinhos no e-mail. Prometo que esse cadastro vai ser usado exclusivamente para o envio da pesquisa Panorama UX.
+    p #[+link('Pesquisa: Mercado UXR', 'http://movimentoux.com/pesquisa-uxr/')]
 
-  p Os links sobre os quais falamos são:
-  ul.links
-    li Texto — #[+link('"As 3 linguagens do pesquisador", do Caio Casseb', 'https://medium.com/@caiocasseb/as-3-linguagens-do-pesquisador-e6eb4cd364d')]
-    li Livro — #[+link('"Rocket Surgery Made Easy", do Steve Krug', 'https://amzn.to/329zlpm')]
-    li Texto — #[+link('"The 9 Rules of Design Research", da Erika Hall', 'https://medium.com/mule-design/the-9-rules-of-design-research-1a273fdd1d3b')]
-    li Vídeo — #[+link('"Powers of Ten", do Eames', 'https://www.youtube.com/watch?v=0fKBhvDjuy0')]
-    li Vídeo — #[+link('Microsoft Office 2007: The Story of the Ribbon', 'https://youtu.be/Tl9kD693ie4')]
-    li Documentário — #[+link('Privacidade Hackeada', 'https://www.netflix.com/title/80117542')]
-    li Tweet — #[+link('Jobs To Be Done, do Jared Spool', 'https://twitter.com/jmspool/status/1085982138128912384')]
-    li Tweet — #[+link('Pesquisa com 5-8 usuários, do Jared Spool', 'https://twitter.com/jmspool/status/1150947701695156224')]
-    li Artigo — #[+link('Plataforma de Inteligência Artificial, do Grupo Publicis', 'https://www.meioemensagem.com.br/home/comunicacao/2018/05/24/publicis-groupe-apresenta-marcel.html')]
-    li Download — #[+link('Todos os 25 episódios do Movimento UX', 'https://soundcloud.com/movimento-ux')]
+    p #[strong Patrocinador:] Hotmart, pioneira e líder na América Latina na venda de produtos digitais e atua nas áreas de educação à distância, marketing digital e fintech, em Belo Horizonte. Está em amplo crescimento internacional e o desafio de desenvolver produtos globais.
+    p A boa notícia é que tem várias vagas para os times de design e desenvolvimento. Se você é designer de produto ou desenvolvedor com habilidades em UX, pesquisa e interface pode se #[+supporter-link('cadastrar no banco de talentos da empresa', 'http://bit.ly/vagasdahotmart', 'Hotmart', 'Content')].
 
-  svg(src='/assets/img/media/pesquisa-uxr-logo.svg' alt='Movimento UX & Panorama UX').pesquisa-logo.-invert
-  p #[strong Parceria Movimento UX & Panorama UX:] vamos investigar a fundo o mercado de UX Research entre os brasileiros com uma pesquisa online.
-  p Estamos unindo forças com a pesquisa Panorama UX que há 5 anos investiga o mercado. Dessa parceria vai nascer uma análise especialmente sobre os profissionais e o mercado de UX Research. &lt;3
-  p Para participar e receber o formulário do Panorama UX no dia que lançar, inclua seu nome e e-mail no link abaixo. Ao participar, você também receberá os resultados fresquinhos no e-mail. Prometo que esse cadastro vai ser usado exclusivamente para o envio da pesquisa Panorama UX.
-  p #[+link('Pesquisa: Mercado UXR', 'http://movimentoux.com/pesquisa-uxr/')]
-
-  p #[strong Patrocinador:] Hotmart, pioneira e líder na América Latina na venda de produtos digitais e atua nas áreas de educação à distância, marketing digital e fintech, em Belo Horizonte. Está em amplo crescimento internacional e o desafio de desenvolver produtos globais.
-  p A boa notícia é que tem várias vagas para os times de design e desenvolvimento. Se você é designer de produto ou desenvolvedor com habilidades em UX, pesquisa e interface pode se #[+supporter-link('cadastrar no banco de talentos da empresa', 'http://bit.ly/vagasdahotmart', 'Hotmart', 'Content')].
-
-  p #[strong Trilhas:] são do Garrel com seu projeto #[+link('Aeoner', 'https://aeoner.bandcamp.com')].
-  
-  p O podcast entra de férias a partir de agora e volta com muitas novidades em 2020.
-  p Até lá!
-
-//- .sidebar
-//-   h3.eyebrow Localização
-//-   p São Paulo
-
-//-   h3.eyebrow Social
-//-   p #[+link('LinkedIn', 'https://www.linkedin.com/in/camilaborja/')]
-//-   p #[+link('Twitter', 'https://twitter.com/camila_borja')]
-//-   p #[+link('UX Collective', 'https://uxdesign.cc/@camila.brj')]
-
-//-   +supporter-sidebar(
-//-     'Patrocinador do episódio',
-//-     'Hotmart',
-//-     'A Hotmart é pioneira e líder na América Latina na venda de produtos digitais.',
-//-     'http://bit.ly/vagasdahotmart',
-//-     'hotmart-logo.png'
-//-   )
+    p #[strong Trilhas:] são do Garrel com seu projeto #[+link('Aeoner', 'https://aeoner.bandcamp.com')].
+    
+    p O podcast entra de férias a partir de agora e volta com muitas novidades em 2020.
+    p Até lá!
