@@ -1,57 +1,36 @@
 include /components/link
+include /components/image
 include /components/supporter-link
-include /components/supporter-sidebar
 
-.text
-  p O terceiro podcast da nova temporada foi com o Caio Gama, User Experience Researcher no Nubank. Ele tem formação em Ciência da Computação, trabalhou como desenvolvedor back-end por 8 anos e traz um visão bem interessante sobre como podemos mesclar dados de uso e técnicas qualitativa e quantitativa para conhecer as pessoas que usam os produtos e serviços que vamos investigar.
-  p Também falamos sobre como ele fez a transição de desenvolvedor para pesquisador UX, o dia a dia no Nubank, dicas pra você começar a usar data no processo de pesquisa e outras coisas mais!
+.tab.on#intro
+  .text
+    p O terceiro podcast da nova temporada foi com o Caio Gama, User Experience Researcher no Nubank. Ele tem formação em Ciência da Computação, trabalhou como desenvolvedor back-end por 8 anos e traz um visão bem interessante sobre como podemos mesclar dados de uso e técnicas qualitativa e quantitativa para conhecer as pessoas que usam os produtos e serviços que vamos investigar.
+    p Também falamos sobre como ele fez a transição de desenvolvedor para pesquisador UX, o dia a dia no Nubank, dicas pra você começar a usar data no processo de pesquisa e outras coisas mais!
 
-  blockquote "… Pesquisa é uma guilda e diversas pessoas da empresa, de diversos backgrounds diferentes, fazem pesquisa."
+    blockquote "Pesquisa é uma guilda e diversas pessoas da empresa, de diversos backgrounds diferentes, fazem pesquisa."
 
-  img(src='/assets/img/media/21-foto-01.png' alt='')
-  span.caption Pesquisa com usuários.
+    +image('21-foto-01.png','Pesquisa com usuários.')
+    .gallery
+      .img #[+image('21-foto-02.png','Plano de pesquisa usado pelo time de design.')]
+    +image('21-foto-03.png','Parte do time de design.')
 
-  img(src='/assets/img/media/21-foto-02.png' alt='')
-  span.caption Plano de pesquisa usado pelo time de design.
+    p Os links que falamos são:
+    ul.links
+      li #[+link('Livro Como mentir com estatística do Darrell Heff', 'https://amzn.to/2XTowFn')]
+      li #[+link('Livro Designing with Data - Rochelle King , Elizabeth F Churchill , Caitlin Tan', 'https://amzn.to/2J77TBM')]
+      li #[+link('Medium time de design Nubank', 'https://medium.com/nubank-design')]
+      li #[+link('Vaga de UX Research no Nubank', 'https://nubank.workable.com/j/0A9DD6DA2C')]
+      li #[+link('Plano de pesquisa usado no Nubank', 'https://medium.com/nubank-design/why-we-have-a-research-plan-at-nubank-7db687141077')]
 
-  img(src='/assets/img/media/21-foto-03.png' alt='')
-  span.caption Parte do time de design.
+    p E esse episódio também teve apoio do TESTR. &lt;3 Nós estamos usando e adorando. E você? Já está conseguindo rodar pesquisa no tempo do produto? A gente sabe que o tempo é um super desafio e o TESTR resolve esse problema porque entrega todo o processo de teste com usuários (recrutamento, execução, recompensa aos participantes e relatório com resultados), em uma média de 48 horas! E pra quem acompanha o podcast ganha 3 participantes extras na contratação de qualquer plano. o/ Mais infos #[+supporter-link('aqui', 'http://bit.ly/testeremoto', 'TESTR', 'Content')].
+    
+    p Uma outra coisa legal que a gente falou no podcast é que o primeiro livro sobre UX Research em português está saindo do forno. As autoras Denise Pilar, Cecília Henriques e Elizete Ignacio estão escrevendo o livro “UX Research com sotaque brasileiro” e lançaram uma campanha de pré-venda, para que a gente possa comprar o livro antes mesmo de ser lançado. Ah, além do livro, existem outras recompensas ótimas pra gente contribuir com essa conquista tão legal pro nosso mercado. #[+link('Dá uma olhada', 'http://bit.ly/livropesquisa')] e corre porque é só até dia 11 de março.
 
-  p Os links que falamos são:
-  ul.links
-    li #[+link('Livro Como mentir com estatística do Darrell Heff', 'https://amzn.to/2XTowFn')]
-    li #[+link('Livro Designing with Data - Rochelle King , Elizabeth F Churchill , Caitlin Tan', 'https://amzn.to/2J77TBM')]
-    li #[+link('Medium time de design Nubank', 'https://medium.com/nubank-design')]
-    li #[+link('Vaga de UX Research no Nubank', 'https://nubank.workable.com/j/0A9DD6DA2C')]
-    li #[+link('Plano de pesquisa usado no Nubank', 'https://medium.com/nubank-design/why-we-have-a-research-plan-at-nubank-7db687141077')]
+    .gallery
+      .img #[+image('21-foto-04.png','Livro “UX Research com sotaque brasileiro”.')]
+        //- img(src='/assets/img/media/21-foto-04.png' alt='')
+        //- span.caption Livro “UX Research com sotaque brasileiro”
 
-  p E esse episódio também teve apoio do TESTR. <3 Nós estamos usando e adorando. E você? Já está conseguindo rodar pesquisa no tempo do produto? A gente sabe que o tempo é um super desafio e o TESTR resolve esse problema porque entrega todo o processo de teste com usuários (recrutamento, execução, recompensa aos participantes e relatório com resultados), em uma média de 48 horas! E pra quem acompanha o podcast ganha 3 participantes extras na contratação de qualquer plano. o/ Mais infos #[+supporter-link('aqui', 'http://bit.ly/testeremoto', 'TESTR', 'Content')].
-  p Uma outra coisa legal que a gente falou no podcast é que o primeiro livro sobre UX Research em português está saindo do forno. As autoras Denise Pilar, Cecília Henriques e Elizete Ignacio estão escrevendo o livro “UX Research com sotaque brasileiro” e lançaram uma campanha de pré-venda, para que a gente possa comprar o livro antes mesmo de ser lançado. Ah, além do livro, existem outras recompensas ótimas pra gente contribuir com essa conquista tão legal pro nosso mercado. #[+link('Dá uma olhada', 'http://bit.ly/livropesquisa')] e corre porque é só até dia 11 de março.
+    p E pra quem ficou curioso sobre as músicas deste episódio, elas são do produtor Richard Garrel com seu projeto Aeoner e fazem parte do #[+link('álbum Beat Tape 1', 'https://aeoner.bandcamp.com/album/beat-tape-1')].
 
-  .gallery
-    .img
-      img(src='/assets/img/media/21-foto-04.png' alt='')
-      span.caption Livro “UX Research com sotaque brasileiro”
-
-  p E pra quem ficou curioso sobre as músicas deste episódio, elas são do produtor Richard Garrel com seu projeto Aeoner e fazem parte do #[+link('álbum Beat Tape 1', 'https://aeoner.bandcamp.com/album/beat-tape-1')].
-
-  p Até a próxima conversa!
-
-.sidebar
-  h3.eyebrow Localização
-  p São Paulo
-
-  h3.eyebrow Site
-  p #[+link('thecaiogama.com', 'http://thecaiogama.com')]
-
-  h3.eyebrow Social
-  p #[+link('LinkedIn', 'https://www.linkedin.com/in/thecaiogama/')]
-  p #[+link('Medium', 'https://medium.com/@thecaiogama')]
-
-  +supporter-sidebar(
-    'Apoiador do episódio',
-    'TESTR',
-    'Plataforma completa de teste de usabilidade ágil.',
-    'http://bit.ly/testeremoto',
-    'TESTR-logo.png'
-  )
+    p Até a próxima conversa!

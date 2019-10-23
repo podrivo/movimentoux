@@ -1,0 +1,22 @@
+include /components/link
+include /components/supporter-sidebar
+
+.sidebar
+  .info
+    h3.eyebrow Localização
+    p São Paulo
+
+    h3.eyebrow Site
+    p #[+link('thecaiogama.com', 'http://thecaiogama.com')]
+
+    h3.eyebrow Social
+    p #[+link('LinkedIn', 'https://www.linkedin.com/in/thecaiogama/')]
+    p #[+link('Medium', 'https://medium.com/@thecaiogama')]
+
+  +supporter-sidebar(
+    'Apoiador do episódio',
+    'TESTR',
+    'Plataforma completa de teste de usabilidade ágil.',
+    'http://bit.ly/testeremoto',
+    'TESTR-logo.png'
+  )

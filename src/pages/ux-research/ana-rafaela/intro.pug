@@ -1,53 +1,34 @@
 include /components/link
+include /components/image
 include /components/supporter-link
-include /components/supporter-sidebar
 
-.text
-  p Este podcast é uma conversa leve e cheia de aprendizados com a Ana Rafaela, User Experience Researcher no YouTube em San Bruno, Califórnia.
-  p Ela trabalha há muitos anos com pesquisa para design e já passou por empresas como GoPro, Cisco e Try Consultoria. Tem formação em Ciência da Computação e também foi desenvolvedora de softwares por cinco anos.
-  p Falamos sobre a dinâmica de trabalho dela com pesquisa global no time de advertising do YouTube, o uso de repositório para aprendizados de pesquisa, dicas pra quem quer trabalhar em outro país e muito mais.
+.tab.on#intro
+  .text
+    p Este podcast é uma conversa leve e cheia de aprendizados com a Ana Rafaela, User Experience Researcher no YouTube em San Bruno, Califórnia.
+    p Ela trabalha há muitos anos com pesquisa para design e já passou por empresas como GoPro, Cisco e Try Consultoria. Tem formação em Ciência da Computação e também foi desenvolvedora de softwares por cinco anos.
+    p Falamos sobre a dinâmica de trabalho dela com pesquisa global no time de advertising do YouTube, o uso de repositório para aprendizados de pesquisa, dicas pra quem quer trabalhar em outro país e muito mais.
 
-  blockquote "Acho que o principal desafio não muda: a questão do número de participantes e se é representativo ou estatisticamente válido. O mais difícil é convencer e receber um entendimento quando os stakeholders não entendem. É sempre difícil tentar uma mudança baseada em algo que dez participantes disseram, principalmente se você estiver desenvolvendo para uma audiência grande."
+    blockquote "Acho que o principal desafio não muda: a questão do número de participantes e se é representativo ou estatisticamente válido. O mais difícil é convencer e receber um entendimento quando os stakeholders não entendem. É sempre difícil tentar uma mudança baseada em algo que dez participantes disseram, principalmente se você estiver desenvolvendo para uma audiência grande."
 
-  .gallery
-    .img
-      img(src='/assets/img/media/23-foto-01.jpg' alt='')
-      span.caption Exemplo de war room para análise de entrevistas.
+    .gallery
+      .img #[+image('23-foto-01.jpg','Exemplo de war room para análise de entrevistas.')]
+    +image('23-foto-02.jpg','Em um dos muitos happy hours na GoPro São Francisco/CA.')
+    +image('23-foto-03.jpg','Indo fazer home visits na Índia.')
 
-  img(src='/assets/img/media/23-foto-02.jpg' alt='')
-  span.caption Em um dos muitos happy hours na GoPro São Francisco/CA.
+    p Os links sobre os quais falamos são:
+    ul.links
+      li Livro — #[+link('"It’s Our research", Tomer Sharon', 'https://amzn.to/2XMPi20')]
+      li Podcast — #[+link('Design Matters', 'https://www.designmattersmedia.com/designmatters')]
+      li Programa de Mestrado em #[+link('"Interação Humano-Computador" da Carnegie Mellon University', 'https://hcii.cmu.edu/academics/mhci')]
+      li Post sobre #[+link('Rapid UX Research at Google', 'https://medium.com/mixed-methods/rapid-ux-research-at-google-3b92dd038e30')]
 
-  img(src='/assets/img/media/23-foto-03.jpg' alt='')
-  span.caption Indo fazer home visits na Índia.
+    p O MUX tem o patrocínio da Hotmart, pioneira e líder na América Latina na venda de produtos digitais e atua nas áreas de educação à distância, marketing digital e fintech, em Belo Horizonte. Está em amplo crescimento internacional e o desafio de desenvolver produtos globais. E a boa notícia é que tem várias vagas para os times de design e desenvolvimento. Se você é designer de produto ou desenvolvedor com habilidades em UX, pesquisa e interface pode se #[+supporter-link('cadastrar no banco de talentos da empresa', 'http://bit.ly/vagasdahotmart', 'Hotmart', 'Content')].
 
-  p Os links sobre os quais falamos são:
-  ul.links
-    li Livro — #[+link('"It’s Our research", Tomer Sharon', 'https://amzn.to/2XMPi20')]
-    li Podcast — #[+link('Design Matters', 'https://www.designmattersmedia.com/designmatters')]
-    li Programa de Mestrado em #[+link('"Interação Humano-Computador" da Carnegie Mellon University', 'https://hcii.cmu.edu/academics/mhci')]
-    li Post sobre #[+link('Rapid UX Research at Google', 'https://medium.com/mixed-methods/rapid-ux-research-at-google-3b92dd038e30')]
+    p E lembrando que:
+    ul.links
+      li — Estamos no #[+link('Spotify', 'https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73')]!
+      li — Lançamos a transcrição dos episódios desta segunda temporada! estão na página de cada um dos episódios.
+    
+    p As músicas deste episódio são do produtor Richard Garrel com seu projeto Aeoner e você pode conhecer mais #[+link('aqui', 'https://aeoner.bandcamp.com')].
+    p Até a próxima conversa! 
 
-  p O MUX tem o patrocínio da Hotmart, pioneira e líder na América Latina na venda de produtos digitais e atua nas áreas de educação à distância, marketing digital e fintech, em Belo Horizonte. Está em amplo crescimento internacional e o desafio de desenvolver produtos globais. E a boa notícia é que tem várias vagas para os times de design e desenvolvimento. Se você é designer de produto ou desenvolvedor com habilidades em UX, pesquisa e interface pode se #[+supporter-link('cadastrar no banco de talentos da empresa', 'http://bit.ly/vagasdahotmart', 'Hotmart', 'Content')].
-
-  p E lembrando que:
-  ul.links
-    li — Estamos no #[+link('Spotify', 'https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73')]!
-    li — Lançamos a transcrição dos episódios desta segunda temporada! estão na página de cada um dos episódios.
-  
-  p As músicas deste episódio são do produtor Richard Garrel com seu projeto Aeoner e você pode conhecer mais #[+link('aqui', 'https://aeoner.bandcamp.com')].
-  p Até a próxima conversa! 
-
-.sidebar
-  h3.eyebrow Localização
-  p San Bruno, Califórnia
-
-  h3.eyebrow Social
-  p #[+link('LinkedIn', 'https://www.linkedin.com/in/anafaela/')]
-
-  +supporter-sidebar(
-    'Patrocinador do episódio',
-    'Hotmart',
-    'A Hotmart é pioneira e líder na América Latina na venda de produtos digitais.',
-    'http://bit.ly/vagasdahotmart',
-    'hotmart-logo.png'
-  )

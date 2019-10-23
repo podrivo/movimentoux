@@ -1,0 +1,22 @@
+include /components/link
+include /components/supporter-sidebar
+
+.sidebar
+  .info
+    h3.eyebrow Localização
+    p Londres
+
+    h3.eyebrow Site
+    p #[+link('crisbils.com', 'http://crisbils.com/')]
+
+    h3.eyebrow Social
+    p #[+link('LinkedIn', 'https://www.linkedin.com/in/cris-bilsland-1941364/')]
+    p #[+link('One Designer A Day', 'http://www.onedesigneraday.com/bilsland')]
+
+  +supporter-sidebar(
+    'Apoiador do episódio',
+    'TESTR',
+    'Plataforma completa de teste de usabilidade ágil.',
+    'http://bit.ly/testeremoto',
+    'TESTR-logo.png'
+  )

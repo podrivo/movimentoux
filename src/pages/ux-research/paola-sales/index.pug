@@ -29,11 +29,12 @@ body(data-page='episode')
   
   section.episode-content
     +episode-tabs
-    
-    .tab.on#intro
-      include intro.pug
-    
-    .tab#transcricao
-      include transcricao.pug
+
+    .wrapper
+      .content
+        include intro.pug
+        include transcricao.pug
+
+      include sidebar.pug
 
 +js
