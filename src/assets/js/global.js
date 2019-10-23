@@ -422,15 +422,14 @@ if (body.getAttribute('data-page') === 'season') {
 
 
 // flickity carousel
-document.addEventListener('DOMContentLoaded', function() {
-  var carousel = document.querySelector('.carousel')
-  if (carousel) {
-    var flkty = new Flickity(carousel, {
-      autoPlay: true,
-      pageDots: false
-    })
-  }
-})
+var carousel = document.querySelector('.carousel')
+if (carousel) {
+  new Flickity(carousel, {
+    autoPlay: true,
+    pageDots: false,
+    imagesLoaded: true
+  })
+}
 
 
 
