@@ -8,7 +8,7 @@ include /components/image
     p O Felipe é sócio fundador da Work & Co, empresa de design e desenvolvimento de produtos digitais, considerada uma das 10 mais inovadoras do mundo na indústria de Design pela Fast Company. Ele também foi sócio e head global de user experience na Huge, trabalhou durante anos na Globo.com e é autor do livro Design para a Internet, uma das obras pioneiras sobre UX no Brasil.
     p Falamos sobre o processo de UX da Work & Co, a vinda da empresa para o Brasil, os projetos que ele têm mais orgulho de ter liderado e muito mais!
 
-    img(src='/assets/img/media/16-foto-01.jpg' alt='')
+    +image('16-foto-01.jpg', '')
 
     blockquote “Na Work & Co, a gente coloca o time de design inteiro pra pensar na única coisa que importa durante a maior quantidade de tempo possível. Nos concentramos no principal caso de uso e redesenhamos infinitamente, na base da tentativa e erro, até chegar em algo interessante.”
 
@@ -30,12 +30,8 @@ include /components/image
     blockquote “Acredito em solucionar problemas do dia a dia — que talvez alguém já tenha pensado em como resolvê-los, mas aplico uma nova perspectiva sobre como solucioná-los. Esse é o jeito que penso em novos produtos.”
     
     .gallery
-      .img
-        img(src='/assets/img/media/16-foto-10.jpg' alt='')
-        span.caption Escritório Portland.
-      .img
-        img(src='/assets/img/media/16-foto-11.jpg' alt='')
-        span.caption Escritório Rio de Janeiro.
+      .img #[+image('16-foto-10.jpg', 'Escritório Portland.')]
+      .img #[+image('16-foto-11.jpg', 'Escritório Rio de Janeiro.')]
       
     p As dicas que ele deixou pra gente são:
     ul.links
@@ -56,5 +52,5 @@ include /components/image
       li #[+link('Apresentação do redesign da Virgin no UX Awards', 'https://www.youtube.com/watch?v=BFGeswAkP10')]
     
     p No próximo podcast, vou conversar com a Carolina Leslie, sócia fundadora da Saiba+.
-    p Ah, uma novidade: #[a(href='https://play.spotify.com/user/12184063773/playlist/5Bxhm5LY03DHSqko3YRBKf' title='Lista Spotify' target='_blank' rel='noopener').link.-alt o podcast agora tem uma lista no Spotify] pra você continuar ouvindo as músicas que rolam nos episódios! 
+    p Ah, uma novidade: o podcast agora tem uma #[+link('lista no Spotify', 'https://play.spotify.com/user/12184063773/playlist/5Bxhm5LY03DHSqko3YRBKf')] pra você continuar ouvindo as músicas que rolam nos episódios! 
     p Obrigada por acompanhar o Movimento UX e até a próxima edição! 
