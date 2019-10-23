@@ -21,6 +21,10 @@ body {
     border: $spacing-border solid $white;
     pointer-events: none;
     z-index: 999;
+
+    @media (max-width: $sm) {
+      display: none;
+    }
   }
 }
 
@@ -39,6 +43,11 @@ img, video {
   width: 100%;
   height: auto;
   display: block;
+
+  @media (max-width: $sm) {
+    width: calc(100% + (#{$spacing-4} * 2));
+    margin-left: -$spacing-4;
+  }
 }
 
 svg {

@@ -290,7 +290,13 @@ var headroom  = new Headroom(header, {
       sidebarInfo.style.marginBottom = '0'
     }
   },
-  onTop: function() {
+  onTop: function () {
+    if (body.getAttribute('data-page') === 'episode') {
+      supporter.style.transform = 'translateY(0)'
+      sidebarInfo.style.marginBottom = '0'
+    }
+  },
+  onBottom: function () {
     if (body.getAttribute('data-page') === 'episode') {
       supporter.style.transform = 'translateY(0)'
       sidebarInfo.style.marginBottom = '0'
