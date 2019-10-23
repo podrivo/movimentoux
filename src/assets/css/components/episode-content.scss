@@ -14,7 +14,7 @@
     display: flex;
 
     @media (max-width: $sm) {
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
   }
 
@@ -82,11 +82,13 @@
 
   .sidebar {
     width: 100%;
-    max-width: 14rem;
+    max-width: $spacing * 30;
 
     @media (max-width: $sm) {
       max-width: 100%;
-      margin-bottom: $spacing-8;
+      margin: $spacing-6 0;
+      padding-top: $spacing-6;
+      border-top: $spacing solid $grayish;
     }
 
     .info {
@@ -96,10 +98,6 @@
 
     .eyebrow {
       margin-top: $spacing-4;
-
-      @media (max-width: $sm) {
-        margin-top: $spacing-2;
-      }
     }
 
     .eyebrow:first-child {
@@ -127,19 +125,6 @@
 
   .carousel .item {
     width: 100%;
-  }
-
-  blockquote {
-    font-size: $font-size-quote;
-    line-height: $line-height-quote;
-    font-weight: 500;
-    margin: $spacing-8 0;
-
-    @media (max-width: $sm) {
-      font-size: $font-size-text;
-      margin: $spacing-4 0 $spacing-6;
-      padding: $spacing-4 0;
-    }
   }
 }
 
