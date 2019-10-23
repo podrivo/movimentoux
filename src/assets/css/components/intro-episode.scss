@@ -20,7 +20,7 @@
     transition: all $easing $timing * 3;
   }
 
-  > .text .title {
+  > .text .header {
     max-width: 50%;
     margin: $spacing-1 0;
     z-index: 99;

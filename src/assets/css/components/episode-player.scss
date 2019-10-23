@@ -11,6 +11,7 @@
   align-items: center;
 
   @media (max-width: $sm) {
+    bottom: 0;
     padding: $spacing-2 $spacing-4;
   }
 

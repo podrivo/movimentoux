@@ -1,6 +1,5 @@
 var gulp = require('gulp')
 var plumber = require('gulp-plumber')
-var browserSync = require('browser-sync').create()
 var runSequence = require('gulp4-run-sequence')
 var concat = require('gulp-concat')
 var eslint = require('gulp-eslint')
@@ -11,19 +10,31 @@ module.exports = function(config) {
     return gulp.src(config.scripts.lint)
       .pipe(eslint())
       .pipe(eslint.format())
+      .pipe(eslint.failAfterError())
+  })
+
+  gulp.task('scripts:concat', function() {
+    return gulp.src(config.scripts.src)
+      .pipe(plumber())
+      .pipe(concat('main.min.js'))
+      .pipe(gulp.dest(config.scripts.dest))
       .pipe(plumber.stop())
   })
 
-  gulp.task('scripts:build', function() {
+  gulp.task('scripts:uglify', function() {
     return gulp.src(config.scripts.src)
+      .pipe(plumber())
       .pipe(concat('main.min.js'))
       .pipe(uglify())
       .pipe(gulp.dest(config.scripts.dest))
-      .pipe(browserSync.stream())
       .pipe(plumber.stop())
   })
 
-  gulp.task('scripts', function(callback) {
-    return runSequence('scripts:lint', 'scripts:build', callback)
+  gulp.task('scripts:default', function(callback) {
+    return runSequence('scripts:lint', ['scripts:concat'], callback)
+  })
+
+  gulp.task('scripts:build', function(callback) {
+    return runSequence('scripts:lint', ['scripts:uglify'], callback)
   })
 }

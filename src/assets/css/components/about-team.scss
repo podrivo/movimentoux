@@ -1,5 +1,5 @@
 .about-team {
-  margin-top: 8vw;
+  margin-top: $spacing-body-y;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -13,10 +13,6 @@
 
   > .eyebrow {
     margin-bottom: $spacing-4;
-
-    @media (max-width: $sm) {
-      margin-bottom: $spacing-2;
-    }
   }
 
   > .members {
@@ -35,6 +31,10 @@
 
   @media (max-width: $sm) {
     width: 100%;
+  }
+
+  .name {
+    font-size: $font-size-text;
   }
 
   > img,
@@ -56,7 +56,7 @@
   }
 
   > .item {
-    margin-right: $spacing-1;
+    margin-right: $spacing-2;
   }
 
   .icon {

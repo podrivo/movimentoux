@@ -2,7 +2,7 @@ include /components/meta
 include /components/header
 include /components/episode
 include /components/player
-include /components/tabs
+include /components/episode-tabs
 include /components/js
 
 +meta(
@@ -29,12 +29,13 @@ body(data-page='episode')
   +player('camilaborja-parte1')
 
   section.episode-content
-    +tabs
+    +episode-tabs
 
-    .tab.on#intro
-      include intro.pug
+    .wrapper
+      .content
+        include intro.pug
+        include transcricao.pug
 
-    .tab#transcricao
-      include transcricao.pug
+      include sidebar.pug
 
 +js

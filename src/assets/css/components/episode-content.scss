@@ -1,25 +1,30 @@
 .episode-content {
   width: 100%;
   padding: $spacing-body-y $spacing-body-x calc(#{$spacing-body-x} + #{$spacing-8});
-  background-color: $clear-white;
+  background-color: $white;
   color: $black;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 
   @media (max-width: $sm) {
-    padding: $spacing-2 $spacing-4 $spacing-10;
+    padding: $spacing-4 $spacing-4 $spacing-10;
+  }
+
+  .wrapper {
+    display: flex;
+
+    @media (max-width: $sm) {
+      flex-direction: column;
+    }
+  }
+
+  .content {
+    width: 100%;
   }
 
   .tab {
-    max-width: 1200px;
+    width: 100%;
     display: none;
-    flex-direction: row;
-
-    @media (max-width: $sm) {
-      flex-direction: column-reverse;
-    }
 
     &.on {
       display: flex;
@@ -29,14 +34,22 @@
 
   .text {
     width: 100%;
-    margin-right: $spacing-10 * 2;
+    margin-right: $spacing-8;
 
     @media (max-width: $sm) {
       margin-right: 0;
     }
 
-    img, p, ul, video {
-      margin-bottom: $spacing-4;
+    p {
+      @include paragraph;
+    }
+
+    figure, video {
+      margin: $spacing-12 0;
+
+      @media (max-width: $sm) {
+        margin: $spacing-6 0;
+      }
     }
 
     em {
@@ -45,7 +58,8 @@
 
     hr {
       width: 100%;
-      border: 1px solid $gray;
+      max-width: $spacing * 80;
+      border: calc(#{$spacing} / 2) solid $grayish;
       margin: $spacing-8 0;
     }
 
@@ -53,38 +67,42 @@
       margin-bottom: 0;
     }
 
-    .caption {
-      margin-top: -$spacing-4;
-      margin-bottom: $spacing-4;
-      font-size: 0.9rem;
-      text-align: right;
+    figcaption {
       display: block;
+      position: relative;
+      padding-top: $spacing;
+      color: $grayer;
     }
 
     .links {
       margin-top: -$spacing-3;
+      margin-bottom: $spacing-4;
     }
 
     .links li {
       margin-bottom: $spacing-1;
+      font-size: $font-size-text;
     }
   }
 
   .sidebar {
     width: 100%;
-    max-width: 270px;
+    max-width: $spacing * 30;
 
     @media (max-width: $sm) {
       max-width: 100%;
-      margin-bottom: $spacing-4;
+      margin: $spacing-6 0;
+      padding-top: $spacing-6;
+      border-top: $spacing solid $grayish;
+    }
+
+    .info {
+      transition: margin-bottom 920ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      backface-visibility: hidden;
     }
 
     .eyebrow {
       margin-top: $spacing-4;
-
-      @media (max-width: $sm) {
-        margin-top: $spacing-2;
-      }
     }
 
     .eyebrow:first-child {
@@ -94,38 +112,38 @@
   }
 
   .gallery {
+    margin: $spacing-12 0;
     display: flex;
     justify-content: space-between;
 
     @media (max-width: $sm) {
+      margin: $spacing-6 0;
       flex-direction: column;
     }
 
     .img {
+      width: 100%;
       max-width: 48%;
 
       @media (max-width: $sm) {
         max-width: 100%;
       }
     }
+
+    figure {
+      margin: 0;
+    }
   }
 
-  .carousel .item {
-    width: 100%;
-  }
-
-  blockquote {
-    font-size: 2rem;
-    line-height: 2.6rem;
-    font-weight: 500;
-    margin: $spacing-8 0;
-    padding: $spacing-8 0;
-    border-top: 2px solid $gray;
-    border-bottom: 2px solid $gray;
+  .carousel {
+    margin: $spacing-12 0;
 
     @media (max-width: $sm) {
-      margin: $spacing-4 0 $spacing-6;
-      padding: $spacing-4 0;
+      margin: $spacing-6 0;
+    }
+
+    .item {
+      width: 100%;
     }
   }
 }

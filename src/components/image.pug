@@ -1,0 +1,10 @@
+include /components/link
+
+mixin image(file, caption, title, link)
+  figure
+      img(src='/assets/img/media/' + file alt= caption)
+      if link
+        figcaption= caption
+        +link(title, link)
+      else
+        figcaption= caption

@@ -158,10 +158,11 @@
 
 
 var body = document.body
+var episode = body.getAttribute('data-page') === 'episode'
 
-if (body.getAttribute('data-page') === 'episode') {
-  // var soundcloud = new SoundCloudAudio('y1nMl2njKSB6eNKPiU4jTxp9lNt2LE8d')
-  var soundcloud = new SoundCloudAudio('AdBAY9M0wHTRovngU9Ht4Z63XezL9saK')
+if (episode) {
+  var KEY = 'AdBAY9M0wHTRovngU9Ht4Z63XezL9saK'
+  var soundcloud = new SoundCloudAudio(KEY)
   var audio = soundcloud.audio
   var player = document.querySelector('.episode-player')
   var timeCurrent = document.querySelector('.-current')
@@ -172,6 +173,7 @@ if (body.getAttribute('data-page') === 'episode') {
   var volume = document.querySelector('.volume')
   var backwards = document.querySelector('.backwards')
   var forwards = document.querySelector('.forwards')
+  var downloadLink = document.querySelector('.download')
 
   function formatTime(timeCurrent) {
     var seconds = parseInt(timeCurrent % 60)
@@ -188,6 +190,7 @@ if (body.getAttribute('data-page') === 'episode') {
     timeDuration.innerHTML = formatTime(soundcloud.duration)
     soundcloud.play()
     soundcloud.pause()
+    downloadLink.href = track.download_url + '?client_id=' + KEY
   })
 
   soundcloud.on('timeupdate', function() {
@@ -270,18 +273,40 @@ linkMobile.addEventListener('click', function(e){
 
 //header after scrolling
 var header = document.querySelector('header')
+var headerHeight = header.offsetHeight
+var sidebarInfo = document.querySelector('.sidebar .info')
+var supporter = document.querySelector('.supporter')
+var mqSmall = window.matchMedia('(min-width: 768px)')
+
 var headroom  = new Headroom(header, {
   offset: 80,
-  tolerance: 40
+  tolerance: 40,
+  onPin: function() {
+    if (episode && supporter && mqSmall.matches) {
+      supporter.style.transform = 'translateY(' + header.offsetHeight + 'px)'
+      sidebarInfo.style.marginBottom = '-' + header.offsetHeight + 'px'
+    }
+  },
+  onUnpin: function() {
+    if (episode && supporter && mqSmall.matches) {
+      supporter.style.transform = 'translateY(0)'
+      sidebarInfo.style.marginBottom = '0'
+    }
+  },
+  onTop: function () {
+    if (episode && supporter) {
+      supporter.style.transform = 'translateY(0)'
+      sidebarInfo.style.marginBottom = '0'
+    }
+  },
+  onBottom: function () {
+    if (episode && supporter) {
+      supporter.style.transform = 'translateY(0)'
+      sidebarInfo.style.marginBottom = '0'
+    }
+  }
 })
 headroom.init()
-// document.addEventListener('scroll', function(){
-//   if (window.scrollY >= 100){
-//     header.classList.add('-scrolled')
-//   } else {
-//     header.classList.remove('-scrolled')
-//   }
-// })
 
 
 
@@ -400,15 +425,14 @@ if (body.getAttribute('data-page') === 'season') {
 
 
 // flickity carousel
-document.addEventListener('DOMContentLoaded', function() {
-  var carousel = document.querySelector('.carousel')
-  if (carousel) {
-    var flkty = new Flickity(carousel, {
-      autoPlay: true,
-      pageDots: false
-    })
-  }
-})
+var carousel = document.querySelector('.carousel')
+if (carousel) {
+  new Flickity(carousel, {
+    autoPlay: true,
+    pageDots: false,
+    imagesLoaded: true
+  })
+}
 
 
 
@@ -416,7 +440,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // tabs
 window.addEventListener('load', function() {
-  var myTabs = document.querySelectorAll('.tab-item a')
+  var myTabs = document.querySelectorAll('.episode-tabs .link')
   var myContentPanes = document.querySelectorAll('.tab')
   var hash = location.hash.replace('#','')
 

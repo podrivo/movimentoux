@@ -1,12 +1,12 @@
 var gulp = require('gulp')
-var plumber = require('gulp-plumber')
-var browserSync = require('browser-sync').create()
 var pug = require('gulp-pug')
+var plumber = require('gulp-plumber')
 var embedSvg = require('gulp-embed-svg')
 
 module.exports = function(config) {
   gulp.task('html', function() {
     return gulp.src(config.html.src)
+      .pipe(plumber())
       .pipe(pug({
         pretty: true,
         basedir: config.base.dir
@@ -15,7 +15,6 @@ module.exports = function(config) {
         root: config.base.dir
       }))
       .pipe(gulp.dest(config.html.dest))
-      .pipe(browserSync.stream())
       .pipe(plumber.stop())
   })
 }
