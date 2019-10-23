@@ -26,7 +26,10 @@ var config = {
   },
   'styles': {
     'watch': './src/assets/css/**/*.{css,scss,sass}',
-    'lint': './src/assets/css/**/*.{css,scss,sass}',
+    'lint': [
+      './src/assets/css/**/*.{css,scss,sass}',
+      '!./src/assets/css/plugins/*.{css,scss,sass}'
+    ],
     'src': './src/assets/css/main.scss',
     'dest': './dist/assets/css'
   },
