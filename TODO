@@ -1,9 +1,9 @@
 ### TO-DO
 
-- [ ] Ajustar tabs desktop
-- [ ] Ajustar tabs mobile
-- [ ] Incluir link de download vindo do SoundCloud
-- [ ] Diminuir tamanho do header e ajustar interação
+- [x] Ajustar tabs desktop
+- [x] Ajustar tabs mobile
+- [x] Incluir link de download vindo do SoundCloud
+- [x] Diminuir tamanho do header e ajustar interação
 - [ ] Codar interação da listagem de episódios
 - [ ] Codar visão de episódios em grid
 - [ ] Adicionar textinho página Sobre
@@ -14,4 +14,4 @@
 - [ ] Testar salvar tempo do podcast no cookies/localstorage
 - [ ] Fazer imagens de compartilhamento dos episódios passados
 - [ ] Arrumar bug do hover na imagem do episódio
-- [ ] Remover flickity external CSS 
+- [x] Remover flickity external CSS 
