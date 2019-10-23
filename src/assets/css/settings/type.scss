@@ -32,7 +32,7 @@ blockquote {
   font-size: $font-size-quote;
   line-height: $line-height-quote;
   font-weight: 300;
-  margin: $spacing-8 0;
+  margin: $spacing-12 0;
   max-width: $spacing * 110;
 
   @media (max-width: $sm) {

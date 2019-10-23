@@ -44,8 +44,8 @@
       @include paragraph;
     }
 
-    figure, ul, video {
-      margin: $spacing-8 0;
+    figure, video {
+      margin: $spacing-12 0;
     }
 
     em {
@@ -72,6 +72,7 @@
 
     .links {
       margin-top: -$spacing-3;
+      margin-bottom: $spacing-4;
     }
 
     .links li {
@@ -107,6 +108,7 @@
   }
 
   .gallery {
+    margin: $spacing-12 0;
     display: flex;
     justify-content: space-between;
 
@@ -123,8 +125,12 @@
     }
   }
 
-  .carousel .item {
-    width: 100%;
+  .carousel {
+    margin: $spacing-12 0;
+
+    .item {
+      width: 100%;
+    }
   }
 }
 

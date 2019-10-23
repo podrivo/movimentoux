@@ -58,6 +58,10 @@ strong {
   font-weight: 700;
 }
 
+.border {
+  border: $spacing solid $grayish;
+}
+
 .pesquisa-logo {
   max-width: 430px;
   margin-bottom: $spacing-8;

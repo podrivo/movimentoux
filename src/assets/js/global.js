@@ -158,8 +158,9 @@
 
 
 var body = document.body
+var episode = body.getAttribute('data-page') === 'episode'
 
-if (body.getAttribute('data-page') === 'episode') {
+if (episode) {
   // var soundcloud = new SoundCloudAudio('y1nMl2njKSB6eNKPiU4jTxp9lNt2LE8d')
   var soundcloud = new SoundCloudAudio('AdBAY9M0wHTRovngU9Ht4Z63XezL9saK')
   var audio = soundcloud.audio
@@ -279,25 +280,25 @@ var headroom  = new Headroom(header, {
   offset: 80,
   tolerance: 40,
   onPin: function() {
-    if (body.getAttribute('data-page') === 'episode' && mqSmall.matches) {
+    if (episode && supporter && mqSmall.matches) {
       supporter.style.transform = 'translateY(' + header.offsetHeight + 'px)'
       sidebarInfo.style.marginBottom = '-' + header.offsetHeight + 'px'
     }
   },
   onUnpin: function() {
-    if (body.getAttribute('data-page') === 'episode' && mqSmall.matches) {
+    if (episode && supporter && mqSmall.matches) {
       supporter.style.transform = 'translateY(0)'
       sidebarInfo.style.marginBottom = '0'
     }
   },
   onTop: function () {
-    if (body.getAttribute('data-page') === 'episode') {
+    if (episode && supporter) {
       supporter.style.transform = 'translateY(0)'
       sidebarInfo.style.marginBottom = '0'
     }
   },
   onBottom: function () {
-    if (body.getAttribute('data-page') === 'episode') {
+    if (episode && supporter) {
       supporter.style.transform = 'translateY(0)'
       sidebarInfo.style.marginBottom = '0'
     }
