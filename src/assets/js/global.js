@@ -161,8 +161,8 @@ var body = document.body
 var episode = body.getAttribute('data-page') === 'episode'
 
 if (episode) {
-  // var soundcloud = new SoundCloudAudio('y1nMl2njKSB6eNKPiU4jTxp9lNt2LE8d')
-  var soundcloud = new SoundCloudAudio('AdBAY9M0wHTRovngU9Ht4Z63XezL9saK')
+  var KEY = 'AdBAY9M0wHTRovngU9Ht4Z63XezL9saK'
+  var soundcloud = new SoundCloudAudio(KEY)
   var audio = soundcloud.audio
   var player = document.querySelector('.episode-player')
   var timeCurrent = document.querySelector('.-current')
@@ -173,6 +173,7 @@ if (episode) {
   var volume = document.querySelector('.volume')
   var backwards = document.querySelector('.backwards')
   var forwards = document.querySelector('.forwards')
+  var downloadLink = document.querySelector('.download')
 
   function formatTime(timeCurrent) {
     var seconds = parseInt(timeCurrent % 60)
@@ -189,6 +190,7 @@ if (episode) {
     timeDuration.innerHTML = formatTime(soundcloud.duration)
     soundcloud.play()
     soundcloud.pause()
+    downloadLink.href = track.download_url + '?client_id=' + KEY
   })
 
   soundcloud.on('timeupdate', function() {

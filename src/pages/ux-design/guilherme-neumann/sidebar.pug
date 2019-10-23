@@ -1,13 +1,17 @@
 include /components/link
 
 .sidebar
-  h3.eyebrow Localização
-  p São Paulo
-  
-  h3.eyebrow Site
-  p #[a(href='https://nubank.com.br/' title='Nubank' target='_blank' rel='noopener').link.-alt Nubank]
-  
-  h3.eyebrow Social
-  p #[a(href='http://gneumann.me/' title='Site pessoal' target='_blank' rel='noopener').link.-alt Site pessoal]
-  p #[a(href='http://twitter.com/gneumann' title='Twitter' target='_blank' rel='noopener').link.-alt Twitter]
-  p #[a(href='https://dribbble.com/gneumann' title='Dribbble' target='_blank' rel='noopener').link.-alt Dribbble]
+  .info
+    h3.eyebrow Localização
+    p São Paulo
+
+    h3.eyebrow Site
+    p #[a(href='https://nubank.com.br/' title='Nubank' target='_blank' rel='noopener').link.-alt Nubank]
+
+    h3.eyebrow Social
+    p #[a(href='http://gneumann.me/' title='Site pessoal' target='_blank' rel='noopener').link.-alt Site pessoal]
+    p #[a(href='http://twitter.com/gneumann' title='Twitter' target='_blank' rel='noopener').link.-alt Twitter]
+    p #[a(href='https://dribbble.com/gneumann' title='Dribbble' target='_blank' rel='noopener').link.-alt Dribbble]
+
+    h3.eyebrow Download
+    p #[+link('Arquivo MP3', '#!', 'download')]
