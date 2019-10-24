@@ -1,12 +1,12 @@
 mixin meta(title, description, href, share)
   doctype html
-  html
+  html(lang='pt-br')
 
     head
       meta(charset='utf-8')
       title= title
       meta(name='description' content= description)
-      meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+      meta(name='viewport' content='width=device-width, initial-scale=1')
       meta(name='google-site-verification' content='PFD058kE60WP7JXowo6ain930OAmdWOGSKW0afbB4ow')
 
       link(rel='canonical' href= href)
@@ -20,24 +20,24 @@ mixin meta(title, description, href, share)
       if share
         meta(property='og:image' content= share)
       else
-        meta(property='og:image' content='http://movimentoux.com/assets/img/share/share.png')
+        meta(property='og:image' content='https://movimentoux.com/assets/img/share/share.png')
 
       meta(itemprop='name' content= title)
       meta(itemprop='description' content= description)
-      meta(itemprop='image' content='http://movimentoux.com/assets/img/share/share.png')
+      meta(itemprop='image' content='https://movimentoux.com/assets/img/share/share.png')
       meta(itemprop='url' content= href)
 
       meta(name='twitter:card' content='summary')
       meta(name='twitter:title' content= title)
       meta(name='twitter:description' content= description)
-      meta(name='twitter:image' content='http://movimentoux.com/assets/img/share/share.png')
+      meta(name='twitter:image' content='https://movimentoux.com/assets/img/share/share.png')
 
       link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap')
       link(rel='stylesheet' href= '/assets/css/main.min.css')
       link(rel='author' href='/humans.txt')
       
       //- Google Tag Manager
-      script.
+      script(defer).
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
