@@ -159,6 +159,7 @@
 
 var body = document.body
 var episode = body.getAttribute('data-page') === 'episode'
+var season = body.getAttribute('data-page') === 'season'
 
 if (episode) {
   var KEY = 'AdBAY9M0wHTRovngU9Ht4Z63XezL9saK'
@@ -271,6 +272,20 @@ linkMobile.addEventListener('click', function(e){
 
 
 
+// flickity carousel
+var carousel = document.querySelector('.carousel')
+if (carousel) {
+  new Flickity(carousel, {
+    autoPlay: true,
+    pageDots: false,
+    imagesLoaded: true
+  })
+}
+
+
+
+
+
 //header after scrolling
 var header = document.querySelector('header')
 var headerHeight = header.offsetHeight
@@ -315,124 +330,116 @@ headroom.init()
 
 
 // list-grid
-if (body.getAttribute('data-page') === 'season') {
-  var list = document.querySelector('.list')
-  var grid = document.querySelector('.grid')
-  var wrapper = document.querySelector('.episode-wrapper')
+// if (season) {
+//   var list = document.querySelector('.list')
+//   var grid = document.querySelector('.grid')
+//   var wrapper = document.querySelector('.episode-wrapper')
 
-  list.addEventListener('click', function(){
-    if (!this.classList.contains('-on')) {
-      wrapper.classList.remove('-grid')
-      list.classList.toggle('-on')
-      grid.classList.toggle('-on')
-    }
-    layout()
-  })
+//   list.addEventListener('click', function(){
+//     if (!this.classList.contains('-on')) {
+//       wrapper.classList.remove('-grid')
+//       list.classList.toggle('-on')
+//       grid.classList.toggle('-on')
+//     }
+//     layout()
+//   })
 
-  grid.addEventListener('click', function(){
-    if (!this.classList.contains('-on')) {
-      wrapper.classList.add('-grid')
-      list.classList.toggle('-on')
-      grid.classList.toggle('-on')
-    }
-    layout()
-  })
+//   grid.addEventListener('click', function(){
+//     if (!this.classList.contains('-on')) {
+//       wrapper.classList.add('-grid')
+//       list.classList.toggle('-on')
+//       grid.classList.toggle('-on')
+//     }
+//     layout()
+//   })
 
-  // Code from 'Animated Flexbox Playground' — https://codepen.io/osublake/pen/dMLQJr
-  // by Blake Bowen — https://codepen.io/osublake
-  window.addEventListener('resize', function() {dirty = true;})
-  TweenLite.ticker.addEventListener('tick', function() {return dirty && layout()})
-  layout()
+//   // Code from 'Animated Flexbox Playground' — https://codepen.io/osublake/pen/dMLQJr
+//   // by Blake Bowen — https://codepen.io/osublake
+//   window.addEventListener('resize', function() {dirty = true;})
+//   TweenLite.ticker.addEventListener('tick', function() {return dirty && layout()})
+//   layout()
 
-  var episodes = document.querySelectorAll('.intro-episode');
-  var episodesTotal = episodes.length
-  var dirty = true
-  var time = 2
-  var ease = Quint.easeInOut
-  var boxes = []
+//   var episodes = document.querySelectorAll('.intro-episode');
+//   var episodesTotal = episodes.length
+//   var dirty = true
+//   var time = 2
+//   var ease = Quint.easeInOut
+//   var boxes = []
 
-  for (var i = 0; i < episodesTotal; i++) {
+//   for (var i = 0; i < episodesTotal; i++) {
 
-    var ep = episodes[i]
-    var width = ep.offsetWidth
-    var height = ep.offsetHeight
+//     var ep = episodes[i]
+//     var width = ep.offsetWidth
+//     var height = ep.offsetHeight
 
-    var epClone = ep.cloneNode(true)
-    epClone.classList.add('-clone')
+//     var epClone = ep.cloneNode(true)
+//     epClone.classList.add('-clone')
 
-    TweenLite.set(ep, {x: '+=0'})
-    TweenLite.set(epClone, {width: width, height: height})
-    TweenLite.set([ep, ep.children], {visibility: 'hidden'})
-    TweenLite.set([epClone, epClone.children], {visibility: 'visible'})
+//     TweenLite.set(ep, {x: '+=0'})
+//     TweenLite.set(epClone, {width: width, height: height})
+//     TweenLite.set([ep, ep.children], {visibility: 'hidden'})
+//     TweenLite.set([epClone, epClone.children], {visibility: 'visible'})
 
-    ep.appendChild(epClone)
+//     ep.appendChild(epClone)
 
-    var transform = ep._gsTransform
-    var x = ep.offsetLeft
-    var y = ep.offsetTop
+//     var transform = ep._gsTransform
+//     var x = ep.offsetLeft
+//     var y = ep.offsetTop
 
-    boxes[i] = {
-      width: width,
-      height: height,
-      x: x,
-      y: y,
-      ep: ep,
-      epClone: epClone,
-      transform: transform
-    }
-  }
+//     boxes[i] = {
+//       width: width,
+//       height: height,
+//       x: x,
+//       y: y,
+//       ep: ep,
+//       epClone: epClone,
+//       transform: transform
+//     }
+//   }
 
-  function layout() {
+//   function layout() {
 
-    dirty = false
+//     dirty = false
 
-    for (var i = 0; i < episodesTotal; i++) {
+//     for (var i = 0; i < episodesTotal; i++) {
 
-      var box = boxes[i]
+//       var box = boxes[i]
 
-      var lastX = box.x
-      var lastY = box.y
+//       var lastX = box.x
+//       var lastY = box.y
 
-      var lastW = box.width
-      var lastH = box.height
+//       var lastW = box.width
+//       var lastH = box.height
 
-      var width = box.width = box.ep.offsetWidth
-      var height = box.height = box.ep.offsetHeight
+//       var width = box.width = box.ep.offsetWidth
+//       var height = box.height = box.ep.offsetHeight
 
-      box.x = box.ep.offsetLeft
-      box.y = box.ep.offsetTop
+//       box.x = box.ep.offsetLeft
+//       box.y = box.ep.offsetTop
 
-      if (lastX !== box.x || lastY !== box.y) {
+//       if (lastX !== box.x || lastY !== box.y) {
 
-        var x = box.transform.x + lastX - box.x
-        var y = box.transform.y + lastY - box.y
+//         var x = box.transform.x + lastX - box.x
+//         var y = box.transform.y + lastY - box.y
 
-        TweenLite.set(box.ep, {x: x, y: y})
-        TweenLite.to(box.ep, time, {x: 0, y: 0, ease: ease})
-      }
+//         TweenLite.set(box.ep, {x: x, y: y})
+//         TweenLite.to(box.ep, time, {x: 0, y: 0, ease: ease})
+//       }
 
-      if (lastW !== box.width || lastH !== box.height) {
+//       if (lastW !== box.width || lastH !== box.height) {
 
-        TweenLite.to(box.epClone, time, {autoRound: false, width: width, height: height, ease: ease})
-      }
-    }
-  }
-}
-
-
+//         TweenLite.to(box.epClone, time, {autoRound: false, width: width, height: height, ease: ease})
+//       }
+//     }
+//   }
+// }
 
 
 
 
-// flickity carousel
-var carousel = document.querySelector('.carousel')
-if (carousel) {
-  new Flickity(carousel, {
-    autoPlay: true,
-    pageDots: false,
-    imagesLoaded: true
-  })
-}
+
+
+
 
 
 

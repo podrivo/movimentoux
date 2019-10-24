@@ -6,8 +6,8 @@ mixin episode(speaker, description, keywords, number, image, url, variantInside)
           img(src='/assets/img/perfil/' + image alt='Fotografia de ' + speaker)
       .text
         h2.header= speaker
-        p.keywords= description
-        p.keywords= keywords
+        p.description= description
+        span.keywords= keywords
       span.number= number
     else
       .episode-cover
@@ -17,6 +17,6 @@ mixin episode(speaker, description, keywords, number, image, url, variantInside)
             svg(src='/assets/img/ui/play.svg')
       .text
         h2.header= speaker
-        p.keywords= description
-        p.keywords= keywords
+        p.description= description
+        span.keywords= keywords
       span.number= number
