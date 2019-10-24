@@ -5,6 +5,7 @@
   justify-content: flex-end;
   flex-direction: column;
   padding: $spacing-body-y $spacing-body-x $spacing-body-x;
+  scroll-snap-align: start;
 
   @media (max-width: $sm) {
     justify-content: center;
@@ -20,3 +21,7 @@
     height: auto;
   }
 }
+
+// body[data-page='season'] .intro-text {
+//   scroll-snap-align: start;
+// }

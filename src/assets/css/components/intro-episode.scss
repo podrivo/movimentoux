@@ -7,6 +7,7 @@
   justify-content: flex-end;
   flex-shrink: 0;
   padding: $spacing-body-y $spacing-body-x $spacing-body-x;
+  scroll-snap-align: start;
 
   @media (max-width: $sm) {
     display: block;
