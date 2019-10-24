@@ -1,8 +1,8 @@
 # Movimento UX
-![Movimento UX Logo](http://movimentoux.com/assets/img/share/share.png)
+![Movimento UX Logo](https://movimentoux.com/assets/img/share/share.png)
 Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário.
 
-Acesse pelo link — [movimentoux.com](http://movimentoux.com/)
+Acesse pelo link — [movimentoux.com](https://movimentoux.com/)
 
 
 ## Uso
