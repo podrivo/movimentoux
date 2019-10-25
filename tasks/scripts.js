@@ -4,10 +4,14 @@ var runSequence = require('gulp4-run-sequence')
 var concat = require('gulp-concat')
 var eslint = require('gulp-eslint')
 var uglify = require('gulp-uglify')
+var babel = require('gulp-babel')
 
 module.exports = function(config) {
   gulp.task('scripts:lint', function() {
     return gulp.src(config.scripts.lint)
+      .pipe(babel({
+        presets: ['@babel/preset-env']
+      }))
       .pipe(eslint())
       .pipe(eslint.format())
       .pipe(eslint.failAfterError())
