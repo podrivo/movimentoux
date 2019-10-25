@@ -20,7 +20,8 @@ var config = {
     ],
     'src': [
       './src/assets/js/plugins/*.js',
-      './src/assets/js/global.js'
+      './src/assets/js/global.js',
+      './src/assets/js/components/*.js'
     ],
     'dest': './dist/assets/js'
   },
