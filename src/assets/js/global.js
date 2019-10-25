@@ -160,6 +160,7 @@
 var body = document.body
 var episode = body.getAttribute('data-page') === 'episode'
 var season = body.getAttribute('data-page') === 'season'
+var mqSmall = window.matchMedia('(min-width: 768px)').matches
 
 if (episode) {
   var KEY = 'AdBAY9M0wHTRovngU9Ht4Z63XezL9saK'
@@ -292,19 +293,18 @@ if (!season) {
   var headerHeight = header.offsetHeight
   var sidebarInfo = document.querySelector('.sidebar .info')
   var supporter = document.querySelector('.supporter')
-  var mqSmall = window.matchMedia('(min-width: 768px)')
 
   var headroom  = new Headroom(header, {
     offset: 80,
     tolerance: 40,
     onPin: function() {
-      if (episode && supporter && mqSmall.matches) {
+      if (episode && supporter && mqSmall) {
         supporter.style.transform = 'translateY(' + header.offsetHeight + 'px)'
         sidebarInfo.style.marginBottom = '-' + header.offsetHeight + 'px'
       }
     },
     onUnpin: function() {
-      if (episode && supporter && mqSmall.matches) {
+      if (episode && supporter && mqSmall) {
         supporter.style.transform = 'translateY(0)'
         sidebarInfo.style.marginBottom = '0'
       }
@@ -504,7 +504,7 @@ window.addEventListener('load', function() {
 
 // observer.observe(sections)
 
-if ('IntersectionObserver' in window) {
+if ('IntersectionObserver' in window && season && mqSmall) {
   // var observer
   // var current = -1
   // var allentries = []
@@ -520,11 +520,11 @@ if ('IntersectionObserver' in window) {
       
       // if (entry.intersectionRatio > 0.5) {
       if (entry.intersectionRatio >= 0.5) {
-        section.classList.toggle('teste')
+        section.classList.toggle('-active')
         
         console.log(entry.target)
       } else {
-        section.classList.remove('teste')
+        section.classList.remove('-active')
       }
     })
   }, {

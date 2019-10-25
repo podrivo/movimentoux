@@ -24,6 +24,12 @@
     position: fixed;
     bottom: $spacing-body-y;
     opacity: 0;
+
+    @media (max-width: $sm) {
+      position: relative;
+      bottom: 0;
+      opacity: 1;
+    }
   }
 
   > .text .header {
@@ -32,7 +38,6 @@
     z-index: 99;
     // transition: all cubic-bezier(0.86, 0, 0.07, 1) $timing * 3;
     transition: font-size $easing $timing;
-    // display: table-caption;
 
     @media (max-width: $sm) {
       max-width: 100%;
@@ -41,6 +46,11 @@
     .part {
       margin-left: $spacing-2;
       font-size: $font-size-part;
+
+      @media (max-width: $sm) {
+        margin-left: $spacing-1;
+        font-size: $font-size-text;
+      }
     }
   }
 
@@ -92,13 +102,25 @@
     @media (max-width: $sm) {
       padding-top: $spacing-10;
     }
+
+    .text {
+      pointer-events: all;
+      position: relative;
+      opacity: 1;
+    }
+
+    .header {
+      max-width: 50%;
+    }
+
+    .number {
+      position: absolute;
+      bottom: auto;
+      opacity: 1;
+    }
   }
 
-  &.-inside .text {
-    pointer-events: all;
-  }
-
-  &.teste {
+  &.-active {
     > .text,
     > .number {
       opacity: 1;
