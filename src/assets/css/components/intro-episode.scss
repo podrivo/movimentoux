@@ -119,6 +119,10 @@
       bottom: auto;
       opacity: 1;
     }
+
+    .cover {
+      transform: rotateY(18deg);
+    }
   }
 
   &.-active {

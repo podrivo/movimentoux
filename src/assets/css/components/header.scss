@@ -1,5 +1,9 @@
 [data-page='season'] header {
   background: transparent;
+
+  @media (max-width: $sm) {
+    background: $black;
+  }
 }
 
 header {
