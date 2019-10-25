@@ -287,41 +287,43 @@ if (carousel) {
 
 
 //header after scrolling
-var header = document.querySelector('header')
-var headerHeight = header.offsetHeight
-var sidebarInfo = document.querySelector('.sidebar .info')
-var supporter = document.querySelector('.supporter')
-var mqSmall = window.matchMedia('(min-width: 768px)')
+if (!season) {
+  var header = document.querySelector('header')
+  var headerHeight = header.offsetHeight
+  var sidebarInfo = document.querySelector('.sidebar .info')
+  var supporter = document.querySelector('.supporter')
+  var mqSmall = window.matchMedia('(min-width: 768px)')
 
-var headroom  = new Headroom(header, {
-  offset: 80,
-  tolerance: 40,
-  onPin: function() {
-    if (episode && supporter && mqSmall.matches) {
-      supporter.style.transform = 'translateY(' + header.offsetHeight + 'px)'
-      sidebarInfo.style.marginBottom = '-' + header.offsetHeight + 'px'
+  var headroom  = new Headroom(header, {
+    offset: 80,
+    tolerance: 40,
+    onPin: function() {
+      if (episode && supporter && mqSmall.matches) {
+        supporter.style.transform = 'translateY(' + header.offsetHeight + 'px)'
+        sidebarInfo.style.marginBottom = '-' + header.offsetHeight + 'px'
+      }
+    },
+    onUnpin: function() {
+      if (episode && supporter && mqSmall.matches) {
+        supporter.style.transform = 'translateY(0)'
+        sidebarInfo.style.marginBottom = '0'
+      }
+    },
+    onTop: function () {
+      if (episode && supporter) {
+        supporter.style.transform = 'translateY(0)'
+        sidebarInfo.style.marginBottom = '0'
+      }
+    },
+    onBottom: function () {
+      if (episode && supporter) {
+        supporter.style.transform = 'translateY(0)'
+        sidebarInfo.style.marginBottom = '0'
+      }
     }
-  },
-  onUnpin: function() {
-    if (episode && supporter && mqSmall.matches) {
-      supporter.style.transform = 'translateY(0)'
-      sidebarInfo.style.marginBottom = '0'
-    }
-  },
-  onTop: function () {
-    if (episode && supporter) {
-      supporter.style.transform = 'translateY(0)'
-      sidebarInfo.style.marginBottom = '0'
-    }
-  },
-  onBottom: function () {
-    if (episode && supporter) {
-      supporter.style.transform = 'translateY(0)'
-      sidebarInfo.style.marginBottom = '0'
-    }
-  }
-})
-headroom.init()
+  })
+  headroom.init()
+}
 
 
 
@@ -487,3 +489,70 @@ window.addEventListener('load', function() {
     myTabs[i].addEventListener('click', myTabClicks)
   }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+// observer.observe(sections)
+
+if ('IntersectionObserver' in window) {
+  // var observer
+  // var current = -1
+  // var allentries = []
+  body.classList.add('ioapi')
+
+  var observer = new IntersectionObserver(function (entries, observer){
+    // console.log(entries);
+    // console.log(observer);
+
+    entries.forEach(function (entry){
+      // console.log(entry);
+      section = entry.target
+      
+      // if (entry.intersectionRatio > 0.5) {
+      if (entry.intersectionRatio >= 0.5) {
+        section.classList.toggle('teste')
+        
+        console.log(entry.target)
+      } else {
+        section.classList.remove('teste')
+      }
+    })
+  }, {
+      threshold: [0.3, 0.7]
+  })
+  //   entries.forEach(function (entry) {
+  //     if (entry.intersectionRatio > 0.5) {
+  //       var newcurrent = sections.indexOf(entry.target)
+  //       if (newcurrent === current) return
+  //       var direction = newcurrent > current
+
+  //       if (current >= 0) {
+  //         allentries[current].exit(direction ? 'down' : 'up');
+  //       }
+
+  //       allentries[newcurrent].enter(direction ? 'down' : 'up');
+  //       current = newcurrent;
+  //     }
+  //   });
+  // }, {
+  //   threshold: 0.5
+  // })
+  // sections.forEach(function (section) {
+  //   return allentries.push(new Entry(section))
+  // })
+  // var images = document.querySelectorAll('.cover img')
+  var imagesArr = Array.from(document.querySelectorAll('.intro-episode'))
+  imagesArr.forEach(function (img) {
+    observer.observe(img)
+  })
+}

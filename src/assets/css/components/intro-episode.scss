@@ -16,19 +16,31 @@
   }
 
   > .text {
+    width: 100%;
     z-index: 99;
     pointer-events: none;
-    transition: all $easing $timing * 3;
+    // transition: all $easing $timing * 3;
+    transition: opacity $easing $timing;
+    position: fixed;
+    bottom: $spacing-body-y;
+    opacity: 0;
   }
 
   > .text .header {
-    max-width: 50%;
+    max-width: 38%;
     margin: $spacing-1 0;
     z-index: 99;
-    transition: all cubic-bezier(0.86, 0, 0.07, 1) $timing * 3;
+    // transition: all cubic-bezier(0.86, 0, 0.07, 1) $timing * 3;
+    transition: font-size $easing $timing;
+    // display: table-caption;
 
     @media (max-width: $sm) {
       max-width: 100%;
+    }
+
+    .part {
+      margin-left: $spacing-2;
+      font-size: $font-size-part;
     }
   }
 
@@ -36,12 +48,15 @@
     font-size: 8.1vw;
     line-height: 0.9em;
     font-weight: 700;
-    position: absolute;
+    position: fixed;
+    bottom: $spacing-body-y;
     display: flex;
     align-self: flex-end;
     color: $black;
     text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
-    transition: all cubic-bezier(0.86, 0, 0.07, 1) $timing * 3;
+    // transition: all cubic-bezier(0.86, 0, 0.07, 1) $timing * 3;
+    transition: opacity $easing $timing;
+    opacity: 0;
 
     @media (max-width: $sm) {
       display: none;
@@ -81,5 +96,12 @@
 
   &.-inside .text {
     pointer-events: all;
+  }
+
+  &.teste {
+    > .text,
+    > .number {
+      opacity: 1;
+    }
   }
 }

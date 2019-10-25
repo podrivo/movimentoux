@@ -9,12 +9,12 @@
 body {
   background-color: $black;
   color: $white;
-  // scroll-snap-type: y mandatory;
   overflow-y: scroll;
   overflow-x: hidden;
 
   &[data-page='season'] {
     scroll-snap-type: y proximity;
+    // scroll-snap-type: y mandatory;
   }
 
   &::after {
