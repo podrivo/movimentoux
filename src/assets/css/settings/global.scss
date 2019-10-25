@@ -15,6 +15,10 @@ body {
   &[data-page='season'] {
     scroll-snap-type: y proximity;
     // scroll-snap-type: y mandatory;
+
+    @media (max-width: $sm) {
+      scroll-snap-type: none;
+    }
   }
 
   &::after {

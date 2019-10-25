@@ -124,6 +124,7 @@
     .img {
       width: 100%;
       max-width: 48%;
+      margin: 0;
 
       @media (max-width: $sm) {
         max-width: 100%;

@@ -22,7 +22,7 @@
     // transition: all $easing $timing * 3;
     transition: opacity $easing $timing;
     position: fixed;
-    bottom: $spacing-body-y;
+    bottom: $spacing-body-x;
     opacity: 0;
 
     @media (max-width: $sm) {
@@ -59,7 +59,7 @@
     line-height: 0.9em;
     font-weight: 700;
     position: fixed;
-    bottom: $spacing-body-y;
+    bottom: $spacing-body-x;
     display: flex;
     align-self: flex-end;
     color: $black;
@@ -107,6 +107,7 @@
       pointer-events: all;
       position: relative;
       opacity: 1;
+      bottom: 0;
     }
 
     .header {
