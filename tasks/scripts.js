@@ -20,6 +20,9 @@ module.exports = function(config) {
   gulp.task('scripts:concat', function() {
     return gulp.src(config.scripts.src)
       .pipe(plumber())
+      .pipe(babel({
+        presets: ['@babel/preset-env']
+      }))
       .pipe(concat('main.min.js'))
       .pipe(gulp.dest(config.scripts.dest))
       .pipe(plumber.stop())
@@ -28,6 +31,9 @@ module.exports = function(config) {
   gulp.task('scripts:uglify', function() {
     return gulp.src(config.scripts.src)
       .pipe(plumber())
+      .pipe(babel({
+        presets: ['@babel/preset-env']
+      }))
       .pipe(concat('main.min.js'))
       .pipe(uglify())
       .pipe(gulp.dest(config.scripts.dest))
