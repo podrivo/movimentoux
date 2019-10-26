@@ -56,8 +56,12 @@ var config = {
     'src': './dist/**/*.html',
     'dest': './dist/'
   },
-  'netlify': {
-    'src': './_redirects',
+  'files': {
+    'src': [
+      './src/_redirects',
+      './src/robots.txt',
+      './src/humans.txt'
+    ],
     'dest': './dist'
   }
 }

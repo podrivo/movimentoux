@@ -2,10 +2,10 @@ var gulp = require('gulp')
 var plumber = require('gulp-plumber')
 
 module.exports = function(config) {
-  gulp.task('netlify', function() {
-    return gulp.src(config.netlify.src)
+  gulp.task('files', function() {
+    return gulp.src(config.files.src)
       .pipe(plumber())
-      .pipe(gulp.dest(config.netlify.dest))
+      .pipe(gulp.dest(config.files.dest))
       .pipe(plumber.stop())
   })
 }
