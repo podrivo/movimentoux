@@ -2,8 +2,8 @@
 if ('IntersectionObserver' in window && season && mqSmall) {
   body.classList.add('ioapi')
 
-  var observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
       section = entry.target
       if (entry.intersectionRatio >= 0.5) {
         section.classList.toggle('-active')
