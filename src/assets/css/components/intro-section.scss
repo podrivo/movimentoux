@@ -1,13 +1,35 @@
-.intro-episode {
+.intro-section {
   position: relative;
   width: 100%;
-  height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: flex-end;
-  flex-shrink: 0;
+  flex-direction: column;
   padding: $spacing-body-y $spacing-body-x $spacing-body-x;
+
+  @media (max-width: $sm) {
+    justify-content: center;
+    padding: $spacing-2 $spacing-4;
+  }
+
+  .header {
+    margin: $spacing-2 0;
+  }
+
+  &.-about {
+    margin-top: 30vh;
+    height: auto;
+  }
+}
+
+.intro-section.-snap {
+  height: 100vh;
   scroll-snap-align: start;
+}
+
+
+.intro-section.-episode {
+  height: 100vh;
+  // flex-shrink: 0;
 
   @media (max-width: $sm) {
     display: block;
@@ -17,13 +39,12 @@
 
   > .text {
     width: 100%;
-    z-index: 99;
-    pointer-events: none;
-    // transition: all $easing $timing * 3;
-    transition: opacity $easing $timing;
     position: fixed;
     bottom: $spacing-body-x;
     opacity: 0;
+    z-index: 99;
+    pointer-events: none;
+    transition: opacity $easing $timing;
 
     @media (max-width: $sm) {
       position: relative;
@@ -36,7 +57,6 @@
     max-width: 38%;
     margin: $spacing-1 0;
     z-index: 99;
-    // transition: all cubic-bezier(0.86, 0, 0.07, 1) $timing * 3;
     transition: font-size $easing $timing;
 
     @media (max-width: $sm) {
@@ -64,7 +84,6 @@
     align-self: flex-end;
     color: $black;
     text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
-    // transition: all cubic-bezier(0.86, 0, 0.07, 1) $timing * 3;
     transition: opacity $easing $timing;
     opacity: 0;
 
@@ -73,62 +92,46 @@
     }
   }
 
-  > .buttons {
-    display: flex;
-    align-items: center;
-    margin-top: $spacing-8;
-
-    .link {
-      margin-left: $spacing-2;
-    }
-
-    span {
-      transform: translateY(1px);
-      display: inline-block;
-      margin-right: 4px;
-    }
-  }
-
-  &.-clone {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-  }
-
-  &.-inside {
-    justify-content: center;
-
-    @media (max-width: $sm) {
-      padding-top: $spacing-10;
-    }
-
-    .text {
-      pointer-events: all;
-      position: relative;
-      opacity: 1;
-      bottom: 0;
-    }
-
-    .header {
-      max-width: 50%;
-    }
-
-    .number {
-      position: absolute;
-      bottom: auto;
-      opacity: 1;
-    }
-
-    .cover {
-      transform: rotateY(18deg);
-    }
-  }
+  // &.-clone {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   margin: 0;
+  // }
 
   &.-active {
     > .text,
     > .number {
       opacity: 1;
     }
+  }
+}
+
+.intro-section.-inside {
+  justify-content: center;
+
+  @media (max-width: $sm) {
+    padding-top: $spacing-10;
+  }
+
+  .text {
+    pointer-events: all;
+    position: relative;
+    opacity: 1;
+    bottom: 0;
+  }
+
+  .header {
+    max-width: 50%;
+  }
+
+  .number {
+    position: absolute;
+    bottom: auto;
+    opacity: 1;
+  }
+
+  .cover {
+    pointer-events: none;
   }
 }

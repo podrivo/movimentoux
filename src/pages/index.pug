@@ -1,6 +1,6 @@
 include /components/meta-head
 include /components/header
-include /components/episode
+include /components/episode-section
 include /components/social-links
 include /components/meta-js
 
@@ -14,77 +14,81 @@ body(data-page='season')
 
   +header('', 'on', '', '')
 
-  article.intro-text
+  section.intro-section.-snap
     span.eyebrow Segunda Temporada
     h1.header UX <br> Research
     p Nov, 2018 — Conversas sobre pesquisa para produto.
-
-  +social-links('-home')
+    +social-links('-home')
   
   //- ul.list-grid
   //-   li.list.-on #[svg(src='assets/img/ui/ep-list.svg')]
   //-   li.grid #[svg(src='assets/img/ui/ep-grid.svg')]
   
   //- .episode-wrapper
-  +episode(
+  +episode-section(
     'Camila Borja',
     'User Experience Researcher no Itaú.',
     'Operação de pesquisa (Research Ops), Síntese de aprendizados e Storytelling.',
     '25',
     '24-camila-borja.jpg',
     '/ux-research/camila-borja-pt2/',
-    '',
+    '-snap',
     'pt2'
   )
-  +episode(
+  +episode-section(
     'Camila Borja',
     'User Experience Researcher no Itaú.',
     'Capacitação em Pesquisa, Atomic Research e Gestão e organização dos aprendizados.',
     '24',
     '24-camila-borja.jpg',
     '/ux-research/camila-borja-pt1/',
-    '',
+    '-snap',
     'pt1'
   )
-  +episode(
+  +episode-section(
     'Ana Rafaela',
     'User Experience Researcher no YouTube San Bruno/CA.',
     'Pesquisa global, técnicas híbridas de pesquisa, repositório de aprendizados.',
     '23',
     '23-ana-rafaela.jpg',
-    '/ux-research/ana-rafaela/'
+    '/ux-research/ana-rafaela/',
+    '-snap'
   )
-  +episode(
+  +episode-section(
     'Cristina Bilsland',
     'User Experience Researcher Senior no Google UK.',
     'Pesquisa global, estratégia de pesquisa, design sprint.',
     '22',
     '22-cristina-bilsland.jpg',
-    '/ux-research/cristina-bilsland/'
+    '/ux-research/cristina-bilsland/',
+    '-snap'
   )
-  +episode(
+  +episode-section(
     'Caio Gama',
     'User Researcher no Nubank.',
     'Data & analytics, mix de técnicas de pesquisa qualitativa e quantitativa.',
     '21',
     '21-caio-gama.jpg',
-    '/ux-research/caio-gama/'
+    '/ux-research/caio-gama/',
+    '-snap'
   )
-  +episode(
+  +episode-section(
     'Carol Zatorre',
     'Head de Pesquisa na Kyvo.',
     'Consultoria, pesquisa qualitativa e pesquisa na sprint.',
     '20',
     '20-carol-zatorre.jpg',
-    '/ux-research/carol-zatorre/'
+    '/ux-research/carol-zatorre/',
+    '-snap'
   )
-  +episode(
+  +episode-section(
     'Paola Sales',
     'Head de User Studies no Descomplica.',
     'Pesquisa humanizada, empatia e criação de área.',
     '19',
     '19-paola-sales.jpg',
-    '/ux-research/paola-sales/'
+    '/ux-research/paola-sales/',
+    '-snap'
   )
 
 +meta-js

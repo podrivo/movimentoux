@@ -1,6 +1,6 @@
 include /components/meta-head
 include /components/header
-include /components/episode
+include /components/episode-section
 include /components/episode-player
 include /components/episode-tabs
 include /components/meta-js
@@ -15,7 +15,7 @@ body(data-page='episode')
 
   +header('on', '', '')
 
-  +episode(
+  +episode-section(
     'Érico Fileno',
     'Head de Inovação na Visa.',
     'Design estratégico, inovação em serviços e experiência do usuário.',

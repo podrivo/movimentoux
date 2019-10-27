@@ -1,8 +1,8 @@
-mixin episode(speaker, description, keywords, number, image, url, variantInside, part)
-  section(class= variantInside).intro-episode
+mixin episode-section(speaker, description, keywords, number, image, url, variantClass, part)
+  section.intro-section.-episode(class= variantClass)
     .episode-cover
       .cover
-        if variantInside
+        if variantClass == '-inside'
           img(src='/assets/img/perfil/' + image alt='Fotografia de ' + speaker)
         else
           a(href= url title='Ir para episódio').play-badge

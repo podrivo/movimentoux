@@ -15,7 +15,7 @@ if ('IntersectionObserver' in window && season && mqSmall) {
     threshold: [0.3, 0.7]
   })
 
-  var sectionsArr = Array.from(document.querySelectorAll('.intro-episode'))
+  var sectionsArr = Array.from(document.querySelectorAll('.intro-section'))
   sectionsArr.forEach(function (img) {
     observer.observe(img)
   })

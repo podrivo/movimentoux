@@ -1,6 +1,6 @@
 include /components/meta-head
 include /components/header
-include /components/episode
+include /components/episode-section
 include /components/episode-player
 include /components/episode-tabs
 include /components/meta-js
@@ -15,7 +15,7 @@ body(data-page='episode')
 
   +header('on', '', '')
 
-  +episode(
+  +episode-section(
     'Andre do Amaral',
     'Designer de Produto na Netflix.',
     'Visual design, design digital, UX em outros países.',
