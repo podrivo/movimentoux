@@ -1,9 +1,9 @@
-include /components/meta
+include /components/meta-head
 include /components/header
-include /components/social
-include /components/js
+include /components/social-links
+include /components/meta-js
 
-+meta(
++meta-head(
   'Página não encontrada — Movimento UX',
   'Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário',
   'https://movimentoux.com/'
@@ -18,6 +18,6 @@ body
     h1.header 404
     p A página que você tentou acessar não foi encontrada.
 
-  +social('-home')
+  +social-links('-home')
 
-+js
++meta-js

@@ -1,11 +1,11 @@
-include /components/meta
+include /components/meta-head
 include /components/header
 include /components/episode
-include /components/player
+include /components/episode-player
 include /components/episode-tabs
-include /components/js
+include /components/meta-js
 
-+meta(
++meta-head(
   'Carol Zatorre, Head de Pesquisa na Kyvo. Episódio 20 — Movimento UX. Conversas sobre pesquisa para produto. UX Research.',
   'Consultoria, pesquisa qualitativa e pesquisa na sprint — Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Segunda Temporada. Conversas sobre pesquisa para produto. UX Research.',
   'https://movimentoux.com/ux-research/carol-zatorre/'
@@ -25,7 +25,7 @@ body(data-page='episode')
     '-inside'
   )
 
-  +player('carolzatorre')
+  +episode-player('carolzatorre')
 
   section.episode-content
     +episode-tabs
@@ -37,4 +37,4 @@ body(data-page='episode')
 
       include sidebar.pug
 
-+js
++meta-js

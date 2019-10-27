@@ -1,10 +1,10 @@
-include /components/meta
+include /components/meta-head
 include /components/header
 include /components/episode
-include /components/social
-include /components/js
+include /components/social-links
+include /components/meta-js
 
-+meta(
++meta-head(
   'Movimento UX — Segunda Temporada. Conversas sobre pesquisa para produto. UX Research.',
   'Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Segunda Temporada. Conversas sobre pesquisa para produto. UX Research.',
   'https://movimentoux.com'
@@ -19,7 +19,7 @@ body(data-page='season')
     h1.header UX <br> Research
     p Nov, 2018 — Conversas sobre pesquisa para produto.
 
-  +social('-home')
+  +social-links('-home')
   
   //- ul.list-grid
   //-   li.list.-on #[svg(src='assets/img/ui/ep-list.svg')]
@@ -87,4 +87,4 @@ body(data-page='season')
     '/ux-research/paola-sales/'
   )
 
-+js
++meta-js

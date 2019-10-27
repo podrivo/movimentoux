@@ -1,11 +1,11 @@
-include /components/meta
+include /components/meta-head
 include /components/header
 include /components/episode
-include /components/player
+include /components/episode-player
 include /components/episode-tabs
-include /components/js
+include /components/meta-js
 
-+meta(
++meta-head(
   'Fernanda Barbato, Episódio 13 — Movimento UX',
   'UX Lead na Designit. Hyper Island, pesquisa com usuários, UX em outros países.',
   'https://movimentoux.com/ux-design/fernanda-barbato/'
@@ -25,7 +25,7 @@ body(data-page='episode')
     '-inside'
   )
 
-  +player('fernandabarbato')
+  +episode-player('fernandabarbato')
 
   section.episode-content
     //- +episode-tabs
@@ -37,4 +37,4 @@ body(data-page='episode')
 
       include sidebar.pug
 
-+js
++meta-js

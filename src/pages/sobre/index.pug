@@ -1,9 +1,9 @@
-include /components/meta
+include /components/meta-head
 include /components/header
-include /components/social
-include /components/js
+include /components/social-links
+include /components/meta-js
 
-+meta(
++meta-head(
   'Sobre — Movimento UX',
   'Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário.',
   'https://movimentoux.com/sobre/'
@@ -26,7 +26,7 @@ body
         p Eu fico à frente da produção dos podcasts, enquanto o Cristiano Sarmento e o Pedro Ivo Hudson — que além de serem designers que admiro, tenho a sorte de tê-los como parceiros neste projeto — lideram a parte visual e o site.
         p Espero que você goste!
 
-      +social('')
+      +social-links('')
 
   section.about-team
     span.eyebrow Equipe
@@ -71,4 +71,4 @@ body
     a(href='mailto:contato@movimentoux.com' title='envie email para — contato@movimentoux.com').btn.-lg envie email para — contato@movimentoux.com
     span Feito com &hearts; em Belo Horizonte, Estocolmo e São Paulo.
 
-+js
++meta-js

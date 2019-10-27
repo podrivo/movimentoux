@@ -1,11 +1,11 @@
-include /components/meta
+include /components/meta-head
 include /components/header
 include /components/episode
-include /components/player
+include /components/episode-player
 include /components/episode-tabs
-include /components/js
+include /components/meta-js
 
-+meta(
++meta-head(
   'Pedro Beleza e Thiago Esser, Episódio 8 — Movimento UX',
   'Sócios-fundadores da UXConf. Conteúdo sobre UX, importância de comunidade, eventos de UX.',
   'https://movimentoux.com/ux-design/pedro-thiago/'
@@ -25,7 +25,7 @@ body(data-page='episode')
     '-inside'
   )
 
-  +player('uxconfbr')
+  +episode-player('uxconfbr')
 
   section.episode-content
     +episode-tabs
@@ -37,4 +37,4 @@ body(data-page='episode')
 
       include sidebar.pug
 
-+js
++meta-js

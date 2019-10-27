@@ -1,11 +1,11 @@
-include /components/meta
+include /components/meta-head
 include /components/header
 include /components/episode
-include /components/player
+include /components/episode-player
 include /components/episode-tabs
-include /components/js
+include /components/meta-js
 
-+meta(
++meta-head(
   'Ana Rafaela, User Experience Researcher no YouTube San Bruno/CA. Episódio 23 — Movimento UX. Conversas sobre pesquisa para produto. UX Research.',
   'Pesquisa global, técnicas híbridas de pesquisa, repositório de aprendizados — Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Segunda Temporada. Conversas sobre pesquisa para produto. UX Research.',
   'https://movimentoux.com/ux-research/ana-rafaela/',
@@ -26,7 +26,7 @@ body(data-page='episode')
     '-inside'
   )
 
-  +player('anarafaela')
+  +episode-player('anarafaela')
 
   section.episode-content
     +episode-tabs
@@ -38,4 +38,4 @@ body(data-page='episode')
       
       include sidebar.pug
 
-+js
++meta-js

@@ -1,11 +1,11 @@
-include /components/meta
+include /components/meta-head
 include /components/header
 include /components/episode
-include /components/player
+include /components/episode-player
 include /components/episode-tabs
-include /components/js
+include /components/meta-js
 
-+meta(
++meta-head(
   'Elisa Volpato, Episódio 6 — Movimento UX',
   'Fundadora na TESTR. Pesquisa para produto, teste de usabilidade, consultoria.',
   'https://movimentoux.com/ux-design/elisa-volpato/'
@@ -25,7 +25,7 @@ body(data-page='episode')
     '-inside'
   )
 
-  +player('elisa-volpato')
+  +episode-player('elisa-volpato')
 
   section.episode-content
     +episode-tabs
@@ -37,4 +37,4 @@ body(data-page='episode')
 
       include sidebar.pug
 
-+js
++meta-js

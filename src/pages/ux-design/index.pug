@@ -1,10 +1,10 @@
-include /components/meta
+include /components/meta-head
 include /components/header
-include /components/social
+include /components/social-links
 include /components/episode
-include /components/js
+include /components/meta-js
 
-+meta(
++meta-head(
   'Movimento UX — Primeira Temporada. Conversas sobre o universo de design de experiência de uso. UX Design.',
   'Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Primeira Temporada. Conversas sobre o universo de design de experiência de uso. UX Design.',
   'https://movimentoux.com/ux-design/'
@@ -19,7 +19,7 @@ body(data-page='season')
     h1.header UX <br> Design
     p Fev, 2016 — Conversas sobre o universo de design de experiência de uso.
 
-  +social('-home')
+  +social-links('-home')
 
   ul.list-grid
     li.list.-on #[svg(src='assets/img/ui/ep-list.svg')]
@@ -172,4 +172,4 @@ body(data-page='season')
       '/ux-design/caio-cesar'
     )
 
-+js
++meta-js
