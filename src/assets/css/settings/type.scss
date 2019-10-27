@@ -63,7 +63,19 @@ blockquote {
 }
 
 @mixin paragraph {
-  width: 100%;
-  max-width: $spacing * 80;
-  margin-bottom: $spacing-4;
+  p {
+    width: 100%;
+    max-width: $spacing * 80;
+    margin-bottom: $spacing-4;
+
+    @media (max-width: $sm) {
+      width: 100%;
+      margin-bottom: $spacing-2;
+    }
+
+    &:last-child,
+    &:only-child {
+      margin-bottom: 0;
+    }
+  }
 }

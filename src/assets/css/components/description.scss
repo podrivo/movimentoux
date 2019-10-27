@@ -1,0 +1,30 @@
+.description {
+  @include paragraph;
+
+  @media (max-width: $sm) {
+    width: 100%;
+  }
+}
+
+.description .header {
+  // margin-bottom: $spacing-8;
+
+  @media (max-width: $sm) {
+    margin-bottom: $spacing-2;
+    font-size: 9.2vw;
+    line-height: 1.2em;
+  }
+}
+
+// .description p {
+//   @include paragraph;
+
+//   @media (max-width: $sm) {
+//     width: 100%;
+//     padding-bottom: $spacing-2;
+//   }
+
+//   &:last-child {
+//     // padding-bottom: 0;
+//   }
+// }
