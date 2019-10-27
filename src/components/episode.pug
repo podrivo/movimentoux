@@ -1,30 +1,17 @@
 mixin episode(speaker, description, keywords, number, image, url, variantInside, part)
   section(class= variantInside).intro-episode
-    if variantInside == '-inside'
-      .episode-cover
-        .cover
+    .episode-cover
+      .cover
+        if variantInside
           img(src='/assets/img/perfil/' + image alt='Fotografia de ' + speaker)
-      .text
-        if part
-          h2.header= speaker
-            span.part= part
         else
-          h2.header= speaker
-        p.description= description
-        span.keywords= keywords
-      span.number= number
-    else
-      .episode-cover
-        .cover
           a(href= url title='Ir para episódio').play-badge
             img(src='/assets/img/perfil/' + image alt='Fotografia de ' + speaker)
             svg(src='/assets/img/ui/play.svg')
-      .text
+    .text
+      h2.header= speaker
         if part
-          h2.header= speaker
-            span.part= part
-        else
-          h2.header= speaker
-        p.description= description
-        span.keywords= keywords
-      span.number= number
+          span.part= part
+      p.description= description
+      span.keywords= keywords
+    span.number= number
