@@ -1,0 +1,47 @@
+.episode-text {
+  @include paragraph;
+
+  width: calc(100% - #{$sidebar-max-width});
+  padding-right: $spacing-8;
+
+  @media (max-width: $sm) {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  figure, video {
+    margin: $spacing-12 0;
+
+    @media (max-width: $sm) {
+      margin: $spacing-6 0;
+    }
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  hr {
+    width: 100%;
+    max-width: $spacing * 80;
+    border: calc(#{$spacing} / 2) solid $grayish;
+    margin: $spacing-8 0;
+  }
+
+  figcaption {
+    display: block;
+    position: relative;
+    padding-top: $spacing;
+    color: $grayer;
+  }
+
+  .links {
+    margin-top: -$spacing-3;
+    margin-bottom: $spacing-4;
+  }
+
+  .links li {
+    margin-bottom: $spacing-1;
+    font-size: $font-size-text;
+  }
+}

@@ -17,7 +17,7 @@ linkMobile.addEventListener('click', function (e) {
 if (!season) {
   var header = document.querySelector('header')
   var headerHeight = header.offsetHeight
-  var sidebarInfo = document.querySelector('.sidebar .info')
+  var sidebarInfo = document.querySelector('.episode-sidebar .info')
   var supporter = document.querySelector('.supporter')
 
   var headroom = new Headroom(header, {

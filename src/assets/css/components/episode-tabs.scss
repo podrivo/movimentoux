@@ -27,3 +27,26 @@
     }
   }
 }
+
+.tab {
+  width: 100%;
+  display: none;
+
+  &.on {
+    display: flex;
+    flex-direction: column;
+    animation: tabShow 0.8s $easing backwards;
+  }
+}
+
+@keyframes tabShow {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,11 @@
+.episode-carousel {
+  margin: $spacing-12 0;
+
+  @media (max-width: $sm) {
+    margin: $spacing-6 0;
+  }
+
+  .item {
+    width: 100%;
+  }
+}
