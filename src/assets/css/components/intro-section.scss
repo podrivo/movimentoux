@@ -22,6 +22,8 @@
 }
 
 .intro-section.-scroll {
+  @include paragraph;
+
   height: auto;
   margin-top: 30vh;
   flex-direction: row;

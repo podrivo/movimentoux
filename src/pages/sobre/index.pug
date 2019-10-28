@@ -14,8 +14,7 @@ body
   +header('', '', '', 'on')
 
   section.intro-section.-scroll
-    //- section.about-description
-    .description
+    .text
       h1.header Movimento UX <br>é um podcast <br>de entrevistas <br>sobre o universo <br>de Experiência <br>do Usuário.
       p Olá. Bem-vindx ao Movimento UX!
       p Meu nome é Izabela de Fátima, tenho 34 anos, moro em São Paulo e trabalho com pesquisa para produto no iFood. Trabalhei a maior parte do tempo como estrategista em agências de publicidade e hoje meu foco é pesquisa e estratégia de produto.
@@ -30,12 +29,12 @@ body
 
   section.about-team
     span.eyebrow Equipe
-    .members
-      .member-block
+    .grid
+      .about-person
         img(src='/assets/img/team/izabela.jpg' alt='Fotografia de Izabela de Fátima')
         h2.name Izabela de Fátima
         h3.job Pesquisadora UX & Apresentadora
-        ul.member-social
+        ul.about-social
           //- li.item
             a(href='http://izabeladefatima.com/' title='Website' target='_blank' rel='noopener').icon #[svg(src='assets/img/social-website.svg')]
           li.item
@@ -43,11 +42,11 @@ body
           li.item
             a(href='https://twitter.com/izabeladefatima' title='Twitter' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-twitter.svg')]
       
-      .member-block
+      .about-person
         img(src='/assets/img/team/cristiano.jpg' alt='Fotografia de Cristiano Sarmento')
         h2.name Cristiano Sarmento
         h3.job Designer & Diretor de Arte
-        ul.member-social
+        ul.about-social
           li.item
             a(href='http://cristiano.do/' title='Website' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-website.svg')]
           li.item
@@ -55,11 +54,11 @@ body
           li.item
             a(href='https://twitter.com/cristianodoes' title='Twitter' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-twitter.svg')]
       
-      .member-block
+      .about-person
         img(src='/assets/img/team/pedro-ivo.jpg' alt='Fotografia de Pedro Ivo Hudson')
         h2.name Pedro Ivo Hudson
         h3.job Designer
-        ul.member-social
+        ul.about-social
           li.item
             a(href='http://podrivo.com/' title='Website' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-website.svg')]
           li.item
@@ -67,8 +66,8 @@ body
           li.item
             a(href='https://twitter.com/podrivo' title='Twitter' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-twitter.svg')]
   
-  footer
+  footer.about-footer
     a(href='mailto:contato@movimentoux.com' title='envie email para — contato@movimentoux.com').btn.-lg envie email para — contato@movimentoux.com
-    span Feito com &hearts; em Belo Horizonte, Estocolmo e São Paulo.
+    span.madewithlove Feito com &hearts; em Belo Horizonte, Estocolmo e São Paulo.
 
 +meta-js

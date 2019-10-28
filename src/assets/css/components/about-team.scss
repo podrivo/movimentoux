@@ -15,7 +15,7 @@
     margin-bottom: $spacing-4;
   }
 
-  > .members {
+  > .grid {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -23,63 +23,5 @@
     @media (max-width: $sm) {
       flex-direction: column;
     }
-  }
-}
-
-.member-block {
-  width: 28%;
-
-  @media (max-width: $sm) {
-    width: 100%;
-  }
-
-  .name {
-    font-size: $font-size-text;
-  }
-
-  > img,
-  > .job,
-  > .text {
-    margin-bottom: $spacing-4;
-
-    @media (max-width: $sm) {
-      margin-bottom: $spacing-2;
-    }
-  }
-}
-
-.member-social {
-  display: flex;
-
-  @media (max-width: $sm) {
-    margin-bottom: $spacing-4;
-  }
-
-  > .item {
-    margin-right: $spacing-2;
-  }
-
-  .icon {
-    display: block;
-    transition: transform $timing $easing;
-
-    &:hover,
-    &:focus {
-      transform: translateY(-4px);
-    }
-  }
-}
-
-footer {
-  padding: 0 $spacing-body-x $spacing-body-x;
-
-  @media (max-width: $sm) {
-    padding: 0 $spacing-4 $spacing-4;
-  }
-
-  span {
-    margin-top: $spacing-8;
-    display: block;
-    // text-align: center;
   }
 }
