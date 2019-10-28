@@ -30,11 +30,10 @@ body(data-page='episode')
   section.episode-content
     //- +episode-tabs
 
-    .wrapper
-      .content
-        include intro.pug
-        //- include transcricao.pug
+    .episode-text
+      include intro.pug
+      //- include transcricao.pug
 
-      include sidebar.pug
+    include sidebar.pug
 
 +meta-js
