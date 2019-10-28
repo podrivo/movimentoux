@@ -69,3 +69,17 @@
     }
   }
 }
+
+footer {
+  padding: 0 $spacing-body-x $spacing-body-x;
+
+  @media (max-width: $sm) {
+    padding: 0 $spacing-4 $spacing-4;
+  }
+
+  span {
+    margin-top: $spacing-8;
+    display: block;
+    // text-align: center;
+  }
+}

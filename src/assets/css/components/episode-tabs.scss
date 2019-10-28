@@ -33,8 +33,7 @@
   display: none;
 
   &.on {
-    display: flex;
-    flex-direction: column;
+    display: block;
     animation: tabShow 0.8s $easing backwards;
   }
 }

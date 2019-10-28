@@ -70,6 +70,10 @@ strong {
 
 .border {
   border: $spacing solid $grayish;
+
+  @media (max-width: $sm) {
+    border: 0;
+  }
 }
 
 .pesquisa-logo {

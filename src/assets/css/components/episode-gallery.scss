@@ -19,6 +19,14 @@
   }
 
   figure {
-    margin: 0 !important;
+    margin: 0;
+
+    @media (max-width: $sm) {
+      margin-top: $spacing-6;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
   }
 }
