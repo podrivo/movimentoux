@@ -1,4 +1,4 @@
-include /components/link
+include /components/link-text
 include /components/supporter-sidebar
 
 .episode-sidebar
@@ -7,16 +7,16 @@ include /components/supporter-sidebar
     p São Paulo
 
     h3.eyebrow Site
-    p #[+link('www.kyvo.global/br/', 'https://kyvo.global/br/')]
+    p #[+link-text('www.kyvo.global/br/', 'https://kyvo.global/br/')]
 
     h3.eyebrow Social
-    p #[+link('LinkedIn', 'https://br.linkedin.com/in/carol-zatorre')]
-    p #[+link('Medium', 'https://medium.com/@carolzatorre')]
-    p #[+link('Twitter', 'https://twitter.com/antropolodia')]
-    p #[+link('Instagram', 'https://www.instagram.com/antropolodia/')]
+    p #[+link-text('LinkedIn', 'https://br.linkedin.com/in/carol-zatorre')]
+    p #[+link-text('Medium', 'https://medium.com/@carolzatorre')]
+    p #[+link-text('Twitter', 'https://twitter.com/antropolodia')]
+    p #[+link-text('Instagram', 'https://www.instagram.com/antropolodia/')]
 
     h3.eyebrow Download
-    p #[+link('Arquivo MP3', '#!', 'download')]
+    p #[+link-text('Arquivo MP3', '#!', 'download')]
 
   +supporter-sidebar(
     'Apoiador do episódio',

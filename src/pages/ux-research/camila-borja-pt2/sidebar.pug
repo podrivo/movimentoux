@@ -1,4 +1,4 @@
-include /components/link
+include /components/link-text
 include /components/supporter-sidebar
 
 .episode-sidebar
@@ -7,12 +7,12 @@ include /components/supporter-sidebar
     p São Paulo
 
     h3.eyebrow Social
-    p #[+link('LinkedIn', 'https://www.linkedin.com/in/camilaborja/')]
-    p #[+link('Twitter', 'https://twitter.com/camila_borja')]
-    p #[+link('UX Collective', 'https://uxdesign.cc/@camila.brj')]
+    p #[+link-text('LinkedIn', 'https://www.linkedin.com/in/camilaborja/')]
+    p #[+link-text('Twitter', 'https://twitter.com/camila_borja')]
+    p #[+link-text('UX Collective', 'https://uxdesign.cc/@camila.brj')]
 
     h3.eyebrow Download
-    p #[+link('Arquivo MP3', '#!', 'download')]
+    p #[+link-text('Arquivo MP3', '#!', 'download')]
 
   +supporter-sidebar(
     'Patrocinador do episódio',

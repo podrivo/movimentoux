@@ -1,0 +1,45 @@
+.episode-links {
+
+  @media (max-width: $sm) {
+    // sdasd
+  }
+
+  > .item {
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    padding: $spacing-1 0;
+    // transition: color $timing $easing;
+
+    &.-alt::before {
+      bottom: 0;
+      height: 8%;
+      z-index: -1;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    // &:hover {
+      // color: $white;
+    // }
+  }
+
+  p {
+    margin-bottom: 0;
+    margin-right: $spacing-2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .eyebrow {
+    // margin: 0 $spacing-2 0 0;
+    // min-width: 6rem;
+  }
+}

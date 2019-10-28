@@ -1,4 +1,4 @@
-include /components/link
+include /components/link-text
 include /components/supporter-sidebar
 
 .episode-sidebar
@@ -7,14 +7,14 @@ include /components/supporter-sidebar
     p São Paulo
 
     h3.eyebrow Site
-    p #[+link('thecaiogama.com', 'http://thecaiogama.com')]
+    p #[+link-text('thecaiogama.com', 'http://thecaiogama.com')]
 
     h3.eyebrow Social
-    p #[+link('LinkedIn', 'https://www.linkedin.com/in/thecaiogama/')]
-    p #[+link('Medium', 'https://medium.com/@thecaiogama')]
+    p #[+link-text('LinkedIn', 'https://www.linkedin.com/in/thecaiogama/')]
+    p #[+link-text('Medium', 'https://medium.com/@thecaiogama')]
 
     h3.eyebrow Download
-    p #[+link('Arquivo MP3', '#!', 'download')]
+    p #[+link-text('Arquivo MP3', '#!', 'download')]
 
   +supporter-sidebar(
     'Apoiador do episódio',
