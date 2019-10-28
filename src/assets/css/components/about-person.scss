@@ -1,31 +1,3 @@
-.about-team {
-  margin-top: $spacing-body-y;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 0 $spacing-body-x $spacing-body-x;
-
-  @media (max-width: $sm) {
-    padding: $spacing-4;
-  }
-
-  > .eyebrow {
-    margin-bottom: $spacing-4;
-  }
-
-  > .team {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    @media (max-width: $sm) {
-      flex-direction: column;
-    }
-  }
-}
-
 .about-person {
   width: 28%;
 
@@ -44,40 +16,5 @@
     @media (max-width: $sm) {
       margin-bottom: $spacing-2;
     }
-  }
-}
-
-.about-social {
-  display: flex;
-
-  @media (max-width: $sm) {
-    margin-bottom: $spacing-4;
-  }
-
-  > .item {
-    margin-right: $spacing-2;
-  }
-
-  .icon {
-    display: block;
-    transition: transform $timing $easing;
-
-    &:hover,
-    &:focus {
-      transform: translateY(-4px);
-    }
-  }
-}
-
-footer {
-  padding: 0 $spacing-body-x $spacing-body-x;
-
-  @media (max-width: $sm) {
-    padding: 0 $spacing-4 $spacing-4;
-  }
-
-  span {
-    margin-top: $spacing-8;
-    display: block;
   }
 }

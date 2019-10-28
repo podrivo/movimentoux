@@ -1,0 +1,26 @@
+.iframe-box {
+  width: 100%;
+  max-width: 700px;
+
+  iframe {
+    margin-left: -5%;
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    min-height: 550px;
+  }
+}
+
+.pesquisa-logo {
+  max-width: 430px;
+  margin-bottom: $spacing-8;
+
+  &.-invert {
+    margin-top: $spacing-8;
+    margin-bottom: $spacing-4;
+
+    path {
+      fill: $black;
+    }
+  }
+}
