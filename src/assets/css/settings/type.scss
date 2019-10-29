@@ -64,6 +64,10 @@ blockquote {
   text-transform: uppercase;
   font-size: $font-size-eyebrow;
   font-weight: 500;
+
+  &.-dark {
+    font-weight: 700;
+  }
 }
 
 @mixin paragraph {
