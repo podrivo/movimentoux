@@ -7,7 +7,7 @@
   // border-bottom: 3px solid $gray;
 
   @media (max-width: $sm) {
-    // sdasd
+    margin: $spacing-6 0;
   }
 
   ul {
@@ -40,7 +40,7 @@
 
     &.-alt::before {
       bottom: -1px;
-      height: 4px;
+      height: 2px;
       // z-index: 99;
       // transition: transform $timing $easing;
       // transition-duration: $timing;
@@ -55,22 +55,33 @@
     &:hover .eyebrow {
       color: $black;
     }
+
+    @media (max-width: $sm) {
+      &.-alt {
+        border-bottom: 0;
+      }
+    }
   }
 
   p {
     // max-width: auto;
     // width: auto;
-    max-width: 100%;
+    // max-width: 100%;
     // width: 100%;
-    position: relative;
-    bottom: 1px;
+    // position: relative;
+    // bottom: 1px;
     margin-bottom: 0;
     // margin-left: $spacing-2;
     margin-right: $spacing-2;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    // white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
     // text-align: right;
+
+    @media (max-width: $sm) {
+      margin-bottom: 0;
+    }
   }
 
   .eyebrow {

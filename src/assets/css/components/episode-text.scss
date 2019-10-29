@@ -23,9 +23,13 @@
 
   hr {
     width: 100%;
-    max-width: $spacing * 80;
+    max-width: $max-width-paragraph;
     border: calc(#{$spacing} / 2) solid $grayish;
     margin: $spacing-8 0;
+
+    @media (max-width: $sm) {
+      margin: $spacing-6 0;
+    }
   }
 
   figcaption {
