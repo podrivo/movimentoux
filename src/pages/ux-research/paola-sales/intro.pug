@@ -1,5 +1,6 @@
 include /components/link
 include /components/image
+include /components/episode-links
 include /components/supporter-link
 
 .tab.on#intro
@@ -16,20 +17,30 @@ include /components/supporter-link
   .episode-gallery
     .img #[+image('19-foto-03.jpg','Dinâmica de co-criação.')]
     .img #[+image('19-foto-04.jpg','Grupo de discussão remoto.')]
+  
+  +episode-links({
+    1: {
+      type: 'Livro',
+      title: 'Comunicação Não-Violenta, Marshall B. Rosenberg',
+      url: 'https://amzn.to/2DBfBAQ'
+    },
+    2: {
+      type: 'Livro',
+      title: 'Interviewing Users, Steve Portigal',
+      url: 'https://amzn.to/2DyFUr5'
+    },
+    3: {
+      type: 'Ferramenta',
+      title: 'Ferramenta para otimizar agenda do recrutamento',
+      url: 'https://youcanbook.me/'
+    },
+    4: {
+      type: 'Grupo',
+      title: 'Grupo UX Research Brasil no LinkedIn',
+      url: 'https://www.linkedin.com/groups/8636716/'
+    }
+  })
 
-  p As dicas que ela deixou pra gente são:
-  ul.links
-    li #[+link('Livro Comunicação Não-Violenta: Marshall B. Rosenberg', 'https://amzn.to/2DBfBAQ')]
-    li #[+link('Interviewing Users: Steve Portigal', 'https://amzn.to/2DyFUr5')]
-    li #[+link('Ferramenta para otimizar agenda do recrutamento', 'https://youcanbook.me/')]
-    li #[+link('Grupo UX Research Brasil no Linkedin', 'https://www.linkedin.com/groups/8636716/')]
-
-  p Pra quem gostou da trilha e quiser conhecer o trabalho do DJ Bittencourt:
-  ul.links
-    li #[+link('www.radionoir.com.br', 'http://www.radionoir.com.br/')] e as #[+link('ótimas playlists', 'https://open.spotify.com/user/rbittencourt?si=ZJXyHPR6TaSNhFMBwKpKHQ')]
-
-  p E mudando de assunto, você já respondeu a pesquisa sobre o mercado brasileiro de UX, realizada pela Saiba+/Zoly? Eu já! :)
-  ul.links
-    li #[+link('Responda e participe da pesquisa do Panorama UX 2018', 'https://saiba-mais.typeform.com/to/Mo1J4m')]
-
+  p Pra quem gostou da trilha e quiser conhecer o trabalho do DJ Bittencourt: #[+link('www.radionoir.com.br', 'http://www.radionoir.com.br/')] e as #[+link('ótimas playlists', 'https://open.spotify.com/user/rbittencourt?si=ZJXyHPR6TaSNhFMBwKpKHQ')].
+  p E mudando de assunto, você já respondeu a pesquisa sobre o mercado brasileiro de UX, realizada pela Saiba+/Zoly? Responda e participe da #[+link('pesquisa do Panorama UX 2018', 'https://saiba-mais.typeform.com/to/Mo1J4m')].
   p No próximo episódio a convidada é a Carol Zatorre. Até já!

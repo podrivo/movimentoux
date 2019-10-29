@@ -1,5 +1,6 @@
 include /components/link
 include /components/image
+include /components/episode-links
 include /components/supporter-link
 
 .tab.on#intro
@@ -15,21 +16,37 @@ include /components/supporter-link
 
   .episode-gallery
     .img #[+image('20-foto-02.jpg','Exemplo de perfis extremos na amostra.')]
-
-  p Os links sobre os quais falamos são:
-  ul.links
-    li #[+link('Texto HBR: diferença de olhar para o problema e o fenômeno', 'https://hbr.org/2014/03/an-anthropologist-walks-into-a-bar')]
-    li #[+link('Como a alteridade pode trazer qualidade para a pesquisa em design', 'https://www.linkedin.com/pulse/empatia-e-alteridade-carolina-zatorre-fileno/')]
-    li #[+link('Indexação de Dados de Pesquisa | ISA17', 'https://www.slideshare.net/kyvoinnovation/indexao-de-dados-de-pesquisa-isa17')]
-
+  
   p As dicas que ela deixou para ampliar os conhecimentos em pesquisa são:
   ul.links
     li - Fazer curso de oratória
     li - Ler sobre escuta ativa
     li - Acompanhar o #[+link('EPIC', 'https://www.epicpeople.org/')]
 
+  +episode-links({
+    1: {
+      type: 'Artigo',
+      title: 'Texto HBR: diferença de olhar para o problema e o fenômeno',
+      url: 'https://hbr.org/2014/03/an-anthropologist-walks-into-a-bar'
+    },
+    2: {
+      type: 'Artigo',
+      title: 'Como a alteridade pode trazer qualidade para a pesquisa em design',
+      url: 'https://www.linkedin.com/pulse/empatia-e-alteridade-carolina-zatorre-fileno/'
+    },
+    3: {
+      type: 'Apresentação',
+      title: 'Indexação de Dados de Pesquisa | ISA17',
+      url: 'https://www.slideshare.net/kyvoinnovation/indexao-de-dados-de-pesquisa-isa17'
+    }
+  })
+
+  p #[strong Apoiador]
   p E as novidades continuam por aqui: estamos bastante empolgados em contar que o TESTR é o apoiador deste episódio! Como vocês ouviram neste papo, uma das barreiras mais comuns para fazer pesquisa em ambiente ágil é o tempo. E é exatamente esse o problema que o TESTR resolve: entrega todo o processo de teste com usuários de forma automatizada - incluindo recrutamento, execução, recompensa aos participantes e relatório com resultados, em uma média de 48 horas.
   p E quem acompanha o Movimento UX tem a vantagem de ganhar 3 participantes extras na contratação de qualquer plano. É só acessar #[+supporter-link('aqui', 'http://bit.ly/testeremoto', 'TESTR', 'Content')] :) Agora você não tem mais desculpa pra dizer que não dá pra rodar pesquisa dentro da sprint, hein?!
+
+  hr
+
   p As trilhas deste episódio são parte do projeto Aeoner do produtor Richard Garrell. As faixas sampleam sons 8 bits, discos de vinil, fitas cassete e gravações de campo feitas no Japão. Você pode ouvir todo o álbum #[+link('aqui', 'https://aeoner.bandcamp.com/')].
   
   .episode-gallery

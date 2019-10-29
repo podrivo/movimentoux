@@ -3,6 +3,7 @@ include /components/link
 mixin image(file, caption, title, link, variantClass)
   figure
       img(src='/assets/img/media/' + file alt= caption class= variantClass)
-      figcaption= caption
+      if caption
+        figcaption= caption
       if link
         +link(title, link)
