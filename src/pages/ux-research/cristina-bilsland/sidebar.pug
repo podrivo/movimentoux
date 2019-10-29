@@ -1,4 +1,4 @@
-include /components/link-text
+include /components/link
 include /components/supporter-sidebar
 
 .episode-sidebar
@@ -7,14 +7,14 @@ include /components/supporter-sidebar
     p Londres
 
     h3.eyebrow Site
-    p #[+link-text('crisbils.com', 'http://crisbils.com/')]
+    p #[+link('crisbils.com', 'http://crisbils.com/')]
 
     h3.eyebrow Social
-    p #[+link-text('LinkedIn', 'https://www.linkedin.com/in/cris-bilsland-1941364/')]
-    p #[+link-text('One Designer A Day', 'http://www.onedesigneraday.com/bilsland')]
+    p #[+link('LinkedIn', 'https://www.linkedin.com/in/cris-bilsland-1941364/')]
+    p #[+link('One Designer A Day', 'http://www.onedesigneraday.com/bilsland')]
 
     h3.eyebrow Download
-    p #[+link-text('Arquivo MP3', '#!', 'download')]
+    p #[+link('Arquivo MP3', '#!', 'download')]
 
   +supporter-sidebar(
     'Apoiador do episódio',

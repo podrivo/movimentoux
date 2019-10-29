@@ -1,4 +1,4 @@
-include /components/link-text
+include /components/link
 include /components/supporter-sidebar
 
 .episode-sidebar
@@ -7,10 +7,10 @@ include /components/supporter-sidebar
     p San Bruno, Califórnia
 
     h3.eyebrow Social
-    p #[+link-text('LinkedIn', 'https://www.linkedin.com/in/anafaela/')]
+    p #[+link('LinkedIn', 'https://www.linkedin.com/in/anafaela/')]
 
     h3.eyebrow Download
-    p #[+link-text('Arquivo MP3', '#!', 'download')]
+    p #[+link('Arquivo MP3', '#!', 'download')]
 
   +supporter-sidebar(
     'Patrocinador do episódio',

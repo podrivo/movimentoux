@@ -1,6 +1,6 @@
-include /components/link-text
-include /components/link-row
+include /components/link
 include /components/image
+include /components/episode-links
 include /components/supporter-link
 
 .tab.on#intro
@@ -18,31 +18,54 @@ include /components/supporter-link
   
   .episode-gallery
     .img #[+image('24-foto-03.jpg','Condução de dinâmica usando LEGO® Serious Play®.')]
-
-  //- p Os links sobre os quais falamos são:
-  //- ul.links
-  //-   li Vídeo — #[+link-text('Atomic Research: talk de 1 minuto da Camila na ESOMAR Latin America 2019', 'https://www.youtube.com/watch?v=z9e4OgWKHqE')]
-  //-   li Vídeo — #[+link-text('Vídeo completo da Mesa Redonda sobre UX Research', 'https://www.youtube.com/watch?v=jPp0uPZCP2o')]
-  //-   li #[+link-text('Aurelius: Repositório de aprendizados de pesquisa', 'https://www.aureliuslab.com/')]
-  //-   li #[+link-text('Airtable: Repositório de aprendizados de pesquisa (Tomer Sharon)', 'https://airtable.com/universe/expShuhNMi0Oc0xpb/polaris-ux-nuggets')]
-  //-   li Texto - #[+link-text('Foundations of atomic research do Tomer Sharon', 'https://medium.com/@tsharon/foundations-of-atomic-research-a937d5da5fbb')]
-  //-   li Texto - #[+link-text('Democratizing UX do Tomer Sharon', 'https://medium.com/@tsharon/democratizing-ux-670b95fbc07f')]
-  //-   li Livro - #[+link-text('Validating Product Ideas: Through Lean User Research', 'https://amzn.to/2mEMCGR')]
-  //-   li Perfil de Linkedin - #[+link-text('Renata Tonezi, que a Camila cita no podcast', 'https://www.linkedin.com/in/renata-tonezi-158b7515/')]
-  //-   li #[+link-text('Podcast Aurelius', 'https://open.spotify.com/show/0Je5C69lOGqRdk9cxL2vtj')]
-
-  .episode-links
-    p #[strong Links comentados nesse episódio]
-    ul
-      +link-row('Vídeo', 'Atomic Research: talk de 1 minuto da Camila na ESOMAR Latin America 2019', 'https://www.youtube.com/watch?v=z9e4OgWKHqE')
-      +link-row('Vídeo', 'Vídeo completo da Mesa Redonda sobre UX Research', 'https://www.youtube.com/watch?v=jPp0uPZCP2o')
-      +link-row('Site', 'Aurelius: Repositório de aprendizados de pesquisa', 'https://www.aureliuslab.com/')
-      +link-row('Site', 'Airtable: Repositório de aprendizados de pesquisa (Tomer Sharon)', 'https://airtable.com/universe/expShuhNMi0Oc0xpb/polaris-ux-nuggets')
-      +link-row('Artigo', 'Foundations of atomic research, do Tomer Sharon', 'https://medium.com/@tsharon/foundations-of-atomic-research-a937d5da5fbb')
-      +link-row('Artigo', 'Democratizing UX, do Tomer Sharon', 'https://medium.com/@tsharon/democratizing-ux-670b95fbc07f')
-      +link-row('Livro', 'Validating Product Ideas: Through Lean User Research', 'https://amzn.to/2mEMCGR')
-      +link-row('Perfil', 'Renata Tonezi - Perfil LinkedIn', 'https://www.linkedin.com/in/renata-tonezi-158b7515/')
-      +link-row('Podcast', 'Podcast Aurelius', 'https://open.spotify.com/show/0Je5C69lOGqRdk9cxL2vtj')
+  
+  +episode-links({
+    1: {
+      type: 'Vídeo',
+      title: 'Atomic Research - Talk na ESOMAR Latin America 2019',
+      url: 'https://www.youtube.com/watch?v=z9e4OgWKHqE'
+    },
+    2: {
+      type: 'Vídeo',
+      title: 'Vídeo completo da Mesa Redonda sobre UX Research',
+      url: 'https://www.youtube.com/watch?v=jPp0uPZCP2o'
+    },
+    3: {
+      type: 'Site',
+      title: 'Aurelius - Repositório de aprendizados de pesquisa',
+      url: 'https://www.aureliuslab.com/'
+    },
+    4: {
+      type: 'Site',
+      title: 'Airtable - Repositório de aprendizados de pesquisa (Tomer Sharon)',
+      url: 'https://airtable.com/universe/expShuhNMi0Oc0xpb/polaris-ux-nuggets'
+    },
+    5: {
+      type: 'Artigo',
+      title: 'Foundations of atomic research, do Tomer Sharon',
+      url: 'https://medium.com/@tsharon/foundations-of-atomic-research-a937d5da5fbb'
+    },
+    6: {
+      type: 'Artigo',
+      title: 'Democratizing UX, do Tomer Sharon',
+      url: 'https://medium.com/@tsharon/democratizing-ux-670b95fbc07f'
+    },
+    7: {
+      type: 'Livro',
+      title: 'Validating Product Ideas: Through Lean User Research',
+      url: 'https://amzn.to/2mEMCGR'
+    },
+    8: {
+      type: 'Perfil',
+      title: 'Renata Tonezi - Perfil LinkedIn',
+      url: 'https://www.linkedin.com/in/renata-tonezi-158b7515/'
+    },
+    9: {
+      type: 'Podcast',
+      title: 'Podcast Aurelius',
+      url: 'https://open.spotify.com/show/0Je5C69lOGqRdk9cxL2vtj'
+    }
+  })
 
   p #[strong Patrocinador]
   p O MUX tem o patrocínio da Hotmart, pioneira e líder na América Latina na venda de produtos digitais e atua nas áreas de educação à distância, marketing digital e fintech, em Belo Horizonte. Está em amplo crescimento internacional e o desafio de desenvolver produtos globais. 
@@ -52,9 +75,9 @@ include /components/supporter-link
 
   p Informações que achamos que você vai gostar de saber:
   ul.links
-    li — Estamos no #[+link-text('Spotify', 'https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73')]!
+    li — Estamos no #[+link('Spotify', 'https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73')]!
     li — A transcrição dos podcasts estão na página de cada um dos episódios.
-    li — As músicas que ouviram neste episódio são do produtor Richard Garrel com seu projeto #[+link-text('Aeoner', 'https://aeoner.bandcamp.com')].
+    li — As músicas que ouviram neste episódio são do produtor Richard Garrel com seu projeto #[+link('Aeoner', 'https://aeoner.bandcamp.com')].
   
   p E a segunda parte da conversa? Daqui 2 semanas a gente compartilha mais um episódio com a outra parte desta conversa.
   p Até já!

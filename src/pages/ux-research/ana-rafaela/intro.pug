@@ -1,6 +1,6 @@
-include /components/link-text
-include /components/link-row
+include /components/link
 include /components/image
+include /components/episode-links
 include /components/supporter-link
 
 .tab.on#intro
@@ -17,13 +17,28 @@ include /components/supporter-link
     .img #[+image('23-foto-02.jpg','Um dos muitos happy hours na GoPro São Francisco/CA.')]
     .img #[+image('23-foto-03.jpg','Indo fazer home visits na Índia.')]
 
-  .episode-links
-    p #[strong Links comentados nesse episódio]
-    ul
-      +link-row('Livro', 'It’s Our research, do Tomer Sharon', 'https://amzn.to/2XMPi20')
-      +link-row('Podcast', 'Design Matters', 'https://www.designmattersmedia.com/designmatters')
-      +link-row('Mestrado', 'Programa de Mestrado em "Interação Humano-Computador"', 'https://hcii.cmu.edu/academics/mhci')
-      +link-row('Artigo', 'Rapid UX Research at Google', 'https://medium.com/mixed-methods/rapid-ux-research-at-google-3b92dd038e30')
+  +episode-links({
+    1: {
+      type: 'Livro',
+      title: 'It’s Our research, do Tomer Sharon',
+      url: 'https://amzn.to/2XMPi20'
+    },
+    2: {
+      type: 'Podcast',
+      title: 'Design Matters',
+      url: 'https://www.designmattersmedia.com/designmatters'
+    },
+    3: {
+      type: 'Mestrado',
+      title: 'Programa de Mestrado em "Interação Humano-Computador"',
+      url: 'https://hcii.cmu.edu/academics/mhci'
+    },
+    4: {
+      type: 'Artigo',
+      title: 'Rapid UX Research at Google',
+      url: 'https://medium.com/mixed-methods/rapid-ux-research-at-google-3b92dd038e30'
+    }
+  })
 
   p #[strong Patrocinador]
   p O MUX tem o patrocínio da Hotmart, pioneira e líder na América Latina na venda de produtos digitais e atua nas áreas de educação à distância, marketing digital e fintech, em Belo Horizonte. Está em amplo crescimento internacional e o desafio de desenvolver produtos globais.
@@ -31,8 +46,8 @@ include /components/supporter-link
 
   hr
 
-  p E lembrando que estamos no #[+link-text('Spotify', 'https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73')] e que lançamos a transcrição dos episódios desta segunda temporada! Estão na página de cada um dos episódios.
+  p E lembrando que estamos no #[+link('Spotify', 'https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73')] e que lançamos a transcrição dos episódios desta segunda temporada! Estão na página de cada um dos episódios.
 
-  p As músicas deste episódio são do produtor Richard Garrel com seu projeto Aeoner e você pode conhecer mais #[+link-text('aqui', 'https://aeoner.bandcamp.com')].
+  p As músicas deste episódio são do produtor Richard Garrel com seu projeto Aeoner e você pode conhecer mais #[+link('aqui', 'https://aeoner.bandcamp.com')].
   p Até a próxima conversa! 
 
