@@ -15,32 +15,42 @@ include /components/supporter-link
     .img #[+image('25-foto-02.jpg','Condução de dinâmicas com clientes e time.')]
   +image('25-foto-03.jpg','Treinamento de Lego Serious Play na Dinamarca.')
 
-  p Os links sobre os quais falamos são:
-  ul.links
-    li Texto — #[+link-text('"As 3 linguagens do pesquisador", do Caio Casseb', 'https://medium.com/@caiocasseb/as-3-linguagens-do-pesquisador-e6eb4cd364d')]
-    li Livro — #[+link-text('"Rocket Surgery Made Easy", do Steve Krug', 'https://amzn.to/329zlpm')]
-    li Texto — #[+link-text('"The 9 Rules of Design Research", da Erika Hall', 'https://medium.com/mule-design/the-9-rules-of-design-research-1a273fdd1d3b')]
-    li Vídeo — #[+link-text('"Powers of Ten", do Eames', 'https://www.youtube.com/watch?v=0fKBhvDjuy0')]
-    li Vídeo — #[+link-text('Microsoft Office 2007: The Story of the Ribbon', 'https://youtu.be/Tl9kD693ie4')]
-    li Documentário — #[+link-text('Privacidade Hackeada', 'https://www.netflix.com/title/80117542')]
-    li Tweet — #[+link-text('Jobs To Be Done, do Jared Spool', 'https://twitter.com/jmspool/status/1085982138128912384')]
-    li Tweet — #[+link-text('Pesquisa com 5-8 usuários, do Jared Spool', 'https://twitter.com/jmspool/status/1150947701695156224')]
-    li Artigo — #[+link-text('Plataforma de Inteligência Artificial, do Grupo Publicis', 'https://www.meioemensagem.com.br/home/comunicacao/2018/05/24/publicis-groupe-apresenta-marcel.html')]
-    li Download — #[+link-text('Todos os 25 episódios do Movimento UX', 'https://soundcloud.com/movimento-ux')]
-    
-  ul.episode-links
-    +link-row('Documentário', 'Todos os 25 episódios do Movimento UX', 'https://soundcloud.com/movimento-ux')
+  //- p Os links sobre os quais falamos são:
+  //- ul.links
+    //- li Texto — #[+link-text('"As 3 linguagens do pesquisador", do Caio Casseb', 'https://medium.com/@caiocasseb/as-3-linguagens-do-pesquisador-e6eb4cd364d')]
+    //- li Livro — #[+link-text('"Rocket Surgery Made Easy", do Steve Krug', 'https://amzn.to/329zlpm')]
+    //- li Texto — #[+link-text('"The 9 Rules of Design Research", da Erika Hall', 'https://medium.com/mule-design/the-9-rules-of-design-research-1a273fdd1d3b')]
+    //- li Vídeo — #[+link-text('"Powers of Ten", do Eames', 'https://www.youtube.com/watch?v=0fKBhvDjuy0')]
+    //- li Vídeo — #[+link-text('Microsoft Office 2007: The Story of the Ribbon', 'https://youtu.be/Tl9kD693ie4')]
+    //- li Documentário — #[+link-text('Privacidade Hackeada', 'https://www.netflix.com/title/80117542')]
+    //- li Tweet — #[+link-text('Jobs To Be Done, do Jared Spool', 'https://twitter.com/jmspool/status/1085982138128912384')]
+    //- li Tweet — #[+link-text('Pesquisa com 5-8 usuários, do Jared Spool', 'https://twitter.com/jmspool/status/1150947701695156224')]
+    //- li Artigo — #[+link-text('Plataforma de Inteligência Artificial, do Grupo Publicis', 'https://www.meioemensagem.com.br/home/comunicacao/2018/05/24/publicis-groupe-apresenta-marcel.html')]
+    //- li Download — #[+link-text('Todos os 25 episódios do Movimento UX', 'https://soundcloud.com/movimento-ux')]
 
-  svg(src='/assets/img/media/pesquisa-uxr-logo.svg' alt='Movimento UX & Panorama UX').pesquisa-logo.-invert
-  p #[strong Parceria Movimento UX & Panorama UX:] vamos investigar a fundo o mercado de UX Research entre os brasileiros com uma pesquisa online.
-  p Estamos unindo forças com a pesquisa Panorama UX que há 5 anos investiga o mercado. Dessa parceria vai nascer uma análise especialmente sobre os profissionais e o mercado de UX Research. &lt;3
-  p Para participar e receber o formulário do Panorama UX no dia que lançar, inclua seu nome e e-mail no link abaixo. Ao participar, você também receberá os resultados fresquinhos no e-mail. Prometo que esse cadastro vai ser usado exclusivamente para o envio da pesquisa Panorama UX.
-  p #[+link-text('Pesquisa: Mercado UXR', 'https://movimentoux.com/pesquisa-uxr/')]
+  .episode-links
+    p #[strong Links comentados]
+    ul
+      +link-row('Artigo', 'As 3 linguagens do pesquisador, do Caio Casseb', 'https://medium.com/@caiocasseb/as-3-linguagens-do-pesquisador-e6eb4cd364d')
+      +link-row('Livro', 'Rocket Surgery Made Easy, do Steve Krug', 'https://amzn.to/329zlpm')
+      +link-row('Artigo', 'The 9 Rules of Design Research, da Erika Hall', 'https://medium.com/mule-design/the-9-rules-of-design-research-1a273fdd1d3b')
+      +link-row('Vídeo', 'Powers of Ten, do Eames', 'https://www.youtube.com/watch?v=0fKBhvDjuy0')
+      +link-row('Vídeo', 'Microsoft Office 2007: The Story of the Ribbon', 'https://youtu.be/Tl9kD693ie4')
+      +link-row('Documentário', 'Privacidade Hackeada', 'https://www.netflix.com/title/80117542')
+      +link-row('Tweet', 'Jobs To Be Done, do Jared Spool', 'https://twitter.com/jmspool/status/1085982138128912384')
+      +link-row('Tweet', 'Pesquisa com 5-8 usuários, do Jared Spool', 'https://twitter.com/jmspool/status/1150947701695156224')
+      +link-row('Artigo', 'Plataforma de Inteligência Artificial, do Grupo Publicis', 'https://www.meioemensagem.com.br/home/comunicacao/2018/05/24/publicis-groupe-apresenta-marcel.html')
 
-  p #[strong Patrocinador:] Hotmart, pioneira e líder na América Latina na venda de produtos digitais e atua nas áreas de educação à distância, marketing digital e fintech, em Belo Horizonte. Está em amplo crescimento internacional e o desafio de desenvolver produtos globais.
-  p A boa notícia é que tem várias vagas para os times de design e desenvolvimento. Se você é designer de produto ou desenvolvedor com habilidades em UX, pesquisa e interface pode se #[+supporter-link('cadastrar no banco de talentos da empresa', 'http://bit.ly/vagasdahotmart', 'Hotmart', 'Content')].
+  p #[strong Parceria Movimento UX & Panorama UX]
+  p Vamos investigar a fundo o mercado de UX Research entre os brasileiros com uma pesquisa online.
+  p Estamos unindo forças com a pesquisa Panorama UX que há 5 anos investiga o mercado. Dessa parceria vai nascer uma análise especialmente sobre os profissionais e o mercado de UX Research.
+  p Para participar e receber o formulário do Panorama UX no dia que lançar, inclua seu nome e e-mail #[+link-text('nesse link', 'https://movimentoux.com/pesquisa-uxr/')]. Ao participar, você também receberá os resultados fresquinhos no e-mail. Prometo que esse cadastro vai ser usado exclusivamente para o envio da pesquisa Panorama UX.
 
-  p #[strong Trilhas:] são do Garrel com seu projeto #[+link-text('Aeoner', 'https://aeoner.bandcamp.com')].
-  
+  p #[strong Patrocinador]
+  p Hotmart, pioneira e líder na América Latina na venda de produtos digitais e atua nas áreas de educação à distância, marketing digital e fintech, em Belo Horizonte. Está em amplo crescimento internacional e o desafio de desenvolver produtos globais.
+  p A boa notícia é que tem várias vagas para os times de design e desenvolvimento. Se você é designer de produto ou desenvolvedor com habilidades em UX, pesquisa e interface pode se cadastrar no #[+supporter-link('banco de talentos', 'http://bit.ly/vagasdahotmart', 'Hotmart', 'Content')] da empresa.
+
+  p As trilhas são do Garrel com seu projeto #[+link-text('Aeoner', 'https://aeoner.bandcamp.com')].
+
   p O podcast entra de férias a partir de agora e volta com muitas novidades em 2020.
   p Até lá!

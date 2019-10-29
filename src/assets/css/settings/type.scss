@@ -28,12 +28,16 @@ p {
   font-size: $font-size-text;
 }
 
+strong {
+  font-weight: 500;
+}
+
 blockquote {
   font-size: $font-size-quote;
   line-height: $line-height-quote;
   font-weight: 300;
   margin: $spacing-12 0;
-  max-width: $spacing * 110;
+  max-width: $max-width-quote;
 
   @media (max-width: $sm) {
     font-size: $font-size-text;
@@ -65,7 +69,7 @@ blockquote {
 @mixin paragraph {
   p {
     width: 100%;
-    max-width: $spacing * 80;
+    max-width: $max-width-paragraph;
     margin-bottom: $spacing-4;
 
     @media (max-width: $sm) {

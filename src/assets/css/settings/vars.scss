@@ -28,8 +28,10 @@ $spacing-8: $spacing * 8;
 $spacing-10: $spacing * 10;
 $spacing-12: $spacing * 12;
 
-// sidebar
-$sidebar-max-width: $spacing * 30;
+// max-width
+$max-width-sidebar: $spacing * 30;
+$max-width-quote: $spacing * 110;
+$max-width-paragraph: $spacing * 80;
 
 //media queries
 $xs: 576px;

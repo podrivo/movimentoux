@@ -1,45 +1,83 @@
 .episode-links {
+  max-width: $max-width-quote;
+  // padding-top: $spacing-12;
+  margin: $spacing-12 0;
+  // border-top: $spacing solid $grayish;
+  // border-bottom: $spacing solid $grayish;
+  // border-bottom: 3px solid $gray;
 
   @media (max-width: $sm) {
     // sdasd
   }
 
-  > .item {
-    border-top: 1px solid $black;
-    border-bottom: 1px solid $black;
+  ul {
+    border-top: $spacing solid $grayish;
+    border-bottom: $spacing solid $grayish;
+    margin-top: $spacing-2;
+  }
+
+  .item {
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    margin-top: -1px;
+
+    &:first-child {
+      border-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 
   .link {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    // flex-direction: row-reverse;
     padding: $spacing-1 0;
     // transition: color $timing $easing;
 
     &.-alt::before {
-      bottom: 0;
-      height: 8%;
-      z-index: -1;
+      bottom: -1px;
+      height: 4px;
+      // z-index: 99;
+      // transition: transform $timing $easing;
+      // transition-duration: $timing;
+      // transition-timing-function: ease;
+      opacity: 1;
     }
 
     &::after {
       display: none;
     }
 
-    // &:hover {
-      // color: $white;
-    // }
+    &:hover .eyebrow {
+      color: $black;
+    }
   }
 
   p {
+    // max-width: auto;
+    // width: auto;
+    max-width: 100%;
+    // width: 100%;
+    position: relative;
+    bottom: 1px;
     margin-bottom: 0;
+    // margin-left: $spacing-2;
     margin-right: $spacing-2;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    // text-align: right;
   }
 
   .eyebrow {
+    color: $grayer;
+    transition: color $timing $easing;
+    // font-weight: 700;
     // margin: 0 $spacing-2 0 0;
-    // min-width: 6rem;
+    // min-width: $spacing-12;
   }
 }

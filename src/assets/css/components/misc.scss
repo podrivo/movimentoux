@@ -12,15 +12,6 @@
 }
 
 .pesquisa-logo {
-  max-width: 430px;
+  max-width: 370px;
   margin-bottom: $spacing-8;
-
-  &.-invert {
-    margin-top: $spacing-8;
-    margin-bottom: $spacing-4;
-
-    path {
-      fill: $black;
-    }
-  }
 }

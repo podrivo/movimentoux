@@ -1,7 +1,7 @@
 .episode-text {
   @include paragraph;
 
-  width: calc(100% - #{$sidebar-max-width});
+  width: calc(100% - #{$max-width-sidebar});
   padding-right: $spacing-8;
 
   @media (max-width: $sm) {
