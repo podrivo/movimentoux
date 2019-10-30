@@ -132,7 +132,6 @@
     width: 100%;
     margin: 0 $spacing-1;
     height: 8px;
-    border-radius: 8px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -151,12 +150,11 @@
       top: 0;
       width: 0;
       height: 100%;
-      border-radius: 8px;
     }
 
     > .mouse {
       background-color: rgba($white, 0.15);
-      transition: all $timing / 2 $easing;
+      transition: all $timing $easing;
     }
 
     > .mouse.teste {
@@ -166,7 +164,7 @@
 
     > .percentage {
       background-color: $white;
-      transition: all $timing $easing;
+      transition: all $timing*2 $easing;
     }
   }
 

@@ -30,12 +30,17 @@ if (episode) {
     soundcloud.play()
     soundcloud.pause()
     downloadLink.href = track.download_url + '?client_id=' + KEY
+
+    var timelinePercentage = (audio.currentTime * 100 / soundcloud.duration).toFixed(2)
+    percentage.style.width = timelinePercentage + '%'
   })
 
   soundcloud.on('timeupdate', function () {
     var timelinePercentage = (audio.currentTime * 100 / audio.duration).toFixed(2)
     percentage.style.width = timelinePercentage + '%'
+
     timeCurrent.innerHTML = formatTime(audio.currentTime)
+    localStorage.setItem(player.getAttribute('data-soundcloud'), audio.currentTime)
 
     timeline.addEventListener('click', function (e) {
       var percent = e.offsetX / this.offsetWidth
@@ -43,6 +48,12 @@ if (episode) {
     })
   })
 
+  var storageTime = localStorage.getItem(player.getAttribute('data-soundcloud'))
+  if (storageTime) {
+    audio.currentTime = storageTime
+  } else {
+    localStorage.setItem(player.getAttribute('data-soundcloud'), audio.currentTime)
+  }
 
   var playButton = document.querySelector('.episode-player > .play')
   playButton.addEventListener('click', function () {
@@ -60,7 +71,6 @@ if (episode) {
     percentageMouse.style.width = hoverPercentage + '%'
     percentageMouse.style.opacity = '1'
   })
-
 
   timeline.addEventListener('mouseleave', function (event) {
     setTimeout(function () {
