@@ -8,13 +8,13 @@
 - [x] Incluir link de download vindo do SoundCloud
 - [x] Diminuir tamanho do header e ajustar interação
 - [x] Codar interação da listagem de episódios
-- [ ] Xablauzar a interação da listagem de episódios
-- [ ] Codar visão de episódios em grid
+- [x] Xablauzar a interação da listagem de episódios
 - [x] Adicionar textinho página Sobre
 - [x] Melhorar listagem de links nos episódios
-- [ ] Adicionar botão de play na página do episódios
 - [ ] Testar transição de páginas
 - [ ] Testar animação Home
-- [ ] Testar salvar tempo do podcast no cookies/localStorage
+- [x] Testar salvar tempo do podcast no cookies/localStorage
 - [x] Arrumar bug do hover na imagem do episódio
 - [x] Remover flickity external CSS 
+- [ ] Adicionar botão de play na página do episódios
+- [ ] Codar visão de episódios em grid
