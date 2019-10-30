@@ -10,11 +10,13 @@
   perspective: 1000;
 
   @media (max-width: $sm) {
-    position: relative;
+    width: calc(100% + #{$spacing-8});
     height: auto;
+    position: relative;
     display: block;
     justify-content: flex-start;
     margin-bottom: $spacing-4;
+    margin-left: -$spacing-4;
 
     img {
       width: 100%;
@@ -53,14 +55,13 @@
 
     svg {
       position: absolute;
-      right: $spacing-2;
-      bottom: $spacing-2;
+      right: $spacing-border;
+      bottom: $spacing-border;
       width: 90px;
       height: 90px;
 
       @media (max-width: $sm) {
-        left: $spacing-1;
-        bottom: $spacing-1;
+        left: $spacing-border;
       }
     }
   }

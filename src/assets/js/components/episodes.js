@@ -12,7 +12,7 @@ if ('IntersectionObserver' in window && season && mqSmall) {
       }
     })
   }, {
-    threshold: [0.3, 0.7]
+    threshold: [0.25, 0.75]
   })
 
   var sectionsArr = Array.from(document.querySelectorAll('.intro-section'))

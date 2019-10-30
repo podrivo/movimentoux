@@ -1,16 +1,37 @@
 .intro-section.-snap {
-  .text {
-    opacity: 0;
-  }
-
+  // .text .header,
+  .text .description,
+  .text .keywords,
   .number {
     opacity: 0;
+    transition: opacity $easing $timing;
+
+    @media (max-width: $sm) {
+      opacity: 1;
+    }
+  }
+
+  .text .header {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform $easing $timing, opacity $easing $timing;
+
+    @media (max-width: $sm) {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &.-active {
-    .text,
+    .text .header,
+    .text .description,
+    .text .keywords,
     .number {
       opacity: 1;
+    }
+
+    .text .header {
+      transform: translateY(0);
     }
   }
 }

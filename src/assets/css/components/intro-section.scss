@@ -48,7 +48,7 @@
   @media (max-width: $sm) {
     display: block;
     height: auto;
-    padding: $spacing-2 $spacing-4 $spacing-4;
+    padding: 0 $spacing-4 $spacing-4;
   }
 
   .text {
@@ -57,12 +57,10 @@
     bottom: $spacing-body-x;
     z-index: 99;
     pointer-events: none;
-    transition: opacity $easing $timing;
 
     @media (max-width: $sm) {
       position: relative;
       bottom: 0;
-      opacity: 1;
     }
   }
 
@@ -97,7 +95,6 @@
     align-self: flex-end;
     color: $black;
     text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
-    transition: opacity $easing $timing;
     z-index: 99;
     pointer-events: none;
 
@@ -126,7 +123,6 @@
   .text {
     pointer-events: all;
     position: relative;
-    opacity: 1;
     bottom: 0;
   }
 
@@ -137,7 +133,6 @@
   .number {
     position: absolute;
     bottom: auto;
-    opacity: 1;
   }
 
   .cover {
