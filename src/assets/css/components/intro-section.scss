@@ -55,7 +55,6 @@
     width: 100%;
     position: fixed;
     bottom: $spacing-body-x;
-    // opacity: 0;
     z-index: 99;
     pointer-events: none;
     transition: opacity $easing $timing;
@@ -100,7 +99,6 @@
     text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
     transition: opacity $easing $timing;
     z-index: 99;
-    // opacity: 0;
     pointer-events: none;
 
     @media (max-width: $sm) {
@@ -114,13 +112,6 @@
   //   left: 0;
   //   margin: 0;
   // }
-
-  &.-active {
-    .text,
-    .number {
-      opacity: 1;
-    }
-  }
 }
 
 
