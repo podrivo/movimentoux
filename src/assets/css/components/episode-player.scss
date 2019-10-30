@@ -1,6 +1,6 @@
 .episode-player {
   position: fixed;
-  bottom: $spacing-border;
+  bottom: 0;
   width: calc(100% - #{$spacing-border}*2);
   padding: $spacing-2 $spacing-body-x;
   background-color: $black;

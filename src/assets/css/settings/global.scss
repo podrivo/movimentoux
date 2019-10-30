@@ -11,7 +11,7 @@ body {
   color: $white;
   overflow-y: scroll;
   overflow-x: hidden;
-  padding: $spacing-border;
+  padding: 0 $spacing-border;
 
   &[data-page='season'] {
     scroll-snap-type: y proximity;
@@ -29,12 +29,14 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    border: $spacing-border solid $white;
+    border-right: $spacing-border solid $white;
+    border-left: $spacing-border solid $white;
     pointer-events: none;
     z-index: 999;
+    display: none;
 
     @media (max-width: $sm) {
-      display: none;
+      // display: block;
     }
   }
 }
@@ -56,8 +58,8 @@ img, video {
   display: block;
 
   @media (max-width: $sm) {
-    width: calc(100% + (#{$spacing-4} * 2));
-    margin-left: -$spacing-4;
+    width: calc(100% + (#{$spacing-4} * 2) + (#{$spacing-border} * 2));
+    margin-left: calc(-#{$spacing-4} - #{$spacing-border});
   }
 }
 

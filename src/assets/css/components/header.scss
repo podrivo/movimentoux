@@ -121,7 +121,7 @@ header {
   }
 
   &--not-top {
-    top: calc(#{$spacing-border} - #{$spacing-3});
+    top: -$spacing-3;
   }
 
   &--unpinned {

@@ -1,6 +1,6 @@
 .episode-supporter {
   position: sticky;
-  top: calc(#{$spacing-border} + #{$spacing-2});
+  top: $spacing-4;
   margin-top: $spacing-4;
 
   &:first-child {
