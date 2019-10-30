@@ -10,8 +10,8 @@ header {
   background: $black;
   position: fixed;
   top: $spacing-border;
-  left: 0;
-  width: 100%;
+  left: $spacing-border;
+  width: calc(100% - #{$spacing-border}*2);
   padding: $spacing-6 $spacing-body-x $spacing-3;
   transition: margin $timing $easing;
   z-index: 999;

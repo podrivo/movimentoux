@@ -7,10 +7,11 @@
 *::selection {@include selection}
 
 body {
-  background-color: $black;
+  background-color: $white;
   color: $white;
   overflow-y: scroll;
   overflow-x: hidden;
+  padding: $spacing-border;
 
   &[data-page='season'] {
     scroll-snap-type: y proximity;

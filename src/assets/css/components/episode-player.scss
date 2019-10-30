@@ -1,11 +1,11 @@
 .episode-player {
   position: fixed;
   bottom: $spacing-border;
-  width: 100%;
+  width: calc(100% - #{$spacing-border}*2);
   padding: $spacing-2 $spacing-body-x;
   background-color: $black;
   color: $white;
-  z-index: 99;
+  z-index: 9999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,7 +156,7 @@
 
     > .mouse {
       background-color: rgba($white, 0.15);
-      transition: all $timing $easing;
+      transition: all $timing/2 $easing;
     }
 
     > .mouse.teste {

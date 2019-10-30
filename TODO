@@ -4,14 +4,14 @@
 - [x] Ajustar tabs mobile
 - [ ] Ajustar borda branca mobile
 - [ ] Acertar espaçamentos/paddings vw/rem + borda branca
-- [ ] Ajustar nomes na transcrição
+- [x] Ajustar nomes na transcrição
 - [x] Incluir link de download vindo do SoundCloud
 - [x] Diminuir tamanho do header e ajustar interação
 - [x] Codar interação da listagem de episódios
 - [ ] Xablauzar a interação da listagem de episódios
 - [ ] Codar visão de episódios em grid
 - [x] Adicionar textinho página Sobre
-- [ ] Melhorar listagem de links nos episódios
+- [x] Melhorar listagem de links nos episódios
 - [ ] Adicionar botão de play na página do episódios
 - [ ] Testar transição de páginas
 - [ ] Testar animação Home

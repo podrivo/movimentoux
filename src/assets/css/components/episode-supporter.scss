@@ -15,6 +15,7 @@
   }
 
   .supporter {
+    // position: absolute;
     display: block;
     color: $black;
     transition: color $timing $easing, transform 920ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -36,12 +37,14 @@
     &::before {
       content: '';
       position: absolute;
-      top: -$spacing-2;
-      left: -$spacing-3;
-      width: calc(100% + #{$spacing-6});
-      height: calc(100% + #{$spacing-4});
+      top: -13px;
+      left: -20px;
+      width: 100%;
+      height: 100%;
+      width: calc(100% + #{$spacing-border}*2);
+      height: calc(100% + #{$spacing-border}*2);
       background-color: $black;
-      transform: scale(0.95) translateY($spacing);
+      transform: scale(0.96) translateY(0);
       opacity: 0;
       transition: transform $timing $easing, opacity $timing $easing;
     }

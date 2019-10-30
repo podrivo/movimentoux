@@ -1,4 +1,5 @@
 .intro-section {
+  background-color: $black;
   position: relative;
   width: 100%;
   display: flex;
@@ -25,7 +26,7 @@
   @include paragraph;
 
   height: auto;
-  margin-top: 30vh;
+  padding-top: calc(#{$spacing-body-y} + 30vh);
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
@@ -63,7 +64,7 @@
   }
 
   .header {
-    max-width: 38%;
+    max-width: 42%;
     margin: $spacing-1 0;
     z-index: 99;
     transition: font-size $easing $timing;
