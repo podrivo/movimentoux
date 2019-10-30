@@ -12,14 +12,14 @@ include /components/meta-js
 
 body(data-page='season')
 
-  +header('on', '', '', '')
+  +header('on')
 
   section.intro-section.-snap
     span.eyebrow Primeira Temporada
     h1.header UX <br> Design
     p Fev, 2016 — Conversas sobre o universo de design de experiência de uso.
+    +social-links('-home')
 
-  +social-links('-home')
 
   //- ul.list-grid
   //-   li.list.-on #[svg(src='assets/img/ui/ep-list.svg')]

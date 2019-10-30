@@ -2,8 +2,8 @@
 
 - [x] Ajustar tabs desktop
 - [x] Ajustar tabs mobile
-- [ ] Ajustar borda branca mobile
-- [ ] Acertar espaçamentos/paddings vw/rem + borda branca
+- [x] Ajustar borda branca mobile
+- [x] Acertar espaçamentos/paddings vw/rem + borda branca
 - [x] Ajustar nomes na transcrição
 - [x] Incluir link de download vindo do SoundCloud
 - [x] Diminuir tamanho do header e ajustar interação

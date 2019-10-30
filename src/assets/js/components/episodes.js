@@ -16,7 +16,8 @@ if ('IntersectionObserver' in window && season && mqSmall) {
   })
 
   var sectionsArr = Array.from(document.querySelectorAll('.intro-section'))
-  sectionsArr.forEach(function (img) {
-    observer.observe(img)
+
+  sectionsArr.forEach(function (section) {
+    observer.observe(section)
   })
 }

@@ -1,0 +1,15 @@
+.intro-section.-snap {
+  .text {
+    opacity: 0;
+  }
+  .number {
+    opacity: 0;
+  }
+
+  &.-active {
+    .text,
+    .number {
+      opacity: 1;
+    }
+  }
+}

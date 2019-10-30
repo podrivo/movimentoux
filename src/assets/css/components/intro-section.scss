@@ -5,7 +5,7 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  padding: $spacing-body-y $spacing-body-x $spacing-body-x;
+  padding: $spacing-body-y $spacing-body-x;
 
   @media (max-width: $sm) {
     justify-content: center;
@@ -17,14 +17,17 @@
   }
 }
 
+
+// SNAP
 .intro-section.-snap {
   height: 100vh;
   scroll-snap-align: start;
 }
 
+
+// SCROLL
 .intro-section.-scroll {
   @include paragraph;
-
   height: auto;
   padding-top: calc(#{$spacing-body-y} + 30vh);
   flex-direction: row;
@@ -37,6 +40,7 @@
 }
 
 
+// EPISODE
 .intro-section.-episode {
   height: 100vh;
   // flex-shrink: 0;
@@ -51,7 +55,7 @@
     width: 100%;
     position: fixed;
     bottom: $spacing-body-x;
-    opacity: 0;
+    // opacity: 0;
     z-index: 99;
     pointer-events: none;
     transition: opacity $easing $timing;
@@ -95,7 +99,9 @@
     color: $black;
     text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
     transition: opacity $easing $timing;
-    opacity: 0;
+    z-index: 99;
+    // opacity: 0;
+    pointer-events: none;
 
     @media (max-width: $sm) {
       display: none;
@@ -117,6 +123,8 @@
   }
 }
 
+
+// INSIDE
 .intro-section.-inside {
   justify-content: center;
 
