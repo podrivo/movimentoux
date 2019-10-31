@@ -8,4 +8,25 @@
 
 @import 'plugins/flickity';
 
-@import 'components/*';
+@import 'components/header';
+@import 'components/intro-section';
+@import 'components/intro-animation';
+@import 'components/social-links';
+
+@import 'components/episode-cover';
+@import 'components/episode-player';
+@import 'components/episode-content';
+@import 'components/episode-tabs';
+@import 'components/episode-text';
+@import 'components/episode-sidebar';
+@import 'components/episode-links';
+@import 'components/episode-carousel';
+@import 'components/episode-gallery';
+@import 'components/episode-supporter';
+
+@import 'components/about-team';
+@import 'components/about-person';
+@import 'components/about-social';
+@import 'components/about-footer';
+
+@import 'components/misc';

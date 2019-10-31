@@ -1,41 +1,57 @@
 include /components/link
 include /components/image
+include /components/episode-links
 include /components/supporter-link
 
 .tab.on#intro
-  .text
-    p Neste podcast a conversa foi com a Cristina Bilsland, User Experience Researcher Senior no Google Londres.
+  p Neste podcast a conversa foi com a Cristina Bilsland, User Experience Researcher Senior no Google Londres.
 
-    p Ela tem bastante experiência com pesquisa e design. Trabalhou com design de interação, design de serviços, pesquisa e estratégia em empresas e consultorias como a Head, VeryDay, Nokia e itaú. Em São Paulo, Londres e Estocolmo.
+  p Ela tem bastante experiência com pesquisa e design. Trabalhou com design de interação, design de serviços, pesquisa e estratégia em empresas e consultorias como a Head, VeryDay, Nokia e itaú. Em São Paulo, Londres e Estocolmo.
 
-    p Falamos sobre a dinâmica de trabalho dela no time UX de Android, o papel do pesquisador na design sprints, como trabalha com pesquisas globais e por aí vai.
+  p Falamos sobre a dinâmica de trabalho dela no time UX de Android, o papel do pesquisador na design sprints, como trabalha com pesquisas globais e por aí vai.
 
-    blockquote "Ver alguém num vilarejo na Índia - onde o sinal é bem ruim, onde eles não têm acesso à muita informação e nunca viram internet antes - usar um smartphone pela primeira vez, é muito interessante e é muito diferente do que seria ver uma pessoa em Londres que já teve celular antes."
+  blockquote "Ver alguém num vilarejo na Índia - onde o sinal é bem ruim, onde eles não têm acesso à muita informação e nunca viram internet antes - usar um smartphone pela primeira vez, é muito interessante e é muito diferente do que seria ver uma pessoa em Londres que já teve celular antes."
 
-    +image('22-foto-01.jpg','Condução de projetos de pesquisa global.')
+  +image('22-foto-01.jpg','Condução de projetos de pesquisa global.')
 
-    +image('22-foto-02.jpg','Download de informação dos aprendizados de campo.')
+  blockquote "Grande parte da vida de um pesquisador não é só fazer a pesquisa, mas é comunicar os resultados da maneira mais eficiente e abrangente possível..."
 
-    blockquote "Grande parte da vida de um pesquisador não é só fazer a pesquisa, mas é comunicar os resultados da maneira mais eficiente e abrangente possível..."
+  +image('22-foto-02.jpg','Download de informação dos aprendizados de campo.')
 
-    p As dicas que ela deixou são:
-    ul.links
-      li Livro — #[+link('"It’s Our research", Tomer Sharon', 'https://amzn.to/2XMPi20')]
-      li Livro — #[+link('"Interviewing Users", Steve Portigal', 'https://amzn.to/2DyFUr5')]
-      li Livro — #[+link('"Userpalooza", Nick Bowmast', 'https://www.amazon.com/USERPALOOZA-Researchers-because-customer-understand/dp/0473458764/')]
-      li Conferência — #[+link('"Epic Conference"', 'https://www.epicpeople.org/')]
+  +episode-links({
+    1: {
+      type: 'Livro',
+      title: 'It’s Our research, Tomer Sharon',
+      url: 'https://amzn.to/2XMPi20'
+    },
+    2: {
+      type: 'Livro',
+      title: 'Interviewing Users, Steve Portigal',
+      url: 'https://amzn.to/2DyFUr5'
+    },
+    3: {
+      type: 'Livro',
+      title: 'Userpalooza, Nick Bowmast',
+      url: 'https://www.amazon.com/USERPALOOZA-Researchers-because-customer-understand/dp/0473458764/'
+    },
+    4: {
+      type: 'Evento',
+      title: 'Epic Conference',
+      url: 'https://www.epicpeople.org/'
+    }
+  })
 
-    p E a gente também tem duas novidades pra vocês:
-    ul.links
-      li — Estamos no #[+link('Spotify', 'https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73')]!
-      li — Lançamos a transcrição dos episódios desta segunda temporada! Estão na página de cada um dos episódios. 
+  p #[strong Apoiador]
+  p Esse episódio teve o apoio do TESTR - plataforma completa de teste de usabilidade ágil. Além de apoiar nosso trabalho, o TESTR resolve um problema comum de todo mundo que faz pesquisa para produto: o tempo. Entrega todo o processo de teste com usuários de forma automatizada (recrutamento, execução, recompensa aos participantes e relatório com resultados, em uma média de 48 horas).
+  p Você pode ganhar 3 participantes extras na contratação de qualquer plano. Mais infos #[+supporter-link('aqui', 'http://bit.ly/testeremoto', 'TESTR', 'Content')].
 
-    p Esse episódio teve o apoio do TESTR - plataforma completa de teste de usabilidade ágil. Além de apoiar nosso trabalho, o TESTR resolve um problema comum de todo mundo que faz pesquisa para produto: o tempo. Entrega todo o processo de teste com usuários de forma automatizada (recrutamento, execução, recompensa aos participantes e relatório com resultados, em uma média de 48 horas). E você pode ganhar 3 participantes extras na contratação de qualquer plano. Mais infos #[+supporter-link('aqui', 'http://bit.ly/testeremoto', 'TESTR', 'Content')].
+  hr
 
-    p As músicas de abertura e encerramento são do Lowz (músico e produtor brasiliense Aloizio) e fazem parte do #[+link('Tomorrow People', 'https://tmwppl.bandcamp.com/')] - selo de música eletrônica experimental criado por ele.
+  p E a gente também tem duas novidades pra vocês: estamos no #[+link('Spotify', 'https://open.spotify.com/show/0jpGW9nTFzzzHCjm7Y3d73')] e lançamos a transcrição dos episódios desta segunda temporada! Estão na página de cada um dos episódios. 
+  p As músicas de abertura e encerramento são do Lowz (músico e produtor brasiliense Aloizio) e fazem parte do #[+link('Tomorrow People', 'https://tmwppl.bandcamp.com/')] - selo de música eletrônica experimental criado por ele.
 
-    .gallery
-      .img #[+image('22-foto-03.jpg','10 de maio, música de abertura.')]
-      .img #[+image('22-foto-04.jpg','eevening, música de encerramento.')]
-    
-    p Até a próxima conversa!
+  .episode-gallery
+    .img #[+image('22-foto-03.jpg','10 de maio, música de abertura.')]
+    .img #[+image('22-foto-04.jpg','eevening, música de encerramento.')]
+  
+  p Até a próxima conversa!

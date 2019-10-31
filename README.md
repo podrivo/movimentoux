@@ -42,7 +42,7 @@ Escrevendo CSS:
 + [Rubik Typeface](http://hubertfischer.com/work/type-rubik)
 
 ## Autores
-Feito com <3 em Belo Horizonte, São Paulo e Stockholm
+Feito com <3 em Belo Horizonte, Estocolmo e São Paulo.
 
 + [Cristiano Sarmento](http://cristiano.do/)
 + [Izabela de Fátima](http://twitter.com/izabeladefatima/)

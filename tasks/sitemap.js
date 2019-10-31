@@ -7,7 +7,7 @@ module.exports = function(config) {
     return gulp.src(config.sitemap.src)
       .pipe(plumber())
       .pipe(sitemap({
-        siteUrl: 'http://www.movimentoux.com'
+        siteUrl: 'https://www.movimentoux.com'
       }))
       .pipe(gulp.dest(config.sitemap.dest))
       .pipe(plumber.stop())

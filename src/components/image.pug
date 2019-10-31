@@ -1,10 +1,9 @@
 include /components/link
 
-mixin image(file, caption, title, link)
+mixin image(file, caption, title, link, variantClass)
   figure
-      img(src='/assets/img/media/' + file alt= caption)
+      img(src='/assets/img/media/' + file alt= caption class= variantClass)
+      if caption
+        figcaption= caption
       if link
-        figcaption= caption
         +link(title, link)
-      else
-        figcaption= caption

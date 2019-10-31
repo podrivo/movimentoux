@@ -1,11 +1,11 @@
-include /components/meta
+include /components/meta-head
 include /components/header
-include /components/episode
-include /components/player
+include /components/episode-section
+include /components/episode-player
 include /components/episode-tabs
-include /components/js
+include /components/meta-js
 
-+meta(
++meta-head(
   'Paola Sales, Head de User Studies no Descomplica. Episódio 19 — Movimento UX. Conversas sobre pesquisa para produto. UX Research.',
   'Pesquisa Humanizada, Empatia e Criação de Área — Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Segunda Temporada. Conversas sobre pesquisa para produto. UX Research.',
   'https://movimentoux.com/ux-research/paola-sales/'
@@ -13,9 +13,9 @@ include /components/js
 
 body(data-page='episode')
   
-  +header('', 'on', '')
+  +header('', 'on')
   
-  +episode(
+  +episode-section(
     'Paola Sales',
     'Head de User Studies no Descomplica.',
     'Pesquisa humanizada, empatia e criação de área.',
@@ -25,16 +25,15 @@ body(data-page='episode')
     '-inside'
   )
   
-  +player('paolasales')
+  +episode-player('paolasales')
   
   section.episode-content
     +episode-tabs
 
-    .wrapper
-      .content
-        include intro.pug
-        include transcricao.pug
+    .episode-text
+      include intro.pug
+      include transcricao.pug
 
-      include sidebar.pug
+    include sidebar.pug
 
-+js
++meta-js

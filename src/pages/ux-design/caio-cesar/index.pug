@@ -1,11 +1,11 @@
-include /components/meta
+include /components/meta-head
 include /components/header
-include /components/episode
-include /components/player
+include /components/episode-section
+include /components/episode-player
 include /components/episode-tabs
-include /components/js
+include /components/meta-js
 
-+meta(
++meta-head(
   'Caio César, Episódio 1 — Movimento UX',
   'Professor de Design de Interação na PUC-MG. Introdução ao tema UX, possibilidades de atuação e dicas pra começar.',
   'https://movimentoux.com/ux-design/caio-cesar/'
@@ -13,9 +13,9 @@ include /components/js
 
 body(data-page='episode')
   
-  +header('on', '', '')
+  +header('on')
   
-  +episode(
+  +episode-section(
     'Caio César',
     'Professor de Design de Interação na PUC-MG.',
     'Introdução ao tema UX, possibilidades de atuação e dicas pra começar.',
@@ -25,16 +25,15 @@ body(data-page='episode')
     '-inside'
   )
   
-  +player('movimento-ux-episodio-1-caio-cesar')
+  +episode-player('movimento-ux-episodio-1-caio-cesar')
   
   section.episode-content
     +episode-tabs
 
-    .wrapper
-      .content
-        include intro.pug
-        include transcricao.pug
+    .episode-text
+      include intro.pug
+      include transcricao.pug
 
-      include sidebar.pug
+    include sidebar.pug
 
-+js
++meta-js

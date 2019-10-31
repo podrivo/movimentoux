@@ -1,0 +1,73 @@
+.episode-links {
+  max-width: $max-width-quote;
+  margin: $spacing-12 0;
+
+  @media (max-width: $sm) {
+    margin: $spacing-6 0;
+  }
+
+  ul {
+    border-top: $spacing solid $grayish;
+    border-bottom: $spacing solid $grayish;
+    margin-top: $spacing-2;
+  }
+
+  .item {
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    margin-top: -1px;
+
+    &:first-child {
+      border-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $spacing-1 0;
+
+    &.-alt::before {
+      bottom: -1px;
+      height: 2px;
+      opacity: 1;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &:hover .eyebrow {
+      color: $black;
+    }
+
+    @media (max-width: $sm) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+
+      &.-alt {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+    margin-right: $spacing-2;
+    white-space: normal;
+
+    @media (max-width: $sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  .eyebrow {
+    color: $grayer;
+    transition: color $timing $easing;
+  }
+}

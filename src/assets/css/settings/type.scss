@@ -28,12 +28,16 @@ p {
   font-size: $font-size-text;
 }
 
+strong {
+  font-weight: 500;
+}
+
 blockquote {
   font-size: $font-size-quote;
   line-height: $line-height-quote;
   font-weight: 300;
   margin: $spacing-12 0;
-  max-width: $spacing * 110;
+  max-width: $max-width-quote;
 
   @media (max-width: $sm) {
     font-size: $font-size-text;
@@ -60,10 +64,26 @@ blockquote {
   text-transform: uppercase;
   font-size: $font-size-eyebrow;
   font-weight: 500;
+
+  &.-dark {
+    font-weight: 700;
+  }
 }
 
 @mixin paragraph {
-  width: 100%;
-  max-width: $spacing * 80;
-  margin-bottom: $spacing-4;
+  p {
+    width: 100%;
+    max-width: $max-width-paragraph;
+    margin-bottom: $spacing-4;
+
+    @media (max-width: $sm) {
+      width: 100%;
+      margin-bottom: $spacing-2;
+    }
+
+    &:last-child,
+    &:only-child {
+      margin-bottom: 0;
+    }
+  }
 }

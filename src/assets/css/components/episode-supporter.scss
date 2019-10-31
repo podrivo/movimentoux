@@ -1,6 +1,6 @@
 .episode-supporter {
   position: sticky;
-  top: calc(#{$spacing-border} + #{$spacing-2});
+  top: $spacing-4;
   margin-top: $spacing-4;
 
   &:first-child {
@@ -36,12 +36,12 @@
     &::before {
       content: '';
       position: absolute;
-      top: -$spacing-2;
-      left: -$spacing-3;
-      width: calc(100% + #{$spacing-6});
-      height: calc(100% + #{$spacing-4});
+      top: -13px;
+      left: -20px;
+      width: calc(100% + #{$spacing-border}*2);
+      height: calc(100% + #{$spacing-border}*2);
       background-color: $black;
-      transform: scale(0.95) translateY($spacing);
+      transform: scale(0.96) translateY(0);
       opacity: 0;
       transition: transform $timing $easing, opacity $timing $easing;
     }

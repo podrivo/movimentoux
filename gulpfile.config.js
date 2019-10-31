@@ -20,7 +20,8 @@ var config = {
     ],
     'src': [
       './src/assets/js/plugins/*.js',
-      './src/assets/js/global.js'
+      './src/assets/js/global.js',
+      './src/assets/js/components/*.js'
     ],
     'dest': './dist/assets/js'
   },
@@ -55,8 +56,12 @@ var config = {
     'src': './dist/**/*.html',
     'dest': './dist/'
   },
-  'netlify': {
-    'src': './_redirects',
+  'files': {
+    'src': [
+      './src/_redirects',
+      './src/robots.txt',
+      './src/humans.txt'
+    ],
     'dest': './dist'
   }
 }

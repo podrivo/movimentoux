@@ -1,0 +1,24 @@
+.episode-sidebar {
+  width: 100%;
+  max-width: $max-width-sidebar;
+
+  @media (max-width: $sm) {
+    max-width: 100%;
+    margin: $spacing-6 0;
+    padding-top: $spacing-6;
+    border-top: $spacing solid $grayish;
+  }
+
+  .info {
+    transition: margin-bottom 920ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    backface-visibility: hidden;
+  }
+
+  .eyebrow {
+    margin-top: $spacing-4;
+  }
+
+  .eyebrow:first-child {
+    margin-top: 0;
+  }
+}
