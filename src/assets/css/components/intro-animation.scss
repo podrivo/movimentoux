@@ -1,5 +1,16 @@
 .intro-section.-snap {
-  // .text .header,
+
+  .text .header {
+    opacity: 0;
+    transform: translateY($spacing-border);
+    transition: transform $easing $timing, opacity $easing $timing;
+
+    @media (max-width: $sm) {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .text .description,
   .text .keywords,
   .number {
@@ -8,17 +19,6 @@
 
     @media (max-width: $sm) {
       opacity: 1;
-    }
-  }
-
-  .text .header {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: transform $easing $timing, opacity $easing $timing;
-
-    @media (max-width: $sm) {
-      opacity: 1;
-      transform: translateY(0);
     }
   }
 
