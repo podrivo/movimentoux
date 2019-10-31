@@ -1,20 +1,21 @@
-include /components/meta
+include /components/meta-head
 include /components/header
-include /components/episode
-include /components/player
-include /components/js
+include /components/episode-section
+include /components/episode-player
+include /components/episode-tabs
+include /components/meta-js
 
-+meta(
++meta-head(
   'Carolina Leslie, Episódio 17 — Movimento UX',
   'Sócia fundadora da Saiba+. Consultoria, pesquisa com usuários, usabilidade.',
-  'http://movimentoux.com/ux-design/carolina-leslie/'
+  'https://movimentoux.com/ux-design/carolina-leslie/'
 )
 
 body(data-page='episode')
 
-  +header('on', '', '')
+  +header('on')
 
-  +episode(
+  +episode-section(
     'Carolina Leslie',
     'Sócia fundadora da Saiba+.',
     'Consultoria, pesquisa com usuários, usabilidade.',
@@ -24,10 +25,15 @@ body(data-page='episode')
     '-inside'
   )
 
-  +player('carolinaleslie')
+  +episode-player('carolinaleslie')
 
   section.episode-content
-    .tab.on#intro
-      include intro.pug
+    //- +episode-tabs
 
-+js
+    .episode-text
+      include intro.pug
+      //- include transcricao.pug
+
+    include sidebar.pug
+
++meta-js

@@ -1,20 +1,21 @@
-include /components/meta
+include /components/meta-head
 include /components/header
-include /components/episode
-include /components/player
-include /components/js
+include /components/episode-section
+include /components/episode-player
+include /components/episode-tabs
+include /components/meta-js
 
-+meta(
++meta-head(
   'Érico Fileno, Episódio 10 — Movimento UX',
   'Head de Inovação na Visa. Design estratégico, inovação em serviços e experiência do usuário.',
-  'http://movimentoux.com/ux-design/erico-fileno/'
+  'https://movimentoux.com/ux-design/erico-fileno/'
 )
 
 body(data-page='episode')
 
-  +header('on', '', '')
+  +header('on')
 
-  +episode(
+  +episode-section(
     'Érico Fileno',
     'Head de Inovação na Visa.',
     'Design estratégico, inovação em serviços e experiência do usuário.',
@@ -24,10 +25,15 @@ body(data-page='episode')
     '-inside'
   )
 
-  +player('ericofileno')
+  +episode-player('ericofileno')
 
   section.episode-content
-    .tab.on#intro
-      include intro.pug
+    //- +episode-tabs
 
-+js
+    .episode-text
+      include intro.pug
+      //- include transcricao.pug
+
+    include sidebar.pug
+
++meta-js

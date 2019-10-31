@@ -1,20 +1,21 @@
-include /components/meta
+include /components/meta-head
 include /components/header
-include /components/episode
-include /components/player
-include /components/js
+include /components/episode-section
+include /components/episode-player
+include /components/episode-tabs
+include /components/meta-js
 
-+meta(
++meta-head(
   'Sérgio Salvador, Episódio 12 — Movimento UX',
   'Diretor de UX na Huge. Consultoria, liderança, design antecipatório.',
-  'http://movimentoux.com/ux-design/sergio-salvador/'
+  'https://movimentoux.com/ux-design/sergio-salvador/'
 )
 
 body(data-page='episode')
 
-  +header('on', '', '')
+  +header('on')
 
-  +episode(
+  +episode-section(
     'Sérgio Salvador',
     'Diretor de UX na Huge.',
     'Consultoria, liderança, design antecipatório.',
@@ -24,10 +25,15 @@ body(data-page='episode')
     '-inside'
   )
 
-  +player('sergiosalvador')
+  +episode-player('sergiosalvador')
 
   section.episode-content
-    .tab.on#intro
-      include intro.pug
+    //- +episode-tabs
 
-+js
+    .episode-text
+      include intro.pug
+      //- include transcricao.pug
+
+    include sidebar.pug
+
++meta-js

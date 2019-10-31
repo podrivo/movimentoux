@@ -1,21 +1,21 @@
-include /components/meta
+include /components/meta-head
 include /components/header
-include /components/episode
-include /components/player
-include /components/tabs
-include /components/js
+include /components/episode-section
+include /components/episode-player
+include /components/episode-tabs
+include /components/meta-js
 
-+meta(
++meta-head(
   'Eduardo Loureiro, Episódio 3 — Movimento UX',
   'Sócio gerente DesignThinkers Brasil. Co-criação, transição de agências, empreendedorismo.',
-  'http://movimentoux.com/ux-design/eduardo-loureiro/'
+  'https://movimentoux.com/ux-design/eduardo-loureiro/'
 )
 
 body(data-page='episode')
 
-  +header('on', '', '')
+  +header('on')
 
-  +episode(
+  +episode-section(
     'Eduardo Loureiro',
     'Sócio gerente DesignThinkers Brasil.',
     'Co-criação, transição de agências, empreendedorismo.',
@@ -25,15 +25,15 @@ body(data-page='episode')
     '-inside'
   )
 
-  +player('episodio-3-eduardo-loureiro')
+  +episode-player('episodio-3-eduardo-loureiro')
 
   section.episode-content
-    +tabs
+    +episode-tabs
 
-    .tab.on#intro
+    .episode-text
       include intro.pug
-
-    .tab#transcricao
       include transcricao.pug
 
-+js
+    include sidebar.pug
+
++meta-js

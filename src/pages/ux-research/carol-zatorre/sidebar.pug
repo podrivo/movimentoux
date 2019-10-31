@@ -1,0 +1,27 @@
+include /components/link
+include /components/supporter-sidebar
+
+.episode-sidebar
+  .info
+    h3.eyebrow Localização
+    p São Paulo
+
+    h3.eyebrow Site
+    p #[+link('www.kyvo.global/br/', 'https://kyvo.global/br/')]
+
+    h3.eyebrow Social
+    p #[+link('LinkedIn', 'https://br.linkedin.com/in/carol-zatorre')]
+    p #[+link('Medium', 'https://medium.com/@carolzatorre')]
+    p #[+link('Twitter', 'https://twitter.com/antropolodia')]
+    p #[+link('Instagram', 'https://www.instagram.com/antropolodia/')]
+
+    h3.eyebrow Download
+    p #[+link('Arquivo MP3', '#!', 'download')]
+
+  +supporter-sidebar(
+    'Apoiador do episódio',
+    'TESTR',
+    'Plataforma completa de teste de usabilidade ágil.',
+    'http://bit.ly/testeremoto',
+    'TESTR-logo.png'
+  )

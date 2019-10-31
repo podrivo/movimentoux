@@ -1,175 +1,192 @@
-include /components/meta
+include /components/meta-head
 include /components/header
-include /components/social
-include /components/episode
-include /components/js
+include /components/episode-section
+include /components/social-links
+include /components/meta-js
 
-+meta(
++meta-head(
   'Movimento UX — Primeira Temporada. Conversas sobre o universo de design de experiência de uso. UX Design.',
   'Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Primeira Temporada. Conversas sobre o universo de design de experiência de uso. UX Design.',
-  'http://movimentoux.com/ux-design/'
+  'https://movimentoux.com/ux-design/'
 )
 
 body(data-page='season')
 
-  +header('on', '', '', '')
+  +header('on')
 
-  article.intro-text
-    p.eyebrow Primeira Temporada
-    h1.title UX <br> Design
+  section.intro-section.-snap
+    span.eyebrow Primeira Temporada
+    h1.header UX <br> Design
     p Fev, 2016 — Conversas sobre o universo de design de experiência de uso.
+    +social-links('-home')
 
-  +social('-home')
 
-  ul.list-grid
-    li.list.-on #[svg(src='assets/img/ui/ep-list.svg')]
-    li.grid #[svg(src='assets/img/ui/ep-grid.svg')]
+  //- ul.list-grid
+  //-   li.list.-on #[svg(src='assets/img/ui/ep-list.svg')]
+  //-   li.grid #[svg(src='assets/img/ui/ep-grid.svg')]
 
-  .episode-wrapper
-    +episode(
-      'André do Amaral',
-      'Designer de Produto na Netflix.',
-      'Visual design, design digital, UX em outros países.',
-      '18',
-      '18-andre-do-amaral.jpg',
-      '/ux-design/andre-do-amaral'
-    )
-    +episode(
-      'Carolina Leslie',
-      'Sócia fundadora da Saiba+.',
-      'Consultoria, pesquisa com usuários, usabilidade.',
-      '17',
-      '17-carolina-leslie.jpg',
-      '/ux-design/carolina-leslie'
-    )
-    +episode(
-      'Felipe Memória',
-      'Sócio fundador da Work & Co.',
-      'Produto digital, inovação, liderança em design.',
-      '16',
-      '16-felipe-memoria.jpg',
-      '/ux-design/felipe-memoria'
-    )
-    +episode(
-      'Guilherme Neumann',
-      'UX Lead no Nubank.',
-      'Cultura de experiência, design de produto, liderança em design.',
-      '15',
-      '15-guilherme-neumann.jpg',
-      '/ux-design/guilherme-neumann'
-    )
-    +episode(
-      'Fabricio Dore',
-      'Diretor Executivo de UX na McKinsey.',
-      'Design de interação, inovação digital, UX em outros países.',
-      '14',
-      '14-fabricio-dore.jpg',
-      '/ux-design/fabricio-dore'
-    )
-    +episode(
-      'Fernanda Barbato',
-      'UX Lead na Designit.',
-      'Hyper Island, pesquisa com usuários, UX em outros países.',
-      '13',
-      '13-fernanda-barbato.jpg',
-      '/ux-design/fernanda-barbato'
-    )
-    +episode(
-      'Sérgio Salvador',
-      'Diretor de UX na Huge.',
-      'Consultoria, liderança, design antecipatório.',
-      '12',
-      '12-sergio-salvador.jpg',
-      '/ux-design/sergio-salvador'
-    )
-    +episode(
-      'Robson Santos',
-      'Designer Estratégico na PorQueNão.',
-      'Pesquisa para produto, estratégia de UX, usabilidade.',
-      '11',
-      '11-robson-santos.jpg',
-      '/ux-design/robson-santos'
-    )
-    +episode(
-      'Érico Fileno',
-      'Head de Inovação na Visa.',
-      'Design estratégico, inovação em serviços e experiência do usuário.',
-      '10',
-      '10-erico-fileno.jpg',
-      '/ux-design/erico-fileno'
-    )
-    +episode(
-      'Karine Drumond',
-      'Sócia-fundadora da Negócio de Mulher.',
-      'Usabilidade, design de interação, empreendedorismo.',
-      '09',
-      '09-karine-drumond.jpg',
-      '/ux-design/karine-drumond'
-    )
-    +episode(
-      'Pedro e Thiago',
-      'Sócios-fundadores da UXConf.',
-      'Conteúdo sobre UX, importância de comunidade, eventos de UX.',
-      '08',
-      '08-pedro-thiago.jpg',
-      '/ux-design/pedro-thiago',
-      ''
-    )
-    +episode(
-      'Jane Vita',
-      'Service Creator na Futurice.',
-      'Design de serviços, futures thinking, UX em outros países.',
-      '07',
-      '07-jane-vita.jpg',
-      '/ux-design/jane-vita'
-    )
-    +episode(
-      'Elisa Volpato',
-      'Fundadora na TESTR.',
-      'Pesquisa para produto, teste de usabilidade, consultoria.',
-      '06',
-      '06-elisa-volpato.jpg',
-      '/ux-design/elisa-volpato'
-    )
-    +episode(
-      'Fabrício Teixeira',
-      'Diretor de UX na R/GA.',
-      'UX em agências, arquitetura de informação,UX em outros países.',
-      '05',
-      '05-fabricio-teixeira.jpg',
-      '/ux-design/fabricio-teixeira'
-    )
-    +episode(
-      'Koji Pereira',
-      'Designer de Produto no Google.',
-      'Design digital, prototipação, UX em outros países.',
-      '04',
-      '04-koji-pereira.jpg',
-      '/ux-design/koji-pereira'
-    )
-    +episode(
-      'Eduardo Loureiro',
-      'Sócio gerente DesignThinkers Brasil.',
-      'Co-criação, transição de agências, empreendedorismo.',
-      '03',
-      '03-eduardo-loureiro.jpg',
-      '/ux-design/eduardo-loureiro'
-    )
-    +episode(
-      'Rodrigo Medeiros',
-      'Líder local no IxDA Recife.',
-      'Design centrado no usuário, design thinking e mercado de UX.',
-      '02',
-      '02-rodrigo-medeiros.jpg',
-      '/ux-design/rodrigo-medeiros'
-    )
-    +episode(
-      'Caio César',
-      'Professor de Design de Interação na PUC-MG.',
-      'Introdução ao tema UX, possibilidades de atuação e dicas pra começar.',
-      '01',
-      '01-caio-cesar.jpg',
-      '/ux-design/caio-cesar'
-    )
+  //- .episode-wrapper
+  +episode-section(
+    'Andre do Amaral',
+    'Designer de Produto na Netflix.',
+    'Visual design, design digital, UX em outros países.',
+    '18',
+    '18-andre-do-amaral.jpg',
+    '/ux-design/andre-do-amaral',
+    '-snap'
+  )
+  +episode-section(
+    'Carolina Leslie',
+    'Sócia fundadora da Saiba+.',
+    'Consultoria, pesquisa com usuários, usabilidade.',
+    '17',
+    '17-carolina-leslie.jpg',
+    '/ux-design/carolina-leslie',
+    '-snap'
+  )
+  +episode-section(
+    'Felipe Memória',
+    'Sócio fundador da Work & Co.',
+    'Produto digital, inovação, liderança em design.',
+    '16',
+    '16-felipe-memoria.jpg',
+    '/ux-design/felipe-memoria',
+    '-snap'
+  )
+  +episode-section(
+    'Guilherme Neumann',
+    'UX Lead no Nubank.',
+    'Cultura de experiência, design de produto, liderança em design.',
+    '15',
+    '15-guilherme-neumann.jpg',
+    '/ux-design/guilherme-neumann',
+    '-snap'
+  )
+  +episode-section(
+    'Fabricio Dore',
+    'Diretor Executivo de UX na McKinsey.',
+    'Design de interação, inovação digital, UX em outros países.',
+    '14',
+    '14-fabricio-dore.jpg',
+    '/ux-design/fabricio-dore',
+    '-snap'
+  )
+  +episode-section(
+    'Fernanda Barbato',
+    'UX Lead na Designit.',
+    'Hyper Island, pesquisa com usuários, UX em outros países.',
+    '13',
+    '13-fernanda-barbato.jpg',
+    '/ux-design/fernanda-barbato',
+    '-snap'
+  )
+  +episode-section(
+    'Sérgio Salvador',
+    'Diretor de UX na Huge.',
+    'Consultoria, liderança, design antecipatório.',
+    '12',
+    '12-sergio-salvador.jpg',
+    '/ux-design/sergio-salvador',
+    '-snap'
+  )
+  +episode-section(
+    'Robson Santos',
+    'Designer Estratégico na PorQueNão.',
+    'Pesquisa para produto, estratégia de UX, usabilidade.',
+    '11',
+    '11-robson-santos.jpg',
+    '/ux-design/robson-santos',
+    '-snap'
+  )
+  +episode-section(
+    'Érico Fileno',
+    'Head de Inovação na Visa.',
+    'Design estratégico, inovação em serviços e experiência do usuário.',
+    '10',
+    '10-erico-fileno.jpg',
+    '/ux-design/erico-fileno',
+    '-snap'
+  )
+  +episode-section(
+    'Karine Drumond',
+    'Sócia-fundadora da Negócio de Mulher.',
+    'Usabilidade, design de interação, empreendedorismo.',
+    '09',
+    '09-karine-drumond.jpg',
+    '/ux-design/karine-drumond',
+    '-snap'
+  )
+  +episode-section(
+    'Pedro e Thiago',
+    'Sócios-fundadores da UXConf.',
+    'Conteúdo sobre UX, importância de comunidade, eventos de UX.',
+    '08',
+    '08-pedro-thiago.jpg',
+    '/ux-design/pedro-thiago',
+    '-snap'
+  )
+  +episode-section(
+    'Jane Vita',
+    'Service Creator na Futurice.',
+    'Design de serviços, futures thinking, UX em outros países.',
+    '07',
+    '07-jane-vita.jpg',
+    '/ux-design/jane-vita',
+    '-snap'
+  )
+  +episode-section(
+    'Elisa Volpato',
+    'Fundadora na TESTR.',
+    'Pesquisa para produto, teste de usabilidade, consultoria.',
+    '06',
+    '06-elisa-volpato.jpg',
+    '/ux-design/elisa-volpato',
+    '-snap'
+  )
+  +episode-section(
+    'Fabrício Teixeira',
+    'Diretor de UX na R/GA.',
+    'UX em agências, arquitetura de informação,UX em outros países.',
+    '05',
+    '05-fabricio-teixeira.jpg',
+    '/ux-design/fabricio-teixeira',
+    '-snap'
+  )
+  +episode-section(
+    'Koji Pereira',
+    'Designer de Produto no Google.',
+    'Design digital, prototipação, UX em outros países.',
+    '04',
+    '04-koji-pereira.jpg',
+    '/ux-design/koji-pereira',
+    '-snap'
+  )
+  +episode-section(
+    'Eduardo Loureiro',
+    'Sócio gerente DesignThinkers Brasil.',
+    'Co-criação, transição de agências, empreendedorismo.',
+    '03',
+    '03-eduardo-loureiro.jpg',
+    '/ux-design/eduardo-loureiro',
+    '-snap'
+  )
+  +episode-section(
+    'Rodrigo Medeiros',
+    'Líder local no IxDA Recife.',
+    'Design centrado no usuário, design thinking e mercado de UX.',
+    '02',
+    '02-rodrigo-medeiros.jpg',
+    '/ux-design/rodrigo-medeiros',
+    '-snap'
+  )
+  +episode-section(
+    'Caio César',
+    'Professor de Design de Interação na PUC-MG.',
+    'Introdução ao tema UX, possibilidades de atuação e dicas pra começar.',
+    '01',
+    '01-caio-cesar.jpg',
+    '/ux-design/caio-cesar',
+    '-snap'
+  )
 
-+js
++meta-js

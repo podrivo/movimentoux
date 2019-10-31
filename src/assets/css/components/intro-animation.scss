@@ -1,0 +1,37 @@
+.intro-section.-snap {
+
+  .text .header {
+    opacity: 0;
+    transform: translateY($spacing-border);
+    transition: transform $easing $timing, opacity $easing $timing;
+
+    @media (max-width: $sm) {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .text .description,
+  .text .keywords,
+  .number {
+    opacity: 0;
+    transition: opacity $easing $timing;
+
+    @media (max-width: $sm) {
+      opacity: 1;
+    }
+  }
+
+  &.-active {
+    .text .header,
+    .text .description,
+    .text .keywords,
+    .number {
+      opacity: 1;
+    }
+
+    .text .header {
+      transform: translateY(0);
+    }
+  }
+}

@@ -1,14 +1,24 @@
 // type
-$font-size: 22px;
-$font-size-sm: 16px;
-$font-size-xl: 1.4vw;
-$line-height: 1.6em;
+$font-size-base: 16px;
+$font-size-base-xl: 22px;
+$font-size-base-xxl: 30px;
+$line-height-base: 1.5;
+
+$font-size-header: 9vw;
+$line-height-header: 1;
+$font-size-regular: 1rem;
+$font-size-text: 1.25rem;
+$font-size-eyebrow: 0.75rem;
+$font-size-quote: 2.25rem;
+$line-height-quote: 1.25;
+$font-size-part: 4rem;
 
 // spacing
-$spacing-border: 15px;
+$spacing-border: $font-size-base;
 $spacing-body-x: 5vw;
 $spacing-body-y: 4vw;
-$spacing: 8px;
+
+$spacing: 0.5rem;
 $spacing-1: $spacing * 1;
 $spacing-2: $spacing * 2;
 $spacing-3: $spacing * 3;
@@ -18,19 +28,26 @@ $spacing-8: $spacing * 8;
 $spacing-10: $spacing * 10;
 $spacing-12: $spacing * 12;
 
+// max-width
+$max-width-sidebar: $spacing * 30;
+$max-width-quote: $spacing * 110;
+$max-width-paragraph: $spacing * 80;
+
 //media queries
 $xs: 576px;
 $sm: 768px;
 $md: 992px;
 $lg: 1200px;
-$xl: 1572px;
+$xl: 1919px;
+$xxl: 2340px;
 
 // colors
-$black: #111;
-$white: #fff;
-$clear-white: white;
-$gray: #e9e9e8;
-$selection: gray;
+$black: black;
+$white: white;
+$grayish: #f6f6f6;
+$gray: #ddd;
+$grayer: #757575;
+$selection: $grayer;
 
 // motion
 $timing: 460ms;

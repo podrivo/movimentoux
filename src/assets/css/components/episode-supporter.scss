@@ -1,16 +1,62 @@
 .episode-supporter {
-  text-align: center;
-  border-top: 2px solid $gray;
+  position: sticky;
+  top: $spacing-4;
   margin-top: $spacing-4;
-  padding-top: $spacing-4;
+
+  &:first-child {
+    border: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
 
   @media (max-width: $sm) {
     margin-top: $spacing-2;
     padding-top: $spacing-2;
   }
 
-  img {
-    max-width: 170px;
-    margin: $spacing-2 auto;
+  .supporter {
+    display: block;
+    color: $black;
+    transition: color $timing $easing, transform 920ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    backface-visibility: hidden;
+
+    &:hover {
+      color: $white;
+
+      &::before {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -13px;
+      left: -20px;
+      width: calc(100% + #{$spacing-border}*2);
+      height: calc(100% + #{$spacing-border}*2);
+      background-color: $black;
+      transform: scale(0.96) translateY(0);
+      opacity: 0;
+      transition: transform $timing $easing, opacity $timing $easing;
+    }
+
+    p {
+      position: relative;
+      font-size: $font-size-regular;
+    }
+
+    img {
+      position: relative;
+      max-width: 200px;
+      margin: $spacing-2 0;
+      display: block;
+      transition: filter $timing $easing;
+    }
   }
 }

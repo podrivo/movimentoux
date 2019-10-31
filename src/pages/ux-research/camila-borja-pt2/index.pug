@@ -1,0 +1,41 @@
+include /components/meta-head
+include /components/header
+include /components/episode-section
+include /components/episode-player
+include /components/episode-tabs
+include /components/meta-js
+
++meta-head(
+  'Camila Borja, User Experience Researcher no Itaú (Parte 2). Episódio 25 — Movimento UX. Conversas sobre pesquisa para produto. UX Research.',
+  'Operação de pesquisa (Research Ops), Síntese de aprendizados e Storytelling — Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Segunda Temporada. Conversas sobre pesquisa para produto. UX Research.',
+  'https://movimentoux.com/ux-research/camila-borja-pt2/',
+  'https://movimentoux.com/assets/img/share/25-camila-borja.jpg'
+)
+
+body(data-page='episode')
+
+  +header('', 'on')
+
+  +episode-section(
+    'Camila Borja',
+    'User Experience Researcher no Itaú.',
+    'Operação de pesquisa (Research Ops), Síntese de aprendizados e Storytelling.',
+    '25',
+    '24-camila-borja.jpg',
+    '',
+    '-inside',
+    'pt2'
+  )
+
+  +episode-player('camilaborja-parte2')
+
+  section.episode-content
+    +episode-tabs
+
+    .episode-text
+      include intro.pug
+      include transcricao.pug
+
+    include sidebar.pug
+
++meta-js

@@ -1,0 +1,17 @@
+mixin episode-section(speaker, description, keywords, number, image, url, variantClass, part)
+  section.intro-section.-episode(class= variantClass)
+    .episode-cover
+      .cover
+        if variantClass == '-inside'
+          img(src='/assets/img/perfil/' + image alt='Fotografia de ' + speaker)
+        else
+          a(href= url title='Ir para episódio').play-badge
+            img(src='/assets/img/perfil/' + image alt='Fotografia de ' + speaker)
+            svg(src='/assets/img/ui/play.svg')
+    .text
+      h2.header= speaker
+        if part
+          span.part= part
+      p.description= description
+      span.keywords= keywords
+    span.number= number

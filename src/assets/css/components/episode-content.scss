@@ -1,143 +1,14 @@
 .episode-content {
   width: 100%;
-  padding: $spacing-body-y $spacing-body-x calc(#{$spacing-body-x} + #{$spacing-8});
-  background-color: $clear-white;
+  padding: $spacing-body-y $spacing-body-x calc(#{$spacing-body-y} + #{$spacing-8});
+  background-color: $white;
   color: $black;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   @media (max-width: $sm) {
-    padding: $spacing-2 $spacing-4 $spacing-10;
-  }
-
-  .tab {
-    max-width: 1200px;
-    display: none;
-    flex-direction: row;
-
-    @media (max-width: $sm) {
-      flex-direction: column-reverse;
-    }
-
-    &.on {
-      display: flex;
-      animation: tabShow 0.8s $easing backwards;
-    }
-  }
-
-  .text {
-    width: 100%;
-    margin-right: $spacing-10 * 2;
-
-    @media (max-width: $sm) {
-      margin-right: 0;
-    }
-
-    img, p, ul, video {
-      margin-bottom: $spacing-4;
-    }
-
-    em {
-      font-style: italic;
-    }
-
-    hr {
-      width: 100%;
-      border: 1px solid $gray;
-      margin: $spacing-8 0;
-    }
-
-    *:last-child {
-      margin-bottom: 0;
-    }
-
-    .caption {
-      margin-top: -$spacing-4;
-      margin-bottom: $spacing-4;
-      font-size: 0.9rem;
-      text-align: right;
-      display: block;
-    }
-
-    .links {
-      margin-top: -$spacing-3;
-    }
-
-    .links li {
-      margin-bottom: $spacing-1;
-    }
-  }
-
-  .sidebar {
-    width: 100%;
-    max-width: 270px;
-
-    @media (max-width: $sm) {
-      max-width: 100%;
-      margin-bottom: $spacing-4;
-    }
-
-    .eyebrow {
-      margin-top: $spacing-4;
-
-      @media (max-width: $sm) {
-        margin-top: $spacing-2;
-      }
-    }
-
-    .eyebrow:first-child {
-      margin-top: 0;
-    }
-
-  }
-
-  .gallery {
-    display: flex;
-    justify-content: space-between;
-
-    @media (max-width: $sm) {
-      flex-direction: column;
-    }
-
-    .img {
-      max-width: 48%;
-
-      @media (max-width: $sm) {
-        max-width: 100%;
-      }
-    }
-  }
-
-  .carousel .item {
-    width: 100%;
-  }
-
-  blockquote {
-    font-size: 2rem;
-    line-height: 2.6rem;
-    font-weight: 500;
-    margin: $spacing-8 0;
-    padding: $spacing-8 0;
-    border-top: 2px solid $gray;
-    border-bottom: 2px solid $gray;
-
-    @media (max-width: $sm) {
-      margin: $spacing-4 0 $spacing-6;
-      padding: $spacing-4 0;
-    }
-  }
-}
-
-@keyframes tabShow {
-  0% {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+    padding: $spacing-4 $spacing-4 $spacing-10;
   }
 }

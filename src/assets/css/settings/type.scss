@@ -2,46 +2,88 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+
+  font-family: 'Rubik', -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+  font-weight: 400;
+  line-height: $line-height-base;
+}
+
+html {
+  font-size: $font-size-base;
+
+  @media (min-width: $xl) {
+    font-size: $font-size-base-xl;
+  }
+
+  @media (min-width: $xxl) {
+    font-size: $font-size-base-xxl;
+  }
 }
 
 body {
-  font-family: 'Rubik', -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
-  font-size: $font-size;
-  line-height: $line-height;
-  font-weight: 400;
+  font-size: $font-size-regular;
+}
+
+p {
+  font-size: $font-size-text;
+}
+
+strong {
+  font-weight: 500;
+}
+
+blockquote {
+  font-size: $font-size-quote;
+  line-height: $line-height-quote;
+  font-weight: 300;
+  margin: $spacing-12 0;
+  max-width: $max-width-quote;
 
   @media (max-width: $sm) {
-    font-size: $font-size-sm;
-  }
-
-  @media (min-width: $xl) {
-    font-size: $font-size-xl;
+    font-size: $font-size-text;
+    line-height: $line-height-base;
+    font-weight: 500;
+    border-top: $spacing solid $grayish;
+    border-bottom: $spacing solid $grayish;
+    margin: $spacing-6 0;
+    padding: $spacing-4 0;
   }
 }
 
-.title {
+.header {
   position: relative;
   left: -0.5vw;
-  font-size: 8.2vw;
-  line-height: 1em;
+  font-size: $font-size-header;
+  line-height: $line-height-header;
   font-weight: 700;
   z-index: 0;
-}
-
-.subtitle {
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-
-  @media (max-width: $sm) {
-    font-size: 1.4rem;
-    line-height: 2.2rem;
-  }
 }
 
 .eyebrow {
   position: relative;
   text-transform: uppercase;
-  font-size: 0.8rem;
-  line-height: 1.6rem;
+  font-size: $font-size-eyebrow;
   font-weight: 500;
+
+  &.-dark {
+    font-weight: 700;
+  }
+}
+
+@mixin paragraph {
+  p {
+    width: 100%;
+    max-width: $max-width-paragraph;
+    margin-bottom: $spacing-4;
+
+    @media (max-width: $sm) {
+      width: 100%;
+      margin-bottom: $spacing-2;
+    }
+
+    &:last-child,
+    &:only-child {
+      margin-bottom: 0;
+    }
+  }
 }

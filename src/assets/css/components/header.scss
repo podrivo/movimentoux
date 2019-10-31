@@ -1,14 +1,23 @@
+[data-page='season'] header {
+  background: transparent;
+
+  @media (max-width: $sm) {
+    background: $black;
+  }
+}
+
 header {
   background: $black;
   position: fixed;
-  top: $spacing-border;
-  left: 0;
-  width: 100%;
-  padding: $spacing-body-y $spacing-body-x $spacing-3;
+  top: 0;
+  left: $spacing-border;
+  width: calc(100% - #{$spacing-border}*2);
+  padding: $spacing-6 $spacing-body-x $spacing-3;
   transition: margin $timing $easing;
   z-index: 999;
 
   @media (max-width: $sm) {
+    top: 0 !important;
     padding: $spacing-2 $spacing-4;
   }
 
@@ -92,7 +101,7 @@ header {
     }
 
     > .item {
-      padding-left: $spacing-4;
+      padding-left: $spacing-2;
     }
   }
 }
@@ -100,14 +109,22 @@ header {
 
 //headroom plugin
 .headroom {
-  transition: transform $timing * 2 $easing;
+  transition: transform $timing * 2 $easing, top $timing * 2 $easing;
   will-change: transform;
 
   &--pinned {
     transform: translateY(0);
   }
 
+  &--top {
+    top: 0;
+  }
+
+  &--not-top {
+    top: -$spacing-3;
+  }
+
   &--unpinned {
-    transform: translateY(-102%);
+    transform: translateY(calc(-102% - #{$spacing-4}));
   }
 }

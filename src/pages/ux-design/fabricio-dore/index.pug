@@ -1,20 +1,21 @@
-include /components/meta
+include /components/meta-head
 include /components/header
-include /components/episode
-include /components/player
-include /components/js
+include /components/episode-section
+include /components/episode-player
+include /components/episode-tabs
+include /components/meta-js
 
-+meta(
++meta-head(
   'Fabricio Dore, Episódio 14 — Movimento UX',
   'Diretor Executivo de UX na McKinsey. Design de interação, inovação digital, UX em outros países.',
-  'http://movimentoux.com/ux-design/fabricio-dore/'
+  'https://movimentoux.com/ux-design/fabricio-dore/'
 )
 
 body(data-page='episode')
 
-  +header('on', '', '')
+  +header('on')
 
-  +episode(
+  +episode-section(
     'Fabricio Dore',
     'Diretor Executivo de UX na McKinsey.',
     'Design de interação, inovação digital, UX em outros países.',
@@ -24,10 +25,15 @@ body(data-page='episode')
     '-inside'
   )
 
-  +player('fabriciodore')
+  +episode-player('fabriciodore')
 
   section.episode-content
-    .tab.on#intro
-      include intro.pug
+    //- +episode-tabs
 
-+js
+    .episode-text
+      include intro.pug
+      //- include transcricao.pug
+
+    include sidebar.pug
+
++meta-js

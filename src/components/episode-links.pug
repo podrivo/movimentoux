@@ -1,0 +1,9 @@
+mixin episode-links(object)
+  .episode-links
+    p #[strong Links comentados nesse episódio]
+    ul
+      each link in object
+        li.item
+          a(href= link.url title= link.title target='_blank' rel='noopener').link.-alt
+            p= link.title
+            span.eyebrow= link.type

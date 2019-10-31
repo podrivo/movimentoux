@@ -1,22 +1,22 @@
-include /components/meta
+include /components/meta-head
 include /components/header
-include /components/episode
-include /components/player
-include /components/tabs
-include /components/js
+include /components/episode-section
+include /components/episode-player
+include /components/episode-tabs
+include /components/meta-js
 
-+meta(
++meta-head(
   'Caio Gama, User Researcher no Nubank. Episódio 21 — Movimento UX. Conversas sobre pesquisa para produto. UX Research.',
   'Data & analytics, mix de técnicas de pesquisa qualitativa e quantitativa — Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Segunda Temporada. Conversas sobre pesquisa para produto. UX Research.',
-  'http://movimentoux.com/ux-research/caio-gama/',
-  'http://movimentoux.com/assets/img/share/21-caio-gama.jpg'
+  'https://movimentoux.com/ux-research/caio-gama/',
+  'https://movimentoux.com/assets/img/share/21-caio-gama.jpg'
 )
 
 body(data-page='episode')
 
-  +header('', 'on', '')
+  +header('', 'on')
 
-  +episode(
+  +episode-section(
     'Caio Gama',
     'User Researcher no Nubank.',
     'Data & analytics, mix de técnicas de pesquisa qualitativa e quantitativa.',
@@ -26,15 +26,15 @@ body(data-page='episode')
     '-inside'
   )
 
-  +player('caiogama')
+  +episode-player('caiogama')
 
   section.episode-content
-    +tabs
+    +episode-tabs
 
-    .tab.on#intro
+    .episode-text
       include intro.pug
-
-    .tab#transcricao
       include transcricao.pug
 
-+js
+    include sidebar.pug
+
++meta-js

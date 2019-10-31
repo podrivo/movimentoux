@@ -1,0 +1,141 @@
+.intro-section {
+  background-color: $black;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: $spacing-body-y $spacing-body-x;
+
+  @media (max-width: $sm) {
+    justify-content: center;
+    padding: $spacing-2 $spacing-4;
+  }
+
+  .header {
+    margin: $spacing-2 0;
+  }
+}
+
+
+// SNAP
+.intro-section.-snap {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+
+// SCROLL
+.intro-section.-scroll {
+  @include paragraph;
+  height: auto;
+  padding-top: calc(#{$spacing-body-y} + 30vh);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .header {
+    margin-bottom: $spacing-8;
+  }
+}
+
+
+// EPISODE
+.intro-section.-episode {
+  height: 100vh;
+  // flex-shrink: 0;
+
+  @media (max-width: $sm) {
+    display: block;
+    height: auto;
+    padding: 0 $spacing-4 $spacing-4;
+  }
+
+  .text {
+    width: 100%;
+    position: fixed;
+    bottom: $spacing-body-x;
+    z-index: 99;
+    pointer-events: none;
+
+    @media (max-width: $sm) {
+      position: relative;
+      bottom: 0;
+    }
+  }
+
+  .header {
+    max-width: 42%;
+    margin: $spacing-1 0;
+    z-index: 99;
+    transition: font-size $easing $timing;
+
+    @media (max-width: $sm) {
+      max-width: 100%;
+    }
+
+    .part {
+      margin-left: $spacing-2;
+      font-size: $font-size-part;
+
+      @media (max-width: $sm) {
+        margin-left: $spacing-1;
+        font-size: $font-size-text;
+      }
+    }
+  }
+
+  .number {
+    font-size: 8.1vw;
+    line-height: 0.9em;
+    font-weight: 700;
+    position: fixed;
+    bottom: $spacing-body-x;
+    display: flex;
+    align-self: flex-end;
+    color: $black;
+    text-shadow: -2px 0 $white, 0 2px $white, 2px 0 $white, 0 -2px $white;
+    z-index: 99;
+    pointer-events: none;
+
+    @media (max-width: $sm) {
+      display: none;
+    }
+  }
+
+  // &.-clone {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   margin: 0;
+  // }
+}
+
+
+// INSIDE
+.intro-section.-inside {
+  justify-content: center;
+
+  @media (max-width: $sm) {
+    padding-top: $spacing-10;
+  }
+
+  .text {
+    pointer-events: all;
+    position: relative;
+    bottom: 0;
+  }
+
+  .header {
+    max-width: 50%;
+  }
+
+  .number {
+    position: absolute;
+    bottom: auto;
+  }
+
+  .cover {
+    pointer-events: none;
+  }
+}
