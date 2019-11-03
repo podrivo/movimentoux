@@ -4,7 +4,7 @@ backend:
 
 media_folder: "src/assets/img/media"
 public_folder: "/assets/img/media"
-# publish_mode: editorial_workflow
+publish_mode: editorial_workflow
 
 collections:
   - name: "episodios" # Used in routes, e.g., /admin/collections/blog
