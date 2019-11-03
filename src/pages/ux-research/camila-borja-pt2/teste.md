@@ -16,10 +16,7 @@ Testando {.main}
 
 ***
 
-- [teste](www.google.com "Google"){.link .-alt} {.item}
-{.episode-links}
 
-texto aqui e acolá [teste](http://www.google.com "Google"){target="_blank"}{.link .-alt}
 
 ```+episode-links({
   1: {
