@@ -3,6 +3,7 @@ var runSequence = require('gulp4-run-sequence').use(gulp)
 
 module.exports = function() {
   gulp.task('default', function(callback) {
-    runSequence('clean', ['html', 'scripts:default', 'styles', 'media:default', 'fonts'], 'watch', callback)
+    runSequence('clean', ['html', 'scripts:default', 'styles', 'media:default', 'fonts'], 'admin', 'watch', callback)
   })
 }
+

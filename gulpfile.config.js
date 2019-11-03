@@ -54,7 +54,7 @@ var config = {
   },
   'sitemap': {
     'src': './dist/**/*.html',
-    'dest': './dist/'
+    'dest': './dist'
   },
   'files': {
     'src': [
@@ -63,6 +63,11 @@ var config = {
       './src/humans.txt'
     ],
     'dest': './dist'
+  },
+  'admin': {
+    'watch': './src/admin/**/*',
+    'src': './src/admin/**/*',
+    'dest': './dist/admin'
   }
 }
 
