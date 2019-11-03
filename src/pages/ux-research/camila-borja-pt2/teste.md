@@ -1,3 +1,7 @@
+---
+title: "Teste"
+---
+
 Hello
 
 Testando {.main}
