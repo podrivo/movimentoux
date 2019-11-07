@@ -32,6 +32,7 @@
     "gulp4-run-sequence": "^1.0.0",
     "imagemin-mozjpeg": "^8.0.0",
     "jstransformer-markdown-it": "^2.1.0",
+    "markdown-it": "^10.0.0",
     "markdown-it-attrs": "^3.0.1"
   },
   "browserslist": [
