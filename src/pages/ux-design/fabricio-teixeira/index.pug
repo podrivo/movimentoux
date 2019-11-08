@@ -8,29 +8,27 @@ include /components/includes
   'episode'
 )
 
-body
++header('on')
 
-  +header('on')
++episode-section(
+  'Fabrício Teixeira',
+  'Diretor de UX na R/GA.',
+  'UX em agências, arquitetura de informação,UX em outros países.',
+  '05',
+  '05-fabricio-teixeira.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Fabrício Teixeira',
-    'Diretor de UX na R/GA.',
-    'UX em agências, arquitetura de informação,UX em outros países.',
-    '05',
-    '05-fabricio-teixeira.jpg',
-    '',
-    '-inside'
-  )
++episode-player('episodio-05-fabricio-teixeira')
 
-  +episode-player('episodio-05-fabricio-teixeira')
+section.episode-content
+  +episode-tabs
 
-  section.episode-content
-    +episode-tabs
+  .episode-text
+    include intro
+    include transcricao
 
-    .episode-text
-      include intro
-      include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

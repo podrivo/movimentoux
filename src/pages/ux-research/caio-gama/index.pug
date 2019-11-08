@@ -8,29 +8,27 @@ include /components/includes
   'episode'
 )
 
-body
++header('', 'on')
 
-  +header('', 'on')
++episode-section(
+  'Caio Gama',
+  'User Researcher no Nubank.',
+  'Data & analytics, mix de técnicas de pesquisa qualitativa e quantitativa.',
+  '21',
+  '21-caio-gama.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Caio Gama',
-    'User Researcher no Nubank.',
-    'Data & analytics, mix de técnicas de pesquisa qualitativa e quantitativa.',
-    '21',
-    '21-caio-gama.jpg',
-    '',
-    '-inside'
-  )
++episode-player('caiogama')
 
-  +episode-player('caiogama')
+section.episode-content
+  +episode-tabs
 
-  section.episode-content
-    +episode-tabs
+  .episode-text
+    include intro
+    include transcricao
 
-    .episode-text
-      include intro
-      include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

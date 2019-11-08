@@ -8,29 +8,27 @@ include /components/includes
   'episode'
 )
 
-body
++header('on')
 
-  +header('on')
++episode-section(
+  'Elisa Volpato',
+  'Fundadora na TESTR.',
+  'Pesquisa para produto, teste de usabilidade, consultoria.',
+  '06',
+  '06-elisa-volpato.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Elisa Volpato',
-    'Fundadora na TESTR.',
-    'Pesquisa para produto, teste de usabilidade, consultoria.',
-    '06',
-    '06-elisa-volpato.jpg',
-    '',
-    '-inside'
-  )
++episode-player('elisa-volpato')
 
-  +episode-player('elisa-volpato')
+section.episode-content
+  +episode-tabs
 
-  section.episode-content
-    +episode-tabs
+  .episode-text
+    include intro
+    include transcricao
 
-    .episode-text
-      include intro
-      include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

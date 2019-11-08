@@ -8,29 +8,27 @@ include /components/includes
   'episode'
 )
 
-body
++header('on')
 
-  +header('on')
++episode-section(
+  'Guilherme Neumann',
+  'UX Lead no Nubank.',
+  'Cultura de experiência, design de produto, liderança em design.',
+  '15',
+  '15-guilherme-neumann.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Guilherme Neumann',
-    'UX Lead no Nubank.',
-    'Cultura de experiência, design de produto, liderança em design.',
-    '15',
-    '15-guilherme-neumann.jpg',
-    '',
-    '-inside'
-  )
++episode-player('guilhermeneumann')
 
-  +episode-player('guilhermeneumann')
+section.episode-content
+  //- +episode-tabs
 
-  section.episode-content
-    //- +episode-tabs
+  .episode-text
+    include intro
+    //- include transcricao
 
-    .episode-text
-      include intro
-      //- include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

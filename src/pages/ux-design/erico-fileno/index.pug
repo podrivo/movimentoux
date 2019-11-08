@@ -8,29 +8,27 @@ include /components/includes
   'episode'
 )
 
-body
++header('on')
 
-  +header('on')
++episode-section(
+  'Érico Fileno',
+  'Head de Inovação na Visa.',
+  'Design estratégico, inovação em serviços e experiência do usuário.',
+  '10',
+  '10-erico-fileno.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Érico Fileno',
-    'Head de Inovação na Visa.',
-    'Design estratégico, inovação em serviços e experiência do usuário.',
-    '10',
-    '10-erico-fileno.jpg',
-    '',
-    '-inside'
-  )
++episode-player('ericofileno')
 
-  +episode-player('ericofileno')
+section.episode-content
+  //- +episode-tabs
 
-  section.episode-content
-    //- +episode-tabs
+  .episode-text
+    include intro
+    //- include transcricao
 
-    .episode-text
-      include intro
-      //- include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

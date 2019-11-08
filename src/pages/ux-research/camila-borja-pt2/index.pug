@@ -8,30 +8,28 @@ include /components/includes
   'episode'
 )
 
-body
++header('', 'on')
 
-  +header('', 'on')
++episode-section(
+  'Camila Borja',
+  'User Experience Researcher no Itaú.',
+  'Operação de pesquisa (Research Ops), Síntese de aprendizados e Storytelling.',
+  '25',
+  '24-camila-borja.jpg',
+  '',
+  '-inside',
+  'pt2'
+)
 
-  +episode-section(
-    'Camila Borja',
-    'User Experience Researcher no Itaú.',
-    'Operação de pesquisa (Research Ops), Síntese de aprendizados e Storytelling.',
-    '25',
-    '24-camila-borja.jpg',
-    '',
-    '-inside',
-    'pt2'
-  )
++episode-player('camilaborja-parte2')
 
-  +episode-player('camilaborja-parte2')
+section.episode-content
+  +episode-tabs
 
-  section.episode-content
-    +episode-tabs
+  .episode-text
+    include intro
+    include transcricao
 
-    .episode-text
-      include intro
-      include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

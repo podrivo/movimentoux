@@ -8,29 +8,27 @@ include /components/includes
   'episode'
 )
 
-body
++header('', 'on')
 
-  +header('', 'on')
++episode-section(
+  'Carol Zatorre',
+  'Head de Pesquisa na Kyvo.',
+  'Consultoria, pesquisa qualitativa e pesquisa na sprint.',
+  '20',
+  '20-carol-zatorre.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Carol Zatorre',
-    'Head de Pesquisa na Kyvo.',
-    'Consultoria, pesquisa qualitativa e pesquisa na sprint.',
-    '20',
-    '20-carol-zatorre.jpg',
-    '',
-    '-inside'
-  )
++episode-player('carolzatorre')
 
-  +episode-player('carolzatorre')
+section.episode-content
+  +episode-tabs
 
-  section.episode-content
-    +episode-tabs
+  .episode-text
+    include intro
+    include transcricao
 
-    .episode-text
-      include intro
-      include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

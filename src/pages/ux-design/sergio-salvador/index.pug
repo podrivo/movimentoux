@@ -8,29 +8,27 @@ include /components/includes
   'episode'
 )
 
-body
++header('on')
 
-  +header('on')
++episode-section(
+  'Sérgio Salvador',
+  'Diretor de UX na Huge.',
+  'Consultoria, liderança, design antecipatório.',
+  '12',
+  '12-sergio-salvador.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Sérgio Salvador',
-    'Diretor de UX na Huge.',
-    'Consultoria, liderança, design antecipatório.',
-    '12',
-    '12-sergio-salvador.jpg',
-    '',
-    '-inside'
-  )
++episode-player('sergiosalvador')
 
-  +episode-player('sergiosalvador')
+section.episode-content
+  //- +episode-tabs
 
-  section.episode-content
-    //- +episode-tabs
+  .episode-text
+    include intro
+    //- include transcricao
 
-    .episode-text
-      include intro
-      //- include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

@@ -8,29 +8,27 @@ include /components/includes
   'episode'
 )
 
-body
++header('on')
 
-  +header('on')
++episode-section(
+  'Andre do Amaral',
+  'Designer de Produto na Netflix.',
+  'Visual design, design digital, UX em outros países.',
+  '18',
+  '18-andre-do-amaral.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Andre do Amaral',
-    'Designer de Produto na Netflix.',
-    'Visual design, design digital, UX em outros países.',
-    '18',
-    '18-andre-do-amaral.jpg',
-    '',
-    '-inside'
-  )
++episode-player('andredoamaral')
 
-  +episode-player('andredoamaral')
+section.episode-content
+  //- +episode-tabs
 
-  section.episode-content
-    //- +episode-tabs
+  .episode-text
+    include intro
+    //- include transcricao
 
-    .episode-text
-      include intro
-      //- include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

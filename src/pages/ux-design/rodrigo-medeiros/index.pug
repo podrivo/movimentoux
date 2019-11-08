@@ -8,29 +8,27 @@ include /components/includes
   'episode'
 )
 
-body
-  
-  +header('on')
-  
-  +episode-section(
-    'Rodrigo Medeiros',
-    'Líder local no IxDA Recife.',
-    'Design centrado no usuário, design thinking e mercado de UX.',
-    '02',
-    '02-rodrigo-medeiros.jpg',
-    '',
-    '-inside'
-  )
-  
-  +episode-player('movimento-ux-ep-2-rodrigo-medeiros')
-  
-  section.episode-content
-    +episode-tabs
++header('on')
 
-    .episode-text
-      include intro
-      include transcricao
++episode-section(
+  'Rodrigo Medeiros',
+  'Líder local no IxDA Recife.',
+  'Design centrado no usuário, design thinking e mercado de UX.',
+  '02',
+  '02-rodrigo-medeiros.jpg',
+  '',
+  '-inside'
+)
 
-    include sidebar
++episode-player('movimento-ux-ep-2-rodrigo-medeiros')
+
+section.episode-content
+  +episode-tabs
+
+  .episode-text
+    include intro
+    include transcricao
+
+  include sidebar
 
 +meta-js

@@ -8,29 +8,27 @@ include /components/includes
   'episode'
 )
 
-body
++header('on')
 
-  +header('on')
++episode-section(
+  'Carolina Leslie',
+  'Sócia fundadora da Saiba+.',
+  'Consultoria, pesquisa com usuários, usabilidade.',
+  '17',
+  '17-carolina-leslie.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Carolina Leslie',
-    'Sócia fundadora da Saiba+.',
-    'Consultoria, pesquisa com usuários, usabilidade.',
-    '17',
-    '17-carolina-leslie.jpg',
-    '',
-    '-inside'
-  )
++episode-player('carolinaleslie')
 
-  +episode-player('carolinaleslie')
+section.episode-content
+  //- +episode-tabs
 
-  section.episode-content
-    //- +episode-tabs
+  .episode-text
+    include intro
+    //- include transcricao
 
-    .episode-text
-      include intro
-      //- include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

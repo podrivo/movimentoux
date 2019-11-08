@@ -7,30 +7,28 @@ include /components/includes
   '',
   'episode'
 )
+  
++header('on')
 
-body
-  
-  +header('on')
-  
-  +episode-section(
-    'Caio César',
-    'Professor de Design de Interação na PUC-MG.',
-    'Introdução ao tema UX, possibilidades de atuação e dicas pra começar.',
-    '01',
-    '01-caio-cesar.jpg',
-    '',
-    '-inside'
-  )
-  
-  +episode-player('movimento-ux-episodio-1-caio-cesar')
-  
-  section.episode-content
-    +episode-tabs
++episode-section(
+  'Caio César',
+  'Professor de Design de Interação na PUC-MG.',
+  'Introdução ao tema UX, possibilidades de atuação e dicas pra começar.',
+  '01',
+  '01-caio-cesar.jpg',
+  '',
+  '-inside'
+)
 
-    .episode-text
-      include intro
-      include transcricao
++episode-player('movimento-ux-episodio-1-caio-cesar')
 
-    include sidebar
+section.episode-content
+  +episode-tabs
+
+  .episode-text
+    include intro
+    include transcricao
+
+  include sidebar
 
 +meta-js

@@ -8,29 +8,27 @@ include /components/includes
   'episode'
 )
 
-body
++header('', 'on')
 
-  +header('', 'on')
++episode-section(
+  'Cristina Bilsland',
+  'User Experience Researcher Senior no Google UK.',
+  'Pesquisa global, estratégia de pesquisa, design sprint.',
+  '22',
+  '22-cristina-bilsland.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Cristina Bilsland',
-    'User Experience Researcher Senior no Google UK.',
-    'Pesquisa global, estratégia de pesquisa, design sprint.',
-    '22',
-    '22-cristina-bilsland.jpg',
-    '',
-    '-inside'
-  )
++episode-player('cristinabilsland')
 
-  +episode-player('cristinabilsland')
+section.episode-content
+  +episode-tabs
 
-  section.episode-content
-    +episode-tabs
+  .episode-text
+    include intro
+    include transcricao
 
-    .episode-text
-      include intro
-      include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

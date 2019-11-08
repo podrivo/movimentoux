@@ -8,29 +8,27 @@ include /components/includes
   'episode'
 )
 
-body
++header('on')
 
-  +header('on')
++episode-section(
+  'Eduardo Loureiro',
+  'Sócio gerente DesignThinkers Brasil.',
+  'Co-criação, transição de agências, empreendedorismo.',
+  '03',
+  '03-eduardo-loureiro.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Eduardo Loureiro',
-    'Sócio gerente DesignThinkers Brasil.',
-    'Co-criação, transição de agências, empreendedorismo.',
-    '03',
-    '03-eduardo-loureiro.jpg',
-    '',
-    '-inside'
-  )
++episode-player('episodio-3-eduardo-loureiro')
 
-  +episode-player('episodio-3-eduardo-loureiro')
+section.episode-content
+  +episode-tabs
 
-  section.episode-content
-    +episode-tabs
+  .episode-text
+    include intro
+    include transcricao
 
-    .episode-text
-      include intro
-      include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

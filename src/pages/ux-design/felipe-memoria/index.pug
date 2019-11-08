@@ -8,29 +8,27 @@ include /components/includes
   'episode'
 )
 
-body
++header('on')
 
-  +header('on')
++episode-section(
+  'Felipe Memória',
+  'Sócio fundador da Work & Co.',
+  'Produto digital, inovação, liderança em design.',
+  '16',
+  '16-felipe-memoria.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Felipe Memória',
-    'Sócio fundador da Work & Co.',
-    'Produto digital, inovação, liderança em design.',
-    '16',
-    '16-felipe-memoria.jpg',
-    '',
-    '-inside'
-  )
++episode-player('felipememoria')
 
-  +episode-player('felipememoria')
+section.episode-content
+  //- +episode-tabs
 
-  section.episode-content
-    //- +episode-tabs
+  .episode-text
+    include intro
+    //- include transcricao
 
-    .episode-text
-      include intro
-      //- include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

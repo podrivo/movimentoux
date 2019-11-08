@@ -8,29 +8,27 @@ include /components/includes
   'episode'
 )
 
-body
-  
-  +header('', 'on')
-  
-  +episode-section(
-    'Paola Sales',
-    'Head de User Studies no Descomplica.',
-    'Pesquisa humanizada, empatia e criação de área.',
-    '19',
-    '19-paola-sales.jpg',
-    '',
-    '-inside'
-  )
-  
-  +episode-player('paolasales')
-  
-  section.episode-content
-    +episode-tabs
++header('', 'on')
 
-    .episode-text
-      include intro
-      include transcricao
++episode-section(
+  'Paola Sales',
+  'Head de User Studies no Descomplica.',
+  'Pesquisa humanizada, empatia e criação de área.',
+  '19',
+  '19-paola-sales.jpg',
+  '',
+  '-inside'
+)
 
-    include sidebar
++episode-player('paolasales')
+
+section.episode-content
+  +episode-tabs
+
+  .episode-text
+    include intro
+    include transcricao
+
+  include sidebar
 
 +meta-js
