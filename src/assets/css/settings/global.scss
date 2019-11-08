@@ -6,7 +6,7 @@
 *::-moz-selection {@include selection}
 *::selection {@include selection}
 
-html {
+:root {
   background-color: $white;
   color: $white;
   overflow-x: hidden;
