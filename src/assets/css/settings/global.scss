@@ -6,11 +6,11 @@
 *::-moz-selection {@include selection}
 *::selection {@include selection}
 
-body {
+html {
   background-color: $white;
   color: $white;
-  overflow-y: scroll;
   overflow-x: hidden;
+  overflow-y: scroll;
   padding: 0 $spacing-border;
 
   &[data-page='season'] {
