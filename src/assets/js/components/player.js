@@ -4,17 +4,21 @@ if (episode) {
   var soundcloud = new SoundCloudAudio(KEY)
   var audio = soundcloud.audio
   var player = document.querySelector('.episode-player')
-  var timeCurrent = document.querySelector('.-current')
-  var timeDuration = document.querySelector('.-duration')
-  var timeline = document.querySelector('.timeline')
-  var percentage = document.querySelector('.percentage')
-  var percentageMouse = document.querySelector('.mouse')
-  var volume = document.querySelector('.volume')
-  var backwards = document.querySelector('.backwards')
-  var forwards = document.querySelector('.forwards')
+  var timeCurrent = document.querySelector('.episode-player .-current')
+  var timeDuration = document.querySelector('.episode-player .-duration')
+  var playButton = document.querySelector('.episode-player .play')
+  var timeline = document.querySelector('.episode-player .timeline')
+  var percentage = document.querySelector('.episode-player .percentage')
+  var percentageMouse = document.querySelector('.episode-player .mouse')
+  var volume = document.querySelector('.episode-player .volume')
+  var backwards = document.querySelector('.episode-player .backwards')
+  var forwards = document.querySelector('.episode-player .forwards')
   var downloadLink = document.querySelector('.download')
 
   var attrData = player.getAttribute('data-soundcloud')
+  var storageTime = localStorage.getItem(attrData)
+  var url = 'https://soundcloud.com/movimento-ux/' + attrData
+
 
   function formatTime(timeCurrent) {
     var seconds = parseInt(timeCurrent % 60)
@@ -26,28 +30,23 @@ if (episode) {
     return format
   }
 
-  var storageTime = localStorage.getItem(attrData)
-  // alert(localStorage.getItem(attrData));
 
   if (storageTime) {
     audio.currentTime = storageTime
   } else {
     localStorage.setItem(attrData, audio.currentTime)
-    // alert(localStorage.getItem(attrData));
   }
 
-  var url = 'https://soundcloud.com/movimento-ux/' + attrData
+
   soundcloud.resolve(url, function(track) {
+    timeCurrent.innerHTML = formatTime(audio.currentTime)
     timeDuration.innerHTML = formatTime(soundcloud.duration)
     soundcloud.play()
-    // soundcloud.pause()
-    var playPromise = soundcloud.play()
 
+    var playPromise = soundcloud.play()
     if (playPromise !== undefined) {
       playPromise.then(function() {
-        if (mqSmall) {
-          soundcloud.pause()
-        }
+        soundcloud.pause()
       }).catch(function(error){
         console.log(error)
       })
@@ -58,13 +57,13 @@ if (episode) {
     percentage.style.width = timelinePercentage + '%'
   })
 
+
   soundcloud.on('timeupdate', function() {
     var timelinePercentage = (audio.currentTime * 100 / audio.duration).toFixed(2)
     percentage.style.width = timelinePercentage + '%'
 
     timeCurrent.innerHTML = formatTime(audio.currentTime)
     localStorage.setItem(attrData, audio.currentTime)
-    // alert(localStorage.getItem(attrData));
 
     timeline.addEventListener('click', function(e) {
       var percent = e.offsetX / this.offsetWidth
@@ -72,17 +71,7 @@ if (episode) {
     })
   })
 
-  // var storageTime = localStorage.getItem(attrData)
-  // alert(localStorage.getItem(attrData));
 
-  // if (storageTime) {
-  //   audio.currentTime = storageTime
-  // } else {
-  //   localStorage.setItem(attrData, audio.currentTime)
-  //   alert(localStorage.getItem(attrData));
-  // }
-
-  var playButton = document.querySelector('.episode-player > .play')
   playButton.addEventListener('click', function() {
     if (soundcloud.playing) {
       soundcloud.pause()
@@ -92,6 +81,7 @@ if (episode) {
       this.classList.add('-on')
     }
   })
+
 
   timeline.addEventListener('mousemove', function(event) {
     var hoverPercentage = (event.offsetX * 100 / this.offsetWidth).toFixed(2)
