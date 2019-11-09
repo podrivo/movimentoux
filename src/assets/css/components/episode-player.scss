@@ -140,7 +140,7 @@
     cursor: pointer;
 
     @media (max-width: $sm) {
-      display: none;
+      // display: none;
     }
 
     > .percentage,
