@@ -9,6 +9,6 @@
   justify-content: space-between;
 
   @media (max-width: $sm) {
-    padding: $spacing-4 $spacing-4 $spacing-10;
+    padding: $spacing-4 0 60px;
   }
 }

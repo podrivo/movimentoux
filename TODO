@@ -14,7 +14,7 @@
 - [ ] Testar transição de páginas
 - [ ] Testar animação Home
 - [ ] Refinar menu mobile
-- [ ] Adicionar timeline em player mobile
+- [x] Adicionar timeline em player mobile
 - [x] Testar salvar tempo do podcast no cookies/localStorage
 - [x] Arrumar bug do hover na imagem do episódio
 - [x] Remover flickity external CSS 

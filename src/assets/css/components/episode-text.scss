@@ -40,7 +40,7 @@
   }
 
   .links {
-    margin-top: -$spacing-3;
+    // margin-top: -$spacing-3;
     margin-bottom: $spacing-4;
   }
 
@@ -53,7 +53,7 @@
     border: $spacing solid $grayish;
 
     @media (max-width: $sm) {
-      border: 0;
+      border-width: $spacing / 2;
     }
   }
 }

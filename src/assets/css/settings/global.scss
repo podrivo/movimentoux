@@ -40,8 +40,9 @@ img, video {
   display: block;
 
   @media (max-width: $sm) {
-    width: calc(100% + (#{$spacing-4} * 2) + (#{$spacing-border} * 2));
-    margin-left: calc(-#{$spacing-4} - #{$spacing-border});
+    // width: calc(100% + (#{$spacing-4} * 2) + (#{$spacing-border}));
+    width: 100%;
+    // margin-left: calc(-#{$spacing-4} - #{$spacing-border});
   }
 }
 
