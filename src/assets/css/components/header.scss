@@ -15,7 +15,7 @@ header {
   padding: $spacing-6 $spacing-body-x $spacing-3;
   transition: margin $timing $easing;
   z-index: 999;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
 
   @media (max-width: $sm) {
     top: 0 !important;
