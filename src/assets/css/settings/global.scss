@@ -20,6 +20,10 @@
       scroll-snap-type: none;
     }
   }
+
+  &.-mobile-active {
+    overflow-y: hidden;
+  }
 }
 
 input {

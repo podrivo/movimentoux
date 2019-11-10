@@ -62,16 +62,16 @@ header {
         top: 0;
         left: 0;
         width: calc(100vw - #{$spacing-border}*2);
-        height: 100vh;
+        height: 0;
         background-color: $black;
         display: flex;
         justify-content: center;
         flex-direction: column;
         font-size: $font-size-header;
         line-height: 4rem;
-        transform: scaleY(0) translate3d(0, 0, 0);
+        font-weight: 700;
         transform-origin: top;
-        transition: transform $timing * 2 $easing;
+        transition: height $timing $easing;
         pointer-events: none;
 
         .item {
@@ -81,14 +81,14 @@ header {
       }
 
       &.-desktop.-mobile-active {
-        transform: scaleY(1) translate3d(0, 0, 0);
+        height: 100vh;
         z-index: 100;
         pointer-events: all;
 
         .item {
           opacity: 1;
           pointer-events: all;
-          transition: opacity $timing $timing $easing;
+          transition: opacity $timing $timing / 2 $easing;
         }
       }
     }

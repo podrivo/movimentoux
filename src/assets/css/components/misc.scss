@@ -8,6 +8,17 @@
     max-width: 700px;
     height: 100%;
     min-height: 550px;
+    overflow-x: hidden !important;
+
+    @media (max-width: $sm) {
+      margin-left: 0;
+      max-width: 100%;
+      min-height: 650px;
+    }
+  }
+
+  @media (max-width: $sm) {
+    max-width: 100%;
   }
 }
 
