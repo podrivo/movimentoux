@@ -15,7 +15,6 @@
 
   &[data-page='season'] {
     scroll-snap-type: y proximity;
-    // scroll-snap-type: y mandatory;
 
     @media (max-width: $sm) {
       scroll-snap-type: none;
@@ -38,12 +37,6 @@ img, video {
   width: 100%;
   height: auto;
   display: block;
-
-  @media (max-width: $sm) {
-    // width: calc(100% + (#{$spacing-4} * 2) + (#{$spacing-border}));
-    width: 100%;
-    // margin-left: calc(-#{$spacing-4} - #{$spacing-border});
-  }
 }
 
 svg {
