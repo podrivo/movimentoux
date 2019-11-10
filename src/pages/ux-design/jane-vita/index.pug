@@ -3,32 +3,32 @@ include /components/includes
 +meta-head(
   'Jane Vita, Episódio 7 — Movimento UX',
   'Service Creator na Futurice. Design de serviços, futures thinking, UX em outros países.',
-  'https://movimentoux.com/ux-design/jane-vita/'
+  'https://movimentoux.com/ux-design/jane-vita/',
+  '',
+  'episode'
 )
 
-body(data-page='episode')
++header('on')
 
-  +header('on')
++episode-section(
+  'Jane Vita',
+  'Service Creator na Futurice.',
+  'Design de serviços, futures thinking, UX em outros países.',
+  '07',
+  '07-jane-vita.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Jane Vita',
-    'Service Creator na Futurice.',
-    'Design de serviços, futures thinking, UX em outros países.',
-    '07',
-    '07-jane-vita.jpg',
-    '',
-    '-inside'
-  )
++episode-player('janevita')
 
-  +episode-player('janevita')
+section.episode-content
+  +episode-tabs
 
-  section.episode-content
-    +episode-tabs
+  .episode-text
+    include intro
+    include transcricao
 
-    .episode-text
-      include intro
-      include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

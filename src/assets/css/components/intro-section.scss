@@ -9,7 +9,7 @@
 
   @media (max-width: $sm) {
     justify-content: center;
-    padding: $spacing-2 $spacing-4;
+    padding: $spacing-2 $spacing-border;
   }
 
   .header {
@@ -48,7 +48,7 @@
   @media (max-width: $sm) {
     display: block;
     height: auto;
-    padding: 0 $spacing-4 $spacing-4;
+    padding: 0 $spacing-border $spacing-4;
   }
 
   .text {
@@ -115,9 +115,10 @@
 // INSIDE
 .intro-section.-inside {
   justify-content: center;
+  z-index: 1;
 
   @media (max-width: $sm) {
-    padding-top: $spacing-10;
+    padding-top: 70px;
   }
 
   .text {

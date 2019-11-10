@@ -11,6 +11,10 @@
     margin-right: $spacing-4;
     font-size: $font-size-text;
     font-weight: 500;
+
+    @media (max-width: $sm) {
+      margin-right: $spacing-2;
+    }
   }
 
   .link {

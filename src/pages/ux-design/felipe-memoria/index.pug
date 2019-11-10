@@ -3,32 +3,32 @@ include /components/includes
 +meta-head(
   'Felipe Memória, Episódio 16 — Movimento UX',
   'Sócio fundador da Work & Co. Produto digital, inovação, liderança em design.',
-  'https://movimentoux.com/ux-design/felipe-memoria/'
+  'https://movimentoux.com/ux-design/felipe-memoria/',
+  '',
+  'episode'
 )
 
-body(data-page='episode')
++header('on')
 
-  +header('on')
++episode-section(
+  'Felipe Memória',
+  'Sócio fundador da Work & Co.',
+  'Produto digital, inovação, liderança em design.',
+  '16',
+  '16-felipe-memoria.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Felipe Memória',
-    'Sócio fundador da Work & Co.',
-    'Produto digital, inovação, liderança em design.',
-    '16',
-    '16-felipe-memoria.jpg',
-    '',
-    '-inside'
-  )
++episode-player('felipememoria')
 
-  +episode-player('felipememoria')
+section.episode-content
+  //- +episode-tabs
 
-  section.episode-content
-    //- +episode-tabs
+  .episode-text
+    include intro
+    //- include transcricao
 
-    .episode-text
-      include intro
-      //- include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

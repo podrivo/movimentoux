@@ -6,20 +6,23 @@
 *::-moz-selection {@include selection}
 *::selection {@include selection}
 
-body {
+:root {
   background-color: $white;
   color: $white;
-  overflow-y: scroll;
   overflow-x: hidden;
+  overflow-y: scroll;
   padding: 0 $spacing-border;
 
   &[data-page='season'] {
     scroll-snap-type: y proximity;
-    // scroll-snap-type: y mandatory;
 
     @media (max-width: $sm) {
       scroll-snap-type: none;
     }
+  }
+
+  &.-mobile-active {
+    overflow-y: hidden;
   }
 }
 
@@ -38,11 +41,6 @@ img, video {
   width: 100%;
   height: auto;
   display: block;
-
-  @media (max-width: $sm) {
-    width: calc(100% + (#{$spacing-4} * 2) + (#{$spacing-border} * 2));
-    margin-left: calc(-#{$spacing-4} - #{$spacing-border});
-  }
 }
 
 svg {

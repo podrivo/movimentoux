@@ -3,32 +3,32 @@ include /components/includes
 +meta-head(
   'Caio César, Episódio 1 — Movimento UX',
   'Professor de Design de Interação na PUC-MG. Introdução ao tema UX, possibilidades de atuação e dicas pra começar.',
-  'https://movimentoux.com/ux-design/caio-cesar/'
+  'https://movimentoux.com/ux-design/caio-cesar/',
+  '',
+  'episode'
+)
+  
++header('on')
+
++episode-section(
+  'Caio César',
+  'Professor de Design de Interação na PUC-MG.',
+  'Introdução ao tema UX, possibilidades de atuação e dicas pra começar.',
+  '01',
+  '01-caio-cesar.jpg',
+  '',
+  '-inside'
 )
 
-body(data-page='episode')
-  
-  +header('on')
-  
-  +episode-section(
-    'Caio César',
-    'Professor de Design de Interação na PUC-MG.',
-    'Introdução ao tema UX, possibilidades de atuação e dicas pra começar.',
-    '01',
-    '01-caio-cesar.jpg',
-    '',
-    '-inside'
-  )
-  
-  +episode-player('movimento-ux-episodio-1-caio-cesar')
-  
-  section.episode-content
-    +episode-tabs
++episode-player('movimento-ux-episodio-1-caio-cesar')
 
-    .episode-text
-      include intro
-      include transcricao
+section.episode-content
+  +episode-tabs
 
-    include sidebar
+  .episode-text
+    include intro
+    include transcricao
+
+  include sidebar
 
 +meta-js

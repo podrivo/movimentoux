@@ -9,7 +9,7 @@
   padding: 0 $spacing-body-x $spacing-body-x;
 
   @media (max-width: $sm) {
-    padding: $spacing-4;
+    padding: $spacing-4 $spacing-border;
   }
 
   > .eyebrow {

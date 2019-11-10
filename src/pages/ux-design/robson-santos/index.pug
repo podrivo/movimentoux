@@ -3,32 +3,32 @@ include /components/includes
 +meta-head(
   'Robson Santos, Episódio 11 — Movimento UX',
   'Designer Estratégico na PorQueNão?. Pesquisa para produto, estratégia de UX, usabilidade.',
-  'https://movimentoux.com/ux-design/robson-santos/'
+  'https://movimentoux.com/ux-design/robson-santos/',
+  '',
+  'episode'
 )
 
-body(data-page='episode')
++header('on')
 
-  +header('on')
++episode-section(
+  'Robson Santos',
+  'Designer Estratégico na PorQueNão?.',
+  'Pesquisa para produto, estratégia de UX, usabilidade.',
+  '11',
+  '11-robson-santos.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Robson Santos',
-    'Designer Estratégico na PorQueNão?.',
-    'Pesquisa para produto, estratégia de UX, usabilidade.',
-    '11',
-    '11-robson-santos.jpg',
-    '',
-    '-inside'
-  )
++episode-player('robsonsantos')
 
-  +episode-player('robsonsantos')
+section.episode-content
+  //- +episode-tabs
 
-  section.episode-content
-    //- +episode-tabs
+  .episode-text
+    include intro
+    //- include transcricao
 
-    .episode-text
-      include intro
-      //- include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

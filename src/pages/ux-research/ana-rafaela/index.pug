@@ -1,35 +1,34 @@
 include /components/includes
 
 +meta-head(
-  'Ana Rafaela, User Experience Researcher no YouTube San Bruno/CA. Episódio 23 — Movimento UX. Conversas sobre pesquisa para produto. UX Research.',
-  'Pesquisa global, técnicas híbridas de pesquisa, repositório de aprendizados — Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Segunda Temporada. Conversas sobre pesquisa para produto. UX Research.',
+  'Ana Rafaela, User Experience Researcher no YouTube San Bruno/CA. Episódio 23 — Movimento UX. Conversas sobre pesquisa para experiência do usuário. UX Research.',
+  'Pesquisa global, técnicas híbridas de pesquisa, repositório de aprendizados — Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Segunda Temporada. Conversas sobre pesquisa para experiência do usuário. UX Research.',
   'https://movimentoux.com/ux-research/ana-rafaela/',
-  'https://movimentoux.com/assets/img/share/23-ana-rafaela.jpg'
+  'https://movimentoux.com/assets/img/share/23-ana-rafaela.jpg',
+  'episode'
 )
 
-body(data-page='episode')
++header('', 'on')
 
-  +header('', 'on')
++episode-section(
+  'Ana Rafaela',
+  'User Experience Researcher no YouTube San Bruno/CA.',
+  'Pesquisa global, técnicas híbridas de pesquisa, repositório de aprendizados.',
+  '23',
+  '23-ana-rafaela.jpg',
+  '',
+  '-inside'
+)
 
-  +episode-section(
-    'Ana Rafaela',
-    'User Experience Researcher no YouTube San Bruno/CA.',
-    'Pesquisa global, técnicas híbridas de pesquisa, repositório de aprendizados.',
-    '23',
-    '23-ana-rafaela.jpg',
-    '',
-    '-inside'
-  )
++episode-player('anarafaela')
 
-  +episode-player('anarafaela')
+section.episode-content
+  +episode-tabs
 
-  section.episode-content
-    +episode-tabs
-
-    .episode-text
-      include intro
-      include transcricao
-      
-    include sidebar
+  .episode-text
+    include intro
+    include transcricao
+    
+  include sidebar
 
 +meta-js

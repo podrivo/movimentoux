@@ -10,13 +10,13 @@
   perspective: 1000;
 
   @media (max-width: $sm) {
-    width: calc(100% + #{$spacing-8});
+    width: calc(100% + #{$spacing-border}*2);
     height: auto;
     position: relative;
     display: block;
     justify-content: flex-start;
     margin-bottom: $spacing-4;
-    margin-left: -$spacing-4;
+    margin-left: -$spacing-border;
 
     img {
       width: 100%;

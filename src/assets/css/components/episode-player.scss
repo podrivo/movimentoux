@@ -5,14 +5,14 @@
   padding: $spacing-2 $spacing-body-x;
   background-color: $black;
   color: $white;
-  z-index: 9999;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 
   @media (max-width: $sm) {
     bottom: 0;
-    padding: $spacing-2 $spacing-4;
+    padding: $spacing-2 $spacing-border;
   }
 
   > .play {
@@ -87,10 +87,14 @@
     min-width: 29px;
     height: 26px;
     opacity: 0.7;
+    background-repeat: no-repeat;
     transition: opacity $timing $easing;
 
     @media (max-width: $sm) {
       opacity: 1;
+      background-size: contain;
+      min-width: 24px;
+      height: 24px;
     }
 
     &:hover,
@@ -107,6 +111,10 @@
   > .forwards {
     background-image: url('../img/ui/player-forwards.svg');
     margin-right: $spacing-2;
+
+    @media (max-width: $sm) {
+      margin-right: $spacing-border;
+    }
   }
 
   > .time {
@@ -138,10 +146,6 @@
     background-color: rgba($white, 0.25);
     overflow: hidden;
     cursor: pointer;
-
-    @media (max-width: $sm) {
-      display: none;
-    }
 
     > .percentage,
     > .mouse {

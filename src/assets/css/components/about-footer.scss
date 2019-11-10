@@ -3,11 +3,15 @@
   padding: 0 $spacing-body-x $spacing-body-y;
 
   @media (max-width: $sm) {
-    padding: 0 $spacing-4 $spacing-4;
+    padding: 0 $spacing-border $spacing-4;
   }
 
   > .madewithlove {
     margin: $spacing-8 0 0;
     display: block;
+
+    @media (max-width: $sm) {
+      margin-top: $spacing-4;
+    }
   }
 }

@@ -1,36 +1,35 @@
 include /components/includes
 
 +meta-head(
-  'Camila Borja, User Experience Researcher no Itaú (Parte 1). Episódio 24 — Movimento UX. Conversas sobre pesquisa para produto. UX Research.',
-  'Capacitação em Pesquisa, Atomic Research e Gestão e organização dos aprendizados — Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Segunda Temporada. Conversas sobre pesquisa para produto. UX Research.',
+  'Camila Borja, User Experience Researcher no Itaú (Parte 1). Episódio 24 — Movimento UX. Conversas sobre pesquisa para experiência do usuário. UX Research.',
+  'Capacitação em Pesquisa, Atomic Research e Gestão e organização dos aprendizados — Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Segunda Temporada. Conversas sobre pesquisa para experiência do usuário. UX Research.',
   'https://movimentoux.com/ux-research/camila-borja-pt1/',
-  'https://movimentoux.com/assets/img/share/24-camila-borja.jpg'
+  'https://movimentoux.com/assets/img/share/24-camila-borja.jpg',
+  'episode'
 )
 
-body(data-page='episode')
++header('', 'on')
 
-  +header('', 'on')
++episode-section(
+  'Camila Borja',
+  'User Experience Researcher no Itaú.',
+  'Capacitação em Pesquisa, Atomic Research e Gestão e organização dos aprendizados.',
+  '24',
+  '24-camila-borja.jpg',
+  '',
+  '-inside',
+  'pt1'
+)
 
-  +episode-section(
-    'Camila Borja',
-    'User Experience Researcher no Itaú.',
-    'Capacitação em Pesquisa, Atomic Research e Gestão e organização dos aprendizados.',
-    '24',
-    '24-camila-borja.jpg',
-    '',
-    '-inside',
-    'pt1'
-  )
++episode-player('camilaborja-parte1')
 
-  +episode-player('camilaborja-parte1')
+section.episode-content
+  +episode-tabs
 
-  section.episode-content
-    +episode-tabs
+  .episode-text
+    include intro
+    include transcricao
 
-    .episode-text
-      include intro
-      include transcricao
-
-    include sidebar
+  include sidebar
 
 +meta-js

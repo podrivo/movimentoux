@@ -1,6 +1,6 @@
-mixin meta-head(title, description, href, share)
+mixin meta-head(title, description, href, share, page)
   doctype html
-  html(lang='pt-br')
+  html(lang='pt-br' data-page= page)
 
     head
       meta(charset='utf-8')
@@ -43,3 +43,5 @@ mixin meta-head(title, description, href, share)
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-PJ7GNKQ');
+
+    body

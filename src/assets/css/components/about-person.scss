@@ -17,4 +17,11 @@
       margin-bottom: $spacing-2;
     }
   }
+
+  > img {
+    @media (max-width: $sm) {
+      width: calc(100% + #{$spacing-border}*2);
+      margin-left: -$spacing-border;
+    }
+  }
 }

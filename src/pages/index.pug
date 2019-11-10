@@ -1,94 +1,90 @@
-include /components/meta-head
-include /components/header
-include /components/episode-section
-include /components/social-links
-include /components/meta-js
+include /components/includes
 
 +meta-head(
-  'Movimento UX — Segunda Temporada. Conversas sobre pesquisa para produto. UX Research.',
-  'Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Segunda Temporada. Conversas sobre pesquisa para produto. UX Research.',
-  'https://movimentoux.com'
+  'Movimento UX — Segunda Temporada. Conversas sobre pesquisa para experiência do usuário. UX Research.',
+  'Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Segunda Temporada. Conversas sobre pesquisa para experiência do usuário. UX Research.',
+  'https://movimentoux.com',
+  '',
+  'season'
 )
 
-body(data-page='season')
++header('', 'on')
 
-  +header('', 'on')
+section.intro-section.-snap
+  span.eyebrow Segunda Temporada
+  h1.header UX <br> Research
+  p Nov, 2018 — Conversas sobre pesquisa para experiência do usuário.
+  +social-links('-home')
 
-  section.intro-section.-snap
-    span.eyebrow Segunda Temporada
-    h1.header UX <br> Research
-    p Nov, 2018 — Conversas sobre pesquisa para produto.
-    +social-links('-home')
-  
-  //- ul.list-grid
-  //-   li.list.-on #[svg(src='assets/img/ui/ep-list.svg')]
-  //-   li.grid #[svg(src='assets/img/ui/ep-grid.svg')]
-  
-  //- .episode-wrapper
-  +episode-section(
-    'Camila Borja',
-    'User Experience Researcher no Itaú.',
-    'Operação de pesquisa (Research Ops), Síntese de aprendizados e Storytelling.',
-    '25',
-    '24-camila-borja.jpg',
-    '/ux-research/camila-borja-pt2/',
-    '-snap',
-    'pt2'
-  )
-  +episode-section(
-    'Camila Borja',
-    'User Experience Researcher no Itaú.',
-    'Capacitação em Pesquisa, Atomic Research e Gestão e organização dos aprendizados.',
-    '24',
-    '24-camila-borja.jpg',
-    '/ux-research/camila-borja-pt1/',
-    '-snap',
-    'pt1'
-  )
-  +episode-section(
-    'Ana Rafaela',
-    'User Experience Researcher no YouTube San Bruno/CA.',
-    'Pesquisa global, técnicas híbridas de pesquisa, repositório de aprendizados.',
-    '23',
-    '23-ana-rafaela.jpg',
-    '/ux-research/ana-rafaela/',
-    '-snap'
-  )
-  +episode-section(
-    'Cristina Bilsland',
-    'User Experience Researcher Senior no Google UK.',
-    'Pesquisa global, estratégia de pesquisa, design sprint.',
-    '22',
-    '22-cristina-bilsland.jpg',
-    '/ux-research/cristina-bilsland/',
-    '-snap'
-  )
-  +episode-section(
-    'Caio Gama',
-    'User Researcher no Nubank.',
-    'Data & analytics, mix de técnicas de pesquisa qualitativa e quantitativa.',
-    '21',
-    '21-caio-gama.jpg',
-    '/ux-research/caio-gama/',
-    '-snap'
-  )
-  +episode-section(
-    'Carol Zatorre',
-    'Head de Pesquisa na Kyvo.',
-    'Consultoria, pesquisa qualitativa e pesquisa na sprint.',
-    '20',
-    '20-carol-zatorre.jpg',
-    '/ux-research/carol-zatorre/',
-    '-snap'
-  )
-  +episode-section(
-    'Paola Sales',
-    'Head de User Studies no Descomplica.',
-    'Pesquisa humanizada, empatia e criação de área.',
-    '19',
-    '19-paola-sales.jpg',
-    '/ux-research/paola-sales/',
-    '-snap'
-  )
+//- ul.list-grid
+//-   li.list.-on #[svg(src='assets/img/ui/ep-list.svg')]
+//-   li.grid #[svg(src='assets/img/ui/ep-grid.svg')]
+
+//- .episode-wrapper
++episode-section(
+  'Camila Borja',
+  'User Experience Researcher no Itaú.',
+  'Operação de pesquisa (Research Ops), Síntese de aprendizados e Storytelling.',
+  '25',
+  '24-camila-borja.jpg',
+  '/ux-research/camila-borja-pt2/',
+  '-snap',
+  'pt2'
+)
++episode-section(
+  'Camila Borja',
+  'User Experience Researcher no Itaú.',
+  'Capacitação em Pesquisa, Atomic Research e Gestão e organização dos aprendizados.',
+  '24',
+  '24-camila-borja.jpg',
+  '/ux-research/camila-borja-pt1/',
+  '-snap',
+  'pt1'
+)
++episode-section(
+  'Ana Rafaela',
+  'User Experience Researcher no YouTube San Bruno/CA.',
+  'Pesquisa global, técnicas híbridas de pesquisa, repositório de aprendizados.',
+  '23',
+  '23-ana-rafaela.jpg',
+  '/ux-research/ana-rafaela/',
+  '-snap'
+)
++episode-section(
+  'Cristina Bilsland',
+  'User Experience Researcher Senior no Google UK.',
+  'Pesquisa global, estratégia de pesquisa, design sprint.',
+  '22',
+  '22-cristina-bilsland.jpg',
+  '/ux-research/cristina-bilsland/',
+  '-snap'
+)
++episode-section(
+  'Caio Gama',
+  'User Researcher no Nubank.',
+  'Data & analytics, mix de técnicas de pesquisa qualitativa e quantitativa.',
+  '21',
+  '21-caio-gama.jpg',
+  '/ux-research/caio-gama/',
+  '-snap'
+)
++episode-section(
+  'Carol Zatorre',
+  'Head de Pesquisa na Kyvo.',
+  'Consultoria, pesquisa qualitativa e pesquisa na sprint.',
+  '20',
+  '20-carol-zatorre.jpg',
+  '/ux-research/carol-zatorre/',
+  '-snap'
+)
++episode-section(
+  'Paola Sales',
+  'Head de User Studies no Descomplica.',
+  'Pesquisa humanizada, empatia e criação de área.',
+  '19',
+  '19-paola-sales.jpg',
+  '/ux-research/paola-sales/',
+  '-snap'
+)
 
 +meta-js

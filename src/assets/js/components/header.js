@@ -6,15 +6,17 @@ linkMobile.addEventListener('click', function (e) {
   e.preventDefault()
   if (menuDesktop.classList.contains('-mobile-active')) {
     menuDesktop.classList.remove('-mobile-active')
+    html.classList.remove('-mobile-active')
     this.innerHTML = 'Menu'
   } else {
     menuDesktop.classList.add('-mobile-active')
+    html.classList.add('-mobile-active')
     this.innerHTML = 'Fechar'
   }
 })
 
 //header after scrolling
-if (!season) {
+if (!season || !mqSmall) {
   var header = document.querySelector('header')
   var headerHeight = header.offsetHeight
   var sidebarInfo = document.querySelector('.episode-sidebar .info')
