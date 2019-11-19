@@ -11,12 +11,14 @@
 - [x] Xablauzar a interação da listagem de episódios
 - [x] Adicionar textinho página Sobre
 - [x] Melhorar listagem de links nos episódios
-- [ ] Testar transição de páginas
-- [ ] Testar animação Home
-- [ ] Refinar menu mobile
 - [x] Adicionar timeline em player mobile
 - [x] Testar salvar tempo do podcast no cookies/localStorage
 - [x] Arrumar bug do hover na imagem do episódio
 - [x] Remover flickity external CSS 
+- [x] Refinar menu mobile
+- [ ] Testar transição de páginas
+- [ ] Testar animação Home
 - [ ] Adicionar botão de play na página do episódios
 - [ ] Codar visão de episódios em grid
+- [ ] Corrigir SEO compartilhamento UX Design
+- [ ] Adicionar imagens de compartilhamento
