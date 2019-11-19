@@ -8,61 +8,62 @@ include /components/includes
 
 +header('', '', '', 'on')
 
-section.intro-section.-scroll(data-barba='container' data-barba-namespace='home')
-  .text
-    h1.header Movimento UX <br>é um podcast <br>de entrevistas <br>sobre o universo <br>de Experiência <br>do Usuário.
-    p Olá. Bem-vinde ao Movimento UX!
-    p Meu nome é Izabela de Fátima, moro em São Paulo e trabalho com pesquisa para experiência do usuário no iFood. Trabalhei a maior parte do tempo como pesquisadora e estrategista em agências de publicidade e de uns anos pra cá resolvi focar em UX Research.
-    p O podcast surgiu no momento em que resolvi me aproximar da área de UX. A vontade surgiu pela busca por projetos centrados (de verdade) nas pessoas e pelo desejo de ir além da comunicação para projetar produtos e serviços digitais.
-    p O primeiro passo que dei foi pesquisar informações para começar a criar repertório. Achei bastante coisa, principalmente online. Se por um lado o volume de dados encontrado foi muito animador, por outro me deixou bastante perdida sobre como começar em uma área tão ampla, com inúmeras nomenclaturas e diversas possibilidades de atuação. E uma coisa me chamou à atenção durante a procura. Não encontrei nenhum canal de informação voltado para iniciantes, e em português — não tenho nada contra a língua inglesa; pelo contrário, gosto e admiro o poder de síntese, mas conteúdo em português pode facilitar a entrada num campo desconhecido.
-    p Isso me fez pensar que outras pessoas poderiam estar com o mesmo problema que o meu, confusas sobre como começar a trabalhar com UX. E como acredito que conversar sobre um problema é uma das melhores formas de encontrar caminhos para solucioná-lo, resolvi criar esse projeto.
-    p O propósito do Movimento UX é entrevistar líderes do mercado de experiência do usuário no Brasil e no mundo para que a gente possa utilizar o ponto de vista dele ou dela para aprender mais sobre o tema. A primeira temporada tem 18 episódios e o objetivo foi investigar sobre o universo de UX Design. Já a segunda temporada tem a proposta de discutir sobre Pesquisa para produto (UX Research).
-    p Eu fico à frente da produção, enquanto o Cristiano Sarmento e o Pedro Ivo Hudson — que além de serem designers que admiro, tenho a sorte de tê-los como parceiros neste projeto — lideram a parte visual e o site.
-    p Espero que você goste!
+div(data-barba='container' data-barba-namespace='home')
+  section.intro-section.-scroll
+    .text
+      h1.header Movimento UX <br>é um podcast <br>de entrevistas <br>sobre o universo <br>de Experiência <br>do Usuário.
+      p Olá. Bem-vinde ao Movimento UX!
+      p Meu nome é Izabela de Fátima, moro em São Paulo e trabalho com pesquisa para experiência do usuário no iFood. Trabalhei a maior parte do tempo como pesquisadora e estrategista em agências de publicidade e de uns anos pra cá resolvi focar em UX Research.
+      p O podcast surgiu no momento em que resolvi me aproximar da área de UX. A vontade surgiu pela busca por projetos centrados (de verdade) nas pessoas e pelo desejo de ir além da comunicação para projetar produtos e serviços digitais.
+      p O primeiro passo que dei foi pesquisar informações para começar a criar repertório. Achei bastante coisa, principalmente online. Se por um lado o volume de dados encontrado foi muito animador, por outro me deixou bastante perdida sobre como começar em uma área tão ampla, com inúmeras nomenclaturas e diversas possibilidades de atuação. E uma coisa me chamou à atenção durante a procura. Não encontrei nenhum canal de informação voltado para iniciantes, e em português — não tenho nada contra a língua inglesa; pelo contrário, gosto e admiro o poder de síntese, mas conteúdo em português pode facilitar a entrada num campo desconhecido.
+      p Isso me fez pensar que outras pessoas poderiam estar com o mesmo problema que o meu, confusas sobre como começar a trabalhar com UX. E como acredito que conversar sobre um problema é uma das melhores formas de encontrar caminhos para solucioná-lo, resolvi criar esse projeto.
+      p O propósito do Movimento UX é entrevistar líderes do mercado de experiência do usuário no Brasil e no mundo para que a gente possa utilizar o ponto de vista dele ou dela para aprender mais sobre o tema. A primeira temporada tem 18 episódios e o objetivo foi investigar sobre o universo de UX Design. Já a segunda temporada tem a proposta de discutir sobre Pesquisa para produto (UX Research).
+      p Eu fico à frente da produção, enquanto o Cristiano Sarmento e o Pedro Ivo Hudson — que além de serem designers que admiro, tenho a sorte de tê-los como parceiros neste projeto — lideram a parte visual e o site.
+      p Espero que você goste!
 
-  +social-links('')
+    +social-links('')
 
-section.about-team
-  span.eyebrow Equipe
-  .grid
-    .about-person
-      img(src='/assets/img/team/izabela.jpg' alt='Fotografia de Izabela de Fátima')
-      h2.name Izabela de Fátima
-      h3.job Pesquisadora UX & Apresentadora
-      ul.about-social
-        //- li.item
-          a(href='http://izabeladefatima.com/' title='Website' target='_blank' rel='noopener').icon #[svg(src='assets/img/social-website.svg')]
-        li.item
-          a(href='https://www.linkedin.com/in/izabeladefatima/' title='LinkedIn' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-linkedin.svg')]
-        li.item
-          a(href='https://twitter.com/izabeladefatima' title='Twitter' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-twitter.svg')]
-    
-    .about-person
-      img(src='/assets/img/team/cristiano.jpg' alt='Fotografia de Cristiano Sarmento')
-      h2.name Cristiano Sarmento
-      h3.job Designer & Diretor de Arte
-      ul.about-social
-        li.item
-          a(href='http://cristiano.do/' title='Website' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-website.svg')]
-        li.item
-          a(href='https://www.linkedin.com/in/hicristiano/' title='LinkedIn' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-linkedin.svg')]
-        li.item
-          a(href='https://twitter.com/cristianodoes' title='Twitter' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-twitter.svg')]
-    
-    .about-person
-      img(src='/assets/img/team/pedro-ivo.jpg' alt='Fotografia de Pedro Ivo Hudson')
-      h2.name Pedro Ivo Hudson
-      h3.job Designer
-      ul.about-social
-        li.item
-          a(href='http://podrivo.com/' title='Website' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-website.svg')]
-        li.item
-          a(href='https://www.linkedin.com/in/pedroivohudson/' title='LinkedIn' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-linkedin.svg')]
-        li.item
-          a(href='https://twitter.com/podrivo' title='Twitter' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-twitter.svg')]
+  section.about-team
+    span.eyebrow Equipe
+    .grid
+      .about-person
+        img(src='/assets/img/team/izabela.jpg' alt='Fotografia de Izabela de Fátima')
+        h2.name Izabela de Fátima
+        h3.job Pesquisadora UX & Apresentadora
+        ul.about-social
+          //- li.item
+            a(href='http://izabeladefatima.com/' title='Website' target='_blank' rel='noopener').icon #[svg(src='assets/img/social-website.svg')]
+          li.item
+            a(href='https://www.linkedin.com/in/izabeladefatima/' title='LinkedIn' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-linkedin.svg')]
+          li.item
+            a(href='https://twitter.com/izabeladefatima' title='Twitter' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-twitter.svg')]
+      
+      .about-person
+        img(src='/assets/img/team/cristiano.jpg' alt='Fotografia de Cristiano Sarmento')
+        h2.name Cristiano Sarmento
+        h3.job Designer & Diretor de Arte
+        ul.about-social
+          li.item
+            a(href='http://cristiano.do/' title='Website' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-website.svg')]
+          li.item
+            a(href='https://www.linkedin.com/in/hicristiano/' title='LinkedIn' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-linkedin.svg')]
+          li.item
+            a(href='https://twitter.com/cristianodoes' title='Twitter' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-twitter.svg')]
+      
+      .about-person
+        img(src='/assets/img/team/pedro-ivo.jpg' alt='Fotografia de Pedro Ivo Hudson')
+        h2.name Pedro Ivo Hudson
+        h3.job Designer
+        ul.about-social
+          li.item
+            a(href='http://podrivo.com/' title='Website' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-website.svg')]
+          li.item
+            a(href='https://www.linkedin.com/in/pedroivohudson/' title='LinkedIn' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-linkedin.svg')]
+          li.item
+            a(href='https://twitter.com/podrivo' title='Twitter' target='_blank' rel='noopener').icon #[svg(src='assets/img/ui/social-twitter.svg')]
 
-footer.about-footer
-  a(href='mailto:contato@movimentoux.com' title='envie email para — contato@movimentoux.com').btn.-lg envie email para — contato@movimentoux.com
-  span.madewithlove Feito com &hearts; em Belo Horizonte, Estocolmo e São Paulo.
+  footer.about-footer
+    a(href='mailto:contato@movimentoux.com' title='envie email para — contato@movimentoux.com').btn.-lg envie email para — contato@movimentoux.com
+    span.madewithlove Feito com &hearts; em Belo Horizonte, Estocolmo e São Paulo.
 
 +meta-js

@@ -33,18 +33,18 @@ barba.init({
   transitions: [{
     name: 'legacy-example',
     leave: function (data) {
-      var done = this.async();
+      var done = this.async()
       TweenMax.to(data.current.container, 1, {
         opacity: 0,
         onComplete: done
-      });
+      })
     },
     enter: function (data) {
-      var done = this.async();
+      var done = this.async()
       TweenMax.from(data.next.container, 1, {
         opacity: 0,
         onComplete: done
-      });
+      })
     }
   }]
-});
+})

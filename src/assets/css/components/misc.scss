@@ -26,3 +26,8 @@
   max-width: 370px;
   margin-bottom: $spacing-8;
 }
+
+[data-barba='container'] {
+  position: absolute;
+  width: 100%;
+}
