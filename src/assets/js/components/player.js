@@ -1,6 +1,6 @@
 // Player + SoundCloud
 if (episode) {
-  var KEY = 'AdBAY9M0wHTRovngU9Ht4Z63XezL9saK'
+  var KEY = 'eab076c133468510a6efbe8ca1390e96'
   var soundcloud = new SoundCloudAudio(KEY)
   var audio = soundcloud.audio
   var player = document.querySelector('.episode-player')
