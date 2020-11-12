@@ -1,0 +1,34 @@
+include /components/includes
+
++meta-head(
+  'André Souza, Pesquisador Quantitativo no Spotify. Episódio 26 — Movimento UX. Conversas sobre pesquisa para experiência do usuário. UX Research.',
+  'Pesquisa quantitativa e Neurociência aplicada à Design e UX — Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Segunda Temporada. Conversas sobre pesquisa para experiência do usuário. UX Research.',
+  'https://movimentoux.com/ux-research/camila-borja-pt2/',
+  'https://movimentoux.com/assets/img/share/25-camila-borja.jpg',
+  'episode'
+)
+
++header('', '', 'on')
+
++episode-section(
+  'André Souza',
+  'Pesquisador Quantitativo no Spotify.',
+  'Pesquisa quantitativa e Neurociência aplicada à Design e UX.',
+  '26',
+  '26-andre-souza.jpg',
+  '',
+  '-inside'
+)
+
++episode-player('andre-souza')
+
+section.episode-content
+  //- +episode-tabs
+
+  .episode-text
+    include intro
+    //- include transcricao
+
+  include sidebar
+
++meta-js
