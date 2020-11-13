@@ -1,0 +1,34 @@
+include /components/includes
+
++meta-head(
+  'Movimento UX — Terceira Temporada. Conversas sobre pesquisa para experiência do usuário. UX Research.',
+  'Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Terceira Temporada. Conversas sobre pesquisa para experiência do usuário. UX Research.',
+  'https://movimentoux.com/temporada-3/',
+  '',
+  'season'
+)
+
++header('', '', 'on')
+
+section.intro-section.-snap
+  span.eyebrow UX Research
+  h1.header Terceira <br> Temporada
+  p Nov, 2020 — Conversas sobre pesquisa para experiência do usuário.
+  +social-links('-home')
+
+//- ul.list-grid
+//-   li.list.-on #[svg(src='assets/img/ui/ep-list.svg')]
+//-   li.grid #[svg(src='assets/img/ui/ep-grid.svg')]
+
+//- .episode-wrapper
++episode-section(
+  'André Souza',
+  'Pesquisador Quantitativo no Spotify.',
+  'Pesquisa Quantitativa e Neurociência aplicada à Design e UX.',
+  '26',
+  '26-andre-souza.jpg',
+  '/temporada-3/andre-souza/',
+  '-snap'
+)
+
++meta-js
