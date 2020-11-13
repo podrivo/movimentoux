@@ -60,8 +60,7 @@ var config = {
     'src': [
       './src/_redirects',
       './src/robots.txt',
-      './src/humans.txt',
-      './src/dbd5304d62e58fe0c5eb0f8509ed780c.txt'
+      './src/humans.txt'
     ],
     'dest': './dist'
   }
