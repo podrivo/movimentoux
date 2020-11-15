@@ -24,13 +24,19 @@ mixin meta-head(title, description, href, share, page)
 
       meta(itemprop='name' content= title)
       meta(itemprop='description' content= description)
-      meta(itemprop='image' content='https://movimentoux.com/assets/img/share/share.png')
       meta(itemprop='url' content= href)
+      if share
+        meta(itemprop='image' content= share)
+      else
+        meta(itemprop='image' content='https://movimentoux.com/assets/img/share/share.png')
 
       meta(name='twitter:card' content='summary')
       meta(name='twitter:title' content= title)
       meta(name='twitter:description' content= description)
-      meta(name='twitter:image' content='https://movimentoux.com/assets/img/share/share.png')
+      if share
+        meta(name='twitter:image' content= share)
+      else
+        meta(name='twitter:image' content='https://movimentoux.com/assets/img/share/share.png')
 
       link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap')
       link(rel='stylesheet' href= '/assets/css/main.min.css')
