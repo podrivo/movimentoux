@@ -36,8 +36,10 @@
     &::before {
       content: '';
       position: absolute;
-      top: -13px;
-      left: -20px;
+      // top: -13px;
+      // left: -20px;
+      top: -20px;
+      left: -32px;
       width: calc(100% + #{$spacing-border}*2);
       height: calc(100% + #{$spacing-border}*2);
       background-color: $black;
