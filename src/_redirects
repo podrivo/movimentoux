@@ -1,64 +1,95 @@
-# Links antigos
+# Links antigos site v1
 /loja /
 /work /
-/work/ep1_caiocesar /ux-design/caio-cesar
-/work/rodrigo-medeiros /ux-design/rodrigo-medeiros
-/work/ep3_eduardoloureiro /ux-design/eduardo-loureiro
-/work/ep4_kojipereira /ux-design/koji-pereira
-/work/ep5_fabricioteixeira /ux-design/fabricio-teixeira
-/work/ep6_elisavolpato /ux-design/elisa-volpato
-/work/ep7_janevita /ux-design/jane-vita
-/work/ep8-pedrothiago /ux-design/pedro-thiago
-/work/ep9_karinedrumond /ux-design/karine-drumond
-/work/ep10_ericofileno /ux-design/erico-fileno
-/work/ep11_robsonsantos /ux-design/robson-santos
-/work/ep12_sergiosalvador /ux-design/sergio-salvador
-/work/ep13_fernandabarbato /ux-design/fernanda-barbato
-/work/ep14_fabriciodore /ux-design/fabricio-dore
-/work/nubank /ux-design/guilherme-neumann
-/work/felipememoria /ux-design/felipe-memoria
-/work/carolina-leslie /ux-design/carolina-leslie
-/work/netflix /ux-design/andre-do-amaral
+/work/ep1_caiocesar /temporada-1/caio-cesar
+/work/rodrigo-medeiros /temporada-1/rodrigo-medeiros
+/work/ep3_eduardoloureiro /temporada-1/eduardo-loureiro
+/work/ep4_kojipereira /temporada-1/koji-pereira
+/work/ep5_fabricioteixeira /temporada-1/fabricio-teixeira
+/work/ep6_elisavolpato /temporada-1/elisa-volpato
+/work/ep7_janevita /temporada-1/jane-vita
+/work/ep8-pedrothiago /temporada-1/pedro-thiago
+/work/ep9_karinedrumond /temporada-1/karine-drumond
+/work/ep10_ericofileno /temporada-1/erico-fileno
+/work/ep11_robsonsantos /temporada-1/robson-santos
+/work/ep12_sergiosalvador /temporada-1/sergio-salvador
+/work/ep13_fernandabarbato /temporada-1/fernanda-barbato
+/work/ep14_fabriciodore /temporada-1/fabricio-dore
+/work/nubank /temporada-1/guilherme-neumann
+/work/felipememoria /temporada-1/felipe-memoria
+/work/carolina-leslie /temporada-1/carolina-leslie
+/work/netflix /temporada-1/andre-do-amaral
 
-# UX Design
-/design /ux-design
-/uxdesign /ux-design
-/rodrigo-medeiros /ux-design/rodrigo-medeiros
-/eduardo-loureiro /ux-design/eduardo-loureiro
-/koji-pereira /ux-design/koji-pereira
-/fabricio-teixeira /ux-design/fabricio-teixeira
-/elisa-volpato /ux-design/elisa-volpato
-/jane-vita /ux-design/jane-vita
-/pedro-thiago /ux-design/pedro-thiago
-/karine-drumond /ux-design/karine-drumond
-/erico-fileno /ux-design/erico-fileno
-/robson-santos /ux-design/robson-santos
-/sergio-salvador /ux-design/sergio-salvador
-/fernanda-barbato /ux-design/fernanda-barbato
-/fabricio-dore /ux-design/fabricio-dore
-/guilherme-neumann /ux-design/guilherme-neumann
-/felipe-memoria /ux-design/felipe-memoria
-/carolina-leslie /ux-design/carolina-leslie
-/andre-do-amaral /ux-design/andre-do-amaral
 
-# UX Research
-/research /ux-research
-/uxresearch /ux-research
-/paola-sales /ux-research/paola-sales
-/carol-zatorre /ux-research/carol-zatorre
-/caio-gama /ux-research/caio-gama
-/carol-zatorre /ux-research/carol-zatorre
-/cristina-bilsland /ux-research/cristina-bilsland
-/ana-rafaela /ux-research/ana-rafaela
+# Temporada 1
+/design /temporada-1
+/uxdesign /temporada-1
+/rodrigo-medeiros /temporada-1/rodrigo-medeiros
+/eduardo-loureiro /temporada-1/eduardo-loureiro
+/koji-pereira /temporada-1/koji-pereira
+/fabricio-teixeira /temporada-1/fabricio-teixeira
+/elisa-volpato /temporada-1/elisa-volpato
+/jane-vita /temporada-1/jane-vita
+/pedro-thiago /temporada-1/pedro-thiago
+/karine-drumond /temporada-1/karine-drumond
+/erico-fileno /temporada-1/erico-fileno
+/robson-santos /temporada-1/robson-santos
+/sergio-salvador /temporada-1/sergio-salvador
+/fernanda-barbato /temporada-1/fernanda-barbato
+/fabricio-dore /temporada-1/fabricio-dore
+/guilherme-neumann /temporada-1/guilherme-neumann
+/felipe-memoria /temporada-1/felipe-memoria
+/carolina-leslie /temporada-1/carolina-leslie
+/andre-do-amaral /temporada-1/andre-do-amaral
 
-# Parte 1 e 2
-/ux-research/camila-borja-parte1 /ux-research/camila-borja-pt1
-/ux-research/camila-borja-parte2 /ux-research/camila-borja-pt2
-/camila-borja /ux-research/camila-borja-pt1
-/camila-borja-parte1 /ux-research/camila-borja-pt1
-/camila-borja-pt1 /ux-research/camila-borja-pt1
-/camila-borja-parte2 /ux-research/camila-borja-pt2
-/camila-borja-pt2 /ux-research/camila-borja-pt2
+
+# Temporada 1 Old Links
+/ux-design/rodrigo-medeiros /temporada-1/rodrigo-medeiros
+/ux-design/eduardo-loureiro /temporada-1/eduardo-loureiro
+/ux-design/koji-pereira /temporada-1/koji-pereira
+/ux-design/fabricio-teixeira /temporada-1/fabricio-teixeira
+/ux-design/elisa-volpato /temporada-1/elisa-volpato
+/ux-design/jane-vita /temporada-1/jane-vita
+/ux-design/pedro-thiago /temporada-1/pedro-thiago
+/ux-design/karine-drumond /temporada-1/karine-drumond
+/ux-design/erico-fileno /temporada-1/erico-fileno
+/ux-design/robson-santos /temporada-1/robson-santos
+/ux-design/sergio-salvador /temporada-1/sergio-salvador
+/ux-design/fernanda-barbato /temporada-1/fernanda-barbato
+/ux-design/fabricio-dore /temporada-1/fabricio-dore
+/ux-design/guilherme-neumann /temporada-1/guilherme-neumann
+/ux-design/felipe-memoria /temporada-1/felipe-memoria
+/ux-design/carolina-leslie /temporada-1/carolina-leslie
+/ux-design/andre-do-amaral /temporada-1/andre-do-amaral
+
+
+# Temporada 2
+/research /temporada-2
+/uxresearch /temporada-2
+/paola-sales /temporada-2/paola-sales
+/carol-zatorre /temporada-2/carol-zatorre
+/caio-gama /temporada-2/caio-gama
+/cristina-bilsland /temporada-2/cristina-bilsland
+/ana-rafaela /temporada-2/ana-rafaela
+/camila-borja /temporada-2/camila-borja-pt1
+
+/camila-borja-parte1 /temporada-2/camila-borja-pt1
+/camila-borja-pt1 /temporada-2/camila-borja-pt1
+/camila-borja-parte2 /temporada-2/camila-borja-pt2
+/camila-borja-pt2 /temporada-2/camila-borja-pt2
+/temporada-2/camila-borja-parte1 /temporada-2/camila-borja-pt1
+/temporada-2/camila-borja-parte2 /temporada-2/camila-borja-pt2
+
+
+# Temporada 2 Old Links
+/ux-research/paola-sales /temporada-2/paola-sales
+/ux-research/carol-zatorre /temporada-2/carol-zatorre
+/ux-research/caio-gama /temporada-2/caio-gama
+/ux-research/cristina-bilsland /temporada-2/cristina-bilsland
+/ux-research/ana-rafaela /temporada-2/ana-rafaela
+/ux-research/camila-borja-pt1 /temporada-2/camila-borja-pt1
+/ux-research/camila-borja-pt2 /temporada-2/camila-borja-pt2
+
 
 # Pesquisa UXR
 /pesquisa /pesquisa-uxr
@@ -66,13 +97,12 @@
 /pesquisa-ux /pesquisa-uxr
 /pesquisauxr /pesquisa-uxr
 
+
 # Temporadas
-/episodios /ux-design
-/temporada-um /ux-design
-/temporada-dois /ux-research
-/temporadaum /ux-design
-/temporadadois /ux-research
-/temporada-1 /ux-design
-/temporada-2 /ux-research
-/temporada1 /ux-design
-/temporada2 /ux-research
+/episodios /
+/temporada-um /temporada-1
+/temporada-dois /temporada-2
+/temporadaum /temporada-1
+/temporadadois /temporada-2
+/temporada1 /temporada-1
+/temporada2 /temporada-2

@@ -97,5 +97,11 @@ a {
       background-color: $white;
       color: $black;
     }
+
+    &.-alt {
+      border: 0;
+      background-color: white;
+      color: black;
+    }
   }
 }
