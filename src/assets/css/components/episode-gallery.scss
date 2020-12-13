@@ -30,13 +30,5 @@
       margin: 0;
       margin-top: $spacing-6;
     }
-
-    .border {
-      border: $spacing solid $grayish;
-
-      @media (max-width: $sm) {
-        border-width: $spacing / 2;
-      }
-    }
   }
 }
