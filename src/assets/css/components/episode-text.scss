@@ -47,12 +47,4 @@
     margin-bottom: $spacing-1;
     font-size: $font-size-text;
   }
-
-  .border {
-    border: $spacing solid $grayish;
-
-    @media (max-width: $sm) {
-      border-width: $spacing / 2;
-    }
-  }
 }
