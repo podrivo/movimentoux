@@ -1,0 +1,34 @@
+include /components/includes
+
++meta-head(
+  'Caio Gama, Pesquisador UX no Shopify. Episódio 27 — Movimento UX. Conversas sobre pesquisa em experiência do usuário. UX Research.',
+  'Personas orientadas por dados comportamentais quantitativos — Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Terceira Temporada. Conversas sobre pesquisa em experiência do usuário. UX Research.',
+  'https://movimentoux.com/temporada-3/caio-gama/',
+  'https://movimentoux.com/assets/img/share/27-caio-gama.jpg',
+  'episode'
+)
+
++header('', '', 'on')
+
++episode-section(
+  'Caio Gama',
+  'Pesquisador UX no Shopify.',
+  'Personas orientadas por dados comportamentais quantitativos.',
+  '27',
+  '27-caio-gama.jpg',
+  '',
+  '-inside'
+)
+
++episode-player('caio-gama')
+
+section.episode-content
+  //- +episode-tabs
+
+  .episode-text
+    include intro
+    //- include transcricao
+
+  include sidebar
+
++meta-js
