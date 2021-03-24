@@ -19,7 +19,7 @@
     color: $black;
     transition: color $timing $easing, transform 920ms cubic-bezier(0.165, 0.84, 0.44, 1);
     backface-visibility: hidden;
-    
+
     &:hover p {
       text-decoration: underline;
     }
