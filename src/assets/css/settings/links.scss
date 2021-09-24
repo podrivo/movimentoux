@@ -92,6 +92,13 @@ a {
       align-self: flex-start;
     }
 
+    &.-episode {
+      background-color: $white;
+      color: $black;
+      padding: $spacing-2 $spacing-3;
+      display: inline-block;
+    }
+
     &:hover,
     &:focus {
       background-color: $white;

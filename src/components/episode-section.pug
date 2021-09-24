@@ -1,4 +1,4 @@
-mixin episode-section(speaker, description, keywords, number, image, url, variantClass, part)
+mixin episode-section(speaker, description, keywords, number, image, url, variantClass, part, link)
   section.intro-section.-episode(class= variantClass)
     .episode-cover
       .cover
@@ -14,4 +14,6 @@ mixin episode-section(speaker, description, keywords, number, image, url, varian
           span.part= part
       p.description= description
       span.keywords= keywords
+      if variantClass == '-inside'
+        a(href=link title="Ouvir episódio" target='_blank' rel='noopener').btn.-episode Ouvir episódio
     span.number= number

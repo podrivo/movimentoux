@@ -1,5 +1,5 @@
 [data-page='episode'] .episode-cover .cover {
-  width: 30%;
+  max-width: 30%;
 }
 
 .episode-cover {
@@ -44,7 +44,7 @@
 
     @media (max-width: $sm) {
       width: 100%;
-      max-width: 100%;
+      max-width: 100% !important;
     }
   }
 

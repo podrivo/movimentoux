@@ -114,7 +114,7 @@
 
 // INSIDE
 .intro-section.-inside {
-  height: 85vh;
+  height: 90vh;
   justify-content: center;
   z-index: 1;
 
@@ -126,6 +126,14 @@
     pointer-events: all;
     position: relative;
     bottom: 0;
+
+    .keywords {
+      display: block;
+    }
+
+    .btn {
+      margin-top: $spacing-3;
+    }
   }
 
   .header {
