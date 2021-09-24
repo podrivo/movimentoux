@@ -1,4 +1,5 @@
-[data-page='season'] header {
+[data-page='season'] header,
+[data-page='episode'] header {
   background: transparent;
 
   @media (max-width: $sm) {
@@ -114,8 +115,8 @@ header {
 
 //headroom plugin
 .headroom {
-  transition: transform $timing * 2 $easing, top $timing * 2 $easing;
-  will-change: transform;
+  transition: transform $timing * 2 $easing, top $timing * 2 $easing, background $timing $easing;
+  will-change: transform background;
 
   &--pinned {
     transform: translateY(0);
@@ -127,6 +128,7 @@ header {
 
   &--not-top {
     top: -$spacing-3;
+    background: $black !important;
   }
 
   &--unpinned {

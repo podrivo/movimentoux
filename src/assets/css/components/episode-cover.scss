@@ -1,3 +1,7 @@
+[data-page='episode'] .episode-cover .cover {
+  width: 30%;
+}
+
 .episode-cover {
   position: absolute;
   top: 0;
@@ -28,7 +32,7 @@
     position: relative;
     width: 560px;
     background: #333;
-    max-width: 36%;
+    max-width: 38%;
     height: auto;
     transform: rotateY(0);
     transition: transform $timing $easing;
