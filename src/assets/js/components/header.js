@@ -23,8 +23,8 @@ if (!season || !mqSmall) {
   var supporter = document.querySelector('.supporter')
 
   var headroom = new Headroom(header, {
-    offset: 80,
-    tolerance: 40,
+    offset: 120,
+    tolerance: 5,
     onPin: function () {
       if (episode && supporter && mqSmall) {
         supporter.style.transform = 'translateY(' + header.offsetHeight + 'px)'
