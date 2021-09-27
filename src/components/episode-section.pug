@@ -7,7 +7,7 @@ mixin episode-section(speaker, description, keywords, number, image, url, varian
         else
           a(href= url title='Ir para episódio').play-badge
             img(src='/assets/img/perfil/' + image alt='Fotografia de ' + speaker)
-            svg(src='/assets/img/ui/play.svg')
+            //- svg(src='/assets/img/ui/play.svg')
     .text
       h2.header= speaker
         if part
