@@ -17,6 +17,11 @@ a {
         white-space: normal;
       }
     }
+
+    &.-players {
+      display: inline-block;
+      margin-bottom: $spacing-2;
+    }
   }
 
   &.link::before,

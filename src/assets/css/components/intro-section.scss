@@ -66,6 +66,7 @@
     @media (max-width: $sm) {
       position: relative;
       bottom: 0;
+      pointer-events: all;
     }
 
     .keywords {
