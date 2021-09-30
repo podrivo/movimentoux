@@ -13,9 +13,10 @@
 
   .text .description,
   .text .keywords,
+  .text .btn,
   .number {
     opacity: 0;
-    transition: opacity $easing $timing;
+    transition: all $easing $timing;
 
     @media (max-width: $sm) {
       opacity: 1;
@@ -26,6 +27,7 @@
     .text .header,
     .text .description,
     .text .keywords,
+    .text .btn,
     .number {
       opacity: 1;
     }

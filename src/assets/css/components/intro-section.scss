@@ -62,6 +62,15 @@
       position: relative;
       bottom: 0;
     }
+
+    .keywords {
+      display: block;
+    }
+
+    .btn {
+      margin-top: $spacing-2;
+      margin-right: $spacing-2;
+    }
   }
 
   .header {
@@ -146,5 +155,19 @@
 
   .cover {
     pointer-events: none;
+  }
+}
+
+
+// ACTIVE
+.intro-section.-active {
+
+  .text {
+    pointer-events: all;
+
+    // .btn {
+    //   margin-top: $spacing-2;
+    //   margin-right: $spacing-2;
+    // }
   }
 }

@@ -5,8 +5,8 @@ mixin episode-section(speaker, description, keywords, number, image, url, varian
         if variantClass == '-inside'
           img(src='/assets/img/perfil/' + image alt='Fotografia de ' + speaker)
         else
-          a(href= url title='Ir para episódio').play-badge
-            img(src='/assets/img/perfil/' + image alt='Fotografia de ' + speaker)
+          img(src='/assets/img/perfil/' + image alt='Fotografia de ' + speaker)
+          //- a(href= url title='Ir para episódio').play-badge
             //- svg(src='/assets/img/ui/play.svg')
     .text
       h2.header= speaker
@@ -16,4 +16,7 @@ mixin episode-section(speaker, description, keywords, number, image, url, varian
       span.keywords= keywords
       if variantClass == '-inside'
         a(href=link title="Ouvir episódio" target='_blank' rel='noopener').btn.-episode Ouvir episódio
+      if variantClass == '-snap'
+        a(href=link title="Ouvir episódio" target='_blank' rel='noopener').btn.-episode Ouvir episódio
+        a(href=url title="Ler mais").btn.-episode.-secondary Ler mais
     span.number= number
