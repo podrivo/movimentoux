@@ -10,13 +10,10 @@
   }
 
   @media (max-width: $sm) {
-    // position: relative;
-    // bottom: auto;
-    // left: 0;
-    // right: auto;
-    // display: none;
+    position: relative;
+    left: 0;
     text-align: left;
-    padding-top: $spacing-6;
+    padding-top: $spacing-8;
   }
 
   &.-home {
