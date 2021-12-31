@@ -1,8 +1,8 @@
 var gulp = require('gulp')
 var plumber = require('gulp-plumber')
 var runSequence = require('gulp4-run-sequence')
-var imagemin = require('gulp-imagemin')
-var mozjpeg = require('imagemin-mozjpeg')
+var imagemin = import('gulp-imagemin')
+var mozjpeg = import('imagemin-mozjpeg')
 
 module.exports = function(config) {
   gulp.task('videos', function() {

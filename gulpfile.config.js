@@ -10,6 +10,7 @@ var config = {
       './src/pages/**/index.pug',
       './src/pages/404.pug'
     ],
+    'svg': './dist/**/*.html',
     'dest': 'dist'
   },
   'scripts': {

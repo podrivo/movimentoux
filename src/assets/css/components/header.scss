@@ -89,7 +89,7 @@ header {
         .item {
           opacity: 1;
           pointer-events: all;
-          transition: opacity $timing $timing / 2 $easing;
+          transition: opacity $timing calc($timing / 2) $easing;
         }
       }
     }

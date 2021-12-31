@@ -1,20 +1,33 @@
 var gulp = require('gulp')
 var pug = require('gulp-pug')
 var plumber = require('gulp-plumber')
-var embedSvg = require('gulp-embed-svg')
+var runSequence = require('gulp4-run-sequence')
+var inline = require('gulp-inline')
 
 module.exports = function(config) {
-  gulp.task('html', function() {
+  gulp.task('pug', function () {
     return gulp.src(config.html.src)
       .pipe(plumber())
       .pipe(pug({
         pretty: true,
         basedir: config.base.dir
       }))
-      .pipe(embedSvg({
-        root: config.base.dir
+      .pipe(gulp.dest(config.html.dest))
+      .pipe(plumber.stop())
+  })
+
+  gulp.task('svg', function () {
+    return gulp.src(config.html.svg)
+      .pipe(plumber())
+      .pipe(inline({
+        base: config.base.dir,
+        disabledTypes: ['css', 'js'],
       }))
       .pipe(gulp.dest(config.html.dest))
       .pipe(plumber.stop())
+  })
+
+  gulp.task('html', function (callback) {
+    return runSequence('pug', 'svg', callback)
   })
 }

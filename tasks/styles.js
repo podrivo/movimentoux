@@ -6,7 +6,7 @@ var concat = require('gulp-concat')
 var cleanCSS = require('gulp-clean-css')
 var mmq = require('gulp-merge-media-queries')
 var postCSS = require('gulp-postcss')
-var sass = require('gulp-sass')
+var sass = require('gulp-sass')(require('sass'))
 var sassLint = require('gulp-sass-lint')
 var sassGlob = require('gulp-sass-glob')
 
