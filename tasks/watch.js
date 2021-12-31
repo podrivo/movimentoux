@@ -19,6 +19,6 @@ module.exports = function(config) {
     gulp.watch(config.html.watch, gulp.series('html', reload))
     gulp.watch(config.scripts.watch, gulp.series('scripts:default', reload))
     gulp.watch(config.styles.watch, gulp.series('styles', reload))
-    gulp.watch(config.media.watch, gulp.series('media:default', reload))
+    gulp.watch(config.media.watch, gulp.series('media', reload))
   })
 }

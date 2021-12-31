@@ -1,8 +1,6 @@
 var gulp = require('gulp')
 var plumber = require('gulp-plumber')
 var runSequence = require('gulp4-run-sequence')
-var imagemin = import('gulp-imagemin')
-var mozjpeg = import('imagemin-mozjpeg')
 
 module.exports = function(config) {
   gulp.task('videos', function() {
@@ -19,21 +17,7 @@ module.exports = function(config) {
       .pipe(plumber.stop())
   })
 
-  gulp.task('optimize', function () {
-    return gulp.src(config.images.src)
-      .pipe(plumber())
-      .pipe(imagemin([
-        mozjpeg()
-      ]))
-      .pipe(gulp.dest(config.images.dest))
-      .pipe(plumber.stop())
-  })
-
-  gulp.task('media:default', function (callback) {
+  gulp.task('media', function (callback) {
     return runSequence('images', 'videos', callback)
-  })
-
-  gulp.task('media:build', function (callback) {
-    return runSequence('optimize', 'videos', callback)
   })
 }
