@@ -1,0 +1,36 @@
+include /components/includes
+
++meta-head(
+  'Nome da pessoa, Cargo na Empresa X. Episódio 31 — Movimento UX. Conversas sobre pesquisa em experiência do usuário. UX Research.',
+  'Descrição do episódio — Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Quarta Temporada. Conversas sobre pesquisa em experiência do usuário. UX Research.',
+  'https://movimentoux.com/temporada-4/samyra-ribeiro-pt2/',
+  'https://movimentoux.com/assets/img/share/30-samyra-ribeiro-pt2.jpg',
+  'episode'
+)
+
++header('', '', '', 'on')
+
++episode-section(
+  'Nome da pessoa',
+  'Cargo na Empresa X',
+  'Descrição do episódio.',
+  '31',
+  '30-samyra-ribeiro-pt2.jpg',
+  '',
+  '-inside',
+  '',
+  'https://open.spotify.com/episode/1NtXyha0NzGHrbt2jiycMh'
+)
+
+//- +episode-player('samyra-ribeiro-pt2')
+
+section.episode-content
+  //- +episode-tabs
+
+  .episode-text
+    include intro
+    //- include transcricao
+
+  include sidebar
+
++meta-js
