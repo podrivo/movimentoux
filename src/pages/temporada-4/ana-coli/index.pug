@@ -1,0 +1,36 @@
+include /components/includes
+
++meta-head(
+  'Ana Coli, Gerente de UX Sênior no Nubank. Episódio 32 — Movimento UX',
+  'Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Quarta Temporada',
+  'https://movimentoux.com/temporada-4/ana-coli/',
+  'https://movimentoux.com/assets/img/share/32-ana-coli.jpg',
+  'episode'
+)
+
++header('', '', '', 'on')
+
++episode-section(
+  'Ana Coli',
+  'Gerente de UX Sênior no Nubank',
+  '',
+  '32',
+  '32-ana-coli.jpg',
+  '',
+  '-inside',
+  '',
+  'https://open.spotify.com/episode/1NtXyha0NzGHrbt2jiycMh'
+)
+
+//- +episode-player('samyra-ribeiro-pt2')
+
+section.episode-content
+  //- +episode-tabs
+
+  .episode-text
+    include intro
+    //- include transcricao
+
+  include sidebar
+
++meta-js
