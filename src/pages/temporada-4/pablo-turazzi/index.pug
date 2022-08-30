@@ -1,0 +1,36 @@
+include /components/includes
+
++meta-head(
+  'Pablo Turazzi, Pesquisador em Experiência do Usuário Sênior no Mercado Livre. Episódio 34 — Movimento UX',
+  'Movimento UX é um podcast de entrevistas sobre o universo de Experiência do Usuário — Quarta Temporada',
+  'https://movimentoux.com/temporada-4/pablo-turazzi/',
+  'https://movimentoux.com/assets/img/share/34-pablo-turazzi.jpg',
+  'episode'
+)
+
++header('', '', '', 'on')
+
++episode-section(
+  'Pablo Turazzi',
+  'Pesquisador em Experiência do Usuário Sênior no Mercado Livre',
+  '',
+  '34',
+  '34-pablo-turazzi.jpg',
+  '',
+  '-inside',
+  '',
+  'google.com'
+)
+
+//- +episode-player('samyra-ribeiro-pt2')
+
+section.episode-content
+  //- +episode-tabs
+
+  .episode-text
+    include intro
+    //- include transcricao
+
+  include sidebar
+
++meta-js
