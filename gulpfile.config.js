@@ -41,11 +41,11 @@ var config = {
     'dest': './dist/assets/fonts'
   },
   'media': {
-    'watch': './src/assets/img/**/*.{gif,ico,png,jpg,jpeg,svg,mp4}'
+    'watch': './src/assets/img/**/*.{gif,ico,png,jpg,jpeg,svg,mp4,pdf}'
   },
   'images': {
-    'watch': './src/assets/img/**/*.{gif,ico,png,jpg,jpeg,svg}',
-    'src': './src/assets/img/**/*.{gif,ico,png,jpg,jpeg,svg}',
+    'watch': './src/assets/img/**/*.{gif,ico,png,jpg,jpeg,svg,pdf}',
+    'src': './src/assets/img/**/*.{gif,ico,png,jpg,jpeg,svg,pdf}',
     'dest': './dist/assets/img'
   },
   'videos': {
