@@ -1,6 +1,9 @@
-mixin episode-links(object)
+mixin episode-links(object, title)
   .episode-links
-    p #[strong Links e dicas que falamos neste episódio]
+    if title
+      p #[strong= title]
+    else
+      p #[strong Links e dicas que falamos neste episódio]
     ul
       each link in object
         li.item
