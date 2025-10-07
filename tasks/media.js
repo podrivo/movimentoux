@@ -17,7 +17,14 @@ module.exports = function(config) {
       .pipe(plumber.stop())
   })
 
+  gulp.task('audios', function () {
+    return gulp.src(config.audios.src)
+      .pipe(plumber())
+      .pipe(gulp.dest(config.audios.dest))
+      .pipe(plumber.stop())
+  })
+
   gulp.task('media', function (callback) {
-    return runSequence('images', 'videos', callback)
+    return runSequence('images', 'videos', 'audios', callback)
   })
 }

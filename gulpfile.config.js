@@ -53,6 +53,11 @@ var config = {
     'src': './src/assets/img/**/*.mp4',
     'dest': './dist/assets/img'
   },
+  'audios': {
+    'watch': './src/assets/audio/**/*.mp3',
+    'src': './src/assets/audio/**/*.mp3',
+    'dest': './dist/assets/audio'
+  },
   'sitemap': {
     'src': './dist/**/*.html',
     'dest': './dist/'
