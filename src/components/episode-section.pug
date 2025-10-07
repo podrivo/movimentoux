@@ -1,4 +1,4 @@
-mixin episode-section(speaker, description, keywords, number, image, url, variantClass, part, link)
+mixin episode-section(speaker, description, keywords, number, image, url, variantClass, part, link, standalone)
   section.intro-section.-episode(class= variantClass)
     .episode-cover
       .cover
@@ -15,8 +15,14 @@ mixin episode-section(speaker, description, keywords, number, image, url, varian
       p.description= description
       span.keywords= keywords
       if variantClass == '-inside'
-        a(href=link title="Ouvir episódio" target='_blank' rel='noopener').btn.-episode Ouvir episódio
+        if standalone == 'standalone'
+          p 
+        else
+          a(href=link title="Ouvir episódio" target='_blank' rel='noopener').btn.-episode Ouvir episódio
       if variantClass == '-snap'
-        a(href=link title="Ouvir episódio" target='_blank' rel='noopener').btn.-episode Ouvir episódio
-        a(href=url title="Ler mais").btn.-episode.-secondary Ler mais
+        if standalone == 'standalone'
+          a(href=url title="Ler mais").btn.-episode Ouvir episódio
+        else
+          a(href=link title="Ouvir episódio" target='_blank' rel='noopener').btn.-episode Ouvir episódio
+          a(href=url title="Ler mais").btn.-episode.-secondary Ler mais
     span.number= number
